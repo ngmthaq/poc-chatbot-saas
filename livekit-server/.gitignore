@@ -1,0 +1,21 @@
+# Generated runtime secrets file — never commit. Operators create this via
+# scripts/bootstrap.sh and it is mode 600 by design.
+.env
+
+# Timestamped backups created by `scripts/bootstrap.sh --force` when rotating
+# secrets. They contain previous credentials and must never reach version
+# control.
+.env.bak.*
+
+# Local persistent data emitted by containers (e.g. LiveKit recordings/logs
+# if mounted, Redis AOF when the volume is bind-mounted for debugging). The
+# default compose stack uses named volumes, but this catches ad-hoc bind
+# mounts an operator might add for troubleshooting.
+data/
+
+# TLS material for the built-in TURN/TLS listener. Real certificates and
+# private keys must never be committed. We still want the `certs/` directory
+# to exist in the repo (so the compose `:ro` mount works on a fresh clone),
+# so an empty `.gitkeep` is explicitly allowed.
+certs/*
+!certs/.gitkeep

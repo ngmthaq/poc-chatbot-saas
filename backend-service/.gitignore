@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Logs
+*.log
+logs/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+# Timestamped backups produced by `scripts/bootstrap.sh --force`; they
+# contain previous credentials and must never be committed.
+.env.bak.*
+
+# Testing
+coverage/
+
+# IDE / OS
+.DS_Store
+.idea/
+.vscode/
+
+# Prisma
+prisma/migrations/dev.db*
+
+# Uploads (local storage)
+uploads/
+
+# Persistent data directories produced if an operator switches the compose
+# stack from named volumes to bind mounts for debugging. Named volumes are
+# managed by Docker outside the repo, but these patterns guard against
+# accidental commits when troubleshooting locally.
+data/
+mariadb-data/
+redis-data/

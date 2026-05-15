@@ -1,0 +1,40 @@
+---
+name: review-pull-request
+description: "Review a pull request by fetching its description and code changes via MCP, then applying clean-code, security-scanner, and aaa-testing (when tests are present) checks. Use when: reviewing a PR, code review, pull request review, MR review, analyzing PR changes, checking code quality of PR, auditing a PR for security, reviewing test coverage or test quality. Requires MCP integration — will not run without it."
+---
+
+# Review Pull Request
+
+Produces a structured code review by fetching a PR's description and diff via **MCP**.
+
+## How to Use This Skill
+
+1. Resolve the target PR and fetch its diff through MCP.
+2. Check requirements conformance before applying sub-skill audits.
+3. Load the required sub-skills in full and apply them against the diff.
+4. Produce the review report, then optionally post it back via MCP.
+
+---
+
+## Review Workflow
+
+Load the step references in order. Do not skip or summarize them.
+
+1. [Step 1 — Verify MCP Availability](./references/step-1-verify-mcp-availability.md)
+2. [Step 2 — Identify the Target PR](./references/step-2-identify-the-target-pr.md)
+3. [Step 3 — Fetch the Code Diff](./references/step-3-fetch-the-code-diff.md)
+4. [Step 4 — Check Requirements Conformance](./references/step-4-check-requirements-conformance.md)
+5. [Step 5 — Load Sub-Skills](./references/step-5-load-sub-skills.md)
+6. [Step 6 — Apply Clean Code Review](./references/step-6-apply-clean-code-review.md)
+7. [Step 7 — Apply Security Scanner Review](./references/step-7-apply-security-scanner-review.md)
+8. [Step 8 — Apply AAA Testing Review](./references/step-8-apply-aaa-testing-review.md)
+9. [Step 9 — Produce the Review Report](./references/step-9-produce-the-review-report.md)
+10. [Step 10 — Offer to Post Review via MCP](./references/step-10-offer-to-post-review-via-mcp.md)
+
+---
+
+## Notes
+
+- Never expose secrets, credentials, or internal environment values found in the diff in the review report — redact them as `[REDACTED]` and flag the finding.
+- If the PR description is empty or very sparse, note this in the Summary as a process issue.
+- This skill is read-only by default. It does not modify any files unless the user explicitly asks for auto-fixes.
