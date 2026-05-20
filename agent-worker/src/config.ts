@@ -8,9 +8,16 @@ export interface WorkerConfig {
 
 export type LogLevel = 'trace' | 'debug' | 'info' | 'warn' | 'error' | 'fatal';
 
-const LOG_LEVELS: ReadonlyArray<LogLevel> = ['trace', 'debug', 'info', 'warn', 'error', 'fatal'];
+export const LOG_LEVELS: ReadonlyArray<LogLevel> = [
+  'trace',
+  'debug',
+  'info',
+  'warn',
+  'error',
+  'fatal',
+];
 
-const REQUIRED_KEYS = [
+export const REQUIRED_KEYS = [
   'LIVEKIT_URL',
   'LIVEKIT_API_KEY',
   'LIVEKIT_API_SECRET',
@@ -59,14 +66,14 @@ export function loadConfig(env: NodeJS.ProcessEnv = process.env): WorkerConfig {
 }
 
 function parseLogLevel(raw: string | undefined): LogLevel {
-  if (raw === undefined || raw.trim() === '') {
-    return 'info';
-  }
+  if (raw === undefined || raw.trim() === '') return 'info';
+
   const normalized = raw.trim().toLowerCase() as LogLevel;
   if (!LOG_LEVELS.includes(normalized)) {
     throw new WorkerConfigError(
       `LOG_LEVEL must be one of ${LOG_LEVELS.join(', ')}; received "${raw}".`,
     );
   }
+
   return normalized;
 }

@@ -30,10 +30,12 @@ That's it for a development-mode stack on plain HTTP. Production deployments mus
 | Logs (livekit only)   | `docker compose logs -f livekit`                              |
 | Restart               | `docker compose restart`                                      |
 | Status                | `docker compose ps`                                           |
-| Regenerate secrets    | `bash scripts/bootstrap.sh --force && docker compose up -d`   |
+| Regenerate secrets    | `bash scripts/bootstrap.sh --force && docker compose up -d --force-recreate livekit` |
 | Validate compose file | `docker compose config`                                       |
 
 `bootstrap.sh --force` writes a timestamped backup (`.env.bak.<ts>`) of the previous file before rotating, so credential rotations are recoverable for at least one cycle.
+
+> Any change to `.env` requires `docker compose up -d --force-recreate livekit` to take effect. `docker compose restart` keeps the old environment (the container's env block is fixed at create time, not at start time), so the server will continue running with the previous `LIVEKIT_KEYS` / `REDIS_PASSWORD` values.
 
 ## Ports
 
@@ -68,6 +70,29 @@ To enable the built-in TURN/TLS listener:
 4. `docker compose up -d` to apply.
 
 The `turn:` block ships commented-out so a fresh checkout does not crash-loop while `./certs/` is empty.
+
+## Troubleshooting — agent-worker logs `Unexpected server response: 401`
+
+Symptom: the sibling `agent-worker` (or any other LiveKit client signing JWTs with `LIVEKIT_API_KEY` / `LIVEKIT_API_SECRET`) repeatedly fails the WebSocket upgrade with `Unexpected server response: 401`, even though the API key and secret are identical across all `.env` files.
+
+Root cause: the LiveKit server does NOT perform `${VAR}` substitution inside `livekit.yaml`. If credentials are written into the YAML body as `${LIVEKIT_API_KEY}: ${LIVEKIT_API_SECRET}`, the server stores those placeholders as literal strings in its `Keys` map and rejects every real-secret-signed JWT with 401. (See `cmd/server/main.go::getConfigString` in the upstream `livekit/livekit` repo — `os.ExpandEnv` is only applied to `KeyFile`, never to the YAML body.)
+
+Fix mechanism: the API key/secret pair is delivered through the `LIVEKIT_KEYS` env var that the server's `--keys` CLI flag consumes. In this stack, `docker-compose.yml` sets:
+
+```yaml
+environment:
+  LIVEKIT_KEYS: "${LIVEKIT_API_KEY}: ${LIVEKIT_API_SECRET}"
+```
+
+The `${VAR}` interpolation here is performed by **Docker Compose at parse time** (Compose loads `.env` from the project directory automatically), not by the LiveKit server. The substituted string `"<key>: <secret>"` is then injected into the container's environment, parsed by the server, and used to populate the `Keys` map.
+
+To apply or re-apply after a `.env` change:
+
+```bash
+docker compose up -d --force-recreate livekit
+```
+
+`docker compose restart` is NOT sufficient — restart preserves the existing container's environment.
 
 ## Security hardening checklist
 

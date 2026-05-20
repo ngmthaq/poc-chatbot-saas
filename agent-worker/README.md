@@ -84,11 +84,50 @@ opens an OUTBOUND WebSocket to `LIVEKIT_URL` and never listens on a host port,
 so there is nothing to publish or probe; worker liveness is tracked
 server-side by LiveKit over the agents protocol.
 
-`host.docker.internal` caveat: when pointing at a host-side LiveKit dev server,
-`LIVEKIT_URL=ws://localhost:7880` will NOT resolve from inside the container
-(`localhost` is the container itself). Use
-`LIVEKIT_URL=ws://host.docker.internal:7880` (macOS/Windows) or attach the
-worker to the `livekit-server` compose network instead.
+When pointing at a host-side LiveKit dev server, set
+`LIVEKIT_URL=ws://host.docker.internal:7880` — this is the recommended default
+for Docker Desktop (macOS/Windows). `ws://localhost:7880` does NOT work from
+inside the worker container because `localhost` resolves to the container
+itself, not the host. On Linux, either use the same `host.docker.internal`
+form (Docker 20.10+ exposes it via `--add-host`) or attach the worker to the
+`livekit-server` compose network.
+
+If the worker still logs `Unexpected server response: 401` after the URL is
+reachable, the LiveKit server's `Keys` map is misconfigured — see the
+"Troubleshooting — agent-worker logs `Unexpected server response: 401`"
+section in [`../livekit-server/README.md`](../livekit-server/README.md).
+
+## Troubleshooting — native bindings / libc
+
+Symptom: the container exits at startup with
+
+```
+Error: Cannot find module './rtc-node.linux-<arch>-musl.node'
+```
+
+Root cause: `@livekit/rtc-ffi-bindings` (transitive dep of `@livekit/rtc-node`)
+publishes prebuilt native bindings only for glibc (`linux-{arm64,x64}-gnu`,
+plus darwin/win32); there is no musl variant on npm, so Alpine-based images
+resolve a non-existent module at runtime.
+
+That is why the base image in `Dockerfile` is `node:20-bookworm-slim` (Debian
+glibc) rather than `node:20-alpine` — switching to glibc lets the existing
+`*-gnu` prebuilts load, and avoids pulling a `linux/amd64` qemu emulation on
+Apple Silicon.
+
+Manual verification (run from `agent-worker/`, requires a populated `.env`):
+
+```bash
+docker compose build --no-cache agent-worker
+docker compose up -d
+sleep 10 && docker compose ps
+docker compose logs agent-worker | grep -i "module_not_found\|rtc-node.linux" || echo "no native-binding errors"
+docker compose exec agent-worker node -e "require('@livekit/rtc-ffi-bindings'); console.log('ok')"
+```
+
+`docker compose ps` should show the service `Up`, the `grep` line should
+print `no native-binding errors`, and the final `node -e` should print `ok`
+and exit 0.
 
 ## Notes
 

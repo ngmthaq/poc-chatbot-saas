@@ -10,6 +10,12 @@ services:
     image: livekit/livekit-server:v1.7.2
     restart: unless-stopped
     env_file: .env
+    environment:
+      # LiveKit does NOT substitute ${VAR} inside livekit.yaml; the server only
+      # honors `LIVEKIT_KEYS` (parsed by the --keys flag) for the key/secret
+      # pair. Docker Compose performs ${VAR} substitution HERE at parse time,
+      # sourcing values from `.env` in this directory.
+      LIVEKIT_KEYS: "${LIVEKIT_API_KEY}: ${LIVEKIT_API_SECRET}"
     command: ["--config", "/etc/livekit/livekit.yaml"]
     volumes:
       - ./livekit.yaml:/etc/livekit/livekit.yaml:ro

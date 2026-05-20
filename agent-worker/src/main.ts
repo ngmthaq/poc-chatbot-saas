@@ -11,15 +11,6 @@ function bootstrap(): void {
   const config = tryLoadConfig(log);
   const childLog = createLogger('agent-worker:main', { level: config.logLevel });
 
-  const options = new ServerOptions({
-    agent: AGENT_MODULE_PATH,
-    agentName: config.agentName,
-    wsURL: config.livekitUrl,
-    apiKey: config.livekitApiKey,
-    apiSecret: config.livekitApiSecret,
-    logLevel: config.logLevel,
-  });
-
   childLog.info(
     {
       agentName: config.agentName,
@@ -31,7 +22,16 @@ function bootstrap(): void {
 
   registerShutdownHandlers(childLog);
 
-  cli.runApp(options);
+  cli.runApp(
+    new ServerOptions({
+      agent: AGENT_MODULE_PATH,
+      agentName: config.agentName,
+      wsURL: config.livekitUrl,
+      apiKey: config.livekitApiKey,
+      apiSecret: config.livekitApiSecret,
+      logLevel: config.logLevel,
+    }),
+  );
 }
 
 function tryLoadConfig(log: ReturnType<typeof createLogger>): WorkerConfig {
@@ -40,21 +40,20 @@ function tryLoadConfig(log: ReturnType<typeof createLogger>): WorkerConfig {
   } catch (err: unknown) {
     log.fatal({ err }, 'invalid worker configuration; exiting');
     process.exit(1);
-    throw new Error('unreachable');
   }
 }
 
 function registerShutdownHandlers(log: ReturnType<typeof createLogger>): void {
   let shuttingDown = false;
+
   const handle = (signal: NodeJS.Signals): void => {
-    if (shuttingDown) {
-      return;
-    }
+    if (shuttingDown) return;
     shuttingDown = true;
     log.info({ signal }, 'received shutdown signal; allowing CLI drain to complete');
   };
 
   process.on('SIGTERM', handle);
+
   process.on('SIGINT', handle);
 
   process.on('uncaughtException', (err: unknown) => {

@@ -9,16 +9,19 @@
 #   runner     — tini PID 1, non-root `node` user, copies only what runtime
 #                actually needs (compiled `dist/`, prod modules).
 #
-# Unlike backend-service this worker has NO Prisma and NO HTTP server, so no
-# `openssl`/`libc6-compat` and no `EXPOSE`: it connects OUTBOUND to
-# `LIVEKIT_URL` and never binds a host port. `@livekit/rtc-node` ships
-# prebuilt binaries, so no native build toolchain is needed either.
+# Pinned base image: `node:20-bookworm-slim` (Debian glibc, 20.x LTS).
+# `@livekit/rtc-ffi-bindings` publishes only glibc (`*-gnu`) prebuilt native
+# bindings — no musl variant — so Alpine causes a runtime
+# `MODULE_NOT_FOUND` for `./rtc-node.linux-<arch>-musl.node` at startup.
+# bookworm-slim still ships the non-root `node` user (uid 1000) used below.
+# `:latest` is intentionally forbidden for reproducible builds.
 #
-# Pinned base image: `node:20-alpine` (latest 20.x LTS on Alpine). Alpine
-# keeps the image small AND ships a non-root `node` user (uid 1000) out of
-# the box. `:latest` is intentionally forbidden for reproducible builds.
+# Unlike backend-service this worker has NO Prisma and NO HTTP server, so no
+# `EXPOSE`: it connects OUTBOUND to `LIVEKIT_URL` and never binds a host
+# port. tini is installed via apt for clean PID-1 SIGTERM forwarding to the
+# Node process so LiveKit worker drain works on `docker compose down`.
 
-ARG NODE_IMAGE=node:20-alpine
+ARG NODE_IMAGE=node:20-bookworm-slim
 
 # ---------------------------------------------------------------------------
 # Stage 1 — builder
@@ -45,11 +48,8 @@ RUN yarn build
 # A clean install of production dependencies only. Used by the runner stage
 # so that devDependencies (jest, ts-node, eslint, ...) never reach the image.
 FROM ${NODE_IMAGE} AS deps-prod
-
 WORKDIR /app
-
 COPY package.json yarn.lock ./
-
 RUN yarn install --production --frozen-lockfile \
     && yarn cache clean
 
@@ -61,8 +61,7 @@ FROM ${NODE_IMAGE} AS runner
 # tini is PID 1 so the process tree reaps zombies and forwards SIGTERM to the
 # Node process cleanly — required for a clean LiveKit worker drain on
 # `docker compose down`.
-RUN apk add --no-cache tini
-
+RUN apt-get update && apt-get install -y --no-install-recommends tini && rm -rf /var/lib/apt/lists/*
 ENV NODE_ENV=production
 WORKDIR /app
 
@@ -79,7 +78,7 @@ COPY --from=builder /app/package.json ./package.json
 COPY scripts/entrypoint.sh /app/scripts/entrypoint.sh
 
 # `node` is the pre-existing non-root user (uid 1000) in the official Node
-# Alpine image. Ownership flip keeps runtime files non-root.
+# bookworm-slim image. Ownership flip keeps runtime files non-root.
 RUN chmod +x /app/scripts/entrypoint.sh \
     && chown -R node:node /app
 
@@ -88,5 +87,5 @@ USER node
 # No EXPOSE — the worker opens an OUTBOUND WebSocket to LIVEKIT_URL and
 # never listens on a host port.
 
-ENTRYPOINT ["/sbin/tini", "--", "/app/scripts/entrypoint.sh"]
+ENTRYPOINT ["/usr/bin/tini", "--", "/app/scripts/entrypoint.sh"]
 CMD ["node", "dist/main.js", "start"]

@@ -7,7 +7,13 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 export default defineConfig({
-  ignores: ['eslint.config.mjs'],
+  ignores: [
+    'dist/**/*',
+    'node_modules/**/*',
+    'coverage/**/*',
+    'eslint.config.mjs',
+    '*.cjs',
+  ],
   extends: [
     eslint.configs.recommended,
     tseslint.configs.recommendedTypeChecked,
