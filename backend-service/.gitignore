@@ -30,6 +30,15 @@ prisma/migrations/dev.db*
 # Uploads (local storage)
 uploads/
 
+# Corporate CA certs — operator-supplied PEM/CRT files dropped into
+# `certs/` so the Docker build can trust a TLS-intercepting proxy. The
+# material is sensitive (issued to a specific corporate network) and must
+# never be committed. The `.gitkeep` is re-included so the directory itself
+# stays tracked and the Dockerfile's `COPY certs/` step keeps working.
+certs/*.crt
+certs/*.pem
+!certs/.gitkeep
+
 # Persistent data directories produced if an operator switches the compose
 # stack from named volumes to bind mounts for debugging. Named volumes are
 # managed by Docker outside the repo, but these patterns guard against

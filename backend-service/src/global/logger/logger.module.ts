@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { Module, RequestMethod } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { LoggerModule as PinoLoggerModule } from 'nestjs-pino';
 
@@ -44,6 +44,7 @@ import { REQUEST_ID_HEADER } from '../../shared/constants';
               ],
             }),
           },
+          forRoutes: [{ path: '{*splat}', method: RequestMethod.ALL }],
         };
       },
     }),

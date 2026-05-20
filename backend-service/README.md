@@ -51,26 +51,26 @@ docker compose up -d
 
 ### Commands
 
-| Action                | Command                                                       |
-| --------------------- | ------------------------------------------------------------- |
-| Start (detached)      | `docker compose up -d`                                        |
-| Stop                  | `docker compose down`                                         |
-| Logs (live)           | `docker compose logs -f`                                      |
-| Logs (backend only)   | `docker compose logs -f backend`                              |
-| Restart               | `docker compose restart`                                      |
-| Status                | `docker compose ps`                                           |
-| Regenerate secrets    | `bash scripts/bootstrap.sh --force && docker compose up -d`   |
-| Validate compose file | `docker compose config`                                       |
+| Action                | Command                                                     |
+| --------------------- | ----------------------------------------------------------- |
+| Start (detached)      | `docker compose up -d`                                      |
+| Stop                  | `docker compose down`                                       |
+| Logs (live)           | `docker compose logs -f`                                    |
+| Logs (backend only)   | `docker compose logs -f backend`                            |
+| Restart               | `docker compose restart`                                    |
+| Status                | `docker compose ps`                                         |
+| Regenerate secrets    | `bash scripts/bootstrap.sh --force && docker compose up -d` |
+| Validate compose file | `docker compose config`                                     |
 
 `bootstrap.sh --force` writes a timestamped backup (`.env.bak.<ts>`) of the previous file before rotating, so credential rotations are recoverable for at least one cycle.
 
 ### Ports
 
-| Port      | Proto | Service / Purpose                                | Public firewall |
-| --------- | ----- | ------------------------------------------------ | --------------- |
-| `${PORT}` | TCP   | NestJS API (defaults to `3000` via bootstrap)    | Yes (via TLS proxy) |
-| 3306      | TCP   | MariaDB — internal compose network only          | **No**          |
-| 6379      | TCP   | Redis — internal compose network only            | **No**          |
+| Port      | Proto | Service / Purpose                             | Public firewall     |
+| --------- | ----- | --------------------------------------------- | ------------------- |
+| `${PORT}` | TCP   | NestJS API (defaults to `3000` via bootstrap) | Yes (via TLS proxy) |
+| 3306      | TCP   | MariaDB — internal compose network only       | **No**              |
+| 6379      | TCP   | Redis — internal compose network only         | **No**              |
 
 Public firewall rules should allow only the API port. MariaDB and Redis must never be reachable from outside the host.
 
@@ -103,16 +103,16 @@ Public firewall rules should allow only the API port. MariaDB and Redis must nev
 
 ## Scripts
 
-| Script | Description |
-|---|---|
-| `yarn start:dev` | Run the app in watch mode. |
-| `yarn build` | Compile to `dist/`. |
-| `yarn start:prod` | Run the compiled app (`node dist/main`). |
-| `yarn test` | Run unit tests with Jest. |
-| `yarn test:e2e` | Run end-to-end tests. |
-| `yarn lint` | Run ESLint (with `--fix`). |
-| `yarn prisma generate` | Regenerate the Prisma client after schema changes. |
-| `yarn prisma migrate dev` | Create + apply a new dev migration. |
+| Script                    | Description                                        |
+| ------------------------- | -------------------------------------------------- |
+| `yarn start:dev`          | Run the app in watch mode.                         |
+| `yarn build`              | Compile to `dist/`.                                |
+| `yarn start:prod`         | Run the compiled app (`node dist/main`).           |
+| `yarn test`               | Run unit tests with Jest.                          |
+| `yarn test:e2e`           | Run end-to-end tests.                              |
+| `yarn lint`               | Run ESLint (with `--fix`).                         |
+| `yarn prisma generate`    | Regenerate the Prisma client after schema changes. |
+| `yarn prisma migrate dev` | Create + apply a new dev migration.                |
 
 ## Folder Structure
 

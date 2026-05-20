@@ -9,6 +9,9 @@
 # Compose inherits them verbatim from docker-compose.yml, so backend still
 # waits for redis/mariadb healthy and loads secrets from `.env`.
 
+include:
+  - ./docker-compose.yml
+
 services:
   backend:
     build:
@@ -19,7 +22,7 @@ services:
       target: development
     # Explicit dev command (also the stage's CMD) — kept here so the intent
     # is obvious when reading the dev overlay in isolation.
-    command: ["yarn", "start:dev"]
+    command: ['yarn', 'start:dev']
     environment:
       # Dev tooling (nest --watch, verbose logging) keys off this.
       NODE_ENV: development
@@ -38,3 +41,12 @@ services:
       # start_period and flap the container unhealthy. Disabled for dev
       # only; the prod healthcheck in docker-compose.yml is untouched.
       disable: true
+    depends_on:
+      # In dev, we don't wait for healthy — just wait for the redis/mariadb
+      # containers to start. This lets us iterate faster on the backend without
+      # waiting for the full startup of these dependencies, which can be slow
+      # on a cold cache.
+      redis:
+        condition: service_started
+      mariadb:
+        condition: service_started

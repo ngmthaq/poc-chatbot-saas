@@ -21,10 +21,42 @@ ARG NODE_IMAGE=node:22-alpine
 FROM ${NODE_IMAGE} AS builder
 
 # openssl is required by `prisma generate` to fingerprint the engine; libc6-
-# compat smooths over glibc-only binaries some node-gyp builds expect.
-RUN apk add --no-cache openssl libc6-compat
+# compat smooths over glibc-only binaries some node-gyp builds expect;
+# ca-certificates ships `update-ca-certificates` so operator-supplied
+# corporate CAs (see COPY below) can be merged into the system trust store.
+RUN apk add --no-cache openssl libc6-compat ca-certificates
 
 WORKDIR /app
+
+# Trust any operator-supplied corporate CA certs before `yarn install` runs.
+# `node-pre-gyp` downloads prebuilt binaries (e.g. bcrypt's musl/arm64
+# tarball) over HTTPS, so behind a TLS-intercepting proxy we must teach the
+# image to verify the proxy's leaf. The `certs/` folder is gitignored apart
+# from `.gitkeep`, so this COPY is a no-op when no certs are supplied.
+#
+# Two root causes the RUN block below addresses:
+#   H1: Alpine's `update-ca-certificates` only ingests `*.crt` files — any
+#       operator-supplied `*.pem`/`*.cer` is silently skipped. We rename them
+#       to `*.crt` in-place so the system trust store actually picks them up.
+#   H2: Node ignores the OS trust store entirely unless `NODE_EXTRA_CA_CERTS`
+#       points at a PEM bundle. We concatenate every cert into a single
+#       bundle at `/etc/ssl/extra-ca-bundle.pem` so Node (and curl/OpenSSL/
+#       git, via their own env vars set below) can find them.
+COPY certs/ /usr/local/share/ca-certificates/extra/
+RUN find /usr/local/share/ca-certificates/extra -maxdepth 1 -type f -name '*.pem' -exec sh -c 'mv "$0" "${0%.pem}.crt"' {} \; \
+ && find /usr/local/share/ca-certificates/extra -maxdepth 1 -type f -name '*.cer' -exec sh -c 'mv "$0" "${0%.cer}.crt"' {} \; \
+ && update-ca-certificates \
+ && cat /usr/local/share/ca-certificates/extra/* > /etc/ssl/extra-ca-bundle.pem 2>/dev/null || true \
+ && touch /etc/ssl/extra-ca-bundle.pem
+
+# Point every TLS-using tool at the concatenated bundle so the corporate CA
+# is trusted uniformly: Node (`NODE_EXTRA_CA_CERTS`, used by node-pre-gyp),
+# curl (`CURL_CA_BUNDLE`), OpenSSL CLI/libs (`SSL_CERT_FILE`), git
+# (`GIT_SSL_CAINFO`). One ENV instruction = one image layer.
+ENV NODE_EXTRA_CA_CERTS=/etc/ssl/extra-ca-bundle.pem \
+    CURL_CA_BUNDLE=/etc/ssl/extra-ca-bundle.pem \
+    SSL_CERT_FILE=/etc/ssl/extra-ca-bundle.pem \
+    GIT_SSL_CAINFO=/etc/ssl/extra-ca-bundle.pem
 
 # Copy only the manifests first so dependency installs cache on lockfile
 # changes alone (source edits don't bust this layer).
@@ -50,9 +82,41 @@ RUN yarn build
 # so that devDependencies (jest, ts-node, eslint, ...) never reach the image.
 FROM ${NODE_IMAGE} AS deps-prod
 
-RUN apk add --no-cache openssl libc6-compat
+# Same package set as `builder` — ca-certificates lets `update-ca-certificates`
+# merge corporate CAs into the trust store so `node-pre-gyp` (used by bcrypt's
+# postinstall) can verify TLS when fetching its prebuilt musl/arm64 tarball
+# through a TLS-intercepting proxy.
+RUN apk add --no-cache openssl libc6-compat ca-certificates
 
 WORKDIR /app
+
+# Mirror builder's CA-trust step so the production-only install path also
+# verifies TLS correctly behind a corporate proxy. No-op when `certs/` is
+# empty (the directory only contains `.gitkeep` by default).
+#
+# Two root causes the RUN block below addresses:
+#   H1: Alpine's `update-ca-certificates` only ingests `*.crt` files — any
+#       operator-supplied `*.pem`/`*.cer` is silently skipped. We rename them
+#       to `*.crt` in-place so the system trust store actually picks them up.
+#   H2: Node ignores the OS trust store entirely unless `NODE_EXTRA_CA_CERTS`
+#       points at a PEM bundle. We concatenate every cert into a single
+#       bundle at `/etc/ssl/extra-ca-bundle.pem` so Node (and curl/OpenSSL/
+#       git, via their own env vars set below) can find them.
+COPY certs/ /usr/local/share/ca-certificates/extra/
+RUN find /usr/local/share/ca-certificates/extra -maxdepth 1 -type f -name '*.pem' -exec sh -c 'mv "$0" "${0%.pem}.crt"' {} \; \
+ && find /usr/local/share/ca-certificates/extra -maxdepth 1 -type f -name '*.cer' -exec sh -c 'mv "$0" "${0%.cer}.crt"' {} \; \
+ && update-ca-certificates \
+ && cat /usr/local/share/ca-certificates/extra/* > /etc/ssl/extra-ca-bundle.pem 2>/dev/null || true \
+ && touch /etc/ssl/extra-ca-bundle.pem
+
+# Point every TLS-using tool at the concatenated bundle so the corporate CA
+# is trusted uniformly: Node (`NODE_EXTRA_CA_CERTS`, used by node-pre-gyp),
+# curl (`CURL_CA_BUNDLE`), OpenSSL CLI/libs (`SSL_CERT_FILE`), git
+# (`GIT_SSL_CAINFO`). One ENV instruction = one image layer.
+ENV NODE_EXTRA_CA_CERTS=/etc/ssl/extra-ca-bundle.pem \
+    CURL_CA_BUNDLE=/etc/ssl/extra-ca-bundle.pem \
+    SSL_CERT_FILE=/etc/ssl/extra-ca-bundle.pem \
+    GIT_SSL_CAINFO=/etc/ssl/extra-ca-bundle.pem
 
 COPY package.json yarn.lock ./
 COPY prisma ./prisma

@@ -3,6 +3,12 @@
 # Anything listed here is NOT sent to the docker daemon. Keeping the build
 # context lean speeds up `docker build` and prevents host-side state (local
 # secrets, IDE configs, OS junk) from leaking into image layers.
+#
+# NOTE: `certs/` is intentionally NOT excluded — the builder and deps-prod
+# stages `COPY certs/` into `/usr/local/share/ca-certificates/extra/` so
+# operator-supplied corporate CAs are trusted before `yarn install` runs
+# (required for `node-pre-gyp` TLS through a corporate proxy). Do not add a
+# `certs/` ignore rule here.
 
 # Dependencies — reinstalled deterministically inside the builder stage from
 # `package.json` + `yarn.lock`. Copying the host's tree would slow the build
