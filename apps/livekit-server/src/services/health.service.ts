@@ -1,5 +1,7 @@
-export interface HealthStatus {
-  readonly status: 'ok';
+export class HealthService {
+  public getStatus() {
+    return { status: 'ok' };
+  }
 }
 
-export const getHealthStatus = (): HealthStatus => ({ status: 'ok' as const });
+export const healthService = new HealthService();

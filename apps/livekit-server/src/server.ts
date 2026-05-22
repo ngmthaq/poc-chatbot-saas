@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
-import { createApp } from './app.js';
-import { config } from './config/env.js';
+import { createApp } from './app';
+import { config } from './config/env';
 
 dotenv.config({ path: '.env.local' });
 

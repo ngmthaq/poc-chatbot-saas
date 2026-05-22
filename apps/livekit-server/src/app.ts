@@ -2,9 +2,9 @@ import cors from 'cors';
 import express, { type Express } from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
-import { errorHandler } from './middlewares/error-handler.js';
-import { notFoundHandler } from './middlewares/not-found.js';
-import router from './routes/index.js';
+import { errorHandler } from './middlewares/error-handler';
+import { notFoundHandler } from './middlewares/not-found';
+import router from './routes';
 
 export const createApp = (): Express => {
   const app = express();

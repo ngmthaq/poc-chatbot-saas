@@ -1,12 +1,7 @@
 import type { ErrorRequestHandler } from 'express';
 import createHttpError, { isHttpError } from 'http-errors';
-import { config } from '../config/env.js';
-
-interface ErrorResponseBody {
-  status: number;
-  message: string;
-  stack?: string;
-}
+import { config } from '../config/env';
+import type { ErrorResponseBody } from '../types/error-handler';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const errorHandler: ErrorRequestHandler = (err, _req, res, _next) => {
@@ -25,11 +20,7 @@ export const errorHandler: ErrorRequestHandler = (err, _req, res, _next) => {
 };
 
 const normalizeMessage = (err: unknown): string => {
-  if (err instanceof Error) {
-    return err.message;
-  }
-  if (typeof err === 'string') {
-    return err;
-  }
+  if (err instanceof Error) return err.message;
+  if (typeof err === 'string') return err;
   return 'Internal Server Error';
 };
