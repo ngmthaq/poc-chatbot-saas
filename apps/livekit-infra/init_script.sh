@@ -6,7 +6,7 @@
 #   1. Copy all infra/ files to the target Linux server.
 #   2. Fill in the .env file (copy from .env.example and set real values).
 #   3. Replace all YOURDOMAIN.COM placeholders in this script, livekit.yaml,
-#      ingress.yaml, and nginx/nginx.conf with your actual domain names.
+#      and nginx/nginx.conf with your actual domain names.
 #   4. Run: sudo ./init_script.sh
 #
 # Tested on: Ubuntu 22.04 LTS / Debian 12
@@ -20,7 +20,6 @@ set -euo pipefail
 # ---------------------------------------------------------------------------
 LIVEKIT_DOMAIN="livekit.YOURDOMAIN.COM"
 LIVEKIT_TURN_DOMAIN="livekit-turn.YOURDOMAIN.COM"
-LIVEKIT_WHIP_DOMAIN="livekit-whip.YOURDOMAIN.COM"
 CERTBOT_EMAIL="${CERTBOT_EMAIL:-}"            # Loaded from .env if set
 
 INSTALL_DIR="/opt/livekit"
@@ -128,7 +127,7 @@ obtain_certificates() {
     die "CERTBOT_EMAIL is not set. Set it in your .env file or export it before running."
   fi
 
-  log "Obtaining TLS certificates for all 3 domains..."
+  log "Obtaining TLS certificates for both domains..."
 
   certbot certonly \
     --webroot \
@@ -138,8 +137,7 @@ obtain_certificates() {
     --non-interactive \
     --expand \
     -d "${LIVEKIT_DOMAIN}" \
-    -d "${LIVEKIT_TURN_DOMAIN}" \
-    -d "${LIVEKIT_WHIP_DOMAIN}"
+    -d "${LIVEKIT_TURN_DOMAIN}"
 
   log "Certificates obtained successfully."
 }
@@ -230,7 +228,6 @@ main() {
   log "Install directory : ${INSTALL_DIR}"
   log "LiveKit domain    : ${LIVEKIT_DOMAIN}"
   log "TURN domain       : ${LIVEKIT_TURN_DOMAIN}"
-  log "WHIP domain       : ${LIVEKIT_WHIP_DOMAIN}"
   echo
 
   # Load .env if present (to pick up CERTBOT_EMAIL etc.)

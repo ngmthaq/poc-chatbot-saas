@@ -4,7 +4,6 @@
 #   nginx         - Reverse proxy (SNI passthrough on 443, ACME on 80)    — bridge network
 #   livekit       - LiveKit server                                        — host network
 #   redis-livekit - Redis dedicated to LiveKit message bus                — host network
-#   ingress       - LiveKit Ingress (RTMP/WHIP)                           — host network
 #   postgres      - PostgreSQL for the call-center-agent app              — bridge network
 #   redis-app     - Redis for the call-center-agent app                   — bridge network
 #
@@ -29,11 +28,10 @@ services:
       # TLS certificates issued by Certbot (read-only inside container)
       - /etc/letsencrypt:/etc/letsencrypt:ro
     extra_hosts:
-      # Allows Nginx to reach host-network services (livekit, ingress, redis-livekit)
+      # Allows Nginx to reach host-network services (livekit, redis-livekit)
       - 'host-gateway:host-gateway'
     depends_on:
       - livekit
-      - ingress
 
   # ---------------------------------------------------------------------------
   # LiveKit Server
@@ -52,7 +50,6 @@ services:
       - LIVEKIT_API_SECRET=${LIVEKIT_API_SECRET}
       - LIVEKIT_DOMAIN=${LIVEKIT_DOMAIN}
       - LIVEKIT_TURN_DOMAIN=${LIVEKIT_TURN_DOMAIN}
-      - LIVEKIT_WHIP_DOMAIN=${LIVEKIT_WHIP_DOMAIN}
     depends_on:
       - redis-livekit
 
@@ -66,24 +63,6 @@ services:
     volumes:
       - ./redis-livekit.conf:/etc/redis/redis.conf:ro
     command: redis-server /etc/redis/redis.conf
-
-  # ---------------------------------------------------------------------------
-  # LiveKit Ingress — RTMP / WHIP media ingest
-  # ---------------------------------------------------------------------------
-  ingress:
-    image: livekit/ingress:v1.4
-    restart: unless-stopped
-    network_mode: host
-    volumes:
-      - ./ingress.yaml:/ingress.yaml:ro
-    command: --config /ingress.yaml
-    environment:
-      - LIVEKIT_API_KEY=${LIVEKIT_API_KEY}
-      - LIVEKIT_API_SECRET=${LIVEKIT_API_SECRET}
-      - LIVEKIT_DOMAIN=${LIVEKIT_DOMAIN}
-    depends_on:
-      - redis-livekit
-      - livekit
 
   # ---------------------------------------------------------------------------
   # PostgreSQL — Application database (bridge network, localhost only)

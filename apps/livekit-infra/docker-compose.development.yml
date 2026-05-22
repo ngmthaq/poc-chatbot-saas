@@ -6,9 +6,8 @@
 #
 # Services:
 #   livekit       - LiveKit server in --dev mode (no auth enforcement)       — bridge network
-#   ingress       - LiveKit Ingress (RTMP/WHIP ingest)                       — bridge network
 #   postgres      - PostgreSQL for the call-center-agent app                 — bridge network
-#   redis-livekit - Redis dedicated to LiveKit + Ingress message bus         — bridge network
+#   redis-livekit - Redis dedicated to LiveKit message bus                   — bridge network
 #   redis-app     - Redis for the call-center-agent app (port 6380)          — bridge network
 #
 # Usage:
@@ -33,24 +32,6 @@ services:
       - redis-livekit
 
   # ---------------------------------------------------------------------------
-  # LiveKit Ingress — RTMP / WHIP media ingest
-  # ---------------------------------------------------------------------------
-  ingress:
-    image: livekit/ingress:v1.4
-    restart: unless-stopped
-    ports:
-      - '0.0.0.0:1935:1935' # RTMP ingest (OBS, ffmpeg, etc.)
-      - '0.0.0.0:8080:8080' # WHIP (WebRTC HTTP Ingest Protocol)
-    volumes:
-      - ./ingress.development.yaml:/ingress.development.yaml:ro
-    command: --config /ingress.development.yaml
-    networks:
-      - livekit-dev-net
-    depends_on:
-      - redis-livekit
-      - livekit
-
-  # ---------------------------------------------------------------------------
   # PostgreSQL — Application database
   # ---------------------------------------------------------------------------
   postgres:
@@ -68,7 +49,7 @@ services:
       - livekit-dev-net
 
   # ---------------------------------------------------------------------------
-  # Redis — Dedicated message bus for LiveKit server and Ingress (port 6379)
+  # Redis — Dedicated message bus for LiveKit server (port 6379)
   # ---------------------------------------------------------------------------
   redis-livekit:
     image: redis:7-alpine

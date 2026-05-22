@@ -47,12 +47,6 @@ turn:
   #   cert_file: /etc/letsencrypt/live/livekit-turn.YOURDOMAIN.COM/fullchain.pem
   #   key_file: /etc/letsencrypt/live/livekit-turn.YOURDOMAIN.COM/privkey.pem
 
-ingress:
-  # RTMP ingest base URL — Nginx passes through port 1935 to the ingress container
-  rtmp_base_url: rtmp://livekit.YOURDOMAIN.COM:1935/x
-  # WHIP ingest base URL — replace with your actual WHIP subdomain
-  whip_base_url: https://livekit-whip.YOURDOMAIN.COM/w
-
 keys:
   # IMPORTANT: The Go YAML parser does NOT expand ${VAR} shell-style substitution.
   # You MUST replace the placeholders below with your actual LiveKit API key and secret.

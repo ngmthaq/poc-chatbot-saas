@@ -13,19 +13,18 @@ This directory contains the complete Docker Compose stack for a self-hosted Live
 | Docker Engine 24+                      | Installed automatically by `init_script.sh` if missing                               |
 | Docker Compose v2+ (plugin)            | Installed automatically by `init_script.sh` if missing                               |
 | Certbot                                | Installed automatically by `init_script.sh` if missing                               |
-| 3 domains pointing to the server       | See DNS Records section below                                                        |
+| 2 domains pointing to the server       | See DNS Records section below                                                        |
 
 ---
 
 ## DNS Records
 
-Create the following A records with your DNS provider before running `init_script.sh`. All three must resolve to the same server IP.
+Create the following A records with your DNS provider before running `init_script.sh`. Both must resolve to the same server IP.
 
-| Subdomain                     | Type | Value         | Purpose                          |
-| ----------------------------- | ---- | ------------- | -------------------------------- |
-| `livekit.YOURDOMAIN.COM`      | A    | `<server-ip>` | LiveKit WebSocket / HTTP         |
-| `livekit-turn.YOURDOMAIN.COM` | A    | `<server-ip>` | LiveKit TURN TLS (port 5349)     |
-| `livekit-whip.YOURDOMAIN.COM` | A    | `<server-ip>` | LiveKit Ingress WHIP (port 8080) |
+| Subdomain                     | Type | Value         | Purpose                      |
+| ----------------------------- | ---- | ------------- | ---------------------------- |
+| `livekit.YOURDOMAIN.COM`      | A    | `<server-ip>` | LiveKit WebSocket / HTTP     |
+| `livekit-turn.YOURDOMAIN.COM` | A    | `<server-ip>` | LiveKit TURN TLS (port 5349) |
 
 ---
 
@@ -33,15 +32,14 @@ Create the following A records with your DNS provider before running `init_scrip
 
 Open the following ports in your server's firewall / security group:
 
-| Protocol | Port(s)     | Direction | Purpose                                               |
-| -------- | ----------- | --------- | ----------------------------------------------------- |
-| TCP      | 80          | Inbound   | Certbot HTTP-01 ACME challenge + HTTP→HTTPS redirect  |
-| TCP      | 443         | Inbound   | Nginx SNI passthrough (routes to LiveKit, TURN, WHIP) |
-| TCP      | 1935        | Inbound   | RTMP ingest (OBS and compatible streaming software)   |
-| TCP      | 5349        | Inbound   | TURN TLS (ICE fallback — LiveKit handles TLS)         |
-| TCP      | 7881        | Inbound   | WebRTC TCP fallback                                   |
-| UDP      | 3478        | Inbound   | STUN / TURN UDP                                       |
-| UDP      | 50000-60000 | Inbound   | WebRTC media streams                                  |
+| Protocol | Port(s)     | Direction | Purpose                                              |
+| -------- | ----------- | --------- | ---------------------------------------------------- |
+| TCP      | 80          | Inbound   | Certbot HTTP-01 ACME challenge + HTTP→HTTPS redirect |
+| TCP      | 443         | Inbound   | Nginx SNI passthrough (routes to LiveKit and TURN)   |
+| TCP      | 5349        | Inbound   | TURN TLS (ICE fallback — LiveKit handles TLS)        |
+| TCP      | 7881        | Inbound   | WebRTC TCP fallback                                  |
+| UDP      | 3478        | Inbound   | STUN / TURN UDP                                      |
+| UDP      | 50000-60000 | Inbound   | WebRTC media streams                                 |
 
 ---
 
@@ -52,7 +50,6 @@ Open the following ports in your server's firewall / security group:
 | `nginx`         | `nginx:1.27-alpine`           | bridge       | `0.0.0.0:80`, `0.0.0.0:443`                   | SNI passthrough reverse proxy; ACME HTTP-01; HTTPS redirect |
 | `livekit`       | `livekit/livekit-server:v1.8` | host         | 7880 (HTTP/WS), 7881 (TCP), 50000-60000 (UDP) | LiveKit media server                                        |
 | `redis-livekit` | `redis:7-alpine`              | host         | 127.0.0.1:6379                                | Redis for LiveKit internal pub/sub — loopback only          |
-| `ingress`       | `livekit/ingress:v1.4`        | host         | 1935 (RTMP), 8080 (WHIP), 9090 (relay)        | LiveKit Ingress for RTMP and WHIP ingest                    |
 | `postgres`      | `postgres:16-alpine`          | bridge       | `127.0.0.1:5432`                              | PostgreSQL database for the call-center-agent application   |
 | `redis-app`     | `redis:7-alpine`              | bridge       | `127.0.0.1:6380`                              | Redis cache/queue for the call-center-agent application     |
 
@@ -75,16 +72,15 @@ cp .env.example .env
 nano .env   # Fill in all values: LIVEKIT_API_KEY, LIVEKIT_API_SECRET, domains, POSTGRES_*, CERTBOT_EMAIL
 ```
 
-> **Important — livekit.yaml keys section:** The Go YAML parser used by LiveKit does **not** expand `${VAR}` shell-style placeholders. You must manually edit the `keys:` section in `livekit.yaml` and replace `replace_this_key` and `replace_this_secret` with your actual LiveKit API key and secret. The `LIVEKIT_API_KEY` / `LIVEKIT_API_SECRET` values in `.env` are used by the CLI and ingress service, but **not** automatically read by `livekit.yaml`.
+> **Important — livekit.yaml keys section:** The Go YAML parser used by LiveKit does **not** expand `${VAR}` shell-style placeholders. You must manually edit the `keys:` section in `livekit.yaml` and replace `replace_this_key` and `replace_this_secret` with your actual LiveKit API key and secret. The `LIVEKIT_API_KEY` / `LIVEKIT_API_SECRET` values in `.env` are used by the CLI, but **not** automatically read by `livekit.yaml`.
 
 ### 3. Update domain placeholders
 
 Replace every occurrence of `YOURDOMAIN.COM` in these files with your actual domain:
 
-- `init_script.sh` — `LIVEKIT_DOMAIN`, `LIVEKIT_TURN_DOMAIN`, `LIVEKIT_WHIP_DOMAIN` variables
-- `livekit.yaml` — `turn.domain`, `ingress.rtmp_base_url`, `ingress.whip_base_url`, and the `keys:` placeholder values
-- `ingress.yaml` — `ws_url`
-- `nginx/nginx.conf` — the three entries in the `map` block
+- `init_script.sh` — `LIVEKIT_DOMAIN`, `LIVEKIT_TURN_DOMAIN` variables
+- `livekit.yaml` — `turn.domain` and the `keys:` placeholder values
+- `nginx/nginx.conf` — the two entries in the `map` block
 
 ### 4. Run the bootstrap script
 
@@ -99,7 +95,7 @@ The script will:
 2. Install Certbot (if not already present)
 3. Copy all files to `/opt/livekit/`
 4. Start the Nginx container so port 80 is available
-5. Obtain TLS certificates for all 3 domains via Certbot HTTP-01
+5. Obtain TLS certificates for both domains via Certbot HTTP-01
 6. Add a weekly cron job to renew certificates and reload Nginx
 7. Write a systemd unit (`livekit-docker.service`) and start the full stack
 
@@ -224,13 +220,11 @@ docker compose -f docker-compose.development.yml down -v
 
 ### Service Port Reference
 
-| Service    | Host Address            | Purpose                                    |
-| ---------- | ----------------------- | ------------------------------------------ |
-| LiveKit    | `ws://localhost:7880`   | WebSocket / HTTP endpoint for SDK clients  |
-| Ingress    | `rtmp://localhost:1935` | RTMP ingest (OBS, ffmpeg, streaming tools) |
-| Ingress    | `http://localhost:8080` | WHIP (WebRTC HTTP Ingest Protocol)         |
-| PostgreSQL | `localhost:5432`        | Application database                       |
-| Redis      | `localhost:6379`        | LiveKit message bus                        |
+| Service    | Host Address          | Purpose                                   |
+| ---------- | --------------------- | ----------------------------------------- |
+| LiveKit    | `ws://localhost:7880` | WebSocket / HTTP endpoint for SDK clients |
+| PostgreSQL | `localhost:5432`      | Application database                      |
+| Redis      | `localhost:6379`      | LiveKit message bus                       |
 
 ### SDK Connection Details
 
