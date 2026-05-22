@@ -6,7 +6,7 @@ export const getWeather = llm.tool({
         Use this tool to look up current weather information in the given location.
         If the location is not supported by the weather service, the tool will indicate this.
         You must tell the user the location's weather is unavailable.
-    `.trim(),
+    `,
   parameters: z.object({
     location: z
       .string()
