@@ -1,8 +1,8 @@
-import { inference } from '@livekit/agents';
+import * as mistral from '@livekit/agents-plugin-mistralai';
 
 export const STTAgent = () => {
-  return new inference.STT({
-    model: 'deepgram/nova-3',
+  return new mistral.STT({
+    model: 'voxtral-mini-transcribe-realtime-2602',
     language: 'multi',
   });
 };

@@ -31,17 +31,15 @@ import { fileURLToPath } from 'node:url';
 import { LLMAgent } from './agents/llm';
 import { STTAgent } from './agents/stt';
 import { TTSAgent } from './agents/tts';
+import type { ProcessUserData } from './types/process-user-data';
 
 dotenv.config({ path: '.env.local' });
-
-interface ProcessUserData {
-  vad: silero.VAD;
-}
 
 export default defineAgent<ProcessUserData>({
   prewarm: async (proc) => {
     proc.userData.vad = await silero.VAD.load();
   },
+
   entry: async (ctx) => {
     const session = new voice.AgentSession({
       stt: STTAgent(),
@@ -57,7 +55,9 @@ export default defineAgent<ProcessUserData>({
       agent: new LLMAgent(),
       room: ctx.room,
       inputOptions: {
-        noiseCancellation: audioEnhancement({ model: 'quailVfS' }),
+        noiseCancellation: audioEnhancement({
+          model: 'quailVfS',
+        }),
       },
     });
 
@@ -69,4 +69,8 @@ export default defineAgent<ProcessUserData>({
   },
 });
 
-cli.runApp(new ServerOptions({ agent: fileURLToPath(import.meta.url) }));
+cli.runApp(
+  new ServerOptions({
+    agent: fileURLToPath(import.meta.url),
+  }),
+);

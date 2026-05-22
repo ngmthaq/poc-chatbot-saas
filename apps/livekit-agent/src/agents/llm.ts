@@ -20,7 +20,8 @@
  *   Also add `import { llm } from '@livekit/agents'` and `import { z } from 'zod'`.
  *   See the commented-out `getWeather` example below.
  */
-import { dedent, inference, voice } from '@livekit/agents';
+import { dedent, voice } from '@livekit/agents';
+import * as mistral from '@livekit/agents-plugin-mistralai';
 
 export class LLMAgent extends voice.Agent {
   constructor() {
@@ -59,7 +60,7 @@ export class LLMAgent extends voice.Agent {
         - Protect privacy and minimize sensitive data.
       `,
 
-      llm: new inference.LLM({ model: 'google/gemini-3.5-flash' }),
+      llm: new mistral.LLM({ model: 'mistral-small-latest' }),
 
       // tools: {
       //   getWeather: llm.tool({

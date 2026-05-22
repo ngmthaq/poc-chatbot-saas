@@ -36,6 +36,7 @@
   "dependencies": {
     "@livekit/agents": "^1.4.3",
     "@livekit/agents-plugin-livekit": "^1.4.3",
+    "@livekit/agents-plugin-mistralai": "^1.4.4",
     "@livekit/agents-plugin-silero": "^1.4.3",
     "@livekit/plugins-ai-coustics": "^0.2.14",
     "dotenv": "^17.4.1",

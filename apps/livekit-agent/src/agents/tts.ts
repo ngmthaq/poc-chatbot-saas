@@ -1,8 +1,8 @@
-import { inference } from '@livekit/agents';
+import * as mistral from '@livekit/agents-plugin-mistralai';
 
 export const TTSAgent = () => {
-  return new inference.TTS({
-    model: 'cartesia/sonic-3',
-    voice: '9626c31c-bec5-4cca-baa8-f8ba9e84c8bc',
+  return new mistral.TTS({
+    model: 'voxtral-mini-tts-latest',
+    voice: 'en_paul_neutral',
   });
 };
