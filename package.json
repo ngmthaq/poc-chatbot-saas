@@ -1,0 +1,25 @@
+{
+  "name": "call-center-agent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Call center AI agent monorepo",
+  "scripts": {
+    "livekit-agent": "pnpm --filter livekit-agent $*",
+    "livekit-server": "pnpm --filter livekit-server $*",
+    "livekit-client": "pnpm --filter livekit-client $*"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=10.0.0"
+  },
+  "keywords": [
+    "call-center",
+    "ai-agent",
+    "livekit",
+    "voice-ai",
+    "monorepo"
+  ],
+  "author": "Victor Nguyen <ngmthaq.20@gmail.com>",
+  "license": "ISC",
+  "packageManager": "pnpm@10.25.0"
+}

@@ -22,7 +22,7 @@
  */
 import { dedent, inference, voice } from '@livekit/agents';
 
-export class Agent extends voice.Agent {
+export class LLMAgent extends voice.Agent {
   constructor() {
     super({
       instructions: dedent`
