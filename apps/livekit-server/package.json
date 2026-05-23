@@ -22,6 +22,7 @@
     "express": "^4.21.0",
     "helmet": "^8.0.0",
     "http-errors": "^2.0.0",
+    "humps": "^2.0.1",
     "livekit-server-sdk": "^2.15.3",
     "morgan": "^1.10.0",
     "zod": "^3.25.76"
@@ -31,6 +32,7 @@
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/http-errors": "^2.0.4",
+    "@types/humps": "^2.0.6",
     "@types/morgan": "^1.9.9",
     "@types/node": "^22.19.17",
     "eslint": "^9.39.4",

@@ -210,6 +210,9 @@ importers:
       http-errors:
         specifier: ^2.0.0
         version: 2.0.1
+      humps:
+        specifier: ^2.0.1
+        version: 2.0.1
       livekit-server-sdk:
         specifier: ^2.15.3
         version: 2.15.3
@@ -232,6 +235,9 @@ importers:
       '@types/http-errors':
         specifier: ^2.0.4
         version: 2.0.5
+      '@types/humps':
+        specifier: ^2.0.6
+        version: 2.0.6
       '@types/morgan':
         specifier: ^1.9.9
         version: 1.9.10
@@ -1814,6 +1820,9 @@ packages:
   '@types/http-errors@2.0.5':
     resolution: {integrity: sha512-r8Tayk8HJnX0FztbZN7oVqGccWgw98T/0neJphO91KkmOzug1KkofZURD4UaD5uH8AqcFLfdPErnBod0u71/qg==}
 
+  '@types/humps@2.0.6':
+    resolution: {integrity: sha512-Fagm1/a/1J9gDKzGdtlPmmTN5eSw/aaTzHtj740oSfo+MODsSY2WglxMmhTdOglC8nxqUhGGQ+5HfVtBvxo3Kg==}
+
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
@@ -2605,6 +2614,9 @@ packages:
   https-proxy-agent@7.0.6:
     resolution: {integrity: sha512-vK9P5/iUfdl95AI+JVyUuIcVtd4ofvtrOr3HNtM2yxC9bnMbEdp3x01OhQNnjb8IJYi38VlTE3mBXwcfvywuSw==}
     engines: {node: '>= 14'}
+
+  humps@2.0.1:
+    resolution: {integrity: sha512-E0eIbrFWUhwfXJmsbdjRQFQPrl5pTEoKlz163j1mTqqUnU9PgR4AgB8AIITzuB3vLBdxZXyZ9TDIrwB2OASz4g==}
 
   husky@9.1.7:
     resolution: {integrity: sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==}
@@ -5146,6 +5158,8 @@ snapshots:
 
   '@types/http-errors@2.0.5': {}
 
+  '@types/humps@2.0.6': {}
+
   '@types/json-schema@7.0.15': {}
 
   '@types/morgan@1.9.10':
@@ -6058,6 +6072,8 @@ snapshots:
       debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
+
+  humps@2.0.1: {}
 
   husky@9.1.7: {}
 

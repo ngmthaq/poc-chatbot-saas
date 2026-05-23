@@ -11,7 +11,7 @@ export class WebhookController {
       return this.webhookService.receive(rawBody, authHeader);
     } catch (error) {
       console.error('Failed to process webhook event:', error);
-      return {};
+      return;
     }
   };
 }

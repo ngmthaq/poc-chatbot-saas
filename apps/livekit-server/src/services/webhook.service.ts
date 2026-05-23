@@ -12,6 +12,7 @@ export class WebhookService {
 
   public async receive(rawBody: string, authHeader: string | null): Promise<void> {
     const event = await this.receiver.receive(rawBody, authHeader ?? undefined);
+    console.log(`Received webhook event: ${event.event} for room: ${event.room?.name}`);
     switch (event.event) {
       case 'room_finished': {
         await this.handleRoomFinished(event);

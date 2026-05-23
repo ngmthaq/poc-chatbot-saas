@@ -1,10 +1,10 @@
 import { Router } from 'express';
 import healthRouter from './health.route';
-import roomRouter from './room.route';
+import liveKitRouter from './livekit.route';
 
 const router: Router = Router();
 
 router.use('/health', healthRouter);
-router.use('/rooms', roomRouter);
+router.use('/livekit', liveKitRouter);
 
 export default router;
