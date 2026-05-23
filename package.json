@@ -1,15 +1,16 @@
 {
   "name": "call-center-agent",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "private": true,
   "description": "Call center AI agent monorepo",
   "scripts": {
+    "prepare": "husky",
+    "format": "prettier --write .",
+    "copy-env": "bash scripts/copy-env.sh",
     "livekit-agent": "pnpm --filter livekit-agent $*",
     "livekit-server": "pnpm --filter livekit-server $*",
     "livekit-client": "pnpm --filter livekit-client $*",
-    "livekit-infra": "pnpm --filter livekit-infra $*",
-    "format": "prettier --write .",
-    "prepare": "husky"
+    "livekit-infra": "pnpm --filter livekit-infra $*"
   },
   "engines": {
     "node": ">=22.0.0",
