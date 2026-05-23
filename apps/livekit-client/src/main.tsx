@@ -1,4 +1,3 @@
-import { queryClient } from '@/lib/queryClient';
 import { routeTree } from '@/routeTree.gen';
 import { theme } from '@/theme';
 import { CssBaseline, ThemeProvider } from '@mui/material';
@@ -8,6 +7,7 @@ import { RouterProvider, createRouter } from '@tanstack/react-router';
 import { Provider as JotaiProvider } from 'jotai';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { queryClient } from './configs';
 
 const router = createRouter({ routeTree });
 

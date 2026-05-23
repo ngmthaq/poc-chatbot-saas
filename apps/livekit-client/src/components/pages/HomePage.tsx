@@ -1,7 +1,7 @@
-import { MainTemplate } from '@/components/templates/MainTemplate';
 import { userSessionAtom } from '@/stores';
 import { Typography } from '@mui/material';
 import { useAtomValue } from 'jotai';
+import { MainTemplate } from '../templates';
 
 export function HomePage() {
   const session = useAtomValue(userSessionAtom);

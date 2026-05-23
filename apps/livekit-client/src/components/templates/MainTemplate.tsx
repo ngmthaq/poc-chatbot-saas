@@ -1,6 +1,6 @@
-import { PageHeader } from '@/components/molecules/PageHeader';
 import { Box, Container } from '@mui/material';
 import type { ReactNode } from 'react';
+import { PageHeader } from '../molecules';
 
 type MainTemplateProps = {
   title: string;
