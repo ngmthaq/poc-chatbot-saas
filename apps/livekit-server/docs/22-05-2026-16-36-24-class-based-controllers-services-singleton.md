@@ -63,13 +63,13 @@
 
 ## Task List
 
-| # | Status | Task | Responsible Role | Dependencies | Skills |
-| --- | ------ | ---- | ---------------- | ------------ | ------ |
-| 1 | DONE | Refactor `health.service.ts` to `class HealthService` with `public getStatus(): { status: string }`. Export class + singleton `healthService`. | developer | none | `clean-code` |
-| 2 | DONE | Refactor `health.controller.ts` to `class HealthController` with arrow-property `getStatus: RequestHandler`. Import `healthService` singleton. Export class + singleton `healthController`. Keep `import type { RequestHandler }`. | developer | task 1 | `clean-code` |
-| 3 | DONE | Update `health.route.ts`: `router.get('/', healthController.getStatus)`. | developer | task 2 | `clean-code` |
-| 4 | DONE | Verification: `pnpm --filter livekit-server typecheck`, `lint`, `build`. All pass. | developer | task 3 | `clean-code` |
-| 5 | SKIPPED | Tests — skipped per Q1 (Skip-Testing honored). | tester | task 4 | — |
+| #   | Status  | Task                                                                                                                                                                                                                               | Responsible Role | Dependencies | Skills       |
+| --- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------ | ------------ |
+| 1   | DONE    | Refactor `health.service.ts` to `class HealthService` with `public getStatus(): { status: string }`. Export class + singleton `healthService`.                                                                                     | developer        | none         | `clean-code` |
+| 2   | DONE    | Refactor `health.controller.ts` to `class HealthController` with arrow-property `getStatus: RequestHandler`. Import `healthService` singleton. Export class + singleton `healthController`. Keep `import type { RequestHandler }`. | developer        | task 1       | `clean-code` |
+| 3   | DONE    | Update `health.route.ts`: `router.get('/', healthController.getStatus)`.                                                                                                                                                           | developer        | task 2       | `clean-code` |
+| 4   | DONE    | Verification: `pnpm --filter livekit-server typecheck`, `lint`, `build`. All pass.                                                                                                                                                 | developer        | task 3       | `clean-code` |
+| 5   | SKIPPED | Tests — skipped per Q1 (Skip-Testing honored).                                                                                                                                                                                     | tester           | task 4       | —            |
 
 ## Reviewer Decision
 

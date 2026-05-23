@@ -34,7 +34,7 @@ redis:
 
 turn:
   enabled: true
-  # Replace with your actual TURN subdomain
+  # IMPORTANT: Replace with your actual TURN subdomain
   domain: livekit-turn.YOURDOMAIN.COM
   # TLS port for TURN — LiveKit handles TLS termination; Nginx passes through raw TCP
   tls_port: 5349
@@ -57,3 +57,11 @@ keys:
   # Example (replace with your own — do not use these sample values in production):
   #   myapikey123: myapisecretxxxxxxxxxxxxxxxxxxx
   replace_this_key: replace_this_secret
+
+webhook:
+  # Must match the literal API key defined above in keys:
+  # IMPORTANT: Replace replace_this_key with your actual API key name
+  api_key: replace_this_key
+  urls:
+    # IMPORTANT: Replace with your actual livekit-server production URL
+    - https://YOURDOMAIN.COM/webhook

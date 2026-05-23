@@ -16,7 +16,8 @@
 set -euo pipefail
 
 # ---------------------------------------------------------------------------
-# Configuration — replace these placeholder values with your actual domains
+# IMPORTANT: Configuration — replace these placeholder values
+# with your actual domains
 # ---------------------------------------------------------------------------
 LIVEKIT_DOMAIN="livekit.YOURDOMAIN.COM"
 LIVEKIT_TURN_DOMAIN="livekit-turn.YOURDOMAIN.COM"

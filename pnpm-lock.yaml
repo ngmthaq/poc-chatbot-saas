@@ -124,6 +124,9 @@ importers:
       morgan:
         specifier: ^1.10.0
         version: 1.10.1
+      zod:
+        specifier: ^3.25.76
+        version: 3.25.76
     devDependencies:
       '@eslint/js':
         specifier: ^9.39.4

@@ -44,3 +44,12 @@ keys:
   # The --dev flag makes LiveKit match these internally.
   # Format: <api_key>: <api_secret>
   devkey: devsecret
+
+webhook:
+  # Must match one of the keys above — used to sign the JWT in Authorization header
+  api_key: devkey
+  urls:
+    # host.docker.internal resolves to the Docker host on macOS/Windows Docker Desktop.
+    # On Linux, add `extra_hosts: [host.docker.internal:host-gateway]` to the livekit
+    # service in docker-compose.development.yml.
+    - http://host.docker.internal:3000/webhook
