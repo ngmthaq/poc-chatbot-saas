@@ -8,8 +8,8 @@
     "build": "tsc -p tsconfig.app.json && vite build",
     "preview": "vite preview",
     "typecheck": "tsc -p tsconfig.app.json --noEmit",
-    "lint": "eslint \"**/*.{ts,tsx}\"",
-    "lint:fix": "eslint --fix \"**/*.{ts,tsx}\""
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
   },
   "engines": {
     "node": ">=22.0.0",
