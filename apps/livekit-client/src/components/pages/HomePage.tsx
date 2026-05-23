@@ -1,16 +1,31 @@
-import { userSessionAtom } from '@/stores';
-import { Typography } from '@mui/material';
-import { useAtomValue } from 'jotai';
+import { roomService } from '@/services';
+import { roomSessionAtom } from '@/stores';
+import { useMutation } from '@tanstack/react-query';
+import { useAtom } from 'jotai';
+import { JoinRoomForm } from '../molecules';
 import { MainTemplate } from '../templates';
+import { ConferenceRoom } from './ConferenceRoom';
 
 export function HomePage() {
-  const session = useAtomValue(userSessionAtom);
+  const [roomSession, setRoomSession] = useAtom(roomSessionAtom);
+
+  const { mutate, isPending, error } = useMutation({
+    mutationFn: ({ identity, name }: { identity: string; name?: string }) =>
+      roomService.join(identity, name),
+    onSuccess: (data) => setRoomSession(data),
+  });
+
+  if (roomSession !== null) {
+    return <ConferenceRoom roomSession={roomSession} onDisconnected={() => setRoomSession(null)} />;
+  }
 
   return (
-    <MainTemplate title="Call Center Agent">
-      <Typography variant="body1">
-        {session ? `Welcome, ${session.displayName}` : 'Welcome to Call Center Agent'}
-      </Typography>
+    <MainTemplate title="Join Room">
+      <JoinRoomForm
+        onJoin={(identity, name) => mutate({ identity, ...(name !== undefined ? { name } : {}) })}
+        isPending={isPending}
+        error={error}
+      />
     </MainTemplate>
   );
 }

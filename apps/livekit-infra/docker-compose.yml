@@ -76,6 +76,7 @@ services:
     ports:
       - '0.0.0.0:7880:7880'
       - '0.0.0.0:7881:7881'
+      - '0.0.0.0:50000-50100:50000-50100/udp' # WebRTC UDP ICE media ports
     env_file:
       - .env
     command: --dev

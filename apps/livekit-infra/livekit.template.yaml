@@ -7,7 +7,7 @@ port: 7880
 rtc:
   tcp_port: 7881
   port_range_start: 50000
-  port_range_end: 60000
+  port_range_end: 50100
   use_external_ip: ${LIVEKIT_USE_EXTERNAL_IP}
   enable_loopback_candidate: ${LIVEKIT_ENABLE_LOOPBACK_CANDIDATE}
 

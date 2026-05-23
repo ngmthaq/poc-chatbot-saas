@@ -28,6 +28,7 @@ let config = {} as Readonly<{
     apiKey: string;
     apiSecret: string;
     url: string;
+    agentName: string;
   };
 }>;
 
@@ -40,6 +41,7 @@ function loadConfig() {
         apiKey: parseRequiredString(process.env.LIVEKIT_API_KEY, 'LIVEKIT_API_KEY'),
         apiSecret: parseRequiredString(process.env.LIVEKIT_API_SECRET, 'LIVEKIT_API_SECRET'),
         url: parseRequiredString(process.env.LIVEKIT_URL, 'LIVEKIT_URL'),
+        agentName: parseRequiredString(process.env.LIVEKIT_AGENT_NAME, 'LIVEKIT_AGENT_NAME'),
       } as const,
     } as const;
   }

@@ -16,8 +16,8 @@
  *   agent should respond. See https://docs.livekit.io/agents/build/turns
  * - preemptiveGeneration: allows the LLM to generate a response while waiting
  *   for end of turn.
- * - noiseCancellation: ai-coustics QUAIL audio enhancement — works for both
- *   WebRTC and telephony (SIP) participants.
+ * - noiseCancellation: BackgroundVoiceCancellation from @livekit/noise-cancellation-node
+ *   — suppresses background noise for both WebRTC and telephony (SIP) participants.
  *
  * On entry: starts the session (initializes the pipeline and warms up models),
  * joins the room, and greets the user. Runs the agent server via cli.runApp.
@@ -25,7 +25,7 @@
 import { ServerOptions, cli, defineAgent, voice } from '@livekit/agents';
 import * as livekit from '@livekit/agents-plugin-livekit';
 import * as silero from '@livekit/agents-plugin-silero';
-import { audioEnhancement } from '@livekit/plugins-ai-coustics';
+import { BackgroundVoiceCancellation } from '@livekit/noise-cancellation-node';
 import dotenv from 'dotenv';
 import { fileURLToPath } from 'node:url';
 import { LLMAgent } from './agents';
@@ -54,9 +54,7 @@ export default defineAgent<ProcessUserData>({
       agent: new LLMAgent(),
       room: ctx.room,
       inputOptions: {
-        noiseCancellation: audioEnhancement({
-          model: 'quailVfS',
-        }),
+        noiseCancellation: BackgroundVoiceCancellation(),
       },
     });
 

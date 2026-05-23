@@ -1,5 +1,6 @@
 import { routeTree } from '@/routeTree.gen';
 import { theme } from '@/theme';
+import '@livekit/components-styles';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
