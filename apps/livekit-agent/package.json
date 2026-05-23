@@ -9,8 +9,6 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{ts,js}\"",
     "lint:fix": "eslint --fix \"**/*.{ts,js}\"",
-    "format": "prettier --write \"**/*.{ts,js,json,md}\"",
-    "format:check": "prettier --check \"**/*.{ts,js,json,md}\"",
     "test": "vitest --run",
     "test:watch": "vitest",
     "dev": "pnpm run build && node dist/main.js dev",
@@ -23,7 +21,6 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
-    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@types/node": "^22.19.17",
     "eslint": "^9.39.4",
     "globals": "^16.5.0",

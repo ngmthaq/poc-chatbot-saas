@@ -1,3 +1,5 @@
-apps/
 node_modules/
 pnpm-lock.yaml
+.agents/
+.claude/
+dist/

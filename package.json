@@ -1,6 +1,6 @@
 {
   "name": "call-center-agent",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "private": true,
   "description": "Call center AI agent monorepo",
   "scripts": {
@@ -27,6 +27,7 @@
   "license": "ISC",
   "packageManager": "pnpm@10.25.0",
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "husky": "^9.1.7",
     "prettier": "^3.8.3"
   }

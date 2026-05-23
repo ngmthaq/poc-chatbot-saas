@@ -1,3 +1,8 @@
+import dotenv from 'dotenv';
+import path from 'node:path';
+
+dotenv.config({ path: path.resolve(process.cwd(), '.env.local') });
+
 const parsePort = (raw: string | undefined): number => {
   const DEFAULT_PORT = 3000;
   if (raw === undefined || raw === '') return DEFAULT_PORT;
@@ -16,8 +21,6 @@ const parseRequiredString = (raw: string | undefined, keyName: string): string =
   return trimmed;
 };
 
-// console.log(process.env);
-
 let config = {} as Readonly<{
   port: number;
   nodeEnv: string;
@@ -29,16 +32,19 @@ let config = {} as Readonly<{
 }>;
 
 function loadConfig() {
-  if (Object.keys(config).length > 0) return;
-  config = {
-    port: parsePort(process.env.PORT),
-    nodeEnv: process.env.NODE_ENV ?? 'development',
-    livekit: {
-      apiKey: parseRequiredString(process.env.LIVEKIT_API_KEY, 'LIVEKIT_API_KEY'),
-      apiSecret: parseRequiredString(process.env.LIVEKIT_API_SECRET, 'LIVEKIT_API_SECRET'),
-      url: parseRequiredString(process.env.LIVEKIT_URL, 'LIVEKIT_URL'),
-    } as const,
-  } as const;
+  if (Object.keys(config).length === 0) {
+    config = {
+      port: parsePort(process.env.PORT),
+      nodeEnv: process.env.NODE_ENV ?? 'development',
+      livekit: {
+        apiKey: parseRequiredString(process.env.LIVEKIT_API_KEY, 'LIVEKIT_API_KEY'),
+        apiSecret: parseRequiredString(process.env.LIVEKIT_API_SECRET, 'LIVEKIT_API_SECRET'),
+        url: parseRequiredString(process.env.LIVEKIT_URL, 'LIVEKIT_URL'),
+      } as const,
+    } as const;
+  }
+
+  return config;
 }
 
-export { loadConfig, config };
+export { loadConfig };

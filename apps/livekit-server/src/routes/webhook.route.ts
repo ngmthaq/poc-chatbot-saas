@@ -1,8 +1,9 @@
 import express, { Router } from 'express';
-import { webhookController } from '../controllers/webhook.controller';
+import { WebhookController } from '../controllers/webhook.controller';
 import { responseHandler } from '../utils/response-handler';
 
 const router: Router = Router();
+const webhookController = new WebhookController();
 
 router.post('/', express.text({ type: '*/*' }), responseHandler(webhookController.receive));
 

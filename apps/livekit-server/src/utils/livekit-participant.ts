@@ -1,17 +1,14 @@
 import { RoomServiceClient } from 'livekit-server-sdk';
 import type { ParticipantInfo, ParticipantPermission } from 'livekit-server-sdk';
-import { config } from '../config/env';
+import { loadConfig } from '../config/env';
 
 export class LiveKitParticipantUtil {
-  private readonly roomService: RoomServiceClient;
-
-  constructor() {
-    this.roomService = new RoomServiceClient(
-      config.livekit.url,
-      config.livekit.apiKey,
-      config.livekit.apiSecret,
-    );
-  }
+  private readonly config = loadConfig();
+  private readonly roomService = new RoomServiceClient(
+    this.config.livekit.url,
+    this.config.livekit.apiKey,
+    this.config.livekit.apiSecret,
+  );
 
   /**
    * Lists all participants currently connected to the given room.
@@ -68,5 +65,3 @@ export class LiveKitParticipantUtil {
     await this.roomService.mutePublishedTrack(room, identity, trackSid, muted);
   }
 }
-
-export const livekitParticipantUtil = new LiveKitParticipantUtil();

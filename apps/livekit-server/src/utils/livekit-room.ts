@@ -1,17 +1,14 @@
 import { RoomServiceClient } from 'livekit-server-sdk';
 import type { CreateOptions, Room } from 'livekit-server-sdk';
-import { config } from '../config/env';
+import { loadConfig } from '../config/env';
 
 export class LiveKitRoomUtil {
-  private readonly roomService: RoomServiceClient;
-
-  constructor() {
-    this.roomService = new RoomServiceClient(
-      config.livekit.url,
-      config.livekit.apiKey,
-      config.livekit.apiSecret,
-    );
-  }
+  private readonly config = loadConfig();
+  private readonly roomService = new RoomServiceClient(
+    this.config.livekit.url,
+    this.config.livekit.apiKey,
+    this.config.livekit.apiSecret,
+  );
 
   /**
    * Creates a new LiveKit room with the supplied options.
@@ -49,5 +46,3 @@ export class LiveKitRoomUtil {
     return this.roomService.updateRoomMetadata(name, metadata);
   }
 }
-
-export const livekitRoomUtil = new LiveKitRoomUtil();

@@ -1,10 +1,10 @@
 import type { RequestHandler } from 'express';
-import { healthService } from '../services/health.service';
+import { HealthService } from '../services/health.service';
 
 export class HealthController {
+  private readonly healthService = new HealthService();
+
   public readonly getStatus: RequestHandler = () => {
-    return healthService.getStatus();
+    return this.healthService.getStatus();
   };
 }
-
-export const healthController = new HealthController();

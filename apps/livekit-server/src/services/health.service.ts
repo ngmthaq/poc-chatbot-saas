@@ -3,5 +3,3 @@ export class HealthService {
     return { status: 'ok' };
   }
 }
-
-export const healthService = new HealthService();

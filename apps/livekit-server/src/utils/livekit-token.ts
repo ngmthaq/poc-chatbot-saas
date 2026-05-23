@@ -1,16 +1,12 @@
 import { AccessToken } from 'livekit-server-sdk';
 import type { AccessTokenOptions } from 'livekit-server-sdk';
-import { config } from '../config/env';
+import { loadConfig } from '../config/env';
 import type { CreateAccessTokenInput } from '../types/livekit-token';
 
 export class LiveKitTokenUtil {
-  private readonly apiKey: string;
-  private readonly apiSecret: string;
-
-  constructor() {
-    this.apiKey = config.livekit.apiKey;
-    this.apiSecret = config.livekit.apiSecret;
-  }
+  private readonly config = loadConfig();
+  private readonly apiKey = this.config.livekit.apiKey;
+  private readonly apiSecret = this.config.livekit.apiSecret;
 
   /**
    * Mints a signed LiveKit JWT for a participant joining the given room.
@@ -25,5 +21,3 @@ export class LiveKitTokenUtil {
     return await at.toJwt();
   }
 }
-
-export const livekitTokenUtil = new LiveKitTokenUtil();

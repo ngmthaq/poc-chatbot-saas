@@ -23,6 +23,7 @@ Replace the static `nginx/nginx.conf` (which contains hardcoded domain names) wi
 ## Background
 
 The prior refactor (`23-05-2026-10-00-00-livekit-infra-template-env-consolidation.md`) introduced:
+
 - A unified `.env` / `.env.example` with `LIVEKIT_DOMAIN` and `LIVEKIT_TURN_DOMAIN` keys
 - `Dockerfile.livekit`, `Dockerfile.redis-livekit`, and matching entrypoint scripts
 - A single `docker-compose.yml` with `prod` / `dev` profiles
@@ -59,10 +60,10 @@ This instructs `envsubst` to substitute **only** `${LIVEKIT_DOMAIN}` and `${LIVE
 
 **Only two lines change** relative to the current `nginx/nginx.conf`:
 
-| Line (original)                                 | Line (template)                                         |
-| ----------------------------------------------- | ------------------------------------------------------- |
-| `livekit.YOURDOMAIN.COM      livekit_backend;`  | `${LIVEKIT_DOMAIN}      livekit_backend;`               |
-| `livekit-turn.YOURDOMAIN.COM livekit_turn_backend;` | `${LIVEKIT_TURN_DOMAIN} livekit_turn_backend;`      |
+| Line (original)                                     | Line (template)                                |
+| --------------------------------------------------- | ---------------------------------------------- |
+| `livekit.YOURDOMAIN.COM      livekit_backend;`      | `${LIVEKIT_DOMAIN}      livekit_backend;`      |
+| `livekit-turn.YOURDOMAIN.COM livekit_turn_backend;` | `${LIVEKIT_TURN_DOMAIN} livekit_turn_backend;` |
 
 **File content:**
 
@@ -237,6 +238,7 @@ ENTRYPOINT ["/nginx-entrypoint.sh"]
 ```
 
 **Notes:**
+
 - `nginx:1.27-alpine` is Alpine-based — `apk` is the correct package manager.
 - The template is copied to `/nginx.template.conf` (root of the image). The entrypoint writes the rendered config to `/etc/nginx/nginx.conf`, which is the standard Nginx config path inside the container.
 - The `ENTRYPOINT` directive replaces the default nginx entrypoint. The `exec nginx -g "daemon off;"` in the entrypoint script keeps the nginx process as PID 1 for correct signal handling.
@@ -248,6 +250,7 @@ ENTRYPOINT ["/nginx-entrypoint.sh"]
 **Scope**: Only the `nginx` service block changes. All other services remain exactly as-is.
 
 **Changes:**
+
 1. Replace `image: nginx:1.27-alpine` with a `build:` block pointing to `Dockerfile.nginx`
 2. Add `env_file: [.env]` so Docker Compose injects `LIVEKIT_DOMAIN` and `LIVEKIT_TURN_DOMAIN` into the container at startup
 3. Remove the `./nginx/nginx.conf:/etc/nginx/nginx.conf:ro` volume mount — the template is baked into the image; the entrypoint generates the config at runtime
@@ -256,27 +259,27 @@ ENTRYPOINT ["/nginx-entrypoint.sh"]
 **Resulting nginx service block:**
 
 ```yaml
-  # ---------------------------------------------------------------------------
-  # Nginx — SNI passthrough reverse proxy (prod only)
-  # ---------------------------------------------------------------------------
-  nginx:
-    profiles: [prod]
-    build:
-      context: .
-      dockerfile: Dockerfile.nginx
-    restart: unless-stopped
-    env_file:
-      - .env
-    ports:
-      - '80:80'
-      - '443:443'
-    volumes:
-      - ./certbot/www:/var/www/certbot:ro
-      - /etc/letsencrypt:/etc/letsencrypt:ro
-    extra_hosts:
-      - 'host-gateway:host-gateway'
-    depends_on:
-      - livekit
+# ---------------------------------------------------------------------------
+# Nginx — SNI passthrough reverse proxy (prod only)
+# ---------------------------------------------------------------------------
+nginx:
+  profiles: [prod]
+  build:
+    context: .
+    dockerfile: Dockerfile.nginx
+  restart: unless-stopped
+  env_file:
+    - .env
+  ports:
+    - '80:80'
+    - '443:443'
+  volumes:
+    - ./certbot/www:/var/www/certbot:ro
+    - /etc/letsencrypt:/etc/letsencrypt:ro
+  extra_hosts:
+    - 'host-gateway:host-gateway'
+  depends_on:
+    - livekit
 ```
 
 ---
@@ -289,8 +292,8 @@ ENTRYPOINT ["/nginx-entrypoint.sh"]
 
 Update the `Image` column for the `nginx` row from `nginx:1.27-alpine` to `Dockerfile.nginx (nginx:1.27-alpine)`.
 
-| Service | Image (before) | Image (after) |
-|---------|---------------|--------------|
+| Service | Image (before)      | Image (after)                          |
+| ------- | ------------------- | -------------------------------------- |
 | `nginx` | `nginx:1.27-alpine` | `Dockerfile.nginx (nginx:1.27-alpine)` |
 
 #### 6b. Setup Steps — Step 3 (Update domain placeholders)
@@ -298,6 +301,7 @@ Update the `Image` column for the `nginx` row from `nginx:1.27-alpine` to `Docke
 Remove the bullet for `nginx/nginx.conf` from the list of files requiring manual domain substitution. The SNI map is now driven by `LIVEKIT_DOMAIN` and `LIVEKIT_TURN_DOMAIN` in `.env`.
 
 **Before:**
+
 ```
 Replace every occurrence of `YOURDOMAIN.COM` in these files with your actual domain:
 
@@ -308,6 +312,7 @@ Replace every occurrence of `YOURDOMAIN.COM` in these files with your actual dom
 ```
 
 **After:**
+
 ```
 Replace every occurrence of `YOURDOMAIN.COM` in this file with your actual domain:
 
@@ -337,10 +342,10 @@ Task 1 must come before Task 2 to ensure the template content is correct before 
 
 ## File Change Summary
 
-| Action    | File                                          |
-| --------- | --------------------------------------------- |
-| CREATE    | `apps/livekit-infra/nginx.template.conf`        |
-| DELETE    | `apps/livekit-infra/nginx/` (entire directory)  |
+| Action    | File                                           |
+| --------- | ---------------------------------------------- |
+| CREATE    | `apps/livekit-infra/nginx.template.conf`       |
+| DELETE    | `apps/livekit-infra/nginx/` (entire directory) |
 | CREATE    | `apps/livekit-infra/nginx-entrypoint.sh`       |
 | CREATE    | `apps/livekit-infra/Dockerfile.nginx`          |
 | MODIFY    | `apps/livekit-infra/docker-compose.yml`        |

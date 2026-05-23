@@ -31,12 +31,12 @@ Refactor `apps/livekit-infra/` to:
 
 **Files to delete (3 files + 1 conf):**
 
-| File | Reason |
-|------|--------|
-| `apps/livekit-infra/livekit.yaml` | Replaced by `livekit.template.yaml` |
-| `apps/livekit-infra/livekit.development.yaml` | Values folded into `.env` + template |
-| `apps/livekit-infra/.env.development` | Replaced by unified `.env` |
-| `apps/livekit-infra/redis-livekit.conf` | Replaced by `redis-livekit.template.conf` |
+| File                                          | Reason                                    |
+| --------------------------------------------- | ----------------------------------------- |
+| `apps/livekit-infra/livekit.yaml`             | Replaced by `livekit.template.yaml`       |
+| `apps/livekit-infra/livekit.development.yaml` | Values folded into `.env` + template      |
+| `apps/livekit-infra/.env.development`         | Replaced by unified `.env`                |
+| `apps/livekit-infra/redis-livekit.conf`       | Replaced by `redis-livekit.template.conf` |
 
 **Actions**: `git rm` each file. The `.gitignore` already ignores `.env` so no gitignore change is needed.
 
@@ -236,6 +236,7 @@ REDIS_APP_PORT=6380
 **Purpose**: Static YAML structure with `${VAR}` placeholders for all environment-dependent values. Committed to the repo.
 
 **Key design notes:**
+
 - All placeholders use simple `${VAR}` — no `${VAR:-default}` syntax (envsubst does not support defaults).
 - Defaults are handled in `livekit-entrypoint.sh` before `envsubst` is called.
 - The `cert_file` / `key_file` lines under `turn:` are always present; when empty strings are passed they become empty YAML values, which LiveKit treats as "not set".
@@ -403,11 +404,12 @@ ENTRYPOINT ["/redis-livekit-entrypoint.sh"]
 **Revised approach (user approval)**: Use a single `docker-compose.yml` with Docker Compose profiles instead of separate prod and dev files.
 
 - `profiles: [prod]` — nginx, livekit (host network), redis-livekit (host network)
-- `profiles: [dev]`  — livekit-dev (bridge, ports 7880/7881, `command: --dev`), redis-livekit-dev (bridge, port 6379)
+- `profiles: [dev]` — livekit-dev (bridge, ports 7880/7881, `command: --dev`), redis-livekit-dev (bridge, port 6379)
 - `profiles: [dev, prod]` — postgres, redis-app (shared)
 
 **Usage:**
-- Dev:  `docker compose --profile dev up -d`
+
+- Dev: `docker compose --profile dev up -d`
 - Prod: `docker compose --profile prod up -d`
 
 **Note on service naming**: Docker Compose does not allow duplicate service names in a single file, so dev LiveKit variants are named `livekit-dev` and `redis-livekit-dev`. This is required because prod uses `network_mode: host` and dev uses bridge networking.
@@ -565,37 +567,46 @@ volumes:
 **Sections to update:**
 
 #### 13a. Service Inventory table
+
 - Change `livekit` row: update `Image` column from `livekit/livekit-server:v1.8` to `Dockerfile.livekit (livekit/livekit-server:v1.8)`
 - Change `redis-livekit` row: update `Image` column from `redis:7-alpine` to `Dockerfile.redis-livekit (redis:7-alpine)`
 
 #### 13b. Setup Steps — Step 2 (Configure environment variables)
+
 - Replace the important note about manually editing `livekit.yaml keys:` with a note that env vars are now substituted automatically at container startup via `envsubst`.
 - Update the `nano .env` comment to reflect all new variables.
 
 #### 13c. Setup Steps — Step 3 (Update domain placeholders)
+
 - Remove the bullet for `livekit.yaml` (deleted).
 - Keep only `init_script.sh` and `nginx/nginx.conf`.
 - Add note that `LIVEKIT_DOMAIN`, `LIVEKIT_TURN_DOMAIN`, and `LIVEKIT_WEBHOOK_URL` are set in `.env`.
 
 #### 13d. Upgrade Instructions
+
 - Change `docker compose pull` to `docker compose build --pull` since services now use custom builds.
 
 #### 13e. TURN TLS Certificate Configuration section
+
 - Remove the manual YAML edit instructions.
 - Replace with: "Set `LIVEKIT_TURN_CERT_FILE` and `LIVEKIT_TURN_KEY_FILE` in `.env` to the certificate paths. The entrypoint script substitutes these into `livekit.template.yaml` at startup."
 
 #### 13f. Troubleshooting table
+
 - Update `redis-livekit not started or wrong address` row: change `livekit.yaml must use 127.0.0.1:6379` to `LIVEKIT_REDIS_ADDRESS in .env must be 127.0.0.1:6379 for prod`.
 
 #### 13g. Development Stack — Quickstart section
+
 - Remove `--env-file .env.development` from the `docker compose` command.
 - Update to: `docker compose -f docker-compose.development.yml up -d`
 
 #### 13h. Development Stack — SDK Connection Details section
+
 - Remove reference to `livekit.development.yaml` and `infra/.env.development`.
 - Replace with: "These values match the `keys:` section rendered from `livekit.template.yaml` using the dev values in `.env`."
 
 #### 13i. Development Stack — UDP Media Ports Note section
+
 - Remove reference to `livekit.development.yaml`.
 - Replace with: "Set `LIVEKIT_ENABLE_LOOPBACK_CANDIDATE=true` in `.env` (dev default)."
 - Update the remote device note: replace `use_external_ip: false` in `livekit.development.yaml` with `LIVEKIT_USE_EXTERNAL_IP=false` in `.env`.
@@ -626,25 +637,25 @@ Tasks must be executed in this order to avoid broken intermediate states:
 
 ## File Change Summary
 
-| Action | File |
-|--------|------|
-| DELETE | `apps/livekit-infra/livekit.yaml` |
-| DELETE | `apps/livekit-infra/livekit.development.yaml` |
-| DELETE | `apps/livekit-infra/.env.development` |
-| DELETE | `apps/livekit-infra/redis-livekit.conf` |
-| CREATE | `apps/livekit-infra/.env` |
-| CREATE | `apps/livekit-infra/.env.example` |
-| CREATE | `apps/livekit-infra/livekit.template.yaml` |
-| CREATE | `apps/livekit-infra/livekit-entrypoint.sh` |
-| CREATE | `apps/livekit-infra/Dockerfile.livekit` |
-| CREATE | `apps/livekit-infra/redis-livekit.template.conf` |
-| CREATE | `apps/livekit-infra/redis-livekit-entrypoint.sh` |
-| CREATE | `apps/livekit-infra/Dockerfile.redis-livekit` |
-| MODIFY | `apps/livekit-infra/docker-compose.yml` |
-| DELETE | `apps/livekit-infra/docker-compose.development.yml` |
-| MODIFY | `apps/livekit-infra/README.md` |
-| NO CHANGE | `apps/livekit-infra/.gitignore` |
-| NO CHANGE | `README.md` (root) |
+| Action    | File                                                |
+| --------- | --------------------------------------------------- |
+| DELETE    | `apps/livekit-infra/livekit.yaml`                   |
+| DELETE    | `apps/livekit-infra/livekit.development.yaml`       |
+| DELETE    | `apps/livekit-infra/.env.development`               |
+| DELETE    | `apps/livekit-infra/redis-livekit.conf`             |
+| CREATE    | `apps/livekit-infra/.env`                           |
+| CREATE    | `apps/livekit-infra/.env.example`                   |
+| CREATE    | `apps/livekit-infra/livekit.template.yaml`          |
+| CREATE    | `apps/livekit-infra/livekit-entrypoint.sh`          |
+| CREATE    | `apps/livekit-infra/Dockerfile.livekit`             |
+| CREATE    | `apps/livekit-infra/redis-livekit.template.conf`    |
+| CREATE    | `apps/livekit-infra/redis-livekit-entrypoint.sh`    |
+| CREATE    | `apps/livekit-infra/Dockerfile.redis-livekit`       |
+| MODIFY    | `apps/livekit-infra/docker-compose.yml`             |
+| DELETE    | `apps/livekit-infra/docker-compose.development.yml` |
+| MODIFY    | `apps/livekit-infra/README.md`                      |
+| NO CHANGE | `apps/livekit-infra/.gitignore`                     |
+| NO CHANGE | `README.md` (root)                                  |
 
 ---
 
