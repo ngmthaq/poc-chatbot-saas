@@ -31,10 +31,14 @@ call-center-agent/               ← pnpm workspace root
 │   │       │   ├── pages/       ← Full page components
 │   │       │   ├── providers/   ← React context providers
 │   │       │   └── templates/   ← Layout skeletons
-│   │       ├── configs/         ← App-level config (API endpoints, query client)
+│   │       ├── configs/         ← App-level config (API endpoints, axios instance, query client)
+│   │       ├── hooks/
+│   │       │   ├── common/      ← General-purpose custom hooks
+│   │       │   ├── forms/       ← Form-related hooks
+│   │       │   ├── mutations/   ← TanStack Query mutation hooks
+│   │       │   ├── queries/     ← TanStack Query query hooks
+│   │       │   └── stores/      ← Jotai atom/state hooks
 │   │       ├── routes/          ← TanStack Router file-based routes
-│   │       ├── services/        ← Axios instance and API call functions
-│   │       ├── stores/          ← Jotai atom definitions
 │   │       └── theme/           ← MUI theme
 │   └── livekit-infra/           ← Docker Compose infra (dev + prod profiles)
 ├── docs/                        ← Agent-generated plan files
@@ -182,7 +186,10 @@ ComponentName/
   styled.ts      ← MUI styled() definitions only
   types.ts       ← Props and related types
   configs.ts     ← constants, config maps (optional)
+  use*.ts        ← co-located custom hooks (optional, pages only)
 ```
+
+Page components may include co-located `use*.ts` hook files (e.g., `useAgentCallState.ts`) when the hook is tightly coupled to that page and not shared elsewhere.
 
 ### Styling
 
@@ -192,9 +199,10 @@ ComponentName/
 
 ### State Management
 
-- **Server state**: TanStack Query (`useQuery`, `useMutation`) for all API-fetched data.
-- **Global client state**: Jotai atoms defined in `src/stores/`.
+- **Server state**: TanStack Query (`useQuery`, `useMutation`) for all API-fetched data — hooks in `src/hooks/queries/` and `src/hooks/mutations/`.
+- **Global client state**: Jotai atom/state hooks defined in `src/hooks/stores/`.
 - **Local state**: React `useState`/`useReducer` for component-scoped state.
+- **Custom hooks**: general-purpose hooks in `src/hooks/common/`; form-related hooks in `src/hooks/forms/`.
 
 ### Routing
 
@@ -203,8 +211,9 @@ ComponentName/
 
 ### HTTP Client
 
-- Use the shared `axiosInstance` from `src/services/axiosInstance.ts` for all API calls.
+- Use the shared `axiosInstance` from `src/configs/axiosInstance.ts` for all API calls.
 - API base URLs defined in `src/configs/apiEndpoints.ts`.
+- TanStack Query client configured in `src/configs/queryClient.ts`.
 
 ---
 

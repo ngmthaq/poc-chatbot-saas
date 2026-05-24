@@ -1,15 +1,7 @@
 import { useAgent, useConnectionState } from '@livekit/components-react';
-import type { UseAgentReturn } from '@livekit/components-react';
 import { ConnectionState } from 'livekit-client';
 import { useMemo } from 'react';
-
-export type AgentCallState = {
-  agent: UseAgentReturn;
-  connectionState: ConnectionState;
-  isPending: boolean;
-  hasFailure: boolean;
-  isFinishedClean: boolean;
-};
+import type { AgentCallState } from './types';
 
 export const useAgentCallState = (): AgentCallState => {
   const agent = useAgent();
