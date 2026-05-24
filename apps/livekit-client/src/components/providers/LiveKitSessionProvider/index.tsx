@@ -1,11 +1,10 @@
 import { apiEndpoints } from '@/configs';
 import { SessionProvider, useSession } from '@livekit/components-react';
 import { TokenSource } from 'livekit-client';
-import { type ReactNode, useEffect, useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
+import { type LiveKitSessionProviderProps } from './types';
 
-export interface LiveKitSessionProviderProps {
-  children: ReactNode;
-}
+export type { LiveKitSessionProviderProps } from './types';
 
 export const LiveKitSessionProvider = ({ children }: LiveKitSessionProviderProps) => {
   const tokenSource = useMemo(() => {
