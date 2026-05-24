@@ -1,6 +1,7 @@
 import { WebhookEvent, WebhookReceiver } from 'livekit-server-sdk';
 import { loadConfig } from '../config/env';
-import { LiveKitRoomUtil } from '../utils/livekit-room';
+import { LiveKitRoomUtil } from '../utils/livekit-room.utils';
+import { logger } from '../utils/logger.utils';
 
 export class WebhookService {
   private readonly config = loadConfig();
@@ -12,7 +13,7 @@ export class WebhookService {
 
   public async receive(rawBody: string, authHeader: string | null): Promise<void> {
     const event = await this.receiver.receive(rawBody, authHeader ?? undefined);
-    console.log(`Received webhook event: ${event.event} for room: ${event.room?.name}`);
+    logger.info({ event: event.event, room: event.room?.name }, 'Received webhook event');
     switch (event.event) {
       case 'room_finished': {
         await this.handleRoomFinished(event);

@@ -1,6 +1,6 @@
 ---
 name: create-pull-request
-description: "Create a pull request or merge request with a properly filled template. Use when: opening a PR, creating a MR, submitting code for review, writing a pull request description, generating PR content, preparing a merge request, drafting PR summary from git changes, ticket, or plan."
+description: 'Create a pull request or merge request with a properly filled template. Use when: opening a PR, creating a MR, submitting code for review, writing a pull request description, generating PR content, preparing a merge request, drafting PR summary from git changes, ticket, or plan.'
 ---
 
 # Create Pull Request

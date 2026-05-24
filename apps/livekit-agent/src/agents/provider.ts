@@ -30,88 +30,58 @@ export enum ProviderType {
   HUME,
 }
 
+const LLM_REGISTRY = {
+  [ProviderType.INFERENCE]: () => new inference.LLM({ model: 'gemini-2.0-flash' }),
+  [ProviderType.OPENAI]: () => new openai.LLM({ model: 'gpt-4' }),
+  [ProviderType.GOOGLE]: () => new google.LLM({ model: 'gemini-pro' }),
+  [ProviderType.MISTRAL]: () => new mistral.LLM({ model: 'mistral-small-latest' }),
+} satisfies Partial<Record<ProviderType, () => unknown>>;
+
+const STT_REGISTRY = {
+  [ProviderType.INFERENCE]: () => new inference.STT({ model: 'whisper-1' }),
+  [ProviderType.OPENAI]: () => new openai.STT({ model: 'whisper-1' }),
+  [ProviderType.DEEPGRAM]: () => new deepgram.STT({ model: 'base' }),
+  [ProviderType.ELEVEN]: () => new eleven.STT({ modelId: 'scribe_v1' }),
+  [ProviderType.MISTRAL]: () => new mistral.STT({ model: 'voxtral-mini-transcribe-realtime-2602', language: 'multi' }),
+  [ProviderType.XAI]: () => new xai.STT(),
+} satisfies Partial<Record<ProviderType, () => unknown>>;
+
+const TTS_REGISTRY = {
+  [ProviderType.INFERENCE]: () => new inference.TTS({ model: 'tts-1' }),
+  [ProviderType.OPENAI]: () => new openai.TTS({ model: 'tts-1' }),
+  [ProviderType.ELEVEN]: () => new eleven.TTS({ model: 'eleven_multilingual_v1' }),
+  [ProviderType.CARTESIA]: () => new cartesia.TTS({ model: 'cartesia:alloy' }),
+  [ProviderType.NEUPHONIC]: () => new neuphonic.TTS({ model: 'neuphonic:eva' }),
+  [ProviderType.RESEMBLE]: () => new resemble.TTS({ model: 'chatterbox' }),
+  [ProviderType.RIME]: () => new rime.TTS({ model: 'rime:luma' }),
+  [ProviderType.INWORLD]: () => new inworld.TTS({ model: 'inworld:emma' }),
+  [ProviderType.MISTRAL]: () => new mistral.TTS({ model: 'voxtral-mini-tts-latest', voice: 'en_paul_neutral' }),
+  [ProviderType.FISH]: () => new fish.TTS({ model: 'fish:lucy' }),
+  [ProviderType.HUME]: () => new hume.TTS(),
+} satisfies Partial<Record<ProviderType, () => unknown>>;
+
 export function llmFactory(type: ProviderType) {
-  switch (type) {
-    case ProviderType.INFERENCE:
-      return new inference.LLM({ model: 'gemini-2.0-flash' });
-
-    case ProviderType.OPENAI:
-      return new openai.LLM({ model: 'gpt-4' });
-
-    case ProviderType.GOOGLE:
-      return new google.LLM({ model: 'gemini-pro' });
-
-    case ProviderType.MISTRAL:
-      return new mistral.LLM({ model: 'mistral-small-latest' });
-
-    default:
-      throw new Error(`Unsupported provider type: ${type}`);
+  const factory = LLM_REGISTRY[type as keyof typeof LLM_REGISTRY];
+  if (factory === undefined) {
+    throw new Error(`Unsupported provider type: ${type}`);
   }
+  return factory();
 }
 
 export function sttFactory(type: ProviderType) {
-  switch (type) {
-    case ProviderType.INFERENCE:
-      return new inference.STT({ model: 'whisper-1' });
-
-    case ProviderType.OPENAI:
-      return new openai.STT({ model: 'whisper-1' });
-
-    case ProviderType.DEEPGRAM:
-      return new deepgram.STT({ model: 'base' });
-
-    case ProviderType.ELEVEN:
-      return new eleven.STT({ modelId: 'scribe_v1' });
-
-    case ProviderType.MISTRAL:
-      return new mistral.STT({ model: 'voxtral-mini-transcribe-realtime-2602', language: 'multi' });
-
-    case ProviderType.XAI:
-      return new xai.STT();
-
-    default:
-      throw new Error(`Unsupported provider type: ${type}`);
+  const factory = STT_REGISTRY[type as keyof typeof STT_REGISTRY];
+  if (factory === undefined) {
+    throw new Error(`Unsupported provider type: ${type}`);
   }
+  return factory();
 }
 
 export function ttsFactory(type: ProviderType) {
-  switch (type) {
-    case ProviderType.INFERENCE:
-      return new inference.TTS({ model: 'tts-1' });
-
-    case ProviderType.OPENAI:
-      return new openai.TTS({ model: 'tts-1' });
-
-    case ProviderType.ELEVEN:
-      return new eleven.TTS({ model: 'eleven_multilingual_v1' });
-
-    case ProviderType.CARTESIA:
-      return new cartesia.TTS({ model: 'cartesia:alloy' });
-
-    case ProviderType.NEUPHONIC:
-      return new neuphonic.TTS({ model: 'neuphonic:eva' });
-
-    case ProviderType.RESEMBLE:
-      return new resemble.TTS({ model: 'chatterbox' });
-
-    case ProviderType.RIME:
-      return new rime.TTS({ model: 'rime:luma' });
-
-    case ProviderType.INWORLD:
-      return new inworld.TTS({ model: 'inworld:emma' });
-
-    case ProviderType.MISTRAL:
-      return new mistral.TTS({ model: 'voxtral-mini-tts-latest', voice: 'en_paul_neutral' });
-
-    case ProviderType.FISH:
-      return new fish.TTS({ model: 'fish:lucy' });
-
-    case ProviderType.HUME:
-      return new hume.TTS();
-
-    default:
-      throw new Error(`Unsupported provider type: ${type}`);
+  const factory = TTS_REGISTRY[type as keyof typeof TTS_REGISTRY];
+  if (factory === undefined) {
+    throw new Error(`Unsupported provider type: ${type}`);
   }
+  return factory();
 }
 
 export const providerFactory = {

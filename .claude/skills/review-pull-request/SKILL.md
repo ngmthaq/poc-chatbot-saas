@@ -1,6 +1,6 @@
 ---
 name: review-pull-request
-description: "Review a pull request by fetching its description and code changes via MCP, then applying clean-code, security-scanner, and aaa-testing (when tests are present) checks. Use when: reviewing a PR, code review, pull request review, MR review, analyzing PR changes, checking code quality of PR, auditing a PR for security, reviewing test coverage or test quality. Requires MCP integration — will not run without it."
+description: 'Review a pull request by fetching its description and code changes via MCP, then applying clean-code, security-scanner, and aaa-testing (when tests are present) checks. Use when: reviewing a PR, code review, pull request review, MR review, analyzing PR changes, checking code quality of PR, auditing a PR for security, reviewing test coverage or test quality. Requires MCP integration — will not run without it.'
 ---
 
 # Review Pull Request

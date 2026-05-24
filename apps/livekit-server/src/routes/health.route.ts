@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { HealthController } from '../controllers/health.controller';
-import { responseHandler } from '../utils/response-handler';
+import { responseHandler } from '../utils/response-handler.utils';
 
 const router: Router = Router();
 const healthController = new HealthController();

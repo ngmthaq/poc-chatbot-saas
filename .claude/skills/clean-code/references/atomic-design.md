@@ -22,7 +22,7 @@ Small groups of atoms functioning as a unit. Single clear purpose, minimal inter
 
 ```javascript
 function SearchField({ onSearch }) {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState('');
   return (
     <div>
       <Input value={query} onChange={setQuery} />

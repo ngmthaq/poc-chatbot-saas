@@ -1,6 +1,6 @@
 ---
 name: aaa-testing
-description: "AAA (Arrange-Act-Assert) — Enforces the Arrange-Act-Assert pattern for writing clear, structured, and maintainable tests. Use when writing, reviewing, or refactoring any unit or integration tests that are hard to read, mix setup with assertions, have unclear intent, or lack a consistent structure. Applies to any language and any testing framework (Jest, PyTest, JUnit, RSpec, Go testing, etc.)."
+description: 'AAA (Arrange-Act-Assert) — Enforces the Arrange-Act-Assert pattern for writing clear, structured, and maintainable tests. Use when writing, reviewing, or refactoring any unit or integration tests that are hard to read, mix setup with assertions, have unclear intent, or lack a consistent structure. Applies to any language and any testing framework (Jest, PyTest, JUnit, RSpec, Go testing, etc.).'
 ---
 
 # AAA — Arrange, Act, Assert
@@ -16,11 +16,11 @@ Every test has exactly three phases:
 | **Assert**  | Did it do the right thing?            | Expectations on return values, state, side effects |
 
 ```javascript
-it("applies 10% discount when order exceeds $100", () => {
+it('applies 10% discount when order exceeds $100', () => {
   // Arrange
   const cart = new Cart();
-  cart.add({ name: "Widget", price: 60 });
-  cart.add({ name: "Gadget", price: 50 });
+  cart.add({ name: 'Widget', price: 60 });
+  cart.add({ name: 'Gadget', price: 50 });
 
   // Act
   const total = cart.calculateTotal();
@@ -55,20 +55,20 @@ service.register(payload)              # Act
 Extract repeated setup into `beforeEach`/fixtures, but keep Act and Assert in each test:
 
 ```javascript
-describe("Cart", () => {
+describe('Cart', () => {
   let cart;
   beforeEach(() => {
     cart = new Cart();
-    cart.add({ name: "Widget", price: 10 });
+    cart.add({ name: 'Widget', price: 10 });
   });
 
-  it("calculates correct total", () => {
+  it('calculates correct total', () => {
     const total = cart.calculateTotal(); // Act
     expect(total).toBe(10); // Assert
   });
 
-  it("applies coupon discount", () => {
-    cart.applyCoupon("SAVE10"); // Act
+  it('applies coupon discount', () => {
+    cart.applyCoupon('SAVE10'); // Act
     expect(cart.calculateTotal()).toBe(9); // Assert
   });
 });

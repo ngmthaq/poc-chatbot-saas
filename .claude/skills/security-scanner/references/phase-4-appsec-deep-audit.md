@@ -41,7 +41,7 @@ Also flag server-side template unescaped output: `{{{ var }}}` (Handlebars), `| 
 
 ```js
 // ❌ State-changing endpoint with cookie auth, no origin check
-app.post("/transfer", handler);
+app.post('/transfer', handler);
 
 // ✅ Synchronizer token or SameSite cookie
 app.use(csrf());
@@ -92,7 +92,7 @@ High-risk surfaces: webhook registration, URL preview, PDF/screenshot generators
 
 ```js
 // ❌ Authenticated but not authorized — any user can fetch any invoice
-app.get("/invoice/:id", authenticate, async (req, res) => {
+app.get('/invoice/:id', authenticate, async (req, res) => {
   res.json(await Invoice.findById(req.params.id));
 });
 

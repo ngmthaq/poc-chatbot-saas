@@ -1,6 +1,6 @@
 ---
 name: onboarding
-description: "Onboarding — Guides AI through complete project onboarding: discovers project name, description, programming languages, frameworks, package managers, key libraries, database, doc directory, and testing workflow. Writes structured summaries to PROJECT_OVERVIEW.md and CODING_CONVENTIONS.md. Optionally runs secret-scanner, security-scanner, clean-code, and aaa-testing health checks. Use when: starting on a new project, setting up AI context, initializing copilot configuration, /onboarding."
+description: 'Onboarding — Guides AI through complete project onboarding: discovers project name, description, programming languages, frameworks, package managers, key libraries, database, doc directory, and testing workflow. Writes structured summaries to PROJECT_OVERVIEW.md and CODING_CONVENTIONS.md. Optionally runs secret-scanner, security-scanner, clean-code, and aaa-testing health checks. Use when: starting on a new project, setting up AI context, initializing copilot configuration, /onboarding.'
 ---
 
 # Project Onboarding

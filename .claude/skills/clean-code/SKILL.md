@@ -1,6 +1,6 @@
 ---
 name: clean-code
-description: "Clean Code — Unified reference for all clean code principles: SOLID, DRY, KISS, Separation of Concerns, and Atomic Design. Organized by development context: OOP, Functional, UI/Component, Backend/API, and Code Review. Use when writing, reviewing, or refactoring code in any language or paradigm."
+description: 'Clean Code — Unified reference for all clean code principles: SOLID, DRY, KISS, Separation of Concerns, and Atomic Design. Organized by development context: OOP, Functional, UI/Component, Backend/API, and Code Review. Use when writing, reviewing, or refactoring code in any language or paradigm.'
 ---
 
 # Clean Code

@@ -1,6 +1,6 @@
 ---
 name: secret-scanner
-description: "Secret Scanner — Detects and prevents hardcoded secrets in code, configuration, and documentation. Enforces security best practices and integrates with CI/CD pipelines for proactive secret management."
+description: 'Secret Scanner — Detects and prevents hardcoded secrets in code, configuration, and documentation. Enforces security best practices and integrates with CI/CD pipelines for proactive secret management.'
 ---
 
 # Secret Scanner

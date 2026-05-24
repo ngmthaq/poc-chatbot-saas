@@ -6,14 +6,14 @@
 // ❌ User input interpolated into the system prompt — attacker overrides instructions
 const prompt = `You are a safe assistant.\nUser said: ${userInput}`;
 openai.chat.completions.create({
-  messages: [{ role: "user", content: prompt }],
+  messages: [{ role: 'user', content: prompt }],
 });
 
 // ✅ Use the roles API — structural separation enforced by the model
 openai.chat.completions.create({
   messages: [
-    { role: "system", content: "You are a safe assistant." },
-    { role: "user", content: sanitize(userInput) },
+    { role: 'system', content: 'You are a safe assistant.' },
+    { role: 'user', content: sanitize(userInput) },
   ],
 });
 ```

@@ -2,7 +2,7 @@ import humps from 'humps';
 import { RoomAgentDispatch, RoomConfiguration } from 'livekit-server-sdk';
 import { randomUUID } from 'node:crypto';
 import { loadConfig } from '../config/env';
-import { LiveKitTokenUtil } from '../utils/livekit-token';
+import { LiveKitTokenUtil } from '../utils/livekit-token.utils';
 import type { GetLiveKitTokenBody } from '../validators/get-livekit-token.validator';
 
 export class LiveKitService {

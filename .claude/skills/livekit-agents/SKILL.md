@@ -4,7 +4,7 @@ description: 'Build voice AI agents with LiveKit Cloud and the Agents SDK. Use w
 license: MIT
 metadata:
   author: livekit
-  version: "0.3.1"
+  version: '0.3.1'
 ---
 
 # LiveKit Agents Development for LiveKit Cloud

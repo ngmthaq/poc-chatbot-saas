@@ -2,8 +2,8 @@ import cors from 'cors';
 import express, { type Express } from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
-import { errorHandler } from './middlewares/error-handler';
-import { notFoundHandler } from './middlewares/not-found';
+import { errorHandler } from './middlewares/error-handler.middleware';
+import { notFoundHandler } from './middlewares/not-found.middleware';
 import router from './routes';
 import webhookRouter from './routes/webhook.route';
 

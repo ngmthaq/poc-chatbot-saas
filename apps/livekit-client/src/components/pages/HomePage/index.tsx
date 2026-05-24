@@ -6,16 +6,13 @@ import {
 } from '@/components/molecules';
 import {
   RoomAudioRenderer,
-  useAgent,
-  useConnectionState,
   useLocalParticipant,
   useRoomInfo,
   useTranscriptions,
   useVoiceAssistant,
 } from '@livekit/components-react';
-import { ConnectionState } from 'livekit-client';
-import { useMemo } from 'react';
 import { CONNECTION_STATE_COLORS, CONNECTION_STATE_LABELS } from './configs';
+import { useAgentCallState } from './useAgentCallState';
 import {
   BrandIcon,
   ColumnBox,
@@ -41,24 +38,11 @@ import {
 } from './styled';
 
 export const HomePage = () => {
-  const agent = useAgent();
+  const transcriptions = useTranscriptions();
   const { audioTrack } = useVoiceAssistant();
   const { localParticipant } = useLocalParticipant();
-  const connectionState = useConnectionState();
   const { name: roomName } = useRoomInfo();
-  const transcriptions = useTranscriptions();
-
-  const isPending = useMemo(() => {
-    return agent.isPending || connectionState === ConnectionState.Connecting;
-  }, [agent.isPending, connectionState]);
-
-  const hasFailure = useMemo(() => {
-    return agent.isFinished && agent.failureReasons !== null && agent.failureReasons.length > 0;
-  }, [agent.isFinished, agent.failureReasons]);
-
-  const isFinishedClean = useMemo(() => {
-    return agent.isFinished && (agent.failureReasons === null || agent.failureReasons.length === 0);
-  }, [agent.isFinished, agent.failureReasons]);
+  const { agent, connectionState, isPending, hasFailure, isFinishedClean } = useAgentCallState();
 
   const handleReconnect = () => {
     window.location.reload();
