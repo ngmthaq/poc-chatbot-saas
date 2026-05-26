@@ -29,6 +29,8 @@ Systematically onboard AI to a project by discovering its structure, stack, and 
 
 Load the step references in order. Do not skip or summarize them.
 
+**Prelight:** It is recomended to install and set up [GitNexus](./references/setup-gitnexus.md) before starting onboarding, as it provides a comprehensive codebase index that the AI can reference during onboarding and future tasks. Ask the user if they have set up GitNexus, and if not, offer to load the GitNexus setup reference before proceeding with onboarding steps.
+
 1. [Step 1 — Greet and Confirm](./references/step-1-greet-and-confirm.md)
 2. [Step 2 — Research Project Overview](./references/step-2-research-project-overview.md)
 3. [Step 3 — Coding Conventions](./references/step-3-coding-conventions.md)
