@@ -13,12 +13,17 @@ export const useAgentCallState = (): AgentCallState => {
   );
 
   const hasFailure = useMemo(
-    () => agent.isFinished && agent.failureReasons !== null && agent.failureReasons.length > 0,
+    () =>
+      agent.isFinished &&
+      agent.failureReasons !== null &&
+      agent.failureReasons.length > 0,
     [agent.isFinished, agent.failureReasons],
   );
 
   const isFinishedClean = useMemo(
-    () => agent.isFinished && (agent.failureReasons === null || agent.failureReasons.length === 0),
+    () =>
+      agent.isFinished &&
+      (agent.failureReasons === null || agent.failureReasons.length === 0),
     [agent.isFinished, agent.failureReasons],
   );
 

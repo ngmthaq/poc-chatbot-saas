@@ -1,4 +1,7 @@
-import type { AgentState, TrackReferenceOrPlaceholder } from '@livekit/components-react';
+import type {
+  AgentState,
+  TrackReferenceOrPlaceholder,
+} from '@livekit/components-react';
 import type { Participant } from 'livekit-client';
 
 export interface AgentInfoCardProps {

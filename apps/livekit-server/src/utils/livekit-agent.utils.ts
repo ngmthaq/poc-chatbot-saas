@@ -10,6 +10,9 @@ export class LiveKitAgentUtil {
   );
 
   public async dispatchAgent(roomName: string) {
-    await this.agentDispatchClient.createDispatch(roomName, this.config.livekit.agentName);
+    await this.agentDispatchClient.createDispatch(
+      roomName,
+      this.config.livekit.agentName,
+    );
   }
 }

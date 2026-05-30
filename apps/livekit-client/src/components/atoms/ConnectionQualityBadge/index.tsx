@@ -2,11 +2,14 @@ import {
   ConnectionQualityIndicator,
   useConnectionQualityIndicator,
 } from '@livekit/components-react';
+import type { FC } from 'react';
 import { QUALITY_LABELS } from './configs';
 import { QualityLabel, Root } from './styled';
 import type { ConnectionQualityBadgeProps } from './types';
 
-export const ConnectionQualityBadge = ({ participant }: ConnectionQualityBadgeProps) => {
+export const ConnectionQualityBadge: FC<ConnectionQualityBadgeProps> = ({
+  participant,
+}) => {
   const { quality } = useConnectionQualityIndicator({ participant });
 
   return (

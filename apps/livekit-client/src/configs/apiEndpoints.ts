@@ -1,11 +1,24 @@
 export const apiEndpoints = {
+  // GET requests
   get: {
-    health: () => '/health',
+    health: () => {
+      return '/health';
+    },
   },
+
+  // POST requests
   post: {
-    liveKitToken: () => '/livekit/token',
+    liveKitToken: () => {
+      return '/livekit/token';
+    },
   },
+
+  // PUT requests
   put: {},
+
+  // PATCH requests
   patch: {},
+
+  // DELETE requests
   delete: {},
 };

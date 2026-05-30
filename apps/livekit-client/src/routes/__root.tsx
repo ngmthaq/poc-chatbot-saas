@@ -1,4 +1,4 @@
-import { queryClient, theme } from '@/configs';
+import { defaultTheme, queryClient } from '@/configs';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
@@ -13,7 +13,7 @@ function RootComponent() {
   return (
     <JotaiProvider>
       <QueryClientProvider client={queryClient}>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={defaultTheme}>
           <CssBaseline />
           <Outlet />
         </ThemeProvider>

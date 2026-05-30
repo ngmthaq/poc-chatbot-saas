@@ -10,7 +10,10 @@ const parsePort = (raw: string | undefined): number => {
   return Number.isFinite(parsed) ? parsed : DEFAULT_PORT;
 };
 
-const parseRequiredString = (raw: string | undefined, keyName: string): string => {
+const parseRequiredString = (
+  raw: string | undefined,
+  keyName: string,
+): string => {
   if (raw === undefined) {
     throw new Error(`Missing required env var: ${keyName}`);
   }
@@ -38,10 +41,19 @@ function loadConfig() {
       port: parsePort(process.env.PORT),
       nodeEnv: process.env.NODE_ENV ?? 'development',
       livekit: {
-        apiKey: parseRequiredString(process.env.LIVEKIT_API_KEY, 'LIVEKIT_API_KEY'),
-        apiSecret: parseRequiredString(process.env.LIVEKIT_API_SECRET, 'LIVEKIT_API_SECRET'),
+        apiKey: parseRequiredString(
+          process.env.LIVEKIT_API_KEY,
+          'LIVEKIT_API_KEY',
+        ),
+        apiSecret: parseRequiredString(
+          process.env.LIVEKIT_API_SECRET,
+          'LIVEKIT_API_SECRET',
+        ),
         url: parseRequiredString(process.env.LIVEKIT_URL, 'LIVEKIT_URL'),
-        agentName: parseRequiredString(process.env.LIVEKIT_AGENT_NAME, 'LIVEKIT_AGENT_NAME'),
+        agentName: parseRequiredString(
+          process.env.LIVEKIT_AGENT_NAME,
+          'LIVEKIT_AGENT_NAME',
+        ),
       } as const,
     } as const;
   }

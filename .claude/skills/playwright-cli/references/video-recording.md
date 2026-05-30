@@ -69,7 +69,9 @@ async (page) => {
   await page
     .getByRole('textbox', { name: 'What needs to be done?' })
     .pressSequentially('Walk the dog', { delay: 60 });
-  await page.getByRole('textbox', { name: 'What needs to be done?' }).press('Enter');
+  await page
+    .getByRole('textbox', { name: 'What needs to be done?' })
+    .press('Enter');
   await page.waitForTimeout(1000);
 
   // Show next chapter
@@ -92,7 +94,9 @@ async (page) => {
   await page
     .getByRole('textbox', { name: 'What needs to be done?' })
     .pressSequentially('Buy groceries', { delay: 60 });
-  await page.getByRole('textbox', { name: 'What needs to be done?' }).press('Enter');
+  await page
+    .getByRole('textbox', { name: 'What needs to be done?' })
+    .press('Enter');
   await page.waitForTimeout(1500);
 
   // Remove the annotation when done

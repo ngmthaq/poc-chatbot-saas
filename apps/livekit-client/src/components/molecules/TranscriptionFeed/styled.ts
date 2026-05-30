@@ -36,9 +36,19 @@ export const FeedContainer = styled(Box)({
   display: 'flex',
   flexDirection: 'column',
   gap: 6,
-  '&::-webkit-scrollbar': { width: '4px' },
-  '&::-webkit-scrollbar-track': { background: 'transparent' },
-  '&::-webkit-scrollbar-thumb': { background: 'rgba(255,255,255,0.15)', borderRadius: '2px' },
+
+  '&::-webkit-scrollbar': {
+    width: '4px',
+  },
+
+  '&::-webkit-scrollbar-track': {
+    background: 'transparent',
+  },
+
+  '&::-webkit-scrollbar-thumb': {
+    background: 'rgba(255,255,255,0.15)',
+    borderRadius: '2px',
+  },
 });
 
 export const TranscriptionEntry = styled(Typography, {

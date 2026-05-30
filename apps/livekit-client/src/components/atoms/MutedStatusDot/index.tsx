@@ -1,8 +1,12 @@
 import { TrackMutedIndicator } from '@livekit/components-react';
+import type { FC } from 'react';
 import { Root, StatusLabel } from './styled';
 import type { MutedStatusDotProps } from './types';
 
-export const MutedStatusDot = ({ trackRef, label = 'Mic' }: MutedStatusDotProps) => {
+export const MutedStatusDot: FC<MutedStatusDotProps> = ({
+  trackRef,
+  label = 'Mic',
+}) => {
   return (
     <Root data-lk-theme="default">
       <TrackMutedIndicator trackRef={trackRef} show="always" />

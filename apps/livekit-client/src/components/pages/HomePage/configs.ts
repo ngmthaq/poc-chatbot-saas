@@ -1,7 +1,10 @@
 import { ConnectionState } from 'livekit-client';
 import { type ConnectionChipColor } from './types';
 
-export const CONNECTION_STATE_COLORS: Record<ConnectionState, ConnectionChipColor> = {
+export const CONNECTION_STATE_COLORS: Record<
+  ConnectionState,
+  ConnectionChipColor
+> = {
   [ConnectionState.Connected]: 'success',
   [ConnectionState.Connecting]: 'info',
   [ConnectionState.Disconnected]: 'error',

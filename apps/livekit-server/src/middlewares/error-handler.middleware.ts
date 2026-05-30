@@ -6,7 +6,9 @@ import type { ErrorResponseBody } from '../types/error-handler';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const errorHandler: ErrorRequestHandler = (err, _req, res, _next) => {
   const config = loadConfig();
-  const httpError = isHttpError(err) ? err : createHttpError(500, normalizeMessage(err));
+  const httpError = isHttpError(err)
+    ? err
+    : createHttpError(500, normalizeMessage(err));
   const body: ErrorResponseBody = {
     status: httpError.status,
     message: httpError.message,

@@ -21,6 +21,11 @@ export const validateGetLiveKitToken: RequestHandler = (req, _res, next) => {
     req.body = result.data;
     next();
   } else {
-    next(createHttpError(422, result.error.issues[0]?.message ?? 'Validation failed'));
+    next(
+      createHttpError(
+        422,
+        result.error.issues[0]?.message ?? 'Validation failed',
+      ),
+    );
   }
 };

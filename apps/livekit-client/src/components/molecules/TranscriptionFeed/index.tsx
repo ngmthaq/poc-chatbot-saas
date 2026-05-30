@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { type FC, useEffect, useRef } from 'react';
 import {
   EmptyState,
   FeedContainer,
@@ -8,7 +8,9 @@ import {
 } from './styled';
 import type { TranscriptionFeedProps } from './types';
 
-export const TranscriptionFeed = ({ transcriptions }: TranscriptionFeedProps) => {
+export const TranscriptionFeed: FC<TranscriptionFeedProps> = ({
+  transcriptions,
+}) => {
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -19,7 +21,9 @@ export const TranscriptionFeed = ({ transcriptions }: TranscriptionFeedProps) =>
     return (
       <EmptyState>
         <PlaceholderIcon />
-        <PlaceholderText variant="caption">Transcription will appear here…</PlaceholderText>
+        <PlaceholderText variant="caption">
+          Transcription will appear here…
+        </PlaceholderText>
       </EmptyState>
     );
   }

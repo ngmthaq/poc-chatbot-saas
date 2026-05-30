@@ -6,5 +6,12 @@ export interface AgentStatusBadgeProps {
 
 export interface StatusConfig {
   label: string;
-  color: 'default' | 'primary' | 'secondary' | 'error' | 'info' | 'success' | 'warning';
+  color:
+    | 'default'
+    | 'primary'
+    | 'secondary'
+    | 'error'
+    | 'info'
+    | 'success'
+    | 'warning';
 }

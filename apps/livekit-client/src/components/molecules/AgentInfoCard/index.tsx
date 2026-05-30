@@ -1,5 +1,10 @@
-import { AgentStatusBadge, ConnectionQualityBadge, MutedStatusDot } from '@/components/atoms';
+import {
+  AgentStatusBadge,
+  ConnectionQualityBadge,
+  MutedStatusDot,
+} from '@/components/atoms';
 import { Stack } from '@mui/material';
+import type { FC } from 'react';
 import {
   AgentIcon,
   CardContainer,
@@ -11,14 +16,14 @@ import {
 } from './styled';
 import type { AgentInfoCardProps } from './types';
 
-export const AgentInfoCard = ({
+export const AgentInfoCard: FC<AgentInfoCardProps> = ({
   state,
   identity,
   name,
   metadata,
   participant,
   microphoneTrack,
-}: AgentInfoCardProps) => {
+}) => {
   const displayName = name || 'Anonymous Agent';
 
   return (
@@ -29,7 +34,9 @@ export const AgentInfoCard = ({
           <DisplayName variant="subtitle2">{displayName}</DisplayName>
           <IdentityText variant="caption">{identity}</IdentityText>
         </NameContainer>
-        {microphoneTrack !== undefined && <MutedStatusDot trackRef={microphoneTrack} label="Mic" />}
+        {microphoneTrack !== undefined && (
+          <MutedStatusDot trackRef={microphoneTrack} label="Mic" />
+        )}
         <ConnectionQualityBadge participant={participant} />
         <AgentStatusBadge state={state} />
       </Stack>

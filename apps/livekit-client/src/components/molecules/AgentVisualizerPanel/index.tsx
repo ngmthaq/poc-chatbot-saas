@@ -1,13 +1,30 @@
 import { AudioTrack, BarVisualizer } from '@livekit/components-react';
 import type { TrackReferenceOrPlaceholder } from '@livekit/components-react';
 import { Box } from '@mui/material';
+import { type FC, useMemo } from 'react';
 import { OVERLAY_STATES } from './configs';
-import { OverlayText, StyledProgress, VisualizerOverlay, VisualizerRoot } from './styled';
+import {
+  OverlayText,
+  StyledProgress,
+  VisualizerOverlay,
+  VisualizerRoot,
+} from './styled';
 import type { AgentVisualizerPanelProps } from './types';
 
-export const AgentVisualizerPanel = ({ agentState, audioTrack }: AgentVisualizerPanelProps) => {
-  const showOverlay = OVERLAY_STATES.has(agentState);
-  const isSpeaking = agentState === 'speaking';
+export const AgentVisualizerPanel: FC<AgentVisualizerPanelProps> = ({
+  agentState,
+  audioTrack,
+}) => {
+  const { showOverlay, isSpeaking } = useMemo(() => {
+    return {
+      showOverlay: OVERLAY_STATES.has(agentState),
+      isSpeaking: agentState === 'speaking',
+    };
+  }, [agentState]);
+
+  const barVisualizerProps = useMemo(() => {
+    return audioTrack !== undefined ? { trackRef: audioTrack } : {};
+  }, [audioTrack]);
 
   return (
     <VisualizerRoot data-lk-theme="default" isSpeaking={isSpeaking}>
@@ -31,8 +48,8 @@ export const AgentVisualizerPanel = ({ agentState, audioTrack }: AgentVisualizer
           />
         )}
         <BarVisualizer
+          {...barVisualizerProps}
           state={agentState}
-          {...(audioTrack !== undefined ? { trackRef: audioTrack } : {})}
           barCount={28}
           style={{ width: '100%', height: '100%' }}
         />

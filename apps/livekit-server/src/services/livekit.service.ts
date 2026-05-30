@@ -11,9 +11,12 @@ export class LiveKitService {
 
   public async getToken(body: GetLiveKitTokenBody) {
     const roomName = body.roomName ?? `room-${randomUUID()}`;
-    const participantIdentity = body.participantIdentity ?? `participant-identity-${randomUUID()}`;
-    const participantName = body.participantName ?? `participant-name-${randomUUID()}`;
-    const participantMetadata = body.participantMetadata ?? `participant-metadata-${randomUUID()}`;
+    const participantIdentity =
+      body.participantIdentity ?? `participant-identity-${randomUUID()}`;
+    const participantName =
+      body.participantName ?? `participant-name-${randomUUID()}`;
+    const participantMetadata =
+      body.participantMetadata ?? `participant-metadata-${randomUUID()}`;
     const participantAttributes = body.participantAttributes ?? {};
 
     const at = this.liveKitTokenUtil.createAccessToken({

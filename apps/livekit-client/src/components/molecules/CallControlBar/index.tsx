@@ -1,7 +1,12 @@
-import { DisconnectButton, StartAudio, VoiceAssistantControlBar } from '@livekit/components-react';
+import {
+  DisconnectButton,
+  StartAudio,
+  VoiceAssistantControlBar,
+} from '@livekit/components-react';
+import type { FC } from 'react';
 import { ControlBarRoot } from './styled';
 
-export const CallControlBar = () => {
+export const CallControlBar: FC = () => {
   return (
     <ControlBarRoot data-lk-theme="default">
       <StartAudio label="Enable Audio" />

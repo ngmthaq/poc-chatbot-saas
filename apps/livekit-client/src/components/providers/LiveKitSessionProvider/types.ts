@@ -1,5 +1,3 @@
-import { type ReactNode } from 'react';
+import { type PropsWithChildren } from 'react';
 
-export interface LiveKitSessionProviderProps {
-  children: ReactNode;
-}
+export interface LiveKitSessionProviderProps extends PropsWithChildren {}

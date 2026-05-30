@@ -9,6 +9,10 @@ export class LiveKitTokenUtil {
    * Mints a signed LiveKit JWT for a participant joining the given room.
    */
   public createAccessToken(options: AccessTokenOptions) {
-    return new AccessToken(this.config.livekit.apiKey, this.config.livekit.apiSecret, options);
+    return new AccessToken(
+      this.config.livekit.apiKey,
+      this.config.livekit.apiSecret,
+      options,
+    );
   }
 }

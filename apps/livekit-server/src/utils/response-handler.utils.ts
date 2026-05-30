@@ -2,7 +2,11 @@ import type { NextFunction, Request, RequestHandler, Response } from 'express';
 import type { SuccessResponseBody } from '../types/response-handler';
 
 export const responseHandler = (
-  fn: (req: Request, res: Response, next: NextFunction) => unknown | Promise<unknown>,
+  fn: (
+    req: Request,
+    res: Response,
+    next: NextFunction,
+  ) => unknown | Promise<unknown>,
 ): RequestHandler => {
   return (req, res, next) => {
     Promise.resolve(fn(req, res, next))

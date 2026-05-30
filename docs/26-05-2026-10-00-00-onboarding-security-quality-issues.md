@@ -107,7 +107,9 @@ added without a Zod schema would receive unvalidated LLM output as arguments at 
 ```ts
 import type { llm } from '@livekit/agents';
 
-export const tools: Record<string, ReturnType<typeof llm.tool>> = { getWeather };
+export const tools: Record<string, ReturnType<typeof llm.tool>> = {
+  getWeather,
+};
 ```
 
 ---

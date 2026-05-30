@@ -1,4 +1,7 @@
-import type { AgentState, TrackReferenceOrPlaceholder } from '@livekit/components-react';
+import type {
+  AgentState,
+  TrackReferenceOrPlaceholder,
+} from '@livekit/components-react';
 
 export interface AgentVisualizerPanelProps {
   agentState: AgentState;

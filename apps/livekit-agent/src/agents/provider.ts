@@ -31,35 +31,99 @@ export enum ProviderType {
 }
 
 const LLM_REGISTRY = {
-  [ProviderType.INFERENCE]: () => new inference.LLM({ model: 'gemini-2.0-flash' }),
-  [ProviderType.OPENAI]: () => new openai.LLM({ model: 'gpt-4' }),
-  [ProviderType.GOOGLE]: () => new google.LLM({ model: 'gemini-pro' }),
-  [ProviderType.MISTRAL]: () => new mistral.LLM({ model: 'mistral-small-latest' }),
+  [ProviderType.INFERENCE]: () => {
+    return new inference.LLM({ model: 'gemini-2.0-flash' });
+  },
+
+  [ProviderType.OPENAI]: () => {
+    return new openai.LLM({ model: 'gpt-4' });
+  },
+
+  [ProviderType.GOOGLE]: () => {
+    return new google.LLM({ model: 'gemini-pro' });
+  },
+
+  [ProviderType.MISTRAL]: () => {
+    return new mistral.LLM({ model: 'mistral-small-latest' });
+  },
 } satisfies Partial<Record<ProviderType, () => unknown>>;
 
 const STT_REGISTRY = {
-  [ProviderType.INFERENCE]: () => new inference.STT({ model: 'whisper-1' }),
-  [ProviderType.OPENAI]: () => new openai.STT({ model: 'whisper-1' }),
-  [ProviderType.DEEPGRAM]: () => new deepgram.STT({ model: 'base' }),
-  [ProviderType.ELEVEN]: () => new eleven.STT({ modelId: 'scribe_v1' }),
-  [ProviderType.MISTRAL]: () =>
-    new mistral.STT({ model: 'voxtral-mini-transcribe-realtime-2602', language: 'multi' }),
-  [ProviderType.XAI]: () => new xai.STT(),
+  [ProviderType.INFERENCE]: () => {
+    return new inference.STT({ model: 'whisper-1' });
+  },
+
+  [ProviderType.OPENAI]: () => {
+    return new openai.STT({ model: 'whisper-1' });
+  },
+
+  [ProviderType.DEEPGRAM]: () => {
+    return new deepgram.STT({ model: 'base' });
+  },
+
+  [ProviderType.ELEVEN]: () => {
+    return new eleven.STT({ modelId: 'scribe_v1' });
+  },
+
+  [ProviderType.MISTRAL]: () => {
+    return new mistral.STT({
+      model: 'voxtral-mini-transcribe-realtime-2602',
+      language: 'multi',
+    });
+  },
+
+  [ProviderType.XAI]: () => {
+    return new xai.STT();
+  },
 } satisfies Partial<Record<ProviderType, () => unknown>>;
 
 const TTS_REGISTRY = {
-  [ProviderType.INFERENCE]: () => new inference.TTS({ model: 'tts-1' }),
-  [ProviderType.OPENAI]: () => new openai.TTS({ model: 'tts-1' }),
-  [ProviderType.ELEVEN]: () => new eleven.TTS({ model: 'eleven_multilingual_v1' }),
-  [ProviderType.CARTESIA]: () => new cartesia.TTS({ model: 'cartesia:alloy' }),
-  [ProviderType.NEUPHONIC]: () => new neuphonic.TTS({ model: 'neuphonic:eva' }),
-  [ProviderType.RESEMBLE]: () => new resemble.TTS({ model: 'chatterbox' }),
-  [ProviderType.RIME]: () => new rime.TTS({ model: 'rime:luma' }),
-  [ProviderType.INWORLD]: () => new inworld.TTS({ model: 'inworld:emma' }),
-  [ProviderType.MISTRAL]: () =>
-    new mistral.TTS({ model: 'voxtral-mini-tts-latest', voice: 'en_paul_neutral' }),
-  [ProviderType.FISH]: () => new fish.TTS({ model: 'fish:lucy' }),
-  [ProviderType.HUME]: () => new hume.TTS(),
+  [ProviderType.INFERENCE]: () => {
+    return new inference.TTS({ model: 'tts-1' });
+  },
+
+  [ProviderType.OPENAI]: () => {
+    return new openai.TTS({ model: 'tts-1' });
+  },
+
+  [ProviderType.ELEVEN]: () => {
+    return new eleven.TTS({ model: 'eleven_multilingual_v1' });
+  },
+
+  [ProviderType.CARTESIA]: () => {
+    return new cartesia.TTS({ model: 'cartesia:alloy' });
+  },
+
+  [ProviderType.NEUPHONIC]: () => {
+    return new neuphonic.TTS({ model: 'neuphonic:eva' });
+  },
+
+  [ProviderType.RESEMBLE]: () => {
+    return new resemble.TTS({ model: 'chatterbox' });
+  },
+
+  [ProviderType.RIME]: () => {
+    return new rime.TTS({ model: 'rime:luma' });
+  },
+
+  [ProviderType.INWORLD]: () => {
+    return new inworld.TTS({ model: 'inworld:emma' });
+  },
+
+  [ProviderType.MISTRAL]: () => {
+    return new mistral.TTS({
+      model: 'voxtral-mini-tts-latest',
+      voice: 'en_paul_neutral',
+    });
+  },
+
+  [ProviderType.FISH]: () => {
+    return new fish.TTS({ model: 'fish:lucy' });
+  },
+
+  [ProviderType.HUME]: () => {
+    return new hume.TTS();
+  },
 } satisfies Partial<Record<ProviderType, () => unknown>>;
 
 export function llmFactory(type: ProviderType) {

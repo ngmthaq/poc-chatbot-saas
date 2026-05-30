@@ -42,7 +42,8 @@ export const HomePage = () => {
   const { audioTrack } = useVoiceAssistant();
   const { localParticipant } = useLocalParticipant();
   const { name: roomName } = useRoomInfo();
-  const { agent, connectionState, isPending, hasFailure, isFinishedClean } = useAgentCallState();
+  const { agent, connectionState, isPending, hasFailure, isFinishedClean } =
+    useAgentCallState();
 
   const handleReconnect = () => {
     window.location.reload();
@@ -54,7 +55,9 @@ export const HomePage = () => {
       <PageHeader>
         <HeaderStack direction="row" alignItems="center" spacing={1.25}>
           <BrandIcon />
-          <RoomTitle variant="subtitle1">{roomName || 'Call Center Agent'}</RoomTitle>
+          <RoomTitle variant="subtitle1">
+            {roomName || 'Call Center Agent'}
+          </RoomTitle>
         </HeaderStack>
         <StatusChip
           label={CONNECTION_STATE_LABELS[connectionState]}
@@ -66,7 +69,9 @@ export const HomePage = () => {
         <ColumnBox>
           <AgentVisualizerPanel
             agentState={agent.state}
-            {...(audioTrack !== undefined && audioTrack !== null ? { audioTrack } : {})}
+            {...(audioTrack !== undefined && audioTrack !== null
+              ? { audioTrack }
+              : {})}
           />
           {agent.canListen && (
             <AgentInfoCard

@@ -10,7 +10,9 @@ export const getWeather = llm.tool({
   parameters: z.object({
     location: z
       .string()
-      .describe('The location to look up weather information for (e.g. city name)'),
+      .describe(
+        'The location to look up weather information for (e.g. city name)',
+      ),
   }),
   execute: async ({ location }) => {
     console.log(`Looking up weather for ${location}`);

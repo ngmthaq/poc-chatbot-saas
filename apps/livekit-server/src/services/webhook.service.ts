@@ -11,9 +11,15 @@ export class WebhookService {
     this.config.livekit.apiSecret,
   );
 
-  public async receive(rawBody: string, authHeader: string | null): Promise<void> {
+  public async receive(
+    rawBody: string,
+    authHeader: string | null,
+  ): Promise<void> {
     const event = await this.receiver.receive(rawBody, authHeader ?? undefined);
-    logger.info({ event: event.event, room: event.room?.name }, 'Received webhook event');
+    logger.info(
+      { event: event.event, room: event.room?.name },
+      'Received webhook event',
+    );
     switch (event.event) {
       case 'room_finished': {
         await this.handleRoomFinished(event);

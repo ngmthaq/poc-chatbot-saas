@@ -1,5 +1,8 @@
 import { RoomServiceClient } from 'livekit-server-sdk';
-import type { ParticipantInfo, ParticipantPermission } from 'livekit-server-sdk';
+import type {
+  ParticipantInfo,
+  ParticipantPermission,
+} from 'livekit-server-sdk';
 import { loadConfig } from '../config/env';
 
 export class LiveKitParticipantUtil {
@@ -20,7 +23,10 @@ export class LiveKitParticipantUtil {
   /**
    * Fetches a single participant's info including published tracks.
    */
-  public getParticipant(room: string, identity: string): Promise<ParticipantInfo> {
+  public getParticipant(
+    room: string,
+    identity: string,
+  ): Promise<ParticipantInfo> {
     return this.roomService.getParticipant(room, identity);
   }
 
@@ -50,7 +56,12 @@ export class LiveKitParticipantUtil {
     identity: string,
     permission: ParticipantPermission,
   ): Promise<ParticipantInfo> {
-    return this.roomService.updateParticipant(room, identity, undefined, permission);
+    return this.roomService.updateParticipant(
+      room,
+      identity,
+      undefined,
+      permission,
+    );
   }
 
   /**

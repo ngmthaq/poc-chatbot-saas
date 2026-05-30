@@ -6,6 +6,10 @@ import { validateGetLiveKitToken } from '../validators/get-livekit-token.validat
 const router: Router = Router();
 const liveKitController = new LiveKitController();
 
-router.post('/token', validateGetLiveKitToken, responseHandler(liveKitController.getToken));
+router.post(
+  '/token',
+  validateGetLiveKitToken,
+  responseHandler(liveKitController.getToken),
+);
 
 export default router;
