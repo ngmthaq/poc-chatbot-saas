@@ -46,7 +46,7 @@ Each app has `.env.example` and `.env.local`. The root `copy-env` script copies 
 
 - `livekit-server`: `LIVEKIT_API_KEY`, `LIVEKIT_API_SECRET`, `LIVEKIT_URL`, `LIVEKIT_AGENT_NAME`, `PORT`
 - `livekit-agent`: LiveKit connection + AI provider API keys (OpenAI, Mistral, Deepgram, etc.)
-- `livekit-client`: `VITE_API_BASE_URL`
+- `livekit-client`: `VITE_API_BASE_URL` (Express server base URL), `VITE_LIVEKIT_URL` (LiveKit WebSocket URL, e.g. `ws://localhost:7880`)
 - `livekit-infra`: LiveKit server config, port bindings, domain settings
 
 ### Workspace Scripts
