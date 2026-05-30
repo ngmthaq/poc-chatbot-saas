@@ -38,7 +38,7 @@ call-center-agent/
 │   │       ├── services/       Business logic (class-based)
 │   │       ├── types/          TypeScript declaration files (.d.ts)
 │   │       ├── utils/          Pure helpers (logger, response, livekit utils)
-│   │       └── validators/     Zod request body schemas
+│   │       └── validators/     Yup request body schemas
 │   └── livekit-infra/          Docker Compose + Nginx + Redis config/templates
 ├── docs/                       Agent-generated plans and decision docs
 └── scripts/                    Shell utility scripts
@@ -166,7 +166,7 @@ Use the Pino logger from `utils/logger.utils.ts`. Do not use `console.log` in se
 
 ## Validation
 
-- Server: Zod schemas in `validators/`. Validate at the route/middleware level before controllers.
+- Server: Yup schemas in `validators/`. Validate at the route/middleware level before controllers.
 - Agent tools: Zod schemas inline in tool definitions.
 - Client env vars: validated at module load time in `configs/` files (throw on missing).
 
