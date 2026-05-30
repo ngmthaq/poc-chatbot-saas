@@ -1,7 +1,8 @@
 import axios from 'axios';
 import type { AxiosResponse, InternalAxiosRequestConfig } from 'axios';
+import { loadConfig } from './env';
 
-const BASE_URL: string = import.meta.env['VITE_API_BASE_URL'];
+const BASE_URL: string = loadConfig().apiBaseUrl;
 
 const axiosInstance = axios.create({
   baseURL: BASE_URL,

@@ -1,6 +1,6 @@
 import type { ErrorRequestHandler } from 'express';
 import createHttpError, { isHttpError } from 'http-errors';
-import { loadConfig } from '../config/env';
+import { loadConfig } from '../configs/env';
 import type { ErrorResponseBody } from '../types/error-handler';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -14,7 +14,7 @@ export const errorHandler: ErrorRequestHandler = (err, _req, res, _next) => {
     message: httpError.message,
   };
 
-  if (config.nodeEnv !== 'production' && httpError.stack !== undefined) {
+  if (config.NODE_ENV !== 'production' && httpError.stack !== undefined) {
     body.stack = httpError.stack;
   }
 

@@ -1,7 +1,7 @@
 import humps from 'humps';
 import { RoomAgentDispatch, RoomConfiguration } from 'livekit-server-sdk';
 import { randomUUID } from 'node:crypto';
-import { loadConfig } from '../config/env';
+import { loadConfig } from '../configs/env';
 import { LiveKitTokenUtil } from '../utils/livekit-token.utils';
 import type { GetLiveKitTokenBody } from '../validators/get-livekit-token.validator';
 
@@ -42,7 +42,7 @@ export class LiveKitService {
       at.roomConfig = new RoomConfiguration({
         agents: [
           new RoomAgentDispatch({
-            agentName: this.config.livekit.agentName,
+            agentName: this.config.LIVEKIT_AGENT_NAME,
           }),
         ],
       });
@@ -51,7 +51,7 @@ export class LiveKitService {
     const token = await at.toJwt();
 
     return humps.decamelizeKeys({
-      serverUrl: this.config.livekit.url,
+      serverUrl: this.config.LIVEKIT_URL,
       participantToken: token,
       participantName: participantName,
       roomName: roomName,

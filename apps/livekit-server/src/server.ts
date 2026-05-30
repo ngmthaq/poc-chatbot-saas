@@ -1,9 +1,9 @@
 import { createApp } from './app';
-import { loadConfig } from './config/env';
+import { loadConfig } from './configs/env';
 import { logger } from './utils/logger.utils';
 
 const config = loadConfig();
 const app = createApp();
-app.listen(config.port, () => {
-  logger.info({ port: config.port }, 'Server listening');
+app.listen(config.PORT, () => {
+  logger.info({ port: config.PORT }, 'Server listening');
 });

@@ -1,6 +1,6 @@
 import { AccessToken } from 'livekit-server-sdk';
 import type { AccessTokenOptions } from 'livekit-server-sdk';
-import { loadConfig } from '../config/env';
+import { loadConfig } from '../configs/env';
 
 export class LiveKitTokenUtil {
   private readonly config = loadConfig();
@@ -10,8 +10,8 @@ export class LiveKitTokenUtil {
    */
   public createAccessToken(options: AccessTokenOptions) {
     return new AccessToken(
-      this.config.livekit.apiKey,
-      this.config.livekit.apiSecret,
+      this.config.LIVEKIT_API_KEY,
+      this.config.LIVEKIT_API_SECRET,
       options,
     );
   }

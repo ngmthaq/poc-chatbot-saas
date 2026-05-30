@@ -1,4 +1,4 @@
-import { apiEndpoints } from '@/configs';
+import { apiEndpoints, loadConfig } from '@/configs';
 import { SessionProvider, useSession } from '@livekit/components-react';
 import '@livekit/components-styles';
 import { TokenSource } from 'livekit-client';
@@ -9,7 +9,7 @@ export const LiveKitSessionProvider: FC<LiveKitSessionProviderProps> = ({
   children,
 }) => {
   const tokenSource = useMemo(() => {
-    let apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+    let apiBaseUrl = loadConfig().apiBaseUrl;
     if (apiBaseUrl.endsWith('/')) apiBaseUrl = apiBaseUrl.slice(0, -1);
     return TokenSource.endpoint(
       `${apiBaseUrl}${apiEndpoints.post.liveKitToken()}`,

@@ -3,14 +3,14 @@ import type {
   ParticipantInfo,
   ParticipantPermission,
 } from 'livekit-server-sdk';
-import { loadConfig } from '../config/env';
+import { loadConfig } from '../configs/env';
 
 export class LiveKitParticipantUtil {
   private readonly config = loadConfig();
   private readonly roomService = new RoomServiceClient(
-    this.config.livekit.url,
-    this.config.livekit.apiKey,
-    this.config.livekit.apiSecret,
+    this.config.LIVEKIT_URL,
+    this.config.LIVEKIT_API_KEY,
+    this.config.LIVEKIT_API_SECRET,
   );
 
   /**
