@@ -1,9 +1,9 @@
 export const apiEndpoints = {
   get: {
-    health: '/health',
+    health: () => '/health',
   },
   post: {
-    liveKitToken: '/livekit/token',
+    liveKitToken: () => '/livekit/token',
   },
   put: {},
   patch: {},
