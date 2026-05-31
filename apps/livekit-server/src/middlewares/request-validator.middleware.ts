@@ -1,12 +1,7 @@
 import type { RequestHandler } from 'express';
 import createHttpError from 'http-errors';
-import { type AnyObjectSchema, ValidationError } from 'yup';
-
-export type RequestValidatorOptions = {
-  target: 'body' | 'params' | 'query' | 'headers';
-  schema: AnyObjectSchema;
-  prepare?: (data: unknown) => unknown;
-};
+import { ValidationError } from 'yup';
+import type { RequestValidatorOptions } from '../types/request-validator';
 
 export function requestValidator(
   options: RequestValidatorOptions,

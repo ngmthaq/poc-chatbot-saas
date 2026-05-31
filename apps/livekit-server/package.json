@@ -26,6 +26,7 @@
     "humps": "^2.0.1",
     "livekit-server-sdk": "^2.15.3",
     "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
     "pino": "^9.0.0",
     "yup": "^1.6.1"
   },
@@ -36,6 +37,7 @@
     "@types/http-errors": "^2.0.4",
     "@types/humps": "^2.0.6",
     "@types/morgan": "^1.9.9",
+    "@types/multer": "^1.4.12",
     "@types/node": "^22.19.17",
     "eslint": "^9.39.4",
     "globals": "^16.5.0",
