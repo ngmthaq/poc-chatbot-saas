@@ -1,6 +1,3 @@
-import type { RequestHandler } from 'express';
-import createHttpError from 'http-errors';
-import humps from 'humps';
 import * as yup from 'yup';
 import type { InferType } from 'yup';
 
@@ -24,21 +21,3 @@ export const getLiveKitTokenSchema = yup.object({
 });
 
 export type GetLiveKitTokenBody = InferType<typeof getLiveKitTokenSchema>;
-
-export const validateGetLiveKitToken: RequestHandler = (req, _res, next) => {
-  const camelizeBody = humps.camelizeKeys(req.body);
-  try {
-    const validated = getLiveKitTokenSchema.validateSync(camelizeBody, {
-      abortEarly: true,
-      stripUnknown: true,
-    });
-    req.body = validated;
-    next();
-  } catch (err) {
-    if (err instanceof yup.ValidationError) {
-      next(createHttpError(422, err.message));
-    } else {
-      next(err);
-    }
-  }
-};
