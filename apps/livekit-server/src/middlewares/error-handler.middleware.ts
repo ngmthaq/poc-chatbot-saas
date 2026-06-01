@@ -1,5 +1,6 @@
 import type { ErrorRequestHandler } from 'express';
 import createHttpError, { isHttpError } from 'http-errors';
+import { errorMessages } from '../configs';
 import { loadConfig } from '../configs/env';
 import type { ErrorResponseBody } from '../types/error-handler';
 
@@ -24,5 +25,5 @@ export const errorHandler: ErrorRequestHandler = (err, _req, res, _next) => {
 const normalizeMessage = (err: unknown): string => {
   if (err instanceof Error) return err.message;
   if (typeof err === 'string') return err;
-  return 'Internal Server Error';
+  return errorMessages.internalServerError();
 };

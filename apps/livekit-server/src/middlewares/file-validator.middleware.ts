@@ -2,6 +2,7 @@ import type { RequestHandler } from 'express';
 import createHttpError from 'http-errors';
 import multer from 'multer';
 import { extname } from 'node:path';
+import { errorMessages } from '../configs';
 import type { FileValidatorOptions } from '../types/file-validator';
 
 function normaliseFiles(
@@ -16,14 +17,11 @@ function validateFiles(
   options: FileValidatorOptions,
 ): ReturnType<typeof createHttpError> | null {
   if (files.length === 0) {
-    return createHttpError(400, 'No files uploaded');
+    return createHttpError(400, errorMessages.noFilesUploaded());
   }
 
   if (options.maxFiles !== undefined && files.length > options.maxFiles) {
-    return createHttpError(
-      400,
-      `Too many files: maximum ${options.maxFiles} allowed`,
-    );
+    return createHttpError(400, errorMessages.tooManyFiles(options.maxFiles));
   }
 
   if (options.maxFileSize !== undefined) {
@@ -31,7 +29,7 @@ function validateFiles(
       if (file.size > options.maxFileSize) {
         return createHttpError(
           400,
-          `File "${file.originalname}" exceeds the maximum size of ${options.maxFileSize} bytes`,
+          errorMessages.fileTooLarge(options.maxFileSize),
         );
       }
     }
@@ -42,7 +40,7 @@ function validateFiles(
     if (total > options.totalFileSize) {
       return createHttpError(
         400,
-        `Total upload size exceeds the maximum of ${options.totalFileSize} bytes`,
+        errorMessages.totalFileSizeExceeded(options.totalFileSize),
       );
     }
   }
@@ -57,7 +55,7 @@ function validateFiles(
       if (!allowlist.includes(ext)) {
         return createHttpError(
           400,
-          `File "${file.originalname}" has an unsupported extension`,
+          errorMessages.invalidFileExtension(options.fileExtensions),
         );
       }
     }
@@ -83,7 +81,7 @@ export function fileValidator(options: FileValidatorOptions): RequestHandler {
 
       const rawFiles = req.files;
       if (rawFiles === undefined) {
-        return next(createHttpError(400, 'No files uploaded'));
+        return next(createHttpError(400, errorMessages.noFilesUploaded()));
       }
 
       const files = normaliseFiles(rawFiles);

@@ -1,6 +1,7 @@
 import type { RequestHandler } from 'express';
 import { rateLimit } from 'express-rate-limit';
 import createHttpError from 'http-errors';
+import { errorMessages } from '../configs';
 import { loadConfig } from '../configs/env';
 
 export const rateLimitHandler: RequestHandler = rateLimit({
@@ -10,6 +11,6 @@ export const rateLimitHandler: RequestHandler = rateLimit({
   legacyHeaders: false,
   skip: () => loadConfig().NODE_ENV === 'development',
   handler: (_req, _res, next) => {
-    next(createHttpError(429, 'Too Many Requests'));
+    next(createHttpError(429, errorMessages.tooManyRequests()));
   },
 });
