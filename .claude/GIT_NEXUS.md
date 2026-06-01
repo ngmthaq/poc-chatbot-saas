@@ -1,10 +1,8 @@
-<!-- gitnexus:start -->
-
 # GitNexus — Code Intelligence
 
-This project is indexed by GitNexus as **call-center-agent** (860 symbols, 1071 relationships, 2 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+This project is indexed by GitNexus. Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
 
-> If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
+> If any GitNexus tool warns the index is stale, run `npx gitnexus analyze --skip-agents-md` in terminal first.
 
 ## Always Do
 
@@ -23,12 +21,14 @@ This project is indexed by GitNexus as **call-center-agent** (860 symbols, 1071 
 
 ## Resources
 
-| Resource                                           | Use for                                  |
-| -------------------------------------------------- | ---------------------------------------- |
-| `gitnexus://repo/call-center-agent/context`        | Codebase overview, check index freshness |
-| `gitnexus://repo/call-center-agent/clusters`       | All functional areas                     |
-| `gitnexus://repo/call-center-agent/processes`      | All execution flows                      |
-| `gitnexus://repo/call-center-agent/process/{name}` | Step-by-step execution trace             |
+| Resource                                     | Use for                                  |
+| -------------------------------------------- | ---------------------------------------- |
+| `gitnexus://repo/<repo_name>/context`        | Codebase overview, check index freshness |
+| `gitnexus://repo/<repo_name>/clusters`       | All functional areas                     |
+| `gitnexus://repo/<repo_name>/processes`      | All execution flows                      |
+| `gitnexus://repo/<repo_name>/process/{name}` | Step-by-step execution trace             |
+
+> Resolve `<repo_name>` with the correct repository name
 
 ## CLI
 
@@ -40,5 +40,3 @@ This project is indexed by GitNexus as **call-center-agent** (860 symbols, 1071 
 | Rename / extract / split / refactor          | `.claude/skills/gitnexus/gitnexus-refactoring/SKILL.md`     |
 | Tools, resources, schema reference           | `.claude/skills/gitnexus/gitnexus-guide/SKILL.md`           |
 | Index, status, clean, wiki CLI commands      | `.claude/skills/gitnexus/gitnexus-cli/SKILL.md`             |
-
-<!-- gitnexus:end -->

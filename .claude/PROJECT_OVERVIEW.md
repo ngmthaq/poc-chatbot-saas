@@ -25,7 +25,7 @@ call-center-agent/
 │   ├── livekit-agent/     Voice AI agent — extends voice.Agent, uses LLM/STT/TTS provider factory
 │   ├── livekit-client/    React SPA — connects to LiveKit room, renders call UI
 │   ├── livekit-server/    Express.js API — issues LiveKit tokens, handles webhooks
-│   └── livekit-infra/     Docker Compose stack — LiveKit server, Redis, Nginx
+│   └── livekit-infra/     Docker Compose stack — LiveKit server, PostgreSQL, Redis, Nginx
 ├── docs/                  Agent-generated plans and decision docs
 ├── scripts/               Shell utility scripts (e.g., copy-env.sh)
 └── .claude/               AI agent configuration (skills, rules, conventions)
@@ -37,8 +37,8 @@ call-center-agent/
 | ---------------- | ------------------------------------------- | ---------------------------------------------- |
 | `livekit-agent`  | Voice AI pipeline (LLM + STT + TTS)         | @livekit/agents, Vite, vitest                  |
 | `livekit-client` | Browser call UI (join, talk, transcription) | React, Vite, MUI, TanStack Router/Query, Jotai |
-| `livekit-server` | Token generation & webhook handler          | Express.js, livekit-server-sdk, Pino, Zod      |
-| `livekit-infra`  | Self-hosted LiveKit infrastructure          | Docker Compose, Nginx, Redis                   |
+| `livekit-server` | Token generation & webhook handler          | Express.js, livekit-server-sdk, Pino, Yup      |
+| `livekit-infra`  | Self-hosted LiveKit infrastructure          | Docker Compose, Nginx, PostgreSQL, Redis       |
 
 ### Environment Variables
 

@@ -31,9 +31,9 @@ call-center-agent/
 │   │       └── types/          TypeScript ambient declaration files (.d.ts)
 │   ├── livekit-server/
 │   │   └── src/
-│   │       ├── config/         Env loading (zod-validated)
+│   │       ├── configs/        Env loading (yup-validated) + error messages
 │   │       ├── controllers/    Express route handlers (class-based)
-│   │       ├── middlewares/    Error handler, not-found
+│   │       ├── middlewares/    Error handler, not-found, request-validator, file-validator, rate-limit
 │   │       ├── routes/         Express routers
 │   │       ├── services/       Business logic (class-based)
 │   │       ├── types/          TypeScript declaration files (.d.ts)
@@ -100,10 +100,12 @@ controllers/   Class-based. One public method per endpoint, async RequestHandler
 services/      Class-based. Contains all business logic.
                Instantiates utils via private readonly fields.
 routes/        Express Router only — no logic. Wires controller methods.
-middlewares/   Global error handler and not-found handler.
-validators/    Zod schemas for request body validation.
+middlewares/   Error handler, not-found, generic request-validator factory,
+               file-validator (multer upload), and rate-limit.
+validators/    Yup schemas for request body validation.
 utils/         Pure, stateless helper functions.
-config/        Single loadConfig() that validates env with Zod and returns typed config.
+configs/       Single loadEnv() that validates env with Yup and returns typed
+               config (configs/env.ts), plus error-messages.ts.
 types/         TypeScript ambient declaration files (.d.ts).
 ```
 
@@ -126,7 +128,7 @@ types/         TypeScript ambient declaration files (.d.ts).
 - Trailing commas everywhere (`"all"`)
 - Semicolons: **on**
 - Tab width: **2**
-- Print width: **100**
+- Print width: **80**
 - Import order: third-party modules first, then local (`./`) — auto-sorted by `@trivago/prettier-plugin-sort-imports`
 
 ---

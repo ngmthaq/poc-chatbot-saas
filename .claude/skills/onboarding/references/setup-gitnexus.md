@@ -1,35 +1,9 @@
 # GitNexus Integration
 
-[GitNexus](https://github.com/abhigyanpatwari/GitNexus) indexes your entire codebase into a knowledge graph — every dependency, call chain, cluster, and execution flow — then exposes it through smart tools so AI agents never miss code context.
+- GitNexus indexes your entire source code into a knowledge graph—every dependency, function call chain, function cluster, and execution flow—and then exposes it through intelligent tools so that AI agents never miss the code context. Follow the instructions in [README.md](https://github.com/abhigyanpatwari/GitNexus/blob/main/README.md) to set up GitNexus in your repository.
 
-**Important:** GitNexus generates `AGENTS.md` and `CLAUDE.md`. Follow the steps below to avoid overwriting these root instructions.
+- Run this command to install GitNexus globally: `npm i -g gitnexus`
 
-## Installation & Setup
+- Use the `analyze` command with the `--skip-agents-md` flag; do not use the `analyze` command without this flag: `npx gitnexus analyze --skip-agents-md`
 
-1. Install GitNexus following its [README instructions](https://github.com/abhigyanpatwari/GitNexus).
-
-2. Run GitNexus in your project root. It will generate `AGENTS.md` and `CLAUDE.md`.
-
-3. Rename both generated files to avoid conflicts with the existing `ai-kit` files:
-
-   ```sh
-   mv AGENTS.md .claude/GIT_NEXUS.md
-   rm CLAUDE.md
-   ```
-
-4. Add a reference to `GIT_NEXUS.md` inside your existing `CLAUDE.md` (or `.claude/CLAUDE.md`) so the AI agent picks up the knowledge graph context alongside your existing configuration:
-
-```markdown
-## Codebase Knowledge Graph
-
-See [GIT_NEXUS.md](../GIT_NEXUS.md) for the auto-generated codebase index produced by GitNexus, covering dependencies, call chains, clusters, and execution flows.
-```
-
-Adjust the relative path depending on where your `CLAUDE.md` lives (e.g. `.claude/CLAUDE.md` → `../GIT_NEXUS.md`; root `CLAUDE.md` → `./GIT_NEXUS.md`).
-
-5. Commit `GIT_NEXUS.md` and the updated `CLAUDE.md` together:
-
-   ```sh
-   git add GIT_NEXUS.md CLAUDE.md   # or .claude/CLAUDE.md
-   git commit -m "chore: add GitNexus codebase index as GIT_NEXUS.md"
-   ```
+- Use `npx gitnexus setup` to auto-detects your editors and writes the correct global MCP config. You only need to run it once.
