@@ -1,8 +1,8 @@
 import axios from 'axios';
 import type { AxiosResponse, InternalAxiosRequestConfig } from 'axios';
-import { loadConfig } from './env';
+import { loadEnv } from './env';
 
-const BASE_URL: string = loadConfig().apiBaseUrl;
+const BASE_URL: string = loadEnv().apiBaseUrl;
 
 const axiosInstance = axios.create({
   baseURL: BASE_URL,

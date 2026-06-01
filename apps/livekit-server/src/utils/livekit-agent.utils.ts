@@ -1,8 +1,8 @@
 import { AgentDispatchClient } from 'livekit-server-sdk';
-import { loadConfig } from '../configs/env';
+import { loadEnv } from '../configs';
 
 export class LiveKitAgentUtil {
-  private readonly config = loadConfig();
+  private readonly config = loadEnv();
   private readonly agentDispatchClient = new AgentDispatchClient(
     this.config.LIVEKIT_URL,
     this.config.LIVEKIT_API_KEY,

@@ -23,7 +23,7 @@ type Config = yup.InferType<typeof schema>;
 
 let config = {} as Config;
 
-function loadConfig(): Config {
+function loadEnv(): Config {
   if (Object.keys(config).length === 0) {
     let validated: Config;
 
@@ -45,4 +45,4 @@ function loadConfig(): Config {
   return config;
 }
 
-export { loadConfig };
+export { loadEnv };

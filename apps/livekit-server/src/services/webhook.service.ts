@@ -1,10 +1,10 @@
 import { WebhookEvent, WebhookReceiver } from 'livekit-server-sdk';
-import { loadConfig } from '../configs/env';
+import { loadEnv } from '../configs';
 import { LiveKitRoomUtil } from '../utils/livekit-room.utils';
 import { logger } from '../utils/logger.utils';
 
 export class WebhookService {
-  private readonly config = loadConfig();
+  private readonly config = loadEnv();
   private readonly liveKitRoomUtil = new LiveKitRoomUtil();
   private readonly receiver = new WebhookReceiver(
     this.config.LIVEKIT_API_KEY,

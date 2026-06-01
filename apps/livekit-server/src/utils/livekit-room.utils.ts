@@ -1,9 +1,9 @@
 import { RoomServiceClient } from 'livekit-server-sdk';
 import type { CreateOptions, Room } from 'livekit-server-sdk';
-import { loadConfig } from '../configs/env';
+import { loadEnv } from '../configs';
 
 export class LiveKitRoomUtil {
-  private readonly config = loadConfig();
+  private readonly config = loadEnv();
   private readonly roomService = new RoomServiceClient(
     this.config.LIVEKIT_URL,
     this.config.LIVEKIT_API_KEY,

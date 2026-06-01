@@ -18,7 +18,7 @@ let config = {} as Readonly<{
   livekitUrl: string;
 }>;
 
-function loadConfig() {
+function loadEnv() {
   if (Object.keys(config).length === 0) {
     let validated: EnvSchema;
 
@@ -46,4 +46,4 @@ function loadConfig() {
   return config;
 }
 
-export { loadConfig };
+export { loadEnv };

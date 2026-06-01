@@ -1,9 +1,9 @@
 import { AccessToken } from 'livekit-server-sdk';
 import type { AccessTokenOptions } from 'livekit-server-sdk';
-import { loadConfig } from '../configs/env';
+import { loadEnv } from '../configs';
 
 export class LiveKitTokenUtil {
-  private readonly config = loadConfig();
+  private readonly config = loadEnv();
 
   /**
    * Mints a signed LiveKit JWT for a participant joining the given room.

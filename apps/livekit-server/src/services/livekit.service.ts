@@ -1,12 +1,12 @@
 import humps from 'humps';
 import { RoomAgentDispatch, RoomConfiguration } from 'livekit-server-sdk';
 import { randomUUID } from 'node:crypto';
-import { loadConfig } from '../configs/env';
+import { loadEnv } from '../configs';
 import { LiveKitTokenUtil } from '../utils/livekit-token.utils';
 import type { GetLiveKitTokenBody } from '../validators/get-livekit-token.validator';
 
 export class LiveKitService {
-  private readonly config = loadConfig();
+  private readonly config = loadEnv();
   private readonly liveKitTokenUtil = new LiveKitTokenUtil();
 
   public async getToken(body: GetLiveKitTokenBody) {

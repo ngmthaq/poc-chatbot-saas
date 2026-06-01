@@ -1,7 +1,7 @@
 import pino from 'pino';
-import { loadConfig } from '../configs/env';
+import { loadEnv } from '../configs';
 
-const config = loadConfig();
+const config = loadEnv();
 const level = config.NODE_ENV === 'production' ? 'info' : 'debug';
 
 export const logger = pino({ level });
