@@ -27,5 +27,16 @@ export const useAgentCallState = (): AgentCallState => {
     [agent.isFinished, agent.failureReasons],
   );
 
-  return { agent, connectionState, isPending, hasFailure, isFinishedClean };
+  const handleReconnect = () => {
+    window.location.reload();
+  };
+
+  return {
+    agent,
+    connectionState,
+    isPending,
+    hasFailure,
+    isFinishedClean,
+    handleReconnect,
+  };
 };

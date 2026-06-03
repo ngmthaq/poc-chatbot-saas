@@ -42,12 +42,14 @@ export const HomePage = () => {
   const { audioTrack } = useVoiceAssistant();
   const { localParticipant } = useLocalParticipant();
   const { name: roomName } = useRoomInfo();
-  const { agent, connectionState, isPending, hasFailure, isFinishedClean } =
-    useAgentCallState();
-
-  const handleReconnect = () => {
-    window.location.reload();
-  };
+  const {
+    agent,
+    connectionState,
+    isPending,
+    hasFailure,
+    isFinishedClean,
+    handleReconnect,
+  } = useAgentCallState();
 
   return (
     <PageRoot data-lk-theme="default">

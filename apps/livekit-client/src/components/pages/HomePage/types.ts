@@ -14,4 +14,5 @@ export type AgentCallState = {
   isPending: boolean;
   hasFailure: boolean;
   isFinishedClean: boolean;
+  handleReconnect: () => void;
 };
