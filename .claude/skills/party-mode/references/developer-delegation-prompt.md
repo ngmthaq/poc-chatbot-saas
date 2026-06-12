@@ -12,7 +12,7 @@
 
 ## Document References
 
-- {list any relevant documents from memory or the plan that the developer should reference}
+- {list any relevant documents from memory or the approved plan that the developer should reference}
 
 ## Skill References
 
@@ -20,7 +20,7 @@
 
 ## Tasks Assigned
 
-{Extract only the developer tasks from the plan's Task List. Do not include tester tasks.}
+{Extract only the developer tasks from the approved plan's Task List. Do not include tester tasks.}
 
 | #   | Task               | Dependencies     | Acceptance Criteria    |
 | --- | ------------------ | ---------------- | ---------------------- |
@@ -48,13 +48,17 @@
 
 - {list all files created or modified by the tester sub-agent}
 
-## Reviewer Feedback (if re-delegation)
+## Review Feedback (if re-delegation)
 
-{If this is a re-delegation triggered by a reviewer block, paste the reviewer's feedback here. Leave empty on first delegation.}
+{If this is a re-delegation triggered by the Root Agent's review (Step 6), paste the relevant review feedback rows here. Leave empty on first delegation.}
+
+## Answered Questions (if re-delegation)
+
+{If the previous result returned Open Questions, paste each question with the Root Agent's (or user's) answer here. Leave empty on first delegation.}
 
 ## Expected Output
 
-Return your result using [agent-response-template](./agent-response-template.md) skill (`Sub-Agent Result Template` section).
+Return your result using the `Sub-Agent Result Template` from [Step 5 — Sub-Agent Result Return](./step-5-result-return.md).
 
 ## Additional Information
 
@@ -66,7 +70,8 @@ Return your result using [agent-response-template](./agent-response-template.md)
 ## Usage Notes
 
 - Root Agent must scan `skills/` and assign all relevant skill files to `Skill References` before delegating.
-- `Document References` should include any relevant memory items or the original plan that the developer should reference when implementing.
-- On re-delegation, always include the reviewer feedback section — developer must address each point explicitly.
+- `Document References` should include any relevant memory items or the approved plan that the developer should reference when implementing.
+- On re-delegation after a failed review, always include the `Review Feedback` section — developer must address each point explicitly.
+- On re-delegation after open questions, always include the `Answered Questions` section so the developer can proceed without guessing.
 - `Acceptance Criteria` per task is mandatory — vague tasks produce vague results.
-- Developer must respond using [agent-response-template](./agent-response-template.md) skill (`Sub-Agent Result Template` section).
+- Developer must respond using the `Sub-Agent Result Template` from [Step 5 — Sub-Agent Result Return](./step-5-result-return.md).

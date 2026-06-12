@@ -8,13 +8,12 @@ Central skill index for all **ephemeral sub-agents** spawned by the Root Agent d
 
 ## Roles
 
-| Role      | Reference                   | Mode                | Edits      |
-| --------- | --------------------------- | ------------------- | ---------- |
-| Planner   | [planner](./planner.md)     | plan-mode           | none       |
-| Debugger  | [debugger](./debugger.md)   | plan-mode           | none       |
-| Developer | [developer](./developer.md) | acceptEdits         | production |
-| Tester    | [tester](./tester.md)       | acceptEdits         | test files |
-| Reviewer  | [reviewer](./reviewer.md)   | default (read-only) | none       |
+| Role      | Reference                   | Mode        | Edits      |
+| --------- | --------------------------- | ----------- | ---------- |
+| Developer | [developer](./developer.md) | acceptEdits | production |
+| Tester    | [tester](./tester.md)       | acceptEdits | test files |
+
+> Planning and review are **Root Agent responsibilities** — see [Step 2 — Planning](./step-2-planning.md) and [Step 6 — Review](./step-6-review.md). No planner, debugger, or reviewer sub-agents are spawned.
 
 ---
 
@@ -24,6 +23,6 @@ All sub-agents, regardless of role, must:
 
 - **Never delegate.** Only the Root Agent spawns or re-spawns sub-agents.
 - **Never exceed assigned scope.** Surface scope creep as a blocker — do not silently expand.
-- **Return structured output.** Always use the response template matching the role — see [agent-response-template](./agent-response-template.md).
+- **Return structured output.** Always use the sub-agent result template from [Step 5 — Sub-Agent Result Return](./step-5-result-return.md).
 - **No silent failures.** Any blocked task, failed check, or missing input must be reported explicitly.
-- **Ask when unclear.** If the delegation is missing required sections, refuse and list what is missing.
+- **Ask when unclear.** If the delegation is missing required sections or a decision cannot be made with confidence, return the result with the `Open Questions` section populated — the Root Agent answers (or asks the user) and re-delegates. Never guess.

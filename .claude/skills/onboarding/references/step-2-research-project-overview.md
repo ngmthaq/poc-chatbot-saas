@@ -96,7 +96,7 @@ Ask the user:
 
 Ask the user:
 
-> "How should the reviewer and tester agents handle Playwright (browser) checks on UI-affecting changes?"
+> "How should the Root Agent's review and the tester agent handle Playwright (browser) checks on UI-affecting changes?"
 >
 > - **Always** — Always run Playwright when UI changed
 > - **None** — Skip Playwright checks entirely

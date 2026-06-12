@@ -30,7 +30,9 @@ import dotenv from 'dotenv';
 import { fileURLToPath } from 'node:url';
 import { LLMAgent } from './agents';
 import { ProviderType, providerFactory } from './agents/provider';
+import { SessionModeController } from './agents/session-mode';
 import type { ProcessUserData } from './types/process-user-data';
+import type { SetVoiceModePayload } from './types/session-mode';
 
 dotenv.config({ path: '.env.local' });
 
@@ -54,14 +56,46 @@ export default defineAgent<ProcessUserData>({
       agent: new LLMAgent(),
       room: ctx.room,
       inputOptions: {
+        audioEnabled: false,
         noiseCancellation: BackgroundVoiceCancellation(),
+      },
+      outputOptions: {
+        audioEnabled: false,
       },
     });
 
     await ctx.connect();
 
+    const modeController = new SessionModeController(session);
+
+    ctx.room.localParticipant?.registerRpcMethod(
+      'set_voice_mode',
+      async (data) => {
+        let payload: SetVoiceModePayload;
+        try {
+          payload = JSON.parse(data.payload) as SetVoiceModePayload;
+        } catch {
+          return JSON.stringify({ error: 'invalid payload' });
+        }
+
+        const previous = modeController.mode;
+        const mode = modeController.set(payload.enabled);
+
+        if (mode === 'voice' && previous === 'text') {
+          session.generateReply({
+            inputModality: 'audio',
+            instructions:
+              'Briefly confirm that voice mode is now active and offer to help.',
+          });
+        }
+
+        return JSON.stringify({ mode });
+      },
+    );
+
     session.generateReply({
-      instructions: 'Greet the user in a helpful and friendly manner.',
+      instructions: 'Greet the user briefly and offer help.',
+      inputModality: 'text',
     });
   },
 });

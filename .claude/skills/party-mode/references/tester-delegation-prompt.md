@@ -12,7 +12,7 @@
 
 ## Document References
 
-- {list any relevant documents from memory or the plan that the tester should reference}
+- {list any relevant documents from memory or the approved plan that the tester should reference}
 
 ## Skill References
 
@@ -28,7 +28,7 @@
 
 ## Tasks Assigned
 
-{Extract only the tester tasks from the plan's Task List.}
+{Extract only the tester tasks from the approved plan's Task List.}
 
 | #   | Task           | Test Type                | Acceptance Criteria       |
 | --- | -------------- | ------------------------ | ------------------------- |
@@ -47,13 +47,17 @@
 - {Coverage threshold if applicable}
 - {Must not modify production code}
 
-## Reviewer Feedback (if re-delegation)
+## Review Feedback (if re-delegation)
 
-{If this is a re-delegation triggered by a reviewer block, paste the reviewer's test-related feedback here. Leave empty on first delegation.}
+{If this is a re-delegation triggered by the Root Agent's review (Step 6), paste the test-related review feedback rows here. Leave empty on first delegation.}
+
+## Answered Questions (if re-delegation)
+
+{If the previous result returned Open Questions, paste each question with the Root Agent's (or user's) answer here. Leave empty on first delegation.}
 
 ## Expected Output
 
-Return your result using [agent-response-template](./agent-response-template.md) skill (`Sub-Agent Result Template` section).
+Return your result using the `Sub-Agent Result Template` from [Step 5 — Sub-Agent Result Return](./step-5-result-return.md).
 
 ## Additional Information
 
@@ -65,7 +69,8 @@ Return your result using [agent-response-template](./agent-response-template.md)
 ## Usage Notes
 
 - Root Agent must scan `skills/` and assign all relevant skill files to `Skill References` before delegating.
-- `Document References` should include any relevant memory items or the original plan that the tester should reference when creating tests.
+- `Document References` should include any relevant memory items or the approved plan that the tester should reference when creating tests.
 - Tester must not modify production code — only test files.
-- Tester must not review or judge the developer's work. If a test fails because of the developer's code, just record `fail` in `Test Results` — the reviewer is the only agent that decides whether developer or tester output is correct.
-- Tester must respond using [agent-response-template](./agent-response-template.md) skill (`Sub-Agent Result Template` section).
+- Tester must not review or judge the developer's work. If a test fails because of the developer's code, just record `fail` in `Test Results` — the Root Agent decides at review (Step 6) whether developer or tester output is correct.
+- On re-delegation after a failed review, always include the `Review Feedback` section — tester must address each point explicitly.
+- Tester must respond using the `Sub-Agent Result Template` from [Step 5 — Sub-Agent Result Return](./step-5-result-return.md).
