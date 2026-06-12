@@ -17,10 +17,6 @@ export const getLiveKitTokenSchema = yup.object({
       },
     )
     .optional(),
-  mode: yup
-    .string()
-    .oneOf(['text', 'voice'], 'mode must be "text" or "voice"')
-    .default('text'),
   roomConfig: yup.mixed().optional(),
 });
 
