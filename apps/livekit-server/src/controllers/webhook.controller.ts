@@ -7,6 +7,6 @@ export class WebhookController {
   public readonly receive: RequestHandler = async (req) => {
     const rawBody = req.body as string;
     const authHeader = req.headers.authorization ?? null;
-    await this.webhookService.receive(rawBody, authHeader);
+    await this.webhookService.receive(rawBody, authHeader).catch(() => {});
   };
 }
