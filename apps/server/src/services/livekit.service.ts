@@ -17,7 +17,12 @@ export class LiveKitService {
       body.participantName ?? `participant-name-${randomUUID()}`;
     const participantMetadata =
       body.participantMetadata ?? `participant-metadata-${randomUUID()}`;
-    const participantAttributes = body.participantAttributes ?? {};
+    const mode = body.mode ?? 'text';
+
+    const participantAttributes = {
+      ...(body.participantAttributes ?? {}),
+      'app.mode': mode,
+    };
 
     const at = this.liveKitTokenUtil.createAccessToken({
       identity: participantIdentity,
@@ -43,6 +48,7 @@ export class LiveKitService {
         agents: [
           new RoomAgentDispatch({
             agentName: this.config.LIVEKIT_AGENT_NAME,
+            metadata: JSON.stringify({ defaultMode: mode }),
           }),
         ],
       });

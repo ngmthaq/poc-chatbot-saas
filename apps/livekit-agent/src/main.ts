@@ -31,8 +31,9 @@ import { fileURLToPath } from 'node:url';
 import { LLMAgent } from './agents';
 import { ProviderType, providerFactory } from './agents/provider';
 import { SessionModeController } from './agents/session-mode';
+import type { DispatchMetadata } from './types/dispatch-metadata';
 import type { ProcessUserData } from './types/process-user-data';
-import type { SetVoiceModePayload } from './types/session-mode';
+import type { SessionMode, SetVoiceModePayload } from './types/session-mode';
 
 dotenv.config({ path: '.env.local' });
 
@@ -68,6 +69,22 @@ export default defineAgent<ProcessUserData>({
 
     const modeController = new SessionModeController(session);
 
+    let defaultMode: SessionMode = 'text';
+    if (ctx.job.metadata) {
+      try {
+        const dispatch = JSON.parse(ctx.job.metadata) as DispatchMetadata;
+        if (dispatch.defaultMode === 'voice') {
+          defaultMode = 'voice';
+        }
+      } catch {
+        // Malformed dispatch metadata — fall back to text-first.
+      }
+    }
+
+    if (defaultMode === 'voice') {
+      modeController.enableVoice();
+    }
+
     ctx.room.localParticipant?.registerRpcMethod(
       'set_voice_mode',
       async (data) => {
@@ -95,7 +112,7 @@ export default defineAgent<ProcessUserData>({
 
     session.generateReply({
       instructions: 'Greet the user briefly and offer help.',
-      inputModality: 'text',
+      inputModality: modeController.mode === 'voice' ? 'audio' : 'text',
     });
   },
 });
