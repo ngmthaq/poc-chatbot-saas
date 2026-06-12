@@ -17,19 +17,19 @@ pnpm install
 # Copy environment files
 pnpm copy-env
 # Then fill in each .env file:
-#   apps/livekit-server/.env
+#   apps/server/.env
 #   apps/livekit-agent/.env
-#   apps/livekit-infra/.env
+#   apps/infra/.env
 ```
 
 ## Dev Run
 
 ```bash
 # 1. Start infrastructure (LiveKit, PostgreSQL, Redis)
-pnpm livekit-infra dev
+pnpm infra dev
 
 # 2. Start the API server
-pnpm livekit-server dev
+pnpm server dev
 
 # 3. Start the voice agent
 pnpm livekit-agent dev
@@ -39,8 +39,8 @@ pnpm livekit-agent dev
 
 ```bash
 pnpm format                    # Format all files with Prettier
-pnpm livekit-server lint       # Lint a specific app
-pnpm livekit-server typecheck  # Type-check a specific app
+pnpm server lint       # Lint a specific app
+pnpm server typecheck  # Type-check a specific app
 ```
 
 ## Monorepo Structure
@@ -49,7 +49,8 @@ pnpm livekit-server typecheck  # Type-check a specific app
 call-center-agent/
 ├── apps/
 │   ├── livekit-agent/    # LiveKit voice AI agent (TypeScript)
-│   ├── livekit-server/   # Express.js API server (TypeScript)
-│   └── livekit-infra/    # Self-hosted Docker Compose stack
+│   ├── client/           # React SPA call UI (TypeScript)
+│   ├── server/           # Express.js API server (TypeScript)
+│   └── infra/            # Self-hosted Docker Compose stack
 └── package.json
 ```

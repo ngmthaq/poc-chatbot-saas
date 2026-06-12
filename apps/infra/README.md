@@ -1,4 +1,4 @@
-# livekit-infra
+# infra
 
 Docker Compose stack for LiveKit infrastructure (LiveKit server, Redis, PostgreSQL).
 
@@ -18,7 +18,7 @@ cp .env.example .env
 
 ```bash
 # From the repo root
-pnpm livekit-infra dev
+pnpm infra dev
 
 # Or from this directory
 docker compose --profile dev up -d

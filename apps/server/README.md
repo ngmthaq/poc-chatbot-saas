@@ -1,4 +1,4 @@
-# livekit-server
+# server
 
 Express.js + TypeScript API server for the call center agent.
 
@@ -28,7 +28,7 @@ cp .env.example .env
 
 ```bash
 # From the repo root
-pnpm livekit-server dev
+pnpm server dev
 
 # Or from this directory
 pnpm dev

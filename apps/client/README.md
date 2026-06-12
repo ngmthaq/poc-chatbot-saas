@@ -1,4 +1,4 @@
-# livekit-client
+# client
 
 React 18 + Vite 7 + TypeScript frontend for the Call Center Agent platform.
 
@@ -16,7 +16,7 @@ React 18 + Vite 7 + TypeScript frontend for the Call Center Agent platform.
 
 ```sh
 # from workspace root
-cp apps/livekit-client/.env.example apps/livekit-client/.env.local
+cp apps/client/.env.example apps/client/.env.local
 # fill in VITE_API_BASE_URL
 pnpm install
 ```
@@ -24,7 +24,7 @@ pnpm install
 ## Development
 
 ```sh
-pnpm --filter livekit-client dev
+pnpm --filter client dev
 ```
 
 Dev server runs on http://localhost:5173.
@@ -34,7 +34,7 @@ On first run, Vite generates `src/routeTree.gen.ts` automatically. Do not edit t
 ## Build
 
 ```sh
-pnpm --filter livekit-client build
+pnpm --filter client build
 ```
 
 ## Atomic Design
@@ -51,7 +51,7 @@ Components live in `src/components/` with strict import rules:
 
 ## Environment Variables
 
-| Key                 | Description                         |
-| ------------------- | ----------------------------------- |
-| `VITE_API_BASE_URL` | Base URL for the livekit-server API |
-| `VITE_LIVEKIT_URL`  | LiveKit server WebSocket URL        |
+| Key                 | Description                  |
+| ------------------- | ---------------------------- |
+| `VITE_API_BASE_URL` | Base URL for the server API  |
+| `VITE_LIVEKIT_URL`  | LiveKit server WebSocket URL |

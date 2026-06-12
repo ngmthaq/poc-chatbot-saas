@@ -10,7 +10,7 @@ call-center-agent/
 │   │       ├── agents/         Agent class, provider factory, instructions
 │   │       ├── tools/          LLM tool definitions (zod-validated)
 │   │       └── types/          TypeScript declaration files
-│   ├── livekit-client/
+│   ├── client/
 │   │   └── src/
 │   │       ├── components/
 │   │       │   ├── atoms/      Smallest UI units (badge, dot, icon)
@@ -29,7 +29,7 @@ call-center-agent/
 │   │       │   └── stores/     Jotai atom-based stores
 │   │       ├── routes/         TanStack Router route files
 │   │       └── types/          TypeScript ambient declaration files (.d.ts)
-│   ├── livekit-server/
+│   ├── server/
 │   │   └── src/
 │   │       ├── configs/        Env loading (yup-validated) + error messages
 │   │       ├── controllers/    Express route handlers (class-based)
@@ -39,7 +39,7 @@ call-center-agent/
 │   │       ├── types/          TypeScript declaration files (.d.ts)
 │   │       ├── utils/          Pure helpers (logger, response, livekit utils)
 │   │       └── validators/     Yup request body schemas
-│   └── livekit-infra/          Docker Compose + Nginx + Redis config/templates
+│   └── infra/                  Docker Compose + Nginx + Redis config/templates
 ├── docs/                       Agent-generated plans and decision docs
 └── scripts/                    Shell utility scripts
 ```
@@ -190,7 +190,7 @@ File name format: `DD-MM-YYYY-HH-MM-SS-short-description.md`
 
 ---
 
-## livekit-client Specifics
+## client Specifics
 
 ### Logging (client)
 
