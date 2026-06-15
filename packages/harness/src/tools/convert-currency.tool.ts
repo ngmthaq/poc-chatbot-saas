@@ -11,9 +11,8 @@ const formatNumber = (value: number): string =>
 const convertCurrencySchema = z.object({
   amount: z
     .number()
-    .positive()
     .default(1)
-    .describe('The amount of money to convert'),
+    .describe('The amount of money to convert (must be greater than 0)'),
   from: z
     .string()
     .length(3)
@@ -44,6 +43,10 @@ export class ConvertCurrencyTool extends BaseTool<
     from,
     to,
   }: z.infer<typeof convertCurrencySchema>): Promise<string> {
+    if (amount <= 0) {
+      return 'The amount to convert must be greater than 0.';
+    }
+
     const fromCode = from.trim().toUpperCase();
     const toCode = to.trim().toUpperCase();
     console.log(`Converting ${amount} ${fromCode} to ${toCode}`);
