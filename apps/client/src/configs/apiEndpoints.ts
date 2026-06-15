@@ -11,6 +11,9 @@ export const apiEndpoints = {
     liveKitToken: () => {
       return '/livekit/token';
     },
+    chat: () => {
+      return '/chat';
+    },
   },
 
   // PUT requests
