@@ -1,36 +1,49 @@
-import { dedent, llm } from '@livekit/agents';
-import z from 'zod';
+import { z } from 'zod';
 import type { ExchangeRateResponse } from '../types/convert-currency';
+import { dedent } from '../utils/index';
+import { BaseTool } from './base/base-tool';
 
 const EXCHANGE_RATE_URL = 'https://open.er-api.com/v6/latest';
 
 const formatNumber = (value: number): string =>
   new Intl.NumberFormat('en-US', { maximumFractionDigits: 4 }).format(value);
 
-export const convertCurrency = llm.tool({
-  description: dedent`
+const convertCurrencySchema = z.object({
+  amount: z
+    .number()
+    .positive()
+    .default(1)
+    .describe('The amount of money to convert'),
+  from: z
+    .string()
+    .length(3)
+    .describe('The 3-letter ISO code of the source currency (e.g. "USD")'),
+  to: z
+    .string()
+    .length(3)
+    .describe('The 3-letter ISO code of the target currency (e.g. "EUR")'),
+});
+
+export class ConvertCurrencyTool extends BaseTool<
+  typeof convertCurrencySchema
+> {
+  public readonly name = 'convertCurrency';
+
+  public readonly description = dedent`
         Use this tool to convert an amount of money from one currency to another
         using current exchange rates (e.g. convert 100 USD to EUR).
         Currencies are given as 3-letter ISO codes (e.g. "USD", "EUR", "VND").
         If a currency is not supported, the tool will indicate this and you must
         tell the user the conversion is unavailable.
-    `,
-  parameters: z.object({
-    amount: z
-      .number()
-      .positive()
-      .default(1)
-      .describe('The amount of money to convert'),
-    from: z
-      .string()
-      .length(3)
-      .describe('The 3-letter ISO code of the source currency (e.g. "USD")'),
-    to: z
-      .string()
-      .length(3)
-      .describe('The 3-letter ISO code of the target currency (e.g. "EUR")'),
-  }),
-  execute: async ({ amount, from, to }) => {
+    `;
+
+  public readonly schema = convertCurrencySchema;
+
+  public async execute({
+    amount,
+    from,
+    to,
+  }: z.infer<typeof convertCurrencySchema>): Promise<string> {
     const fromCode = from.trim().toUpperCase();
     const toCode = to.trim().toUpperCase();
     console.log(`Converting ${amount} ${fromCode} to ${toCode}`);
@@ -64,5 +77,5 @@ export const convertCurrency = llm.tool({
       console.error(`Failed to convert ${fromCode} to ${toCode}:`, error);
       return `The conversion from ${fromCode} to ${toCode} is unavailable due to a service error.`;
     }
-  },
-});
+  }
+}

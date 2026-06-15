@@ -1,0 +1,61 @@
+{
+  "name": "@call-center-agent/harness",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./livekit": {
+      "types": "./dist/adapters/livekit.adapter.d.ts",
+      "import": "./dist/adapters/livekit.adapter.js"
+    },
+    "./langchain": {
+      "types": "./dist/adapters/langchain.adapter.d.ts",
+      "import": "./dist/adapters/langchain.adapter.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=10.0.0"
+  },
+  "dependencies": {
+    "zod": "^3.25.76"
+  },
+  "peerDependencies": {
+    "@livekit/agents": "^1.4.3",
+    "langchain": "^1.4.4"
+  },
+  "peerDependenciesMeta": {
+    "@livekit/agents": {
+      "optional": true
+    },
+    "langchain": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@livekit/agents": "^1.4.3",
+    "langchain": "^1.4.4",
+    "@types/node": "^22.19.17",
+    "eslint": "^9.39.4",
+    "globals": "^16.5.0",
+    "jiti": "^2.6.1",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.58.1"
+  }
+}

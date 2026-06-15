@@ -31,6 +31,7 @@
     "vitest": "^4.1.4"
   },
   "dependencies": {
+    "@call-center-agent/harness": "workspace:*",
     "@livekit/agents": "^1.4.3",
     "@livekit/agents-plugin-cartesia": "^1.4.4",
     "@livekit/agents-plugin-deepgram": "^1.4.4",

@@ -1,11 +1,12 @@
-import { dedent, llm } from '@livekit/agents';
-import z from 'zod';
+import { z } from 'zod';
 import type {
   CompanyInfo,
   DuckDuckGoResponse,
   WikipediaSearchResponse,
   WikipediaSummaryResponse,
 } from '../types/search-branch-information';
+import { dedent } from '../utils/index';
+import { BaseTool } from './base/base-tool';
 
 const WIKIPEDIA_SEARCH_URL =
   'https://en.wikipedia.org/w/rest.php/v1/search/page';
@@ -99,20 +100,30 @@ const formatCompanyInfo = (info: CompanyInfo, fallbackUrl: string): string => {
   return lines.join('\n');
 };
 
-export const searchBranchInformation = llm.tool({
-  description: dedent`
+const searchBranchInformationSchema = z.object({
+  company: z
+    .string()
+    .describe('The name of the company or organization to look up'),
+});
+
+export class SearchBranchInformationTool extends BaseTool<
+  typeof searchBranchInformationSchema
+> {
+  public readonly name = 'searchBranchInformation';
+
+  public readonly description = dedent`
         Use this tool to look up information about a company or organization
         (e.g. what it does, where it is headquartered, its industry, history,
         or other public details). It checks Wikipedia first, then DuckDuckGo.
         If neither has data, the tool returns a web-search URL the user can
         open to find more information.
-    `,
-  parameters: z.object({
-    company: z
-      .string()
-      .describe('The name of the company or organization to look up'),
-  }),
-  execute: async ({ company }) => {
+    `;
+
+  public readonly schema = searchBranchInformationSchema;
+
+  public async execute({
+    company,
+  }: z.infer<typeof searchBranchInformationSchema>): Promise<string> {
     console.log(`Searching company information for ${company}`);
 
     const fallbackUrl = buildFallbackSearchUrl(company);
@@ -136,5 +147,5 @@ export const searchBranchInformation = llm.tool({
       No information was found for "${company}" on Wikipedia or DuckDuckGo.
       You can search the web for more information here: ${fallbackUrl}
     `;
-  },
-});
+  }
+}

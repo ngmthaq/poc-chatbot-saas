@@ -1,6 +1,7 @@
-import { dedent, llm } from '@livekit/agents';
-import z from 'zod';
+import { z } from 'zod';
 import type { MetalPriceResponse } from '../types/get-gold-price';
+import { dedent } from '../utils/index';
+import { BaseTool } from './base/base-tool';
 
 const METAL_PRICE_URL = 'https://api.gold-api.com/price';
 
@@ -17,20 +18,28 @@ type Metal = keyof typeof METAL_SYMBOLS;
 const formatNumber = (value: number): string =>
   new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 }).format(value);
 
-export const getGoldPrice = llm.tool({
-  description: dedent`
+const getGoldPriceSchema = z.object({
+  metal: z
+    .enum(Object.keys(METAL_SYMBOLS) as [Metal, ...Metal[]])
+    .default('gold')
+    .describe('The precious metal to look up the spot price for'),
+});
+
+export class GetGoldPriceTool extends BaseTool<typeof getGoldPriceSchema> {
+  public readonly name = 'getGoldPrice';
+
+  public readonly description = dedent`
         Use this tool to look up the current spot price of a precious metal
         (gold, silver, platinum, or palladium) in US dollars per troy ounce.
         If the price cannot be retrieved, the tool will indicate this and you
         must tell the user the price is unavailable.
-    `,
-  parameters: z.object({
-    metal: z
-      .enum(Object.keys(METAL_SYMBOLS) as [Metal, ...Metal[]])
-      .default('gold')
-      .describe('The precious metal to look up the spot price for'),
-  }),
-  execute: async ({ metal }) => {
+    `;
+
+  public readonly schema = getGoldPriceSchema;
+
+  public async execute({
+    metal,
+  }: z.infer<typeof getGoldPriceSchema>): Promise<string> {
     console.log(`Looking up spot price for ${metal}`);
 
     try {
@@ -53,5 +62,5 @@ export const getGoldPrice = llm.tool({
       console.error(`Failed to look up spot price for ${metal}:`, error);
       return `The price for ${metal} is unavailable due to a service error.`;
     }
-  },
-});
+  }
+}

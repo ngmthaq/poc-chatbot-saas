@@ -1,9 +1,10 @@
-import { dedent, llm } from '@livekit/agents';
-import z from 'zod';
+import { z } from 'zod';
 import type {
   CoinSearchResponse,
   SimplePriceResponse,
 } from '../types/get-coin-price';
+import { dedent } from '../utils/index';
+import { BaseTool } from './base/base-tool';
 
 const SEARCH_URL = 'https://api.coingecko.com/api/v3/search';
 const SIMPLE_PRICE_URL = 'https://api.coingecko.com/api/v3/simple/price';
@@ -78,23 +79,32 @@ const SUPPORTED_CURRENCIES = [
 const formatNumber = (value: number): string =>
   new Intl.NumberFormat('en-US', { maximumFractionDigits: 8 }).format(value);
 
-export const getCoinPrice = llm.tool({
-  description: dedent`
+const getCoinPriceSchema = z.object({
+  coin: z
+    .string()
+    .describe('The cryptocurrency name or symbol (e.g. "bitcoin", "BTC")'),
+  currency: z
+    .enum(SUPPORTED_CURRENCIES)
+    .default('usd')
+    .describe('The fiat or crypto currency to price the coin in'),
+});
+
+export class GetCoinPriceTool extends BaseTool<typeof getCoinPriceSchema> {
+  public readonly name = 'getCoinPrice';
+
+  public readonly description = dedent`
         Use this tool to look up the current market price of a cryptocurrency.
         Accepts a coin name or symbol (e.g. "bitcoin", "BTC", "ethereum").
         If the coin is not found, the tool will indicate this and you must tell
         the user the price is unavailable.
-    `,
-  parameters: z.object({
-    coin: z
-      .string()
-      .describe('The cryptocurrency name or symbol (e.g. "bitcoin", "BTC")'),
-    currency: z
-      .enum(SUPPORTED_CURRENCIES)
-      .default('usd')
-      .describe('The fiat or crypto currency to price the coin in'),
-  }),
-  execute: async ({ coin, currency }) => {
+    `;
+
+  public readonly schema = getCoinPriceSchema;
+
+  public async execute({
+    coin,
+    currency,
+  }: z.infer<typeof getCoinPriceSchema>): Promise<string> {
     console.log(`Looking up price for ${coin} in ${currency}`);
 
     try {
@@ -154,5 +164,5 @@ export const getCoinPrice = llm.tool({
       console.error(`Failed to look up price for ${coin}:`, error);
       return `The price for "${coin}" is unavailable due to a service error.`;
     }
-  },
-});
+  }
+}

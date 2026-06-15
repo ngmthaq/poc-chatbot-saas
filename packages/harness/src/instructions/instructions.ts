@@ -1,6 +1,9 @@
-import { dedent } from '@livekit/agents';
+import { dedent } from '../utils/index';
 
-export const instructions = dedent`
+export class AgentInstructions {
+  /** Build and return the full instruction string. */
+  public build(): string {
+    return dedent`
 You are a friendly, reliable voice assistant that answers questions, explains topics, and completes tasks with available tools.
 
 # Output rules
@@ -33,3 +36,10 @@ You are interacting with the user via voice, and must apply the following rules 
 - For medical, legal, or financial topics, provide general information only and suggest consulting a qualified professional.
 - Protect privacy and minimize sensitive data.
 `;
+  }
+
+  /** Alias for {@link build} so the instructions can be used as a string. */
+  public toString(): string {
+    return this.build();
+  }
+}

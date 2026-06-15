@@ -1,9 +1,10 @@
-import { dedent, llm } from '@livekit/agents';
-import z from 'zod';
+import { z } from 'zod';
 import type {
   GeocodingResponse,
   WeatherForecastResponse,
 } from '../types/get-weather';
+import { dedent } from '../utils/index';
+import { BaseTool } from './base/base-tool';
 
 const GEOCODING_URL = 'https://geocoding-api.open-meteo.com/v1/search';
 const FORECAST_URL = 'https://api.open-meteo.com/v1/forecast';
@@ -38,20 +39,28 @@ const WEATHER_CODE_DESCRIPTIONS: Record<number, string> = {
   99: 'thunderstorm with heavy hail',
 };
 
-export const getWeather = llm.tool({
-  description: dedent`
+const getWeatherSchema = z.object({
+  location: z
+    .string()
+    .describe(
+      'The location to look up weather information for (e.g. city name)',
+    ),
+});
+
+export class GetWeatherTool extends BaseTool<typeof getWeatherSchema> {
+  public readonly name = 'getWeather';
+
+  public readonly description = dedent`
         Use this tool to look up current weather information in the given location.
         If the location is not supported by the weather service, the tool will indicate this.
         You must tell the user the location's weather is unavailable.
-    `,
-  parameters: z.object({
-    location: z
-      .string()
-      .describe(
-        'The location to look up weather information for (e.g. city name)',
-      ),
-  }),
-  execute: async ({ location }) => {
+    `;
+
+  public readonly schema = getWeatherSchema;
+
+  public async execute({
+    location,
+  }: z.infer<typeof getWeatherSchema>): Promise<string> {
     console.log(`Looking up weather for ${location}`);
 
     try {
@@ -113,5 +122,5 @@ export const getWeather = llm.tool({
       console.error(`Failed to look up weather for ${location}:`, error);
       return `The weather for "${location}" is unavailable due to a service error.`;
     }
-  },
-});
+  }
+}

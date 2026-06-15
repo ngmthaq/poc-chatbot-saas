@@ -1,5 +1,4 @@
-import { dedent, llm } from '@livekit/agents';
-import z from 'zod';
+import { z } from 'zod';
 import type {
   StockChartResponse,
   StockQuote,
@@ -7,6 +6,8 @@ import type {
   TwelveDataQuoteResponse,
   YahooSearchResponse,
 } from '../types/get-stock-price';
+import { dedent } from '../utils/index';
+import { BaseTool } from './base/base-tool';
 
 const YAHOO_CHART_URL = 'https://query1.finance.yahoo.com/v8/finance/chart';
 const YAHOO_SEARCH_URL = 'https://query1.finance.yahoo.com/v1/finance/search';
@@ -141,19 +142,27 @@ const formatQuote = (quote: StockQuote): string => {
   return lines.join('\n');
 };
 
-export const getStockPrice = llm.tool({
-  description: dedent`
+const getStockPriceSchema = z.object({
+  symbol: z
+    .string()
+    .describe('The stock ticker symbol to look up (e.g. "AAPL", "TSLA")'),
+});
+
+export class GetStockPriceTool extends BaseTool<typeof getStockPriceSchema> {
+  public readonly name = 'getStockPrice';
+
+  public readonly description = dedent`
         Use this tool to look up the current market price of a publicly traded
         stock by its ticker symbol (e.g. "AAPL", "TSLA", "MSFT").
         If the symbol is not found, the tool will indicate this and you must
         tell the user the stock price is unavailable.
-    `,
-  parameters: z.object({
-    symbol: z
-      .string()
-      .describe('The stock ticker symbol to look up (e.g. "AAPL", "TSLA")'),
-  }),
-  execute: async ({ symbol }) => {
+    `;
+
+  public readonly schema = getStockPriceSchema;
+
+  public async execute({
+    symbol,
+  }: z.infer<typeof getStockPriceSchema>): Promise<string> {
     const ticker = symbol.trim().toUpperCase();
     console.log(`Looking up stock price for ${ticker}`);
 
@@ -198,5 +207,5 @@ export const getStockPrice = llm.tool({
     }
 
     return formatQuote(quote);
-  },
-});
+  }
+}
