@@ -3,7 +3,7 @@ import { toolRegistry } from '@call-center-agent/harness';
 import { toLangChainTools } from '@call-center-agent/harness/langchain';
 import { MemorySaver } from '@langchain/langgraph';
 import { type DeepAgent, createDeepAgent } from 'deepagents';
-import { loadEnv } from '../server/configs/env';
+import type { ProviderType } from './provider';
 import { providerFactory } from './provider';
 import { subAgents } from './subagents';
 
@@ -12,12 +12,13 @@ import { subAgents } from './subagents';
  *
  * Uses an in-memory {@link MemorySaver} checkpointer so conversations persist
  * per `thread_id` for the lifetime of the process (lost on restart).
+ *
+ * @param provider - The LLM provider to use. The host owns env/provider
+ *   selection; this factory takes the resolved provider explicitly.
  */
-export function createChatAgent(): DeepAgent {
-  const { LLM_PROVIDER } = loadEnv();
-
+export function createChatAgent(provider: ProviderType): DeepAgent {
   const agent = createDeepAgent({
-    model: providerFactory.llm(LLM_PROVIDER),
+    model: providerFactory.llm(provider),
     tools: toLangChainTools(toolRegistry),
     systemPrompt: new AgentInstructions({ mode: 'text' }).build(),
     subagents: subAgents,

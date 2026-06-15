@@ -17,6 +17,7 @@
     "pnpm": ">=10.0.0"
   },
   "dependencies": {
+    "@call-center-agent/deepagent": "workspace:*",
     "cors": "^2.8.5",
     "dotenv": "^17.4.1",
     "express": "^4.21.0",

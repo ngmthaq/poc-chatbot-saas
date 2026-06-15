@@ -1,3 +1,4 @@
+import { ProviderType } from '@call-center-agent/deepagent';
 import dotenv from 'dotenv';
 import path from 'node:path';
 import * as yup from 'yup';
@@ -17,6 +18,17 @@ const schema = yup.object().shape({
     .string()
     .trim()
     .required('LIVEKIT_AGENT_NAME is required'),
+  // Text-chat (deepagent) LLM provider selection.
+  LLM_PROVIDER: yup
+    .mixed<ProviderType>()
+    .oneOf(Object.values(ProviderType))
+    .default(ProviderType.OPENAI),
+  // Provider API keys are read from process.env directly by LangChain/harness;
+  // declared here as optional for visibility/documentation only.
+  OPENAI_API_KEY: yup.string().trim().optional(),
+  MISTRAL_API_KEY: yup.string().trim().optional(),
+  ANTHROPIC_API_KEY: yup.string().trim().optional(),
+  TWELVE_DATA_API_KEY: yup.string().trim().optional(),
 });
 
 type Config = yup.InferType<typeof schema>;
