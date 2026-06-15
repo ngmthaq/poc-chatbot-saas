@@ -3,7 +3,7 @@ import type {
   GeocodingResponse,
   WeatherForecastResponse,
 } from '../types/get-weather';
-import { dedent } from '../utils/index';
+import { dedent, fetchWithTimeout } from '../utils/index';
 import { BaseTool } from './base/base-tool';
 
 const GEOCODING_URL = 'https://geocoding-api.open-meteo.com/v1/search';
@@ -71,7 +71,7 @@ export class GetWeatherTool extends BaseTool<typeof getWeatherSchema> {
       geocodingUrl.searchParams.set('language', 'en');
       geocodingUrl.searchParams.set('format', 'json');
 
-      const geocodingResponse = await fetch(geocodingUrl);
+      const geocodingResponse = await fetchWithTimeout(geocodingUrl);
       if (!geocodingResponse.ok) {
         throw new Error(
           `Geocoding request failed: ${geocodingResponse.status}`,
@@ -93,7 +93,7 @@ export class GetWeatherTool extends BaseTool<typeof getWeatherSchema> {
         'temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,weather_code',
       );
 
-      const forecastResponse = await fetch(forecastUrl);
+      const forecastResponse = await fetchWithTimeout(forecastUrl);
       if (!forecastResponse.ok) {
         throw new Error(`Forecast request failed: ${forecastResponse.status}`);
       }

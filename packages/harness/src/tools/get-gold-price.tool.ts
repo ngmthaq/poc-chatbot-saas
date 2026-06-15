@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import type { MetalPriceResponse } from '../types/get-gold-price';
-import { dedent } from '../utils/index';
+import { dedent, fetchWithTimeout } from '../utils/index';
 import { BaseTool } from './base/base-tool';
 
 const METAL_PRICE_URL = 'https://api.gold-api.com/price';
@@ -44,7 +44,7 @@ export class GetGoldPriceTool extends BaseTool<typeof getGoldPriceSchema> {
 
     try {
       const symbol = METAL_SYMBOLS[metal];
-      const response = await fetch(`${METAL_PRICE_URL}/${symbol}`);
+      const response = await fetchWithTimeout(`${METAL_PRICE_URL}/${symbol}`);
       if (!response.ok) {
         throw new Error(`Price request failed: ${response.status}`);
       }

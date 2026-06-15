@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import type { ExchangeRateResponse } from '../types/convert-currency';
-import { dedent } from '../utils/index';
+import { dedent, fetchWithTimeout } from '../utils/index';
 import { BaseTool } from './base/base-tool';
 
 const EXCHANGE_RATE_URL = 'https://open.er-api.com/v6/latest';
@@ -52,7 +52,7 @@ export class ConvertCurrencyTool extends BaseTool<
     console.log(`Converting ${amount} ${fromCode} to ${toCode}`);
 
     try {
-      const response = await fetch(
+      const response = await fetchWithTimeout(
         `${EXCHANGE_RATE_URL}/${encodeURIComponent(fromCode)}`,
       );
       if (!response.ok) {
