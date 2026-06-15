@@ -9,7 +9,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "dev": "bash ../../scripts/dev.sh server",
+    "dev": "tsx watch src/server.ts",
     "start": "node dist/server.js"
   },
   "engines": {

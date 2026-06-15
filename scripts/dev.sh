@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 #
-# Dev launcher that builds workspace library dependencies (in order) before
-# starting a package's watcher. Libraries are consumed via their built `dist`,
-# so they must exist first; deepagent's type build also needs harness's dist,
-# hence harness is always built before deepagent.
+# Dev launcher for the full stack, in dependency order:
+#   harness -> deepagent -> livekit-agent -> server -> client
 #
-# Usage: bash scripts/dev.sh <deepagent|server>
+# Libraries (harness, deepagent) are consumed via their built `dist`, so they
+# are built once up front before any watcher starts. Then each package's own
+# `dev` watcher runs concurrently. infra is excluded — run it via `pnpm infra …`.
 
 set -euo pipefail
 
@@ -17,20 +17,19 @@ build_lib() {
   pnpm --filter "$1" run build
 }
 
-case "${1:-}" in
-  deepagent)
-    build_lib @call-center-agent/harness
-    cd "$ROOT/packages/deepagent"
-    exec pnpm exec tsup --watch
-    ;;
-  server)
-    build_lib @call-center-agent/harness
-    build_lib @call-center-agent/deepagent
-    cd "$ROOT/apps/server"
-    exec pnpm exec tsx watch src/server.ts
-    ;;
-  *)
-    echo "usage: bash scripts/dev.sh <deepagent|server>" >&2
-    exit 1
-    ;;
-esac
+# Build libraries once, in order, so the app watchers have a dist to import.
+build_lib @call-center-agent/harness
+build_lib @call-center-agent/deepagent
+
+# Start every package's own dev watcher concurrently; tear them down together.
+pids=()
+cleanup() { kill "${pids[@]}" 2>/dev/null || true; }
+trap cleanup EXIT INT TERM
+
+pnpm --filter @call-center-agent/harness run dev & pids+=($!)
+pnpm --filter @call-center-agent/deepagent run dev & pids+=($!)
+pnpm --filter livekit-agent run dev & pids+=($!)
+pnpm --filter server run dev & pids+=($!)
+pnpm --filter client run dev & pids+=($!)
+
+wait
