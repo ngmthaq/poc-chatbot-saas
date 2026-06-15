@@ -1,6 +1,6 @@
 {
   "name": "call-center-agent",
-  "version": "1.0.38",
+  "version": "1.0.39",
   "private": true,
   "description": "Call center AI agent monorepo",
   "scripts": {
