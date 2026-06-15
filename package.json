@@ -1,13 +1,12 @@
 {
   "name": "call-center-agent",
-  "version": "1.0.41",
+  "version": "1.0.42",
   "private": true,
   "description": "Call center AI agent monorepo",
   "scripts": {
     "prepare": "husky",
     "format": "prettier --write .",
     "copy-env": "bash scripts/copy-env.sh",
-    "build": "bash scripts/build.sh",
     "dev": "bash scripts/dev.sh",
     "livekit-agent": "pnpm --filter livekit-agent $*",
     "deepagent": "pnpm --filter @call-center-agent/deepagent $*",
