@@ -1,19 +1,19 @@
 import dotenv from 'dotenv';
 import { z } from 'zod';
-import { ProviderType } from '../../agents/provider';
-import type { AppConfig } from '../../types/chat';
+import { ProviderType } from '../agents/provider';
+import type { AgentConfig } from '../types/agent-config';
 
 dotenv.config({ path: '.env.local' });
 
 const schema = z.object({
-  PORT: z.coerce.number().int().positive().default(3100),
-  NODE_ENV: z.string().default('development'),
   LLM_PROVIDER: z.nativeEnum(ProviderType).default(ProviderType.MISTRAL),
+  STT_PROVIDER: z.nativeEnum(ProviderType).default(ProviderType.MISTRAL),
+  TTS_PROVIDER: z.nativeEnum(ProviderType).default(ProviderType.MISTRAL),
 });
 
-let config: AppConfig | undefined;
+let config: AgentConfig | undefined;
 
-function loadEnv(): AppConfig {
+function loadEnv(): AgentConfig {
   if (config === undefined) {
     const result = schema.safeParse(process.env);
     if (!result.success) {

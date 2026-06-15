@@ -11,7 +11,7 @@ Docker Compose stack for LiveKit infrastructure (LiveKit server, Redis, PostgreS
 
 ```bash
 # Copy and fill in environment variables
-cp .env.example .env
+cp .env.example .env.local
 ```
 
 ## Dev Run

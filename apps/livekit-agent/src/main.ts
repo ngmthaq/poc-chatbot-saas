@@ -2,13 +2,11 @@ import { ServerOptions, cli, defineAgent, voice } from '@livekit/agents';
 import * as livekit from '@livekit/agents-plugin-livekit';
 import * as silero from '@livekit/agents-plugin-silero';
 import { BackgroundVoiceCancellation } from '@livekit/noise-cancellation-node';
-import dotenv from 'dotenv';
 import { fileURLToPath } from 'node:url';
 import { LLMAgent } from './agents';
-import { ProviderType, providerFactory } from './agents/provider';
+import { providerFactory } from './agents/provider';
+import { loadEnv } from './configs/env';
 import type { ProcessUserData } from './types/process-user-data';
-
-dotenv.config({ path: '.env.local' });
 
 export default defineAgent<ProcessUserData>({
   prewarm: async (proc) => {
@@ -16,9 +14,10 @@ export default defineAgent<ProcessUserData>({
   },
 
   entry: async (ctx) => {
+    const env = loadEnv();
     const session = new voice.AgentSession({
-      stt: providerFactory.stt(ProviderType.MISTRAL),
-      tts: providerFactory.tts(ProviderType.MISTRAL),
+      stt: providerFactory.stt(env.STT_PROVIDER),
+      tts: providerFactory.tts(env.TTS_PROVIDER),
       turnDetection: new livekit.turnDetector.MultilingualModel(),
       vad: ctx.proc.userData.vad,
       voiceOptions: {

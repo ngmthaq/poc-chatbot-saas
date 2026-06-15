@@ -14,20 +14,20 @@ import * as rime from '@livekit/agents-plugin-rime';
 import * as xai from '@livekit/agents-plugin-xai';
 
 export enum ProviderType {
-  INFERENCE,
-  OPENAI,
-  GOOGLE,
-  DEEPGRAM,
-  ELEVEN,
-  CARTESIA,
-  NEUPHONIC,
-  RESEMBLE,
-  RIME,
-  INWORLD,
-  MISTRAL,
-  XAI,
-  FISH,
-  HUME,
+  INFERENCE = 'INFERENCE',
+  OPENAI = 'OPENAI',
+  GOOGLE = 'GOOGLE',
+  DEEPGRAM = 'DEEPGRAM',
+  ELEVEN = 'ELEVEN',
+  CARTESIA = 'CARTESIA',
+  NEUPHONIC = 'NEUPHONIC',
+  RESEMBLE = 'RESEMBLE',
+  RIME = 'RIME',
+  INWORLD = 'INWORLD',
+  MISTRAL = 'MISTRAL',
+  XAI = 'XAI',
+  FISH = 'FISH',
+  HUME = 'HUME',
 }
 
 const LLM_REGISTRY = {

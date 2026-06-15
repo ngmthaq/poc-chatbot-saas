@@ -22,7 +22,7 @@ services:
       dockerfile: Dockerfile.nginx
     restart: unless-stopped
     env_file:
-      - .env
+      - .env.local
     ports:
       - '${NGINX_HTTP_PORT:-80}:80'
       - '${NGINX_HTTPS_PORT:-443}:443'
@@ -45,7 +45,7 @@ services:
     restart: unless-stopped
     network_mode: host
     env_file:
-      - .env
+      - .env.local
     volumes:
       - /etc/letsencrypt:/etc/letsencrypt:ro
     depends_on:
@@ -62,7 +62,7 @@ services:
     restart: unless-stopped
     network_mode: host
     env_file:
-      - .env
+      - .env.local
 
   # ---------------------------------------------------------------------------
   # LiveKit Server — development (bridge network, cross-platform)
@@ -78,7 +78,7 @@ services:
       - '0.0.0.0:${LIVEKIT_RTC_TCP_PORT:-7881}:${LIVEKIT_RTC_TCP_PORT:-7881}'
       - '0.0.0.0:${LIVEKIT_RTC_UDP_PORT_START:-50000}-${LIVEKIT_RTC_UDP_PORT_END:-50100}:${LIVEKIT_RTC_UDP_PORT_START:-50000}-${LIVEKIT_RTC_UDP_PORT_END:-50100}/udp' # WebRTC UDP ICE media ports
     env_file:
-      - .env
+      - .env.local
     command: --dev
     depends_on:
       - redis-livekit-dev
@@ -95,7 +95,7 @@ services:
     ports:
       - '0.0.0.0:${REDIS_LIVEKIT_PORT:-6379}:${REDIS_LIVEKIT_PORT:-6379}'
     env_file:
-      - .env
+      - .env.local
 
   # ---------------------------------------------------------------------------
   # PostgreSQL — Application database (shared, bridge network)

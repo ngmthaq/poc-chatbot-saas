@@ -15,5 +15,5 @@ echo "Copied .env.example to .env.local in apps/client"
 cd $current_dir/apps/server && cp .env.example .env.local
 echo "Copied .env.example to .env.local in apps/server"
 
-cd $current_dir/apps/infra && cp .env.example .env
-echo "Copied .env.example to .env in apps/infra"
+cd $current_dir/apps/infra && cp .env.example .env.local
+echo "Copied .env.example to .env.local in apps/infra"
