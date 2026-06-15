@@ -5,8 +5,9 @@ import {
 } from '@livekit/components-react';
 import type { FC } from 'react';
 import { ControlBarRoot } from './styled';
+import type { CallControlBarProps } from './types';
 
-export const CallControlBar: FC = () => {
+export const CallControlBar: FC<CallControlBarProps> = ({ onLeave }) => {
   return (
     <ControlBarRoot data-lk-theme="default">
       <StartAudio label="Enable Audio" />
@@ -14,7 +15,7 @@ export const CallControlBar: FC = () => {
         style={{ borderTop: 'none' }}
         controls={{ microphone: true, leave: false }}
       />
-      <DisconnectButton>Leave</DisconnectButton>
+      <DisconnectButton onClick={onLeave}>Leave</DisconnectButton>
     </ControlBarRoot>
   );
 };

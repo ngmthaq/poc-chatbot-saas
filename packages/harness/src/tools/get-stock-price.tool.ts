@@ -6,7 +6,7 @@ import type {
   TwelveDataQuoteResponse,
   YahooSearchResponse,
 } from '../types/get-stock-price';
-import { dedent } from '../utils/index';
+import { dedent, fetchWithTimeout } from '../utils/index';
 import { BaseTool } from './base/base-tool';
 
 const YAHOO_CHART_URL = 'https://query1.finance.yahoo.com/v8/finance/chart';
@@ -33,7 +33,7 @@ const validateSymbol = async (ticker: string): Promise<SymbolValidation> => {
   url.searchParams.set('quotesCount', '6');
   url.searchParams.set('newsCount', '0');
 
-  const response = await fetch(url, {
+  const response = await fetchWithTimeout(url, {
     headers: { 'User-Agent': 'Mozilla/5.0' },
   });
   if (!response.ok) {
@@ -61,7 +61,7 @@ const fetchFromYahoo = async (ticker: string): Promise<StockQuote | null> => {
   url.searchParams.set('interval', '1d');
   url.searchParams.set('range', '1d');
 
-  const response = await fetch(url, {
+  const response = await fetchWithTimeout(url, {
     headers: { 'User-Agent': 'Mozilla/5.0' },
   });
   if (!response.ok) {
@@ -97,7 +97,7 @@ const fetchFromTwelveData = async (
   url.searchParams.set('symbol', ticker);
   url.searchParams.set('apikey', apiKey);
 
-  const response = await fetch(url);
+  const response = await fetchWithTimeout(url);
   if (!response.ok) {
     throw new Error(`Twelve Data quote request failed: ${response.status}`);
   }

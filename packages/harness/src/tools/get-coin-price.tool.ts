@@ -3,7 +3,7 @@ import type {
   CoinSearchResponse,
   SimplePriceResponse,
 } from '../types/get-coin-price';
-import { dedent } from '../utils/index';
+import { dedent, fetchWithTimeout } from '../utils/index';
 import { BaseTool } from './base/base-tool';
 
 const SEARCH_URL = 'https://api.coingecko.com/api/v3/search';
@@ -112,7 +112,7 @@ export class GetCoinPriceTool extends BaseTool<typeof getCoinPriceSchema> {
       const searchUrl = new URL(SEARCH_URL);
       searchUrl.searchParams.set('query', coin);
 
-      const searchResponse = await fetch(searchUrl);
+      const searchResponse = await fetchWithTimeout(searchUrl);
       if (!searchResponse.ok) {
         throw new Error(`Search request failed: ${searchResponse.status}`);
       }
@@ -133,7 +133,7 @@ export class GetCoinPriceTool extends BaseTool<typeof getCoinPriceSchema> {
       priceUrl.searchParams.set('include_24hr_change', 'true');
       priceUrl.searchParams.set('include_market_cap', 'true');
 
-      const priceResponse = await fetch(priceUrl);
+      const priceResponse = await fetchWithTimeout(priceUrl);
       if (!priceResponse.ok) {
         throw new Error(`Price request failed: ${priceResponse.status}`);
       }

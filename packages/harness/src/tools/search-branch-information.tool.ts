@@ -5,7 +5,7 @@ import type {
   WikipediaSearchResponse,
   WikipediaSummaryResponse,
 } from '../types/search-branch-information';
-import { dedent } from '../utils/index';
+import { dedent, fetchWithTimeout } from '../utils/index';
 import { BaseTool } from './base/base-tool';
 
 const WIKIPEDIA_SEARCH_URL =
@@ -33,7 +33,9 @@ const fetchFromWikipedia = async (
   searchUrl.searchParams.set('q', company);
   searchUrl.searchParams.set('limit', '3');
 
-  const searchResponse = await fetch(searchUrl, { headers: REQUEST_HEADERS });
+  const searchResponse = await fetchWithTimeout(searchUrl, {
+    headers: REQUEST_HEADERS,
+  });
   if (!searchResponse.ok) {
     throw new Error(`Wikipedia search failed: ${searchResponse.status}`);
   }
@@ -42,7 +44,7 @@ const fetchFromWikipedia = async (
   const page = search.pages?.[0];
   if (!page) return null;
 
-  const summaryResponse = await fetch(
+  const summaryResponse = await fetchWithTimeout(
     `${WIKIPEDIA_SUMMARY_URL}/${encodeURIComponent(page.key)}`,
     { headers: REQUEST_HEADERS },
   );
@@ -71,7 +73,7 @@ const fetchFromDuckDuckGo = async (
   url.searchParams.set('format', 'json');
   url.searchParams.set('no_html', '1');
 
-  const response = await fetch(url, { headers: REQUEST_HEADERS });
+  const response = await fetchWithTimeout(url, { headers: REQUEST_HEADERS });
   if (!response.ok) {
     throw new Error(`DuckDuckGo request failed: ${response.status}`);
   }

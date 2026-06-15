@@ -2,3 +2,8 @@ export * from './AgentInfoCard';
 export * from './AgentVisualizerPanel';
 export * from './TranscriptionFeed';
 export * from './CallControlBar';
+export * from './ConversationFeed';
+export * from './ChatPanel';
+export * from './ChatView';
+export * from './VoiceTranscriptionBridge';
+export * from './VoiceSession';

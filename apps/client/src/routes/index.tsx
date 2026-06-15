@@ -1,5 +1,4 @@
 import { HomePage } from '@/components/pages';
-import { LiveKitSessionProvider } from '@/components/providers';
 import { createFileRoute } from '@tanstack/react-router';
 
 export const Route = createFileRoute('/')({
@@ -7,9 +6,5 @@ export const Route = createFileRoute('/')({
 });
 
 function RouteComponent() {
-  return (
-    <LiveKitSessionProvider>
-      <HomePage />
-    </LiveKitSessionProvider>
-  );
+  return <HomePage />;
 }

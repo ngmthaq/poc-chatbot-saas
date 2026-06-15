@@ -10,6 +10,12 @@ export { ProviderType } from './agents/provider';
 export type { ChatRequestBody, ChatResponseBody } from './types/chat';
 
 /**
+ * Maximum number of LangGraph super-steps per invocation. Caps the agent's
+ * tool-call loop so a runaway agent throws instead of hanging the request.
+ */
+const AGENT_RECURSION_LIMIT = 15;
+
+/**
  * In-process text chat service backed by a `deepagents` deep agent.
  *
  * Holds a single agent instance built from the provided {@link ProviderType}.
@@ -36,7 +42,10 @@ export class TextChatService {
 
     const result = await this.agent.invoke(
       { messages: [new HumanMessage(request.message)] },
-      { configurable: { thread_id: threadId } },
+      {
+        configurable: { thread_id: threadId },
+        recursionLimit: AGENT_RECURSION_LIMIT,
+      },
     );
 
     const reply = extractReply(result.messages);
