@@ -10,10 +10,12 @@ export { ProviderType } from './agents/provider';
 export type { ChatRequestBody, ChatResponseBody } from './types/chat';
 
 /**
- * Maximum number of LangGraph super-steps per invocation. Caps the agent's
- * tool-call loop so a runaway agent throws instead of hanging the request.
+ * Maximum number of LangGraph super-steps per invocation. A generous guard
+ * against true infinite loops only; the 30s server-side chat timeout is the
+ * real wall-clock backstop, so this stays high enough that legitimate
+ * planning and sub-agent tool flows never trip it.
  */
-const AGENT_RECURSION_LIMIT = 15;
+const AGENT_RECURSION_LIMIT = 50;
 
 /**
  * In-process text chat service backed by a `deepagents` deep agent.
