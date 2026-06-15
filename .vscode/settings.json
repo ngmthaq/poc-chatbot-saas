@@ -1,4 +1,13 @@
 {
   "postman.settings.dotenv-detection-notification-visibility": false,
-  "explorer.compactFolders": false
+  "explorer.compactFolders": false,
+  "files.readonlyInclude": {
+    "**/routeTree.gen.ts": true
+  },
+  "files.watcherExclude": {
+    "**/routeTree.gen.ts": true
+  },
+  "search.exclude": {
+    "**/routeTree.gen.ts": true
+  }
 }
