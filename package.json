@@ -1,6 +1,6 @@
 {
   "name": "call-center-agent",
-  "version": "1.0.34",
+  "version": "1.0.35",
   "private": true,
   "description": "Call center AI agent monorepo",
   "scripts": {
@@ -8,6 +8,7 @@
     "format": "prettier --write .",
     "copy-env": "bash scripts/copy-env.sh",
     "livekit-agent": "pnpm --filter livekit-agent $*",
+    "deepagent": "pnpm --filter deepagent $*",
     "server": "pnpm --filter server $*",
     "client": "pnpm --filter client $*",
     "infra": "pnpm --filter infra $*"

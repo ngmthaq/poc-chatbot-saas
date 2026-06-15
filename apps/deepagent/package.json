@@ -1,0 +1,46 @@
+{
+  "name": "deepagent",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "dev": "pnpm run build && node dist/main.js",
+    "start": "node dist/main.js"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=10.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@types/express": "^5.0.0",
+    "@types/http-errors": "^2.0.4",
+    "@types/node": "^22.19.17",
+    "eslint": "^9.39.4",
+    "globals": "^16.5.0",
+    "jiti": "^2.6.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.58.1",
+    "vite": "^7.3.2"
+  },
+  "dependencies": {
+    "@call-center-agent/harness": "workspace:*",
+    "@langchain/anthropic": "^1.4.1",
+    "@langchain/core": "^1.1.49",
+    "@langchain/langgraph": "^1.4.2",
+    "@langchain/mistralai": "^1.1.0",
+    "@langchain/openai": "^1.4.7",
+    "deepagents": "^1.10.2",
+    "dotenv": "^17.4.1",
+    "express": "^4.21.0",
+    "http-errors": "^2.0.0",
+    "langchain": "^1.4.5",
+    "pino": "^9.0.0",
+    "zod": "^3.25.76"
+  }
+}
