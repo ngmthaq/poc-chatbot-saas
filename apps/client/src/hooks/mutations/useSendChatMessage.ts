@@ -19,6 +19,7 @@ export const useSendChatMessage = () => {
         apiEndpoints.post.chat(),
         payload,
       );
+
       return sendChatMessageResponseSchema.validateSync(response.data, {
         stripUnknown: true,
       });

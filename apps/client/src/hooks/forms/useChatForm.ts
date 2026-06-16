@@ -3,15 +3,13 @@ import { useSendChatMessage } from '@/hooks/mutations';
 import { useConversation } from '@/hooks/stores';
 import { useFormik } from 'formik';
 import { useRef } from 'react';
-import { object, string } from 'yup';
-
-export interface ChatFormValues {
-  message: string;
-}
+import { type InferType, object, string } from 'yup';
 
 const chatFormSchema = object({
   message: string().trim().min(1).required(),
 });
+
+export type ChatFormValues = InferType<typeof chatFormSchema>;
 
 const INITIAL_VALUES: ChatFormValues = {
   message: '',
