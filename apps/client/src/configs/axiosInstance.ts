@@ -6,7 +6,7 @@ const BASE_URL: string = loadEnv().apiBaseUrl;
 
 const axiosInstance = axios.create({
   baseURL: BASE_URL,
-  timeout: 10_000,
+  timeout: 60_000,
 });
 
 axiosInstance.interceptors.request.use(

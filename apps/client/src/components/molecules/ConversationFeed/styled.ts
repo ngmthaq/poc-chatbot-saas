@@ -1,7 +1,18 @@
 import { ForumOutlined as ForumOutlinedIcon } from '@mui/icons-material';
 import { Box, Typography } from '@mui/material';
-import { styled } from '@mui/material/styles';
+import { keyframes, styled } from '@mui/material/styles';
 import type { ConversationBubbleProps } from './types';
+
+const thinkingPulse = keyframes({
+  '0%, 80%, 100%': {
+    opacity: 0.3,
+    transform: 'translateY(0)',
+  },
+  '40%': {
+    opacity: 1,
+    transform: 'translateY(-3px)',
+  },
+});
 
 export const FeedContainer = styled(Box)({
   flex: 1,
@@ -81,4 +92,31 @@ export const SourceTag = styled(Typography)({
   fontSize: '0.62rem',
   letterSpacing: '0.04em',
   textTransform: 'uppercase',
+});
+
+export const ThinkingBubble = styled(Box)({
+  alignSelf: 'flex-start',
+  display: 'flex',
+  alignItems: 'center',
+  gap: 4,
+  maxWidth: '78%',
+  padding: '10px 14px',
+  borderRadius: 10,
+  backgroundColor: 'rgba(255,255,255,0.06)',
+});
+
+export const ThinkingDot = styled(Box)({
+  width: 6,
+  height: 6,
+  borderRadius: '50%',
+  backgroundColor: 'rgba(240,244,248,0.7)',
+  animation: `${thinkingPulse} 1.4s ease-in-out infinite`,
+
+  '&:nth-of-type(2)': {
+    animationDelay: '0.2s',
+  },
+
+  '&:nth-of-type(3)': {
+    animationDelay: '0.4s',
+  },
 });

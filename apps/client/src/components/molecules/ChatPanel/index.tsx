@@ -1,7 +1,6 @@
-import { useChatForm } from '@/hooks/forms';
 import { Send as SendIcon } from '@mui/icons-material';
 import { CircularProgress } from '@mui/material';
-import { type FC, type KeyboardEvent } from 'react';
+import { type FC, type KeyboardEvent, useEffect, useRef } from 'react';
 import {
   ErrorText,
   InputRow,
@@ -9,9 +8,18 @@ import {
   PanelRoot,
   SendButton,
 } from './styled';
+import type { ChatPanelProps } from './types';
 
-export const ChatPanel: FC = () => {
-  const { formik, isPending, error } = useChatForm();
+export const ChatPanel: FC<ChatPanelProps> = ({ formik, isPending, error }) => {
+  const inputRef = useRef<HTMLTextAreaElement>(null);
+  const wasPendingRef = useRef(isPending);
+
+  useEffect(() => {
+    if (wasPendingRef.current && !isPending) {
+      inputRef.current?.focus();
+    }
+    wasPendingRef.current = isPending;
+  }, [isPending]);
 
   const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
     if (event.key === 'Enter' && !event.shiftKey) {
@@ -31,9 +39,10 @@ export const ChatPanel: FC = () => {
           onKeyDown={handleKeyDown}
           placeholder="Type a message…"
           disabled={isPending}
+          inputRef={inputRef}
           multiline
           maxRows={4}
-          size="small"
+          size="medium"
         />
         <SendButton
           type="submit"

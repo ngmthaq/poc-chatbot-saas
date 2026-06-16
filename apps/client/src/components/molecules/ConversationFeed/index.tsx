@@ -1,3 +1,4 @@
+import { MarkdownMessage } from '@/components/atoms';
 import { useConversation } from '@/hooks/stores';
 import { type FC, useEffect, useRef } from 'react';
 import {
@@ -8,17 +9,22 @@ import {
   PlaceholderIcon,
   PlaceholderText,
   SourceTag,
+  ThinkingBubble,
+  ThinkingDot,
 } from './styled';
+import type { ConversationFeedProps } from './types';
 
-export const ConversationFeed: FC = () => {
+export const ConversationFeed: FC<ConversationFeedProps> = ({
+  isThinking = false,
+}) => {
   const { entries } = useConversation();
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [entries]);
+  }, [entries, isThinking]);
 
-  if (entries.length === 0) {
+  if (entries.length === 0 && !isThinking) {
     return (
       <EmptyState>
         <PlaceholderIcon />
@@ -33,10 +39,23 @@ export const ConversationFeed: FC = () => {
     <FeedContainer>
       {entries.map((entry) => (
         <BubbleRow key={entry.id} role={entry.role}>
-          <Bubble role={entry.role}>{entry.text}</Bubble>
+          <Bubble role={entry.role}>
+            {entry.role === 'agent' ? (
+              <MarkdownMessage>{entry.text}</MarkdownMessage>
+            ) : (
+              entry.text
+            )}
+          </Bubble>
           <SourceTag variant="caption">{entry.source}</SourceTag>
         </BubbleRow>
       ))}
+      {isThinking && (
+        <ThinkingBubble aria-label="agent is thinking">
+          <ThinkingDot />
+          <ThinkingDot />
+          <ThinkingDot />
+        </ThinkingBubble>
+      )}
       <div ref={bottomRef} />
     </FeedContainer>
   );
