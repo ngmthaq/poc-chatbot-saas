@@ -58,7 +58,7 @@ export class TextChatService {
 function extractReply(messages: BaseMessage[]): string {
   for (let index = messages.length - 1; index >= 0; index -= 1) {
     const message = messages[index];
-    if (message?.getType() === 'ai') {
+    if (message?.type === 'ai') {
       return contentToText(message.content);
     }
   }
