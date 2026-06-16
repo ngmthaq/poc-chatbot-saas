@@ -36,7 +36,8 @@ const next = await service.chat({ message: 'And tomorrow?', threadId });
 
 The host application is responsible for loading environment variables (provider
 selection and the relevant `*_API_KEY` for the chosen provider, plus
-`TWELVE_DATA_API_KEY` used by the stock-price tool).
+`TWELVE_DATA_API_KEY` used by the stock-price tool, and optionally
+`TAVILY_API_KEY` used by the web-search tool).
 
 ## Notes
 

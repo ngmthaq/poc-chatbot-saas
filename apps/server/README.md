@@ -32,6 +32,7 @@ cp .env.example .env
 | `MISTRAL_API_KEY`     | —             | Mistral API key                                          |
 | `ANTHROPIC_API_KEY`   | —             | Anthropic API key                                        |
 | `TWELVE_DATA_API_KEY` | —             | Twelve Data API key for agent data tools                 |
+| `TAVILY_API_KEY`      | —             | Tavily API key for the web-search tool (optional)        |
 
 ## Endpoints
 
