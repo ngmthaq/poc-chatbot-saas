@@ -13,9 +13,8 @@ const RESEARCH_TOOL_NAMES = [
   'getGoldPrice',
   'getStockPrice',
   'convertCurrency',
+  'webSearch',
 ] as const;
-
-const BRANCH_TOOL_NAMES = ['searchBranchInformation'] as const;
 
 function pickTools(names: readonly string[]): SubAgentTools {
   const selected = tools.filter((tool: LangChainTool) =>
@@ -28,24 +27,16 @@ const researchSubAgent: SubAgent = {
   name: 'research',
   description:
     'Looks up live external data: weather, cryptocurrency prices, gold ' +
-    'prices, stock prices, and currency conversion.',
+    'prices, stock prices, and currency conversion, plus general web search ' +
+    'for external, up-to-date public information (facts, news, ' +
+    'organizations, and current events).',
   systemPrompt:
     'You are a research assistant. Use the available tools to fetch ' +
-    'accurate, up-to-date weather, market, and currency data. Report only ' +
-    'what the tools return; never invent values.',
+    'accurate, up-to-date weather, market, and currency data, and use web ' +
+    'search for general external, up-to-date public information (facts, ' +
+    'news, organizations, and current events). Report only what the tools ' +
+    'return; never invent values.',
   tools: pickTools(RESEARCH_TOOL_NAMES),
 };
 
-const branchSubAgent: SubAgent = {
-  name: 'branch',
-  description:
-    'Answers questions about company branch locations, hours, and contact ' +
-    'information.',
-  systemPrompt:
-    'You are a branch information assistant. Use the branch search tool to ' +
-    'find and report details about company branches. Report only what the ' +
-    'tool returns.',
-  tools: pickTools(BRANCH_TOOL_NAMES),
-};
-
-export const subAgents: SubAgent[] = [researchSubAgent, branchSubAgent];
+export const subAgents: SubAgent[] = [researchSubAgent];
