@@ -4,7 +4,7 @@ import { GetCoinPriceTool } from './get-coin-price.tool';
 import { GetGoldPriceTool } from './get-gold-price.tool';
 import { GetStockPriceTool } from './get-stock-price.tool';
 import { GetWeatherTool } from './get-weather.tool';
-import { SearchBranchInformationTool } from './search-branch-information.tool';
+import { WebSearchTool } from './web-search.tool';
 
 /**
  * The full set of framework-agnostic tool instances exposed by the harness.
@@ -18,5 +18,5 @@ export const toolRegistry: BaseTool[] = [
   new GetGoldPriceTool(),
   new GetStockPriceTool(),
   new ConvertCurrencyTool(),
-  new SearchBranchInformationTool(),
+  new WebSearchTool(),
 ];

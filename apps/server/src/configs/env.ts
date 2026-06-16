@@ -29,6 +29,7 @@ const schema = yup.object().shape({
   MISTRAL_API_KEY: yup.string().trim().optional(),
   ANTHROPIC_API_KEY: yup.string().trim().optional(),
   TWELVE_DATA_API_KEY: yup.string().trim().optional(),
+  TAVILY_API_KEY: yup.string().trim().optional(),
 });
 
 type Config = yup.InferType<typeof schema>;
