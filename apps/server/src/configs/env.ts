@@ -18,6 +18,8 @@ const schema = yup.object().shape({
     .string()
     .trim()
     .required('LIVEKIT_AGENT_NAME is required'),
+  // PostgreSQL connection string consumed by Prisma (via env("DATABASE_URL")).
+  DATABASE_URL: yup.string().trim().required('DATABASE_URL is required'),
   // Text-chat (deepagent) LLM provider selection.
   LLM_PROVIDER: yup
     .mixed<ProviderType>()
