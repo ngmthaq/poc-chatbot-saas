@@ -1,9 +1,10 @@
 // Connection plumbing for the multi-file Prisma schema.
 //
 // This file holds ONLY the datasource + generator. Domain models live in
-// sibling per-domain files (see models.prisma) so the schema scales without a
-// single monolithic file. Prisma recursively loads every *.prisma file in this
-// folder (configured via prisma.config.ts `schema`).
+// sibling per-domain files (admin.prisma, tenant.prisma, bot.prisma,
+// conversation.prisma) so the schema scales without a single monolithic file.
+// Prisma recursively loads every *.prisma file in this folder (configured via
+// prisma.config.ts `schema`).
 //
 // Prisma 7: the datasource no longer carries a `url`. The CLI reads the
 // connection URL from prisma.config.ts (`datasource.url`), and the runtime

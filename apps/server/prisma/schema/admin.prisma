@@ -1,0 +1,17 @@
+// Admin domain: platform-global super-admin accounts.
+//
+// AdminUser is NOT scoped to a tenant — these are platform operators managing
+// the whole SaaS via the admin portal. Authentication wiring (sessions/JWT) is
+// out of scope; only `passwordHash` is modeled here (never a raw password).
+
+model AdminUser {
+  id           String    @id @default(uuid())
+  email        String    @unique
+  passwordHash String
+  name         String
+  isAdmin      Boolean   @default(true)
+  isActive     Boolean   @default(true)
+  lastLoginAt  DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+}

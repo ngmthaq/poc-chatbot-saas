@@ -1,0 +1,81 @@
+// Tenant domain: the customer organization and its scoped, hashable API keys.
+//
+// A Tenant owns every customer-facing entity (API keys, bots, knowledge docs,
+// end-users, conversations). Deleting a Tenant cascades all owned rows.
+//
+// API keys store ONLY a one-way `keyHash` plus a short display `keyPrefix` — the
+// raw secret is never persisted. Keys support revocation/expiry, last-used
+// tracking, optional per-bot binding, permission scopes, and windowed usage
+// counters (ApiKeyUsage) for rate-limiting and billing.
+
+enum TenantStatus {
+  ACTIVE
+  SUSPENDED
+  ARCHIVED
+}
+
+enum ApiKeyStatus {
+  ACTIVE
+  REVOKED
+  EXPIRED
+}
+
+enum ApiKeyScope {
+  CHAT
+  READ
+  WRITE
+  ADMIN
+}
+
+model Tenant {
+  id        String       @id @default(uuid())
+  name      String
+  slug      String       @unique
+  status    TenantStatus @default(ACTIVE)
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+
+  apiKeys            ApiKey[]
+  bots               Bot[]
+  knowledgeDocuments KnowledgeDocument[]
+  endUsers           EndUser[]
+  conversations      Conversation[]
+}
+
+model ApiKey {
+  id         String        @id @default(uuid())
+  tenantId   String
+  name       String
+  keyHash    String        @unique
+  keyPrefix  String
+  scopes     ApiKeyScope[]
+  status     ApiKeyStatus  @default(ACTIVE)
+  expiresAt  DateTime?
+  lastUsedAt DateTime?
+  revokedAt  DateTime?
+  botId      String?
+  createdAt  DateTime      @default(now())
+  updatedAt  DateTime      @updatedAt
+
+  tenant        Tenant         @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  bot           Bot?           @relation(fields: [botId], references: [id], onDelete: SetNull)
+  usage         ApiKeyUsage[]
+  conversations Conversation[]
+
+  @@index([tenantId])
+  @@index([botId])
+}
+
+model ApiKeyUsage {
+  id           String   @id @default(uuid())
+  apiKeyId     String
+  windowStart  DateTime
+  requestCount Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  apiKey ApiKey @relation(fields: [apiKeyId], references: [id], onDelete: Cascade)
+
+  @@unique([apiKeyId, windowStart])
+  @@index([apiKeyId])
+}

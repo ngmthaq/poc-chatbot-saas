@@ -1,0 +1,69 @@
+// Bot domain: per-tenant chatbot configuration and its knowledge base.
+//
+// Each Bot belongs to a Tenant and carries its LLM configuration (provider,
+// model, system prompt, etc.). The `Provider` enum mirrors the LLM
+// `ProviderType` registered in `packages/deepagent/src/agents/provider.ts`
+// (the chat/LLM provider registry), keeping the DB enum aligned with the code.
+//
+// KnowledgeDocument stores metadata only — no chunk/embedding/pgvector columns.
+// Vector storage for RAG is a deliberate follow-up.
+
+enum Provider {
+  OPENAI
+  MISTRAL
+  ANTHROPIC
+}
+
+enum BotStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum DocumentStatus {
+  PENDING
+  PROCESSING
+  READY
+  FAILED
+}
+
+model Bot {
+  id           String    @id @default(uuid())
+  tenantId     String
+  name         String
+  description  String?
+  systemPrompt String
+  provider     Provider
+  model        String
+  temperature  Float?
+  greeting     String?
+  status       BotStatus @default(DRAFT)
+  isEnabled    Boolean   @default(true)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  tenant             Tenant              @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  apiKeys            ApiKey[]
+  knowledgeDocuments KnowledgeDocument[]
+  conversations      Conversation[]
+
+  @@index([tenantId])
+}
+
+model KnowledgeDocument {
+  id          String         @id @default(uuid())
+  tenantId    String
+  botId       String?
+  title       String
+  sourceUrl   String?
+  contentType String
+  status      DocumentStatus @default(PENDING)
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  bot    Bot?   @relation(fields: [botId], references: [id], onDelete: SetNull)
+
+  @@index([tenantId])
+  @@index([botId])
+}
