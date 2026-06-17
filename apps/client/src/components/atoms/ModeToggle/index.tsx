@@ -1,3 +1,4 @@
+import { usePublicConfig } from '@/hooks/queries';
 import { useChatMode } from '@/hooks/stores';
 import type { ChatMode } from '@/types/conversation';
 import type { FC, MouseEvent } from 'react';
@@ -6,6 +7,11 @@ import { StyledToggleButton, StyledToggleButtonGroup } from './styled';
 
 export const ModeToggle: FC = () => {
   const [mode, setMode] = useChatMode();
+  const { voiceModeEnabled } = usePublicConfig();
+
+  const visibleOptions = voiceModeEnabled
+    ? MODE_OPTIONS
+    : MODE_OPTIONS.filter(({ value }) => value !== 'voice');
 
   const handleChange = (
     _event: MouseEvent<HTMLElement>,
@@ -23,7 +29,7 @@ export const ModeToggle: FC = () => {
       onChange={handleChange}
       aria-label="chat mode"
     >
-      {MODE_OPTIONS.map(({ value, label, Icon }) => (
+      {visibleOptions.map(({ value, label, Icon }) => (
         <StyledToggleButton key={value} value={value} aria-label={label}>
           <Icon />
           {label}

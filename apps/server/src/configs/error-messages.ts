@@ -30,4 +30,8 @@ export const errorMessages = {
   notFound: () => {
     return 'Not Found';
   },
+
+  voiceModeDisabled: () => {
+    return 'Voice mode is disabled';
+  },
 } as const;

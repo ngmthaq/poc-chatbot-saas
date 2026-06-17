@@ -30,6 +30,25 @@ const schema = yup.object().shape({
   ANTHROPIC_API_KEY: yup.string().trim().optional(),
   TWELVE_DATA_API_KEY: yup.string().trim().optional(),
   TAVILY_API_KEY: yup.string().trim().optional(),
+  // Runtime kill switch for voice mode. Default true (backward compatible —
+  // unset means voice enabled). Env values are strings, and yup's default
+  // boolean cast treats any non-empty string (including "false") as true, so
+  // we transform "false"/"0" explicitly before casting.
+  VOICE_MODE_ENABLED: yup
+    .boolean()
+    .transform((value, originalValue) => {
+      if (typeof originalValue === 'string') {
+        const normalized = originalValue.trim().toLowerCase();
+        if (normalized === 'false' || normalized === '0') {
+          return false;
+        }
+        if (normalized === 'true' || normalized === '1') {
+          return true;
+        }
+      }
+      return value;
+    })
+    .default(true),
 });
 
 type Config = yup.InferType<typeof schema>;

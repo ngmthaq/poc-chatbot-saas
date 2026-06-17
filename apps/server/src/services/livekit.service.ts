@@ -1,7 +1,8 @@
+import createHttpError from 'http-errors';
 import humps from 'humps';
 import { RoomAgentDispatch, RoomConfiguration } from 'livekit-server-sdk';
 import { randomUUID } from 'node:crypto';
-import { loadEnv } from '../configs';
+import { errorMessages, loadEnv } from '../configs';
 import { LiveKitTokenUtil } from '../utils/livekit-token.utils';
 import type { GetLiveKitTokenBody } from '../validators/get-livekit-token.validator';
 
@@ -10,6 +11,10 @@ export class LiveKitService {
   private readonly liveKitTokenUtil = new LiveKitTokenUtil();
 
   public async getToken(body: GetLiveKitTokenBody) {
+    if (!this.config.VOICE_MODE_ENABLED) {
+      throw createHttpError(403, errorMessages.voiceModeDisabled());
+    }
+
     const roomName = body.roomName ?? `room-${randomUUID()}`;
     const participantIdentity =
       body.participantIdentity ?? `participant-identity-${randomUUID()}`;

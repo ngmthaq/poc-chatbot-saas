@@ -4,6 +4,9 @@ export const apiEndpoints = {
     health: () => {
       return '/health';
     },
+    config: () => {
+      return '/config';
+    },
   },
 
   // POST requests
