@@ -1,9 +1,12 @@
 // Bot domain: per-tenant chatbot configuration and its knowledge base.
 //
 // Each Bot belongs to a Tenant and carries its LLM configuration (provider,
-// model, system prompt, etc.). The `Provider` enum mirrors the LLM
+// model, system prompt, etc.) and optional voice (STT/TTS) configuration.
+// The `Provider` enum mirrors the LLM
 // `ProviderType` registered in `packages/deepagent/src/agents/provider.ts`
-// (the chat/LLM provider registry), keeping the DB enum aligned with the code.
+// (the chat/LLM provider registry) and now also covers the livekit-agent voice
+// registry `ProviderType` in `apps/livekit-agent/src/agents/provider.ts`
+// (LLM/STT/TTS providers), keeping the DB enum aligned with the code.
 //
 // KnowledgeDocument stores metadata only — no chunk/embedding/pgvector columns.
 // Vector storage for RAG is a deliberate follow-up.
@@ -12,6 +15,18 @@ enum Provider {
   OPENAI
   MISTRAL
   ANTHROPIC
+  INFERENCE
+  GOOGLE
+  DEEPGRAM
+  ELEVEN
+  CARTESIA
+  NEUPHONIC
+  RESEMBLE
+  RIME
+  INWORLD
+  XAI
+  FISH
+  HUME
 }
 
 enum BotStatus {
@@ -37,6 +52,10 @@ model Bot {
   model        String
   temperature  Float?
   greeting     String?
+  voiceEnabled Boolean   @default(false)
+  stt          Provider?
+  tts          Provider?
+  voiceId      String?
   status       BotStatus @default(DRAFT)
   isEnabled    Boolean   @default(true)
   createdAt    DateTime  @default(now())

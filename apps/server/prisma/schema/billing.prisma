@@ -1,0 +1,119 @@
+// Billing domain: the platform-global plan catalog and per-tenant subscriptions.
+//
+// Plan is NOT scoped to a tenant — it is a shared catalog of purchasable tiers
+// (like AdminUser, a platform-global model). Each Plan carries its price,
+// billing interval, and the usage quotas it grants (bots, API keys, monthly
+// messages, knowledge docs). Retire a plan from the catalog via `isActive`.
+//
+// Subscription is tenant-owned: a Tenant has a 1:many subscription history, and
+// the "current" subscription is the one in ACTIVE status (no schema-level
+// uniqueness on tenantId). Deleting a Tenant cascades its subscriptions, while a
+// Plan referenced by any subscription is protected from deletion (Restrict).
+
+enum BillingInterval {
+  MONTH
+  YEAR
+}
+
+enum SubscriptionStatus {
+  TRIALING
+  ACTIVE
+  PAST_DUE
+  CANCELED
+  EXPIRED
+}
+
+enum InvoiceStatus {
+  DRAFT
+  ISSUED
+  PAID
+  VOID
+}
+
+model Plan {
+  id                  String          @id @default(uuid())
+  name                String
+  slug                String          @unique
+  priceCents          Int
+  currency            String          @default("USD")
+  interval            BillingInterval
+  maxBots             Int
+  maxApiKeys          Int
+  maxMessagesPerMonth Int
+  maxKnowledgeDocs    Int
+  isActive            Boolean         @default(true)
+  createdAt           DateTime        @default(now())
+  updatedAt           DateTime        @updatedAt
+
+  subscriptions Subscription[]
+}
+
+model Subscription {
+  id                 String             @id @default(uuid())
+  tenantId           String
+  planId             String
+  status             SubscriptionStatus @default(TRIALING)
+  currentPeriodStart DateTime?
+  currentPeriodEnd   DateTime?
+  trialEndsAt        DateTime?
+  cancelAtPeriodEnd  Boolean            @default(false)
+  canceledAt         DateTime?
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  plan   Plan   @relation(fields: [planId], references: [id], onDelete: Restrict)
+
+  @@index([tenantId])
+  @@index([planId])
+}
+
+model UsageRollup {
+  id           String   @id @default(uuid())
+  tenantId     String
+  periodStart  DateTime
+  periodEnd    DateTime
+  requestCount Int      @default(0)
+  voiceMinutes Decimal  @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+
+  @@unique([tenantId, periodStart])
+  @@index([tenantId])
+}
+
+model Invoice {
+  id          String        @id @default(uuid())
+  tenantId    String
+  periodStart DateTime
+  periodEnd   DateTime
+  total       Decimal       @default(0)
+  currency    String        @default("USD")
+  status      InvoiceStatus @default(DRAFT)
+  issuedAt    DateTime?
+  paidAt      DateTime?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  tenant    Tenant            @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  lineItems InvoiceLineItem[]
+
+  @@unique([tenantId, periodStart])
+  @@index([tenantId])
+}
+
+model InvoiceLineItem {
+  id          String   @id @default(uuid())
+  invoiceId   String
+  description String
+  quantity    Decimal
+  unitAmount  Decimal
+  amount      Decimal
+  createdAt   DateTime @default(now())
+
+  invoice Invoice @relation(fields: [invoiceId], references: [id], onDelete: Cascade)
+
+  @@index([invoiceId])
+}

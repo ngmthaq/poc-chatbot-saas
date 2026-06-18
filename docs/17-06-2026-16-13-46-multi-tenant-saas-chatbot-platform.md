@@ -62,11 +62,11 @@ Turn the existing chat prototype into a sellable multi-tenant SaaS: tenants are 
 | #   | Status | Title                                                       | Acceptance Criteria                                                      | Depends On |
 | --- | ------ | ----------------------------------------------------------- | ------------------------------------------------------------------------ | ---------- |
 | 1   | DONE   | [DB] `AdminSession` refresh-token model + migration         | Model + migration apply; cascade on AdminUser delete; index on tokenHash | —          |
-| 2   | TODO   | [DB] `Plan` + `Subscription` models + migration             | Models + migration apply; FK indexed; tenant cascade                     | —          |
-| 3   | TODO   | [DB] `UsageRollup` model + migration                        | Migration applies; unique `(tenantId, periodStart)`                      | —          |
-| 4   | TODO   | [DB] `Invoice` + `InvoiceLineItem` models + migration       | Migration applies; cascade invoice→line items                            | 2, 3       |
-| 5   | TODO   | [DB] Extend `Provider` enum for voice providers + migration | Additive enum; existing rows unaffected                                  | —          |
-| 6   | TODO   | [DB] Add voice config fields to `Bot` + migration           | voiceEnabled/stt/tts/voiceId added; existing bots text-only              | 5          |
+| 2   | DONE   | [DB] `Plan` + `Subscription` models + migration             | Models + migration apply; FK indexed; tenant cascade                     | —          |
+| 3   | DONE   | [DB] `UsageRollup` model + migration                        | Migration applies; unique `(tenantId, periodStart)`                      | —          |
+| 4   | DONE   | [DB] `Invoice` + `InvoiceLineItem` models + migration       | Migration applies; cascade invoice→line items                            | 2, 3       |
+| 5   | DONE   | [DB] Extend `Provider` enum for voice providers + migration | Additive enum; existing rows unaffected                                  | —          |
+| 6   | DONE   | [DB] Add voice config fields to `Bot` + migration           | voiceEnabled/stt/tts/voiceId added; existing bots text-only              | 5          |
 | 7   | TODO   | [Logic] Key generation + hashing utility                    | `{raw, keyHash, keyPrefix}`; raw never persisted/logged                  | —          |
 | 8   | TODO   | [Logic] Key verification (lookup-by-hash)                   | Returns null for unknown/expired/revoked; constant-time compare          | 7          |
 | 9   | TODO   | [API] API-key auth middleware (parse + load)                | Attaches `req.apiKey`; 401 missing/invalid                               | 8          |

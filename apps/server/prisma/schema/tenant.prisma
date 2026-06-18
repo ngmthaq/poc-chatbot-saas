@@ -40,6 +40,9 @@ model Tenant {
   knowledgeDocuments KnowledgeDocument[]
   endUsers           EndUser[]
   conversations      Conversation[]
+  subscriptions      Subscription[]
+  usageRollups       UsageRollup[]
+  invoices           Invoice[]
 }
 
 model ApiKey {
