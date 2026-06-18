@@ -1,8 +1,12 @@
 // Admin domain: platform-global super-admin accounts.
 //
 // AdminUser is NOT scoped to a tenant — these are platform operators managing
-// the whole SaaS via the admin portal. Authentication wiring (sessions/JWT) is
-// out of scope; only `passwordHash` is modeled here (never a raw password).
+// the whole SaaS via the admin portal. Only `passwordHash` is modeled here
+// (never a raw password).
+//
+// AdminSession persists refresh tokens for an admin login. It stores ONLY a
+// one-way `tokenHash` (never a raw token), supports revocation/expiry, and
+// cascades on AdminUser deletion.
 
 model AdminUser {
   id           String    @id @default(uuid())
@@ -14,4 +18,20 @@ model AdminUser {
   lastLoginAt  DateTime?
   createdAt    DateTime  @default(now())
   updatedAt    DateTime  @updatedAt
+
+  sessions AdminSession[]
+}
+
+model AdminSession {
+  id          String    @id @default(uuid())
+  adminUserId String
+  tokenHash   String    @unique
+  userAgent   String?
+  expiresAt   DateTime
+  revokedAt   DateTime?
+  createdAt   DateTime  @default(now())
+
+  adminUser AdminUser @relation(fields: [adminUserId], references: [id], onDelete: Cascade)
+
+  @@index([adminUserId])
 }
