@@ -1,3 +1,4 @@
+export { apiKeyAuth } from './api-key.middleware';
 export { errorHandler } from './error-handler.middleware';
 export { fileValidator } from './file-validator.middleware';
 export { notFoundHandler } from './not-found.middleware';

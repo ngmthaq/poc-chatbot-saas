@@ -31,6 +31,14 @@ export const errorMessages = {
     return 'Not Found';
   },
 
+  unauthorized: () => {
+    return 'Unauthorized';
+  },
+
+  forbidden: () => {
+    return 'Forbidden';
+  },
+
   voiceModeDisabled: () => {
     return 'Voice mode is disabled';
   },

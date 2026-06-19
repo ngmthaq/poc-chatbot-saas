@@ -1,4 +1,4 @@
-import { ApiKeyStatus } from '@prisma/client';
+import { ApiKeyScope, ApiKeyStatus } from '@prisma/client';
 import type { ApiKey } from '@prisma/client';
 import { timingSafeEqual } from 'node:crypto';
 import { ApiKeyUtil } from '../utils/api-key.utils';
@@ -47,6 +47,34 @@ export class ApiKeyService {
     }
 
     return record;
+  }
+
+  /**
+   * Records that a key was just used by stamping `lastUsedAt` with the current
+   * time. This is a best-effort write — callers treat a failure as non-fatal.
+   */
+  public async touchLastUsed(id: string): Promise<void> {
+    await prisma.apiKey.update({
+      where: { id },
+      data: { lastUsedAt: new Date() },
+    });
+  }
+
+  /**
+   * Returns whether `key` satisfies every scope in `required`. An empty
+   * requirement is always satisfied, and a key holding `ApiKeyScope.ADMIN`
+   * bypasses the check entirely; otherwise EVERY required scope must be present.
+   */
+  public hasRequiredScopes(key: ApiKey, required: ApiKeyScope[]): boolean {
+    if (required.length === 0) {
+      return true;
+    }
+
+    if (key.scopes.includes(ApiKeyScope.ADMIN)) {
+      return true;
+    }
+
+    return required.every((scope) => key.scopes.includes(scope));
   }
 
   /**
