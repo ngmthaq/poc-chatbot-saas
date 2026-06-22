@@ -45,9 +45,9 @@
     "hash": "4eabafbbbca6551915c139aa55f2e185ddd600aa6bdc9fa84212c0dfd8545082"
   },
   "/Users/nmthang6/Documents/Workspace/agent-assistant/apps/server/package.json": {
-    "size": 1514,
-    "mtime_ns": 1781677195074752104,
-    "hash": "22f8b8da298bf08b1c9ddff6a63863c78f2a31c9d128727efb8ddf47b920a116"
+    "size": 1591,
+    "mtime_ns": 1782117646928654835,
+    "hash": "ee5a9f5db3fcecf5d78e275e3afda0c01c9b1cfd54e2cc249805fee7326272a9"
   },
   "/Users/nmthang6/Documents/Workspace/agent-assistant/apps/server/prisma/migrations/20260617154242_init_chatbot_schema/migration.sql": {
     "size": 8533,
@@ -91,8 +91,8 @@
   },
   "/Users/nmthang6/Documents/Workspace/agent-assistant/package.json": {
     "size": 995,
-    "mtime_ns": 1782099327526059507,
-    "hash": "0fc95f6689f5c417048ecb8d4f885aed8643bca8864025b004e3c27f8b6ab720"
+    "mtime_ns": 1782116678975836641,
+    "hash": "9a6778273ce79f34ff62b2f4d28eee59f34f802d5d91a2ca4474f46aa362e074"
   },
   "/Users/nmthang6/Documents/Workspace/agent-assistant/packages/deepagent/package.json": {
     "size": 1027,

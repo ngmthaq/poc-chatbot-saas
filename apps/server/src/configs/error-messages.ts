@@ -42,4 +42,16 @@ export const errorMessages = {
   voiceModeDisabled: () => {
     return 'Voice mode is disabled';
   },
+
+  invalidCredentials: () => {
+    return 'Invalid email or password';
+  },
+
+  tooManyAuthAttempts: () => {
+    return 'Too many authentication attempts';
+  },
+
+  invalidRefreshToken: () => {
+    return 'Invalid or expired refresh token';
+  },
 } as const;

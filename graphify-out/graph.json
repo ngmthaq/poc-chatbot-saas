@@ -1066,7 +1066,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agentvisualizerpanel_configs",
-      "community": 25,
+      "community": 26,
       "norm_label": "configs.ts"
     },
     {
@@ -1076,7 +1076,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "agentvisualizerpanel_configs_overlay_states",
-      "community": 25,
+      "community": 26,
       "norm_label": "overlay_states"
     },
     {
@@ -1086,7 +1086,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agentvisualizerpanel_index",
-      "community": 25,
+      "community": 26,
       "norm_label": "index.tsx"
     },
     {
@@ -1096,7 +1096,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "agentvisualizerpanel_index_agentvisualizerpanel",
-      "community": 25,
+      "community": 26,
       "norm_label": "agentvisualizerpanel()"
     },
     {
@@ -1106,7 +1106,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agentvisualizerpanel_styled",
-      "community": 25,
+      "community": 26,
       "norm_label": "styled.ts"
     },
     {
@@ -1116,7 +1116,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "agentvisualizerpanel_styled_visualizerroot",
-      "community": 25,
+      "community": 26,
       "norm_label": "visualizerroot"
     },
     {
@@ -1126,7 +1126,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "agentvisualizerpanel_styled_visualizeroverlay",
-      "community": 25,
+      "community": 26,
       "norm_label": "visualizeroverlay"
     },
     {
@@ -1136,7 +1136,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "agentvisualizerpanel_styled_styledprogress",
-      "community": 25,
+      "community": 26,
       "norm_label": "styledprogress"
     },
     {
@@ -1146,7 +1146,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "agentvisualizerpanel_styled_overlaytext",
-      "community": 25,
+      "community": 26,
       "norm_label": "overlaytext"
     },
     {
@@ -1156,7 +1156,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agentvisualizerpanel_types",
-      "community": 25,
+      "community": 26,
       "norm_label": "types.ts"
     },
     {
@@ -1166,7 +1166,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "agentvisualizerpanel_types_agentvisualizerpanelprops",
-      "community": 25,
+      "community": 26,
       "norm_label": "agentvisualizerpanelprops"
     },
     {
@@ -1176,7 +1176,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "agentvisualizerpanel_types_visualizerrootprops",
-      "community": 25,
+      "community": 26,
       "norm_label": "visualizerrootprops"
     },
     {
@@ -1246,7 +1246,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "chatpanel_index",
-      "community": 26,
+      "community": 25,
       "norm_label": "index.tsx"
     },
     {
@@ -1256,7 +1256,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "chatpanel_index_chatpanel",
-      "community": 26,
+      "community": 25,
       "norm_label": "chatpanel()"
     },
     {
@@ -1266,7 +1266,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "chatpanel_styled",
-      "community": 26,
+      "community": 25,
       "norm_label": "styled.ts"
     },
     {
@@ -1276,7 +1276,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "chatpanel_styled_panelroot",
-      "community": 26,
+      "community": 25,
       "norm_label": "panelroot"
     },
     {
@@ -1286,7 +1286,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "chatpanel_styled_inputrow",
-      "community": 26,
+      "community": 25,
       "norm_label": "inputrow"
     },
     {
@@ -1296,7 +1296,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "chatpanel_styled_messagefield",
-      "community": 26,
+      "community": 25,
       "norm_label": "messagefield"
     },
     {
@@ -1306,7 +1306,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "chatpanel_styled_sendbutton",
-      "community": 26,
+      "community": 25,
       "norm_label": "sendbutton"
     },
     {
@@ -1316,7 +1316,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "chatpanel_styled_errortext",
-      "community": 26,
+      "community": 25,
       "norm_label": "errortext"
     },
     {
@@ -1326,7 +1326,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "chatpanel_types",
-      "community": 26,
+      "community": 25,
       "norm_label": "types.ts"
     },
     {
@@ -1336,7 +1336,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "chatpanel_types_chatform",
-      "community": 26,
+      "community": 25,
       "norm_label": "chatform"
     },
     {
@@ -1346,7 +1346,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "chatpanel_types_chatpanelprops",
-      "community": 26,
+      "community": 25,
       "norm_label": "chatpanelprops"
     },
     {
@@ -4446,7 +4446,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_package",
-      "community": 34,
+      "community": 20,
       "norm_label": "package.json"
     },
     {
@@ -4456,7 +4456,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "server_package_name",
-      "community": 34,
+      "community": 20,
       "norm_label": "name"
     },
     {
@@ -4466,7 +4466,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "server_package_version",
-      "community": 34,
+      "community": 20,
       "norm_label": "version"
     },
     {
@@ -4476,7 +4476,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "server_package_private",
-      "community": 34,
+      "community": 20,
       "norm_label": "private"
     },
     {
@@ -4486,7 +4486,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "server_package_type",
-      "community": 34,
+      "community": 20,
       "norm_label": "type"
     },
     {
@@ -4496,7 +4496,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "server_package_scripts",
-      "community": 28,
+      "community": 20,
       "norm_label": "scripts"
     },
     {
@@ -4506,7 +4506,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "server_package_scripts_build",
-      "community": 28,
+      "community": 20,
       "norm_label": "build"
     },
     {
@@ -4516,7 +4516,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "server_package_scripts_clean",
-      "community": 28,
+      "community": 20,
       "norm_label": "clean"
     },
     {
@@ -4526,7 +4526,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "server_package_scripts_typecheck",
-      "community": 28,
+      "community": 20,
       "norm_label": "typecheck"
     },
     {
@@ -4536,7 +4536,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "server_package_scripts_lint",
-      "community": 28,
+      "community": 20,
       "norm_label": "lint"
     },
     {
@@ -4546,7 +4546,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "server_package_scripts_lint_fix",
-      "community": 28,
+      "community": 20,
       "norm_label": "lint:fix"
     },
     {
@@ -4556,7 +4556,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "server_package_scripts_dev",
-      "community": 28,
+      "community": 20,
       "norm_label": "dev"
     },
     {
@@ -4566,7 +4566,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "server_package_scripts_start",
-      "community": 28,
+      "community": 20,
       "norm_label": "start"
     },
     {
@@ -4576,7 +4576,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "server_package_scripts_postinstall",
-      "community": 28,
+      "community": 20,
       "norm_label": "postinstall"
     },
     {
@@ -4586,7 +4586,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "server_package_scripts_prisma_generate",
-      "community": 28,
+      "community": 20,
       "norm_label": "prisma:generate"
     },
     {
@@ -4596,7 +4596,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "server_package_scripts_db_migrate",
-      "community": 28,
+      "community": 20,
       "norm_label": "db:migrate"
     },
     {
@@ -4606,7 +4606,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "server_package_engines",
-      "community": 34,
+      "community": 20,
       "norm_label": "engines"
     },
     {
@@ -4616,7 +4616,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "server_package_engines_node",
-      "community": 34,
+      "community": 20,
       "norm_label": "node"
     },
     {
@@ -4626,7 +4626,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "server_package_engines_pnpm",
-      "community": 34,
+      "community": 20,
       "norm_label": "pnpm"
     },
     {
@@ -4670,10 +4670,20 @@
       "norm_label": "@prisma/client"
     },
     {
-      "label": "cors",
+      "label": "bcrypt",
       "file_type": "code",
       "source_file": "apps/server/package.json",
       "source_location": "L26",
+      "_origin": "ast",
+      "id": "server_package_dependencies_bcrypt",
+      "community": 20,
+      "norm_label": "bcrypt"
+    },
+    {
+      "label": "cors",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "server_package_dependencies_cors",
       "community": 20,
@@ -4683,7 +4693,7 @@
       "label": "dotenv",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L27",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "server_package_dependencies_dotenv",
       "community": 20,
@@ -4693,7 +4703,7 @@
       "label": "express",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L28",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "server_package_dependencies_express",
       "community": 20,
@@ -4703,7 +4713,7 @@
       "label": "express-rate-limit",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L29",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "server_package_dependencies_express_rate_limit",
       "community": 20,
@@ -4713,7 +4723,7 @@
       "label": "helmet",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "server_package_dependencies_helmet",
       "community": 20,
@@ -4723,7 +4733,7 @@
       "label": "http-errors",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L31",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "server_package_dependencies_http_errors",
       "community": 20,
@@ -4733,17 +4743,27 @@
       "label": "humps",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "server_package_dependencies_humps",
       "community": 20,
       "norm_label": "humps"
     },
     {
+      "label": "jose",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "server_package_dependencies_jose",
+      "community": 20,
+      "norm_label": "jose"
+    },
+    {
       "label": "livekit-server-sdk",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L33",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "server_package_dependencies_livekit_server_sdk",
       "community": 20,
@@ -4753,7 +4773,7 @@
       "label": "morgan",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L34",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "server_package_dependencies_morgan",
       "community": 20,
@@ -4763,7 +4783,7 @@
       "label": "multer",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L35",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "server_package_dependencies_multer",
       "community": 20,
@@ -4773,7 +4793,7 @@
       "label": "pg",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L36",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "server_package_dependencies_pg",
       "community": 20,
@@ -4783,7 +4803,7 @@
       "label": "pino",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L37",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "server_package_dependencies_pino",
       "community": 20,
@@ -4793,7 +4813,7 @@
       "label": "yup",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L38",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "server_package_dependencies_yup",
       "community": 20,
@@ -4803,7 +4823,7 @@
       "label": "devDependencies",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L40",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "server_package_devdependencies",
       "community": 21,
@@ -4813,17 +4833,27 @@
       "label": "@eslint/js",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L41",
+      "source_location": "L43",
       "_origin": "ast",
       "id": "server_package_devdependencies_eslint_js",
       "community": 21,
       "norm_label": "@eslint/js"
     },
     {
+      "label": "@types/bcrypt",
+      "file_type": "code",
+      "source_file": "apps/server/package.json",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "server_package_devdependencies_types_bcrypt",
+      "community": 21,
+      "norm_label": "@types/bcrypt"
+    },
+    {
       "label": "@types/cors",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L42",
+      "source_location": "L45",
       "_origin": "ast",
       "id": "server_package_devdependencies_types_cors",
       "community": 21,
@@ -4833,7 +4863,7 @@
       "label": "@types/express",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L43",
+      "source_location": "L46",
       "_origin": "ast",
       "id": "server_package_devdependencies_types_express",
       "community": 21,
@@ -4843,7 +4873,7 @@
       "label": "@types/http-errors",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L44",
+      "source_location": "L47",
       "_origin": "ast",
       "id": "server_package_devdependencies_types_http_errors",
       "community": 21,
@@ -4853,7 +4883,7 @@
       "label": "@types/humps",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L45",
+      "source_location": "L48",
       "_origin": "ast",
       "id": "server_package_devdependencies_types_humps",
       "community": 21,
@@ -4863,7 +4893,7 @@
       "label": "@types/morgan",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L46",
+      "source_location": "L49",
       "_origin": "ast",
       "id": "server_package_devdependencies_types_morgan",
       "community": 21,
@@ -4873,7 +4903,7 @@
       "label": "@types/multer",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L47",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "server_package_devdependencies_types_multer",
       "community": 21,
@@ -4883,7 +4913,7 @@
       "label": "@types/node",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L48",
+      "source_location": "L51",
       "_origin": "ast",
       "id": "server_package_devdependencies_types_node",
       "community": 21,
@@ -4893,7 +4923,7 @@
       "label": "@types/pg",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L49",
+      "source_location": "L52",
       "_origin": "ast",
       "id": "server_package_devdependencies_types_pg",
       "community": 21,
@@ -4903,7 +4933,7 @@
       "label": "eslint",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L50",
+      "source_location": "L53",
       "_origin": "ast",
       "id": "server_package_devdependencies_eslint",
       "community": 21,
@@ -4913,7 +4943,7 @@
       "label": "globals",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L51",
+      "source_location": "L54",
       "_origin": "ast",
       "id": "server_package_devdependencies_globals",
       "community": 21,
@@ -4923,7 +4953,7 @@
       "label": "jiti",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L52",
+      "source_location": "L55",
       "_origin": "ast",
       "id": "server_package_devdependencies_jiti",
       "community": 21,
@@ -4933,7 +4963,7 @@
       "label": "prisma",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L53",
+      "source_location": "L56",
       "_origin": "ast",
       "id": "server_package_devdependencies_prisma",
       "community": 21,
@@ -4943,7 +4973,7 @@
       "label": "tsx",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L54",
+      "source_location": "L57",
       "_origin": "ast",
       "id": "server_package_devdependencies_tsx",
       "community": 21,
@@ -4953,7 +4983,7 @@
       "label": "typescript",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L55",
+      "source_location": "L58",
       "_origin": "ast",
       "id": "server_package_devdependencies_typescript",
       "community": 21,
@@ -4963,7 +4993,7 @@
       "label": "typescript-eslint",
       "file_type": "code",
       "source_file": "apps/server/package.json",
-      "source_location": "L56",
+      "source_location": "L59",
       "_origin": "ast",
       "id": "server_package_devdependencies_typescript_eslint",
       "community": 21,
@@ -5023,7 +5053,7 @@
       "label": "Config",
       "file_type": "code",
       "source_file": "apps/server/src/configs/env.ts",
-      "source_location": "L56",
+      "source_location": "L64",
       "_origin": "ast",
       "id": "apps_server_src_configs_env_ts_configs_env_config",
       "community": 43,
@@ -5033,7 +5063,7 @@
       "label": "loadEnv()",
       "file_type": "code",
       "source_file": "apps/server/src/configs/env.ts",
-      "source_location": "L60",
+      "source_location": "L68",
       "_origin": "ast",
       "id": "apps_server_src_configs_env_ts_configs_env_loadenv",
       "community": 43,
@@ -5068,6 +5098,56 @@
       "id": "apps_server_src_configs_index_ts_configs_index",
       "community": 79,
       "norm_label": "index.ts"
+    },
+    {
+      "label": "admin-auth.controller.ts",
+      "file_type": "code",
+      "source_file": "apps/server/src/controllers/admin-auth.controller.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "controllers_admin_auth_controller",
+      "community": 1,
+      "norm_label": "admin-auth.controller.ts"
+    },
+    {
+      "label": "AdminAuthController",
+      "file_type": "code",
+      "source_file": "apps/server/src/controllers/admin-auth.controller.ts",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "controllers_admin_auth_controller_adminauthcontroller",
+      "community": 1,
+      "norm_label": "adminauthcontroller"
+    },
+    {
+      "label": ".handleLogin()",
+      "file_type": "code",
+      "source_file": "apps/server/src/controllers/admin-auth.controller.ts",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "controllers_admin_auth_controller_adminauthcontroller_handlelogin",
+      "community": 1,
+      "norm_label": ".handlelogin()"
+    },
+    {
+      "label": ".handleRefresh()",
+      "file_type": "code",
+      "source_file": "apps/server/src/controllers/admin-auth.controller.ts",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "controllers_admin_auth_controller_adminauthcontroller_handlerefresh",
+      "community": 1,
+      "norm_label": ".handlerefresh()"
+    },
+    {
+      "label": ".handleLogout()",
+      "file_type": "code",
+      "source_file": "apps/server/src/controllers/admin-auth.controller.ts",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "controllers_admin_auth_controller_adminauthcontroller_handlelogout",
+      "community": 1,
+      "norm_label": ".handlelogout()"
     },
     {
       "label": "chat.controller.ts",
@@ -5136,7 +5216,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "controllers_health_controller",
-      "community": 3,
+      "community": 1,
       "norm_label": "health.controller.ts"
     },
     {
@@ -5218,6 +5298,46 @@
       "id": "controllers_webhook_controller_webhookcontroller_receive",
       "community": 80,
       "norm_label": ".receive()"
+    },
+    {
+      "label": "admin-auth.middleware.ts",
+      "file_type": "code",
+      "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "middlewares_admin_auth_middleware",
+      "community": 79,
+      "norm_label": "admin-auth.middleware.ts"
+    },
+    {
+      "label": "adminAuthService",
+      "file_type": "code",
+      "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "middlewares_admin_auth_middleware_adminauthservice",
+      "community": 79,
+      "norm_label": "adminauthservice"
+    },
+    {
+      "label": "parseBearerToken()",
+      "file_type": "code",
+      "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "middlewares_admin_auth_middleware_parsebearertoken",
+      "community": 79,
+      "norm_label": "parsebearertoken()"
+    },
+    {
+      "label": "adminAuth()",
+      "file_type": "code",
+      "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "middlewares_admin_auth_middleware_adminauth",
+      "community": 79,
+      "norm_label": "adminauth()"
     },
     {
       "label": "api-key.middleware.ts",
@@ -5380,6 +5500,16 @@
       "norm_label": "ratelimithandler"
     },
     {
+      "label": "authRateLimitHandler",
+      "file_type": "code",
+      "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "middlewares_rate_limit_middleware_authratelimithandler",
+      "community": 79,
+      "norm_label": "authratelimithandler"
+    },
+    {
       "label": "request-validator.middleware.ts",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/request-validator.middleware.ts",
@@ -5458,6 +5588,36 @@
       "id": "middlewares_require_scopes_middleware_requirescopes",
       "community": 78,
       "norm_label": "requirescopes()"
+    },
+    {
+      "label": "admin-auth.route.ts",
+      "file_type": "code",
+      "source_file": "apps/server/src/routes/admin-auth.route.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "routes_admin_auth_route",
+      "community": 1,
+      "norm_label": "admin-auth.route.ts"
+    },
+    {
+      "label": "router",
+      "file_type": "code",
+      "source_file": "apps/server/src/routes/admin-auth.route.ts",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "routes_admin_auth_route_router",
+      "community": 1,
+      "norm_label": "router"
+    },
+    {
+      "label": "adminAuthController",
+      "file_type": "code",
+      "source_file": "apps/server/src/routes/admin-auth.route.ts",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "routes_admin_auth_route_adminauthcontroller",
+      "community": 1,
+      "norm_label": "adminauthcontroller"
     },
     {
       "label": "chat.route.ts",
@@ -5563,7 +5723,7 @@
       "label": "router",
       "file_type": "code",
       "source_file": "apps/server/src/routes/index.ts",
-      "source_location": "L7",
+      "source_location": "L8",
       "_origin": "ast",
       "id": "routes_index_router",
       "community": 1,
@@ -5668,6 +5828,76 @@
       "id": "src_server_shutdown",
       "community": 81,
       "norm_label": "shutdown()"
+    },
+    {
+      "label": "admin-auth.service.ts",
+      "file_type": "code",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "services_admin_auth_service",
+      "community": 1,
+      "norm_label": "admin-auth.service.ts"
+    },
+    {
+      "label": "AdminAuthService",
+      "file_type": "code",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "services_admin_auth_service_adminauthservice",
+      "community": 1,
+      "norm_label": "adminauthservice"
+    },
+    {
+      "label": ".login()",
+      "file_type": "code",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "services_admin_auth_service_adminauthservice_login",
+      "community": 1,
+      "norm_label": ".login()"
+    },
+    {
+      "label": ".refresh()",
+      "file_type": "code",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L104",
+      "_origin": "ast",
+      "id": "services_admin_auth_service_adminauthservice_refresh",
+      "community": 1,
+      "norm_label": ".refresh()"
+    },
+    {
+      "label": ".authenticateAccessToken()",
+      "file_type": "code",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L188",
+      "_origin": "ast",
+      "id": "services_admin_auth_service_adminauthservice_authenticateaccesstoken",
+      "community": 1,
+      "norm_label": ".authenticateaccesstoken()"
+    },
+    {
+      "label": ".logout()",
+      "file_type": "code",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L223",
+      "_origin": "ast",
+      "id": "services_admin_auth_service_adminauthservice_logout",
+      "community": 1,
+      "norm_label": ".logout()"
+    },
+    {
+      "label": ".revokeAllSessions()",
+      "file_type": "code",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L237",
+      "_origin": "ast",
+      "id": "services_admin_auth_service_adminauthservice_revokeallsessions",
+      "community": 1,
+      "norm_label": ".revokeallsessions()"
     },
     {
       "label": "api-key.service.ts",
@@ -5866,7 +6096,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "services_webhook_service",
-      "community": 3,
+      "community": 82,
       "norm_label": "webhook.service.ts"
     },
     {
@@ -5898,6 +6128,106 @@
       "id": "services_webhook_service_webhookservice_handleroomfinished",
       "community": 80,
       "norm_label": ".handleroomfinished()"
+    },
+    {
+      "label": "admin-auth.d.ts",
+      "file_type": "code",
+      "source_file": "apps/server/src/types/admin-auth.d.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "types_admin_auth_d",
+      "community": 83,
+      "norm_label": "admin-auth.d.ts"
+    },
+    {
+      "label": "AuthenticatedAdmin",
+      "file_type": "code",
+      "source_file": "apps/server/src/types/admin-auth.d.ts",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "types_admin_auth_d_authenticatedadmin",
+      "community": 83,
+      "norm_label": "authenticatedadmin"
+    },
+    {
+      "label": "AdminPublicProfile",
+      "file_type": "code",
+      "source_file": "apps/server/src/types/admin-auth.d.ts",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "types_admin_auth_d_adminpublicprofile",
+      "community": 83,
+      "norm_label": "adminpublicprofile"
+    },
+    {
+      "label": "AdminAccessTokenPayload",
+      "file_type": "code",
+      "source_file": "apps/server/src/types/admin-auth.d.ts",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "types_admin_auth_d_adminaccesstokenpayload",
+      "community": 83,
+      "norm_label": "adminaccesstokenpayload"
+    },
+    {
+      "label": "SignedAccessToken",
+      "file_type": "code",
+      "source_file": "apps/server/src/types/admin-auth.d.ts",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "types_admin_auth_d_signedaccesstoken",
+      "community": 83,
+      "norm_label": "signedaccesstoken"
+    },
+    {
+      "label": "GeneratedRefreshToken",
+      "file_type": "code",
+      "source_file": "apps/server/src/types/admin-auth.d.ts",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "types_admin_auth_d_generatedrefreshtoken",
+      "community": 83,
+      "norm_label": "generatedrefreshtoken"
+    },
+    {
+      "label": "AdminLoginResult",
+      "file_type": "code",
+      "source_file": "apps/server/src/types/admin-auth.d.ts",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "types_admin_auth_d_adminloginresult",
+      "community": 83,
+      "norm_label": "adminloginresult"
+    },
+    {
+      "label": "AdminLoginOptions",
+      "file_type": "code",
+      "source_file": "apps/server/src/types/admin-auth.d.ts",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "types_admin_auth_d_adminloginoptions",
+      "community": 83,
+      "norm_label": "adminloginoptions"
+    },
+    {
+      "label": "AdminRefreshResult",
+      "file_type": "code",
+      "source_file": "apps/server/src/types/admin-auth.d.ts",
+      "source_location": "L67",
+      "_origin": "ast",
+      "id": "types_admin_auth_d_adminrefreshresult",
+      "community": 83,
+      "norm_label": "adminrefreshresult"
+    },
+    {
+      "label": "AdminLogoutResult",
+      "file_type": "code",
+      "source_file": "apps/server/src/types/admin-auth.d.ts",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "types_admin_auth_d_adminlogoutresult",
+      "community": 83,
+      "norm_label": "adminlogoutresult"
     },
     {
       "label": "api-key.d.ts",
@@ -5983,7 +6313,7 @@
       "label": "Request",
       "file_type": "code",
       "source_file": "apps/server/src/types/express.d.ts",
-      "source_location": "L6",
+      "source_location": "L7",
       "_origin": "ast",
       "id": "types_express_d_request",
       "community": 56,
@@ -6398,6 +6728,96 @@
       "id": "utils_response_handler_utils_responsehandler",
       "community": 1,
       "norm_label": "responsehandler()"
+    },
+    {
+      "label": "admin-login.validator.ts",
+      "file_type": "code",
+      "source_file": "apps/server/src/validators/admin-login.validator.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "validators_admin_login_validator",
+      "community": 1,
+      "norm_label": "admin-login.validator.ts"
+    },
+    {
+      "label": "adminLoginSchema",
+      "file_type": "code",
+      "source_file": "apps/server/src/validators/admin-login.validator.ts",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "validators_admin_login_validator_adminloginschema",
+      "community": 1,
+      "norm_label": "adminloginschema"
+    },
+    {
+      "label": "AdminLoginBody",
+      "file_type": "code",
+      "source_file": "apps/server/src/validators/admin-login.validator.ts",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "validators_admin_login_validator_adminloginbody",
+      "community": 1,
+      "norm_label": "adminloginbody"
+    },
+    {
+      "label": "admin-logout.validator.ts",
+      "file_type": "code",
+      "source_file": "apps/server/src/validators/admin-logout.validator.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "validators_admin_logout_validator",
+      "community": 1,
+      "norm_label": "admin-logout.validator.ts"
+    },
+    {
+      "label": "adminLogoutSchema",
+      "file_type": "code",
+      "source_file": "apps/server/src/validators/admin-logout.validator.ts",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "validators_admin_logout_validator_adminlogoutschema",
+      "community": 1,
+      "norm_label": "adminlogoutschema"
+    },
+    {
+      "label": "AdminLogoutBody",
+      "file_type": "code",
+      "source_file": "apps/server/src/validators/admin-logout.validator.ts",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "validators_admin_logout_validator_adminlogoutbody",
+      "community": 1,
+      "norm_label": "adminlogoutbody"
+    },
+    {
+      "label": "admin-refresh.validator.ts",
+      "file_type": "code",
+      "source_file": "apps/server/src/validators/admin-refresh.validator.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "validators_admin_refresh_validator",
+      "community": 1,
+      "norm_label": "admin-refresh.validator.ts"
+    },
+    {
+      "label": "adminRefreshSchema",
+      "file_type": "code",
+      "source_file": "apps/server/src/validators/admin-refresh.validator.ts",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "validators_admin_refresh_validator_adminrefreshschema",
+      "community": 1,
+      "norm_label": "adminrefreshschema"
+    },
+    {
+      "label": "AdminRefreshBody",
+      "file_type": "code",
+      "source_file": "apps/server/src/validators/admin-refresh.validator.ts",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "validators_admin_refresh_validator_adminrefreshbody",
+      "community": 1,
+      "norm_label": "adminrefreshbody"
     },
     {
       "label": "chat.validator.ts",
@@ -8356,7 +8776,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "adapters_langchain_adapter",
-      "community": 16,
+      "community": 0,
       "norm_label": "langchain.adapter.ts"
     },
     {
@@ -8366,7 +8786,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "adapters_langchain_adapter_langchainstructuredtool",
-      "community": 16,
+      "community": 0,
       "norm_label": "langchainstructuredtool"
     },
     {
@@ -8376,7 +8796,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "adapters_langchain_adapter_langchaintoolschema",
-      "community": 16,
+      "community": 0,
       "norm_label": "langchaintoolschema"
     },
     {
@@ -8386,7 +8806,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "adapters_langchain_adapter_tolangchaintool",
-      "community": 16,
+      "community": 0,
       "norm_label": "tolangchaintool()"
     },
     {
@@ -15311,6 +15731,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/package.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package_dependencies",
+      "target": "server_package_dependencies_bcrypt"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/package.json",
       "source_location": "L23",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -15386,6 +15816,16 @@
       "confidence_score": 1.0,
       "source": "server_package_dependencies",
       "target": "server_package_dependencies_humps"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/package.json",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package_dependencies",
+      "target": "server_package_dependencies_jose"
     },
     {
       "relation": "contains",
@@ -15526,6 +15966,16 @@
       "confidence_score": 1.0,
       "source": "server_package_devdependencies",
       "target": "server_package_devdependencies_tsx"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/package.json",
+      "source_location": "L44",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package_devdependencies",
+      "target": "server_package_devdependencies_types_bcrypt"
     },
     {
       "relation": "contains",
@@ -15824,6 +16274,28 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/admin-auth.controller.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_admin_auth_controller",
+      "target": "configs_error_messages_errormessages"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "middlewares_admin_auth_middleware",
+      "target": "configs_error_messages_errormessages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "apps/server/src/middlewares/api-key.middleware.ts",
       "source_location": "L3",
       "weight": 1.0,
@@ -15882,9 +16354,9 @@
       "source_file": "apps/server/src/middlewares/require-bot-binding.middleware.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "middlewares_require_bot_binding_middleware",
-      "target": "configs_error_messages_errormessages",
-      "confidence_score": 1.0
+      "target": "configs_error_messages_errormessages"
     },
     {
       "relation": "imports",
@@ -15907,6 +16379,156 @@
       "confidence_score": 1.0,
       "source": "services_livekit_service",
       "target": "configs_error_messages_errormessages"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/admin-auth.controller.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_admin_auth_controller",
+      "target": "controllers_admin_auth_controller_adminauthcontroller"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/admin-auth.controller.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_admin_auth_controller",
+      "target": "services_admin_auth_service"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/admin-auth.controller.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_admin_auth_controller",
+      "target": "services_admin_auth_service_adminauthservice"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/admin-auth.controller.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_admin_auth_controller",
+      "target": "validators_admin_login_validator"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/admin-auth.controller.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_admin_auth_controller",
+      "target": "validators_admin_login_validator_adminloginbody"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/admin-auth.controller.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_admin_auth_controller",
+      "target": "validators_admin_logout_validator"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/admin-auth.controller.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_admin_auth_controller",
+      "target": "validators_admin_logout_validator_adminlogoutbody"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/admin-auth.controller.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_admin_auth_controller",
+      "target": "validators_admin_refresh_validator"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/admin-auth.controller.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_admin_auth_controller",
+      "target": "validators_admin_refresh_validator_adminrefreshbody"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/admin-auth.route.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_admin_auth_route",
+      "target": "controllers_admin_auth_controller"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/admin-auth.controller.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_admin_auth_controller_adminauthcontroller",
+      "target": "controllers_admin_auth_controller_adminauthcontroller_handlelogin"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/admin-auth.controller.ts",
+      "source_location": "L62",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_admin_auth_controller_adminauthcontroller",
+      "target": "controllers_admin_auth_controller_adminauthcontroller_handlelogout"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/admin-auth.controller.ts",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_admin_auth_controller_adminauthcontroller",
+      "target": "controllers_admin_auth_controller_adminauthcontroller_handlerefresh"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/admin-auth.route.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_admin_auth_route",
+      "target": "controllers_admin_auth_controller_adminauthcontroller"
     },
     {
       "relation": "contains",
@@ -16253,6 +16875,80 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "middlewares_admin_auth_middleware",
+      "target": "middlewares_admin_auth_middleware_adminauth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "middlewares_admin_auth_middleware",
+      "target": "middlewares_admin_auth_middleware_adminauthservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "middlewares_admin_auth_middleware",
+      "target": "middlewares_admin_auth_middleware_parsebearertoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "middlewares_admin_auth_middleware",
+      "target": "services_admin_auth_service",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "middlewares_admin_auth_middleware",
+      "target": "services_admin_auth_service_adminauthservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/index.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "middlewares_index",
+      "target": "middlewares_admin_auth_middleware",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/index.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "middlewares_index",
+      "target": "middlewares_admin_auth_middleware_adminauth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "apps/server/src/middlewares/api-key.middleware.ts",
       "source_location": "L36",
       "weight": 1.0,
@@ -16504,6 +17200,17 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "middlewares_index",
+      "target": "middlewares_rate_limit_middleware_authratelimithandler"
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/index.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "middlewares_index",
       "target": "middlewares_rate_limit_middleware_ratelimithandler"
     },
     {
@@ -16535,9 +17242,9 @@
       "source_file": "apps/server/src/middlewares/index.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "middlewares_index",
-      "target": "middlewares_require_bot_binding_middleware",
-      "confidence_score": 1.0
+      "target": "middlewares_require_bot_binding_middleware"
     },
     {
       "relation": "re_exports",
@@ -16546,9 +17253,9 @@
       "source_file": "apps/server/src/middlewares/index.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "middlewares_index",
-      "target": "middlewares_require_bot_binding_middleware_requirebotbinding",
-      "confidence_score": 1.0
+      "target": "middlewares_require_bot_binding_middleware_requirebotbinding"
     },
     {
       "relation": "re_exports",
@@ -16576,6 +17283,17 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/admin-auth.route.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_admin_auth_route",
+      "target": "middlewares_index"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "apps/server/src/routes/chat.route.ts",
       "source_location": "L4",
       "weight": 1.0,
@@ -16597,11 +17315,32 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "middlewares_rate_limit_middleware",
+      "target": "middlewares_rate_limit_middleware_authratelimithandler"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
       "source_location": "L7",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "middlewares_rate_limit_middleware",
       "target": "middlewares_rate_limit_middleware_ratelimithandler"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/admin-auth.route.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_admin_auth_route",
+      "target": "middlewares_rate_limit_middleware_authratelimithandler"
     },
     {
       "relation": "contains",
@@ -16617,6 +17356,17 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/admin-auth.route.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_admin_auth_route",
+      "target": "middlewares_request_validator_middleware"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "apps/server/src/routes/chat.route.ts",
       "source_location": "L5",
       "weight": 1.0,
@@ -16634,6 +17384,17 @@
       "confidence_score": 1.0,
       "source": "routes_livekit_route",
       "target": "middlewares_request_validator_middleware"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/admin-auth.route.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_admin_auth_route",
+      "target": "middlewares_request_validator_middleware_requestvalidator"
     },
     {
       "relation": "imports",
@@ -16663,9 +17424,9 @@
       "source_file": "apps/server/src/middlewares/require-bot-binding.middleware.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "middlewares_require_bot_binding_middleware",
-      "target": "middlewares_require_bot_binding_middleware_apikeyservice",
-      "confidence_score": 1.0
+      "target": "middlewares_require_bot_binding_middleware_apikeyservice"
     },
     {
       "relation": "contains",
@@ -16673,9 +17434,9 @@
       "source_file": "apps/server/src/middlewares/require-bot-binding.middleware.ts",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "middlewares_require_bot_binding_middleware",
-      "target": "middlewares_require_bot_binding_middleware_requirebotbinding",
-      "confidence_score": 1.0
+      "target": "middlewares_require_bot_binding_middleware_requirebotbinding"
     },
     {
       "relation": "imports_from",
@@ -16684,9 +17445,9 @@
       "source_file": "apps/server/src/middlewares/require-bot-binding.middleware.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "middlewares_require_bot_binding_middleware",
-      "target": "services_api_key_service",
-      "confidence_score": 1.0
+      "target": "services_api_key_service"
     },
     {
       "relation": "imports",
@@ -16695,9 +17456,9 @@
       "source_file": "apps/server/src/middlewares/require-bot-binding.middleware.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "middlewares_require_bot_binding_middleware",
-      "target": "services_api_key_service_apikeyservice",
-      "confidence_score": 1.0
+      "target": "services_api_key_service_apikeyservice"
     },
     {
       "relation": "imports",
@@ -16706,9 +17467,9 @@
       "source_file": "apps/server/src/routes/chat.route.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "routes_chat_route",
-      "target": "middlewares_require_bot_binding_middleware_requirebotbinding",
-      "confidence_score": 1.0
+      "target": "middlewares_require_bot_binding_middleware_requirebotbinding"
     },
     {
       "relation": "contains",
@@ -16762,6 +17523,136 @@
       "confidence_score": 1.0,
       "source": "routes_chat_route",
       "target": "middlewares_require_scopes_middleware_requirescopes"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/index.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_server_src_routes_index_ts_routes_index",
+      "target": "routes_admin_auth_route"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/admin-auth.route.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_admin_auth_route",
+      "target": "routes_admin_auth_route_adminauthcontroller"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/admin-auth.route.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_admin_auth_route",
+      "target": "routes_admin_auth_route_router"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/admin-auth.route.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_admin_auth_route",
+      "target": "utils_response_handler_utils"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/admin-auth.route.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_admin_auth_route",
+      "target": "utils_response_handler_utils_responsehandler"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/admin-auth.route.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_admin_auth_route",
+      "target": "validators_admin_login_validator"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/admin-auth.route.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_admin_auth_route",
+      "target": "validators_admin_login_validator_adminloginschema"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/admin-auth.route.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_admin_auth_route",
+      "target": "validators_admin_logout_validator"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/admin-auth.route.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_admin_auth_route",
+      "target": "validators_admin_logout_validator_adminlogoutschema"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/admin-auth.route.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_admin_auth_route",
+      "target": "validators_admin_refresh_validator"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/admin-auth.route.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_admin_auth_route",
+      "target": "validators_admin_refresh_validator_adminrefreshschema"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/index.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_server_src_routes_index_ts_routes_index",
+      "target": "routes_admin_auth_route_router"
     },
     {
       "relation": "imports_from",
@@ -16834,9 +17725,9 @@
       "source_file": "apps/server/src/routes/chat.route.ts",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "routes_chat_route",
-      "target": "validators_chat_validator_chatbody",
-      "confidence_score": 1.0
+      "target": "validators_chat_validator_chatbody"
     },
     {
       "relation": "imports",
@@ -17170,6 +18061,187 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_admin_auth_service",
+      "target": "services_admin_auth_service_adminauthservice"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_admin_auth_service",
+      "target": "utils_prisma_utils"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_admin_auth_service",
+      "target": "validators_admin_login_validator"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_admin_auth_service",
+      "target": "validators_admin_login_validator_adminloginbody"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_admin_auth_service",
+      "target": "validators_admin_logout_validator"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_admin_auth_service",
+      "target": "validators_admin_logout_validator_adminlogoutbody"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_admin_auth_service",
+      "target": "validators_admin_refresh_validator"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_admin_auth_service",
+      "target": "validators_admin_refresh_validator_adminrefreshbody"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L188",
+      "weight": 1.0,
+      "source": "services_admin_auth_service_adminauthservice",
+      "target": "services_admin_auth_service_adminauthservice_authenticateaccesstoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_admin_auth_service_adminauthservice",
+      "target": "services_admin_auth_service_adminauthservice_login"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L183",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_admin_auth_service_adminauthservice",
+      "target": "services_admin_auth_service_adminauthservice_logout"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L102",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_admin_auth_service_adminauthservice",
+      "target": "services_admin_auth_service_adminauthservice_refresh"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L178",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_admin_auth_service_adminauthservice",
+      "target": "services_admin_auth_service_adminauthservice_revokeallsessions"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_admin_auth_service_adminauthservice_login",
+      "target": "validators_admin_login_validator_adminloginbody"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L120",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_admin_auth_service_adminauthservice_refresh",
+      "target": "services_admin_auth_service_adminauthservice_revokeallsessions"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L102",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_admin_auth_service_adminauthservice_refresh",
+      "target": "validators_admin_refresh_validator_adminrefreshbody"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L183",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_admin_auth_service_adminauthservice_logout",
+      "target": "validators_admin_logout_validator_adminlogoutbody"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "apps/server/src/services/api-key.service.ts",
       "source_location": "L7",
       "weight": 1.0,
@@ -17236,9 +18308,9 @@
       "source_file": "apps/server/src/services/api-key.service.ts",
       "source_location": "L97",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_api_key_service_apikeyservice",
-      "target": "services_api_key_service_apikeyservice_resolvebotbinding",
-      "confidence_score": 1.0
+      "target": "services_api_key_service_apikeyservice_resolvebotbinding"
     },
     {
       "relation": "method",
@@ -17505,12 +18577,102 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/types/admin-auth.d.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "types_admin_auth_d",
+      "target": "types_admin_auth_d_adminaccesstokenpayload"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/types/admin-auth.d.ts",
+      "source_location": "L51",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "types_admin_auth_d",
+      "target": "types_admin_auth_d_adminloginoptions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/types/admin-auth.d.ts",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "types_admin_auth_d",
+      "target": "types_admin_auth_d_adminloginresult"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/types/admin-auth.d.ts",
+      "source_location": "L66",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "types_admin_auth_d",
+      "target": "types_admin_auth_d_adminlogoutresult"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/types/admin-auth.d.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "types_admin_auth_d",
+      "target": "types_admin_auth_d_adminpublicprofile"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/types/admin-auth.d.ts",
+      "source_location": "L59",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "types_admin_auth_d",
+      "target": "types_admin_auth_d_adminrefreshresult"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/types/admin-auth.d.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "types_admin_auth_d",
+      "target": "types_admin_auth_d_authenticatedadmin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/types/admin-auth.d.ts",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "types_admin_auth_d",
+      "target": "types_admin_auth_d_generatedrefreshtoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/types/admin-auth.d.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "types_admin_auth_d",
+      "target": "types_admin_auth_d_signedaccesstoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "apps/server/src/types/api-key.d.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "types_api_key_d",
-      "target": "types_api_key_d_botbindingresolution",
-      "confidence_score": 1.0
+      "target": "types_api_key_d_botbindingresolution"
     },
     {
       "relation": "contains",
@@ -17863,6 +19025,66 @@
       "confidence_score": 1.0,
       "source": "utils_response_handler_utils",
       "target": "utils_response_handler_utils_responsehandler"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/validators/admin-login.validator.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validators_admin_login_validator",
+      "target": "validators_admin_login_validator_adminloginbody"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/validators/admin-login.validator.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validators_admin_login_validator",
+      "target": "validators_admin_login_validator_adminloginschema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/validators/admin-logout.validator.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validators_admin_logout_validator",
+      "target": "validators_admin_logout_validator_adminlogoutbody"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/validators/admin-logout.validator.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validators_admin_logout_validator",
+      "target": "validators_admin_logout_validator_adminlogoutschema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/validators/admin-refresh.validator.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validators_admin_refresh_validator",
+      "target": "validators_admin_refresh_validator_adminrefreshbody"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/validators/admin-refresh.validator.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validators_admin_refresh_validator",
+      "target": "validators_admin_refresh_validator_adminrefreshschema"
     },
     {
       "relation": "contains",
@@ -22161,5 +23383,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "a0484864039f310c7859ceddef4b4260a1fcbae7"
+  "built_at_commit": "7b11c889d1be65b002ac31a742aff0bf860c3164"
 }

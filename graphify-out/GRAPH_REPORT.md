@@ -2,18 +2,18 @@
 
 ## Corpus Check
 
-- 212 files · ~19,680 words
+- 220 files · ~21,880 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
 
-- 972 nodes · 1201 edges · 83 communities (58 shown, 25 thin omitted)
+- 1014 nodes · 1277 edges · 82 communities (57 shown, 25 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 14 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
 
-- Built from commit: `a0484864`
+- Built from commit: `7b11c889`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -47,13 +47,11 @@
 - [[_COMMUNITY_Community 25|Community 25]]
 - [[_COMMUNITY_Community 26|Community 26]]
 - [[_COMMUNITY_Community 27|Community 27]]
-- [[_COMMUNITY_Community 28|Community 28]]
 - [[_COMMUNITY_Community 29|Community 29]]
 - [[_COMMUNITY_Community 30|Community 30]]
 - [[_COMMUNITY_Community 31|Community 31]]
 - [[_COMMUNITY_Community 32|Community 32]]
 - [[_COMMUNITY_Community 33|Community 33]]
-- [[_COMMUNITY_Community 34|Community 34]]
 - [[_COMMUNITY_Community 35|Community 35]]
 - [[_COMMUNITY_Community 36|Community 36]]
 - [[_COMMUNITY_Community 37|Community 37]]
@@ -89,6 +87,7 @@
 - [[_COMMUNITY_Community 80|Community 80]]
 - [[_COMMUNITY_Community 81|Community 81]]
 - [[_COMMUNITY_Community 82|Community 82]]
+- [[_COMMUNITY_Community 83|Community 83]]
 
 ## God Nodes (most connected - your core abstractions)
 
@@ -120,17 +119,17 @@
 
 - None detected.
 
-## Communities (83 total, 25 thin omitted)
+## Communities (82 total, 25 thin omitted)
 
 ### Community 0 - "Community 0"
 
-Cohesion: 0.08
-Nodes (37): BaseTool, AgentInstructions, convertCurrencySchema, ConvertCurrencyTool, formatNumber(), formatNumber(), getCoinPriceSchema, GetCoinPriceTool (+29 more)
+Cohesion: 0.07
+Nodes (39): LangChainStructuredTool, LangChainToolSchema, BaseTool, AgentInstructions, convertCurrencySchema, ConvertCurrencyTool, formatNumber(), formatNumber() (+31 more)
 
 ### Community 1 - "Community 1"
 
-Cohesion: 0.08
-Nodes (20): ChatController, ConfigController, HealthController, LiveKitController, requestValidator(), chatController, router, configController (+12 more)
+Cohesion: 0.06
+Nodes (30): AdminAuthController, ChatController, ConfigController, HealthController, LiveKitController, requestValidator(), adminAuthController, router (+22 more)
 
 ### Community 2 - "Community 2"
 
@@ -139,7 +138,7 @@ Nodes (47): dependencies, axios, @emotion/react, @emotion/styled, formik, jotai,
 
 ### Community 3 - "Community 3"
 
-Cohesion: 0.23
+Cohesion: 0.24
 Nodes (5): apiKeyAuth(), apiKeyService, HealthService, config, logger
 
 ### Community 4 - "Community 4"
@@ -204,8 +203,8 @@ Nodes (24): compilerOptions, allowJs, allowSyntheticDefaultImports, esModuleInte
 
 ### Community 16 - "Community 16"
 
-Cohesion: 0.11
-Nodes (14): LangChainStructuredTool, LangChainToolSchema, toLangChainTools(), ChatAgent, createChatAgent(), LangChainTool, RESEARCH_TOOL_NAMES, researchSubAgent (+6 more)
+Cohesion: 0.14
+Nodes (12): toLangChainTools(), ChatAgent, createChatAgent(), LangChainTool, RESEARCH_TOOL_NAMES, researchSubAgent, subAgents, SubAgentTools (+4 more)
 
 ### Community 17 - "Community 17"
 
@@ -224,13 +223,13 @@ Nodes (16): compilerOptions, allowJs, allowSyntheticDefaultImports, composite, e
 
 ### Community 20 - "Community 20"
 
-Cohesion: 0.12
-Nodes (17): dependencies, @call-center-agent/deepagent, cors, dotenv, express, express-rate-limit, helmet, http-errors (+9 more)
+Cohesion: 0.05
+Nodes (37): dependencies, bcrypt, @call-center-agent/deepagent, cors, dotenv, express, express-rate-limit, helmet (+29 more)
 
 ### Community 21 - "Community 21"
 
-Cohesion: 0.12
-Nodes (17): devDependencies, eslint, @eslint/js, globals, jiti, prisma, tsx, @types/cors (+9 more)
+Cohesion: 0.11
+Nodes (18): devDependencies, eslint, @eslint/js, globals, jiti, prisma, tsx, @types/bcrypt (+10 more)
 
 ### Community 22 - "Community 22"
 
@@ -250,22 +249,17 @@ Nodes (8): AgentIcon, CardContainer, DisplayName, IdentityText, MetadataDivider,
 ### Community 25 - "Community 25"
 
 Cohesion: 0.29
-Nodes (7): OVERLAY_STATES, OverlayText, StyledProgress, VisualizerOverlay, VisualizerRoot, AgentVisualizerPanelProps, VisualizerRootProps
+Nodes (7): ErrorText, InputRow, MessageField, PanelRoot, SendButton, ChatForm, ChatPanelProps
 
 ### Community 26 - "Community 26"
 
 Cohesion: 0.29
-Nodes (7): ErrorText, InputRow, MessageField, PanelRoot, SendButton, ChatForm, ChatPanelProps
+Nodes (7): OVERLAY_STATES, OverlayText, StyledProgress, VisualizerOverlay, VisualizerRoot, AgentVisualizerPanelProps, VisualizerRootProps
 
 ### Community 27 - "Community 27"
 
 Cohesion: 0.18
 Nodes (11): scripts, build, clean, dev, download-files, lint, lint:fix, start (+3 more)
-
-### Community 28 - "Community 28"
-
-Cohesion: 0.18
-Nodes (11): scripts, build, clean, db:migrate, dev, lint, lint:fix, postinstall (+3 more)
 
 ### Community 29 - "Community 29"
 
@@ -288,11 +282,6 @@ Cohesion: 0.25
 Nodes (5): LiveKitFunctionTool, LiveKitToolContext, toLiveKitTool(), toLiveKitTools(), LLMAgent
 
 ### Community 33 - "Community 33"
-
-Cohesion: 0.25
-Nodes (7): engines, node, pnpm, name, private, type, version
-
-### Community 34 - "Community 34"
 
 Cohesion: 0.25
 Nodes (7): engines, node, pnpm, name, private, type, version
@@ -334,8 +323,8 @@ Nodes (6): apiKeyService, requireBotBinding(), apiKeyService, requireScopes(), A
 
 ### Community 79 - "Community 79"
 
-Cohesion: 0.23
-Nodes (6): errorMessages, errorHandler(), normalizeMessage(), fileValidator(), notFoundHandler(), rateLimitHandler
+Cohesion: 0.17
+Nodes (9): errorMessages, adminAuth(), adminAuthService, errorHandler(), normalizeMessage(), fileValidator(), notFoundHandler(), authRateLimitHandler (+1 more)
 
 ### Community 80 - "Community 80"
 
@@ -347,9 +336,14 @@ Nodes (4): WebhookController, router, webhookController, WebhookService
 Cohesion: 0.25
 Nodes (6): createApp(), config, start(), adapter, { DATABASE_URL }, globalForPrisma
 
+### Community 83 - "Community 83"
+
+Cohesion: 0.20
+Nodes (9): AdminAccessTokenPayload, AdminLoginOptions, AdminLoginResult, AdminLogoutResult, AdminPublicProfile, AdminRefreshResult, AuthenticatedAdmin, GeneratedRefreshToken (+1 more)
+
 ## Knowledge Gaps
 
-- **491 isolated node(s):** `livekit-docs`, `name`, `version`, `private`, `type` (+486 more)
+- **505 isolated node(s):** `livekit-docs`, `name`, `version`, `private`, `type` (+500 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **25 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -358,15 +352,15 @@ Nodes (6): createApp(), config, start(), adapter, { DATABASE_URL }, globalForPri
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `useChatMode()` connect `Community 8` to `Community 10`?**
-  _High betweenness centrality (0.016) - this node is a cross-community bridge._
+  _High betweenness centrality (0.014) - this node is a cross-community bridge._
 - **Why does `VoiceSession()` connect `Community 10` to `Community 8`?**
-  _High betweenness centrality (0.013) - this node is a cross-community bridge._
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **What connects `livekit-docs`, `name`, `version` to the rest of the system?**
-  _491 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _505 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.07787698412698413 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07111501316944688 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.08130081300813008 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.055178652193577565 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.041666666666666664 - nodes in this community are weakly interconnected._
 - **Should `Community 4` be split into smaller, more focused modules?**

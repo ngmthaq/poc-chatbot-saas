@@ -20,6 +20,14 @@ const schema = yup.object().shape({
     .required('LIVEKIT_AGENT_NAME is required'),
   // PostgreSQL connection string consumed by Prisma (via env("DATABASE_URL")).
   DATABASE_URL: yup.string().trim().required('DATABASE_URL is required'),
+  // Platform-admin auth: signing secret + token TTLs. The JWT secret is
+  // required (no default) so the server refuses to boot without it.
+  ADMIN_JWT_SECRET: yup
+    .string()
+    .trim()
+    .required('ADMIN_JWT_SECRET is required'),
+  ADMIN_ACCESS_TOKEN_TTL: yup.string().trim().default('15m'),
+  ADMIN_REFRESH_TOKEN_TTL_DAYS: yup.number().integer().positive().default(7),
   // Text-chat (deepagent) LLM provider selection.
   LLM_PROVIDER: yup
     .mixed<ProviderType>()
