@@ -1,0 +1,17 @@
+*.md
+.claude/
+docs/
+graphify-out/
+*.example
+*.conf
+*.template.*
+*.txt
+*.yml
+*.yaml
+.env*
+*.sh
+Dockerfile*
+.gitignore
+.prettierignore
+*.html
+*.toml

@@ -1,0 +1,743 @@
+{
+  "nodes": [
+    {
+      "id": "users_nmthang6_documents_workspace_agent_assistant_packages_deepagent_package_json",
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "deepagent_package_name",
+      "label": "name",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L2"
+    },
+    {
+      "id": "deepagent_package_version",
+      "label": "version",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L3"
+    },
+    {
+      "id": "deepagent_package_private",
+      "label": "private",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L4"
+    },
+    {
+      "id": "deepagent_package_type",
+      "label": "type",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L5"
+    },
+    {
+      "id": "deepagent_package_exports",
+      "label": "exports",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "deepagent_package_types",
+      "label": "types",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "deepagent_package_import",
+      "label": "import",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "deepagent_package_files",
+      "label": "files",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L12"
+    },
+    {
+      "id": "deepagent_package_scripts",
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L15"
+    },
+    {
+      "id": "deepagent_package_scripts_build",
+      "label": "build",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L16"
+    },
+    {
+      "id": "deepagent_package_scripts_clean",
+      "label": "clean",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L17"
+    },
+    {
+      "id": "deepagent_package_scripts_typecheck",
+      "label": "typecheck",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L18"
+    },
+    {
+      "id": "deepagent_package_scripts_lint",
+      "label": "lint",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L19"
+    },
+    {
+      "id": "deepagent_package_scripts_lint_fix",
+      "label": "lint:fix",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L20"
+    },
+    {
+      "id": "deepagent_package_engines",
+      "label": "engines",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "deepagent_package_engines_node",
+      "label": "node",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L23"
+    },
+    {
+      "id": "deepagent_package_engines_pnpm",
+      "label": "pnpm",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L24"
+    },
+    {
+      "id": "deepagent_package_devdependencies",
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L26"
+    },
+    {
+      "id": "deepagent_package_devdependencies_eslint_js",
+      "label": "@eslint/js",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L27"
+    },
+    {
+      "id": "deepagent_package_devdependencies_types_node",
+      "label": "@types/node",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L28"
+    },
+    {
+      "id": "deepagent_package_devdependencies_eslint",
+      "label": "eslint",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L29"
+    },
+    {
+      "id": "deepagent_package_devdependencies_globals",
+      "label": "globals",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L30"
+    },
+    {
+      "id": "deepagent_package_devdependencies_jiti",
+      "label": "jiti",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L31"
+    },
+    {
+      "id": "deepagent_package_devdependencies_tsup",
+      "label": "tsup",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L32"
+    },
+    {
+      "id": "deepagent_package_devdependencies_typescript",
+      "label": "typescript",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L33"
+    },
+    {
+      "id": "deepagent_package_devdependencies_typescript_eslint",
+      "label": "typescript-eslint",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L34"
+    },
+    {
+      "id": "deepagent_package_dependencies",
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L36"
+    },
+    {
+      "id": "deepagent_package_dependencies_call_center_agent_harness",
+      "label": "@call-center-agent/harness",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L37"
+    },
+    {
+      "id": "deepagent_package_dependencies_langchain_anthropic",
+      "label": "@langchain/anthropic",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L38"
+    },
+    {
+      "id": "deepagent_package_dependencies_langchain_core",
+      "label": "@langchain/core",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L39"
+    },
+    {
+      "id": "deepagent_package_dependencies_langchain_langgraph",
+      "label": "@langchain/langgraph",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L40"
+    },
+    {
+      "id": "deepagent_package_dependencies_langchain_mistralai",
+      "label": "@langchain/mistralai",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L41"
+    },
+    {
+      "id": "deepagent_package_dependencies_langchain_openai",
+      "label": "@langchain/openai",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L42"
+    },
+    {
+      "id": "deepagent_package_dependencies_deepagents",
+      "label": "deepagents",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L43"
+    },
+    {
+      "id": "deepagent_package_dependencies_langchain",
+      "label": "langchain",
+      "file_type": "code",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L44"
+    }
+  ],
+  "edges": [
+    {
+      "source": "users_nmthang6_documents_workspace_agent_assistant_packages_deepagent_package_json",
+      "target": "deepagent_package_name",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "users_nmthang6_documents_workspace_agent_assistant_packages_deepagent_package_json",
+      "target": "deepagent_package_version",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "users_nmthang6_documents_workspace_agent_assistant_packages_deepagent_package_json",
+      "target": "deepagent_package_private",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "users_nmthang6_documents_workspace_agent_assistant_packages_deepagent_package_json",
+      "target": "deepagent_package_type",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "users_nmthang6_documents_workspace_agent_assistant_packages_deepagent_package_json",
+      "target": "deepagent_package_exports",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_exports",
+      "target": "deepagent_package_types",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_exports",
+      "target": "deepagent_package_import",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "users_nmthang6_documents_workspace_agent_assistant_packages_deepagent_package_json",
+      "target": "deepagent_package_files",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_files",
+      "target": "ref_dist",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_nmthang6_documents_workspace_agent_assistant_packages_deepagent_package_json",
+      "target": "deepagent_package_scripts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_scripts",
+      "target": "deepagent_package_scripts_build",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_scripts",
+      "target": "deepagent_package_scripts_clean",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_scripts",
+      "target": "deepagent_package_scripts_typecheck",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_scripts",
+      "target": "deepagent_package_scripts_lint",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_scripts",
+      "target": "deepagent_package_scripts_lint_fix",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "users_nmthang6_documents_workspace_agent_assistant_packages_deepagent_package_json",
+      "target": "deepagent_package_engines",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_engines",
+      "target": "deepagent_package_engines_node",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_engines",
+      "target": "deepagent_package_engines_pnpm",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "users_nmthang6_documents_workspace_agent_assistant_packages_deepagent_package_json",
+      "target": "deepagent_package_devdependencies",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_devdependencies",
+      "target": "deepagent_package_devdependencies_eslint_js",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_devdependencies_eslint_js",
+      "target": "eslint_js",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "deepagent_package_devdependencies",
+      "target": "deepagent_package_devdependencies_types_node",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_devdependencies_types_node",
+      "target": "types_node",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "deepagent_package_devdependencies",
+      "target": "deepagent_package_devdependencies_eslint",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_devdependencies_eslint",
+      "target": "eslint",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L29",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "deepagent_package_devdependencies",
+      "target": "deepagent_package_devdependencies_globals",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_devdependencies_globals",
+      "target": "globals",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L30",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "deepagent_package_devdependencies",
+      "target": "deepagent_package_devdependencies_jiti",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_devdependencies_jiti",
+      "target": "jiti",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L31",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "deepagent_package_devdependencies",
+      "target": "deepagent_package_devdependencies_tsup",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_devdependencies_tsup",
+      "target": "tsup",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L32",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "deepagent_package_devdependencies",
+      "target": "deepagent_package_devdependencies_typescript",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_devdependencies_typescript",
+      "target": "typescript",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L33",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "deepagent_package_devdependencies",
+      "target": "deepagent_package_devdependencies_typescript_eslint",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_devdependencies_typescript_eslint",
+      "target": "typescript_eslint",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L34",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_nmthang6_documents_workspace_agent_assistant_packages_deepagent_package_json",
+      "target": "deepagent_package_dependencies",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_dependencies",
+      "target": "deepagent_package_dependencies_call_center_agent_harness",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_dependencies_call_center_agent_harness",
+      "target": "call_center_agent_harness",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L37",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "deepagent_package_dependencies",
+      "target": "deepagent_package_dependencies_langchain_anthropic",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_dependencies_langchain_anthropic",
+      "target": "langchain_anthropic",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L38",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "deepagent_package_dependencies",
+      "target": "deepagent_package_dependencies_langchain_core",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_dependencies_langchain_core",
+      "target": "langchain_core",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L39",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "deepagent_package_dependencies",
+      "target": "deepagent_package_dependencies_langchain_langgraph",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_dependencies_langchain_langgraph",
+      "target": "langchain_langgraph",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L40",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "deepagent_package_dependencies",
+      "target": "deepagent_package_dependencies_langchain_mistralai",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_dependencies_langchain_mistralai",
+      "target": "langchain_mistralai",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L41",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "deepagent_package_dependencies",
+      "target": "deepagent_package_dependencies_langchain_openai",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_dependencies_langchain_openai",
+      "target": "langchain_openai",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L42",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "deepagent_package_dependencies",
+      "target": "deepagent_package_dependencies_deepagents",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_dependencies_deepagents",
+      "target": "deepagents",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L43",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "deepagent_package_dependencies",
+      "target": "deepagent_package_dependencies_langchain",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "deepagent_package_dependencies_langchain",
+      "target": "langchain",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "packages/deepagent/package.json",
+      "source_location": "L44",
+      "weight": 1.0,
+      "context": "import"
+    }
+  ]
+}

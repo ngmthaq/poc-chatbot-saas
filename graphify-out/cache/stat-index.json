@@ -1,0 +1,117 @@
+{
+  "/Users/nmthang6/Documents/Workspace/agent-assistant/.mcp.json": {
+    "size": 119,
+    "mtime_ns": 1779418381349251177,
+    "hash": "de4ba658694f5b8fbb7bf1da3a4fb54ed01cf3d66821c9fcb83fe06ba2fbc61b"
+  },
+  "/Users/nmthang6/Documents/Workspace/agent-assistant/.vscode/settings.json": {
+    "size": 299,
+    "mtime_ns": 1781513867243845400,
+    "hash": "53bbb0cd83c8d6c5a29faa2dcd6ab189a5aaa3196049418b7bd28fa70c638266"
+  },
+  "/Users/nmthang6/Documents/Workspace/agent-assistant/apps/client/package.json": {
+    "size": 1457,
+    "mtime_ns": 1781667090656902407,
+    "hash": "1606bbe78830da1f94c11bc1403f26fd10851ae988ea4e6fb4543423c12dc0e2"
+  },
+  "/Users/nmthang6/Documents/Workspace/agent-assistant/apps/client/tsconfig.app.json": {
+    "size": 741,
+    "mtime_ns": 1781511914268090006,
+    "hash": "69da3774e51fbcd02032ba7a208368812734f81d74dabda6078e568ee3aab6d1"
+  },
+  "/Users/nmthang6/Documents/Workspace/agent-assistant/apps/client/tsconfig.json": {
+    "size": 119,
+    "mtime_ns": 1781511914268163963,
+    "hash": "f629b23c8aaccd5e81bde434629537c9b2bb3d5d1703542ad1ba93bc6036d5c9"
+  },
+  "/Users/nmthang6/Documents/Workspace/agent-assistant/apps/client/tsconfig.node.json": {
+    "size": 484,
+    "mtime_ns": 1781511914268238254,
+    "hash": "60596421ed87284f8b10ce692f15103d35a8538ba97d6bfe0733562a65c70580"
+  },
+  "/Users/nmthang6/Documents/Workspace/agent-assistant/apps/infra/package.json": {
+    "size": 587,
+    "mtime_ns": 1781511914276256510,
+    "hash": "7043334030bc1db77da79f6df2363e1132e6ef6192ef5a83b7eaeff0fb878d98"
+  },
+  "/Users/nmthang6/Documents/Workspace/agent-assistant/apps/livekit-agent/package.json": {
+    "size": 1744,
+    "mtime_ns": 1781511914296385463,
+    "hash": "9328001092454404505a60d87e9ae5ba33868cbc9fe56462a00548641217029f"
+  },
+  "/Users/nmthang6/Documents/Workspace/agent-assistant/apps/livekit-agent/tsconfig.json": {
+    "size": 841,
+    "mtime_ns": 1779418381353727777,
+    "hash": "4eabafbbbca6551915c139aa55f2e185ddd600aa6bdc9fa84212c0dfd8545082"
+  },
+  "/Users/nmthang6/Documents/Workspace/agent-assistant/apps/server/package.json": {
+    "size": 1514,
+    "mtime_ns": 1781677195074752104,
+    "hash": "22f8b8da298bf08b1c9ddff6a63863c78f2a31c9d128727efb8ddf47b920a116"
+  },
+  "/Users/nmthang6/Documents/Workspace/agent-assistant/apps/server/prisma/migrations/20260617154242_init_chatbot_schema/migration.sql": {
+    "size": 8533,
+    "mtime_ns": 1781686071940718239,
+    "hash": "8e709a93c918532c841189b17003190ad1630cda94bc7bfa6e58d59513862e52"
+  },
+  "/Users/nmthang6/Documents/Workspace/agent-assistant/apps/server/prisma/migrations/20260618090000_add_admin_session/migration.sql": {
+    "size": 724,
+    "mtime_ns": 1781747950867242038,
+    "hash": "dd84f3d54d2bf06253c6143413529aea457285027aed1aeebc79c0fb8079bde1"
+  },
+  "/Users/nmthang6/Documents/Workspace/agent-assistant/apps/server/prisma/migrations/20260618102330_add_plan_subscription/migration.sql": {
+    "size": 1914,
+    "mtime_ns": 1781753133187950423,
+    "hash": "6a6eca4c54482425b9763fab9015e1d7d0880ea84447f96b45f64d29ba378ad5"
+  },
+  "/Users/nmthang6/Documents/Workspace/agent-assistant/apps/server/prisma/migrations/20260618103005_add_usage_rollup/migration.sql": {
+    "size": 821,
+    "mtime_ns": 1781753736195931134,
+    "hash": "aba05e2069e14bbd177520f90cd56b7e5b7a2ab87cec091555d40b6aeda5e136"
+  },
+  "/Users/nmthang6/Documents/Workspace/agent-assistant/apps/server/prisma/migrations/20260618110802_add_invoice/migration.sql": {
+    "size": 1643,
+    "mtime_ns": 1781766101390422600,
+    "hash": "1a65a82a3dd6e6a7d53c0262e449900ab2d70dcb75f6d72a62ca0304e06c41bf"
+  },
+  "/Users/nmthang6/Documents/Workspace/agent-assistant/apps/server/prisma/migrations/20260618141058_extend_provider_voice/migration.sql": {
+    "size": 784,
+    "mtime_ns": 1781766789573056235,
+    "hash": "c26ab12b4e12536e4a88ffa7b2a5e17339f6f8788b98d3d45c5536eb6154f220"
+  },
+  "/Users/nmthang6/Documents/Workspace/agent-assistant/apps/server/prisma/migrations/20260618142629_add_bot_voice_config/migration.sql": {
+    "size": 191,
+    "mtime_ns": 1781767812944902806,
+    "hash": "33b6b2a8a6495f50aa292eaa6e60afbab95ec2d430178a7e138bbe375431c250"
+  },
+  "/Users/nmthang6/Documents/Workspace/agent-assistant/apps/server/tsconfig.json": {
+    "size": 866,
+    "mtime_ns": 1781511914382552273,
+    "hash": "1a2ad711bff76c1a833022aca0f042834b7f354feec830bd8235c6d30bd3b5af"
+  },
+  "/Users/nmthang6/Documents/Workspace/agent-assistant/package.json": {
+    "size": 995,
+    "mtime_ns": 1782096011590551351,
+    "hash": "584d50e738586cd77308a9ad98a8cf8786f68f0228c6077d2c706a87f9a07d52"
+  },
+  "/Users/nmthang6/Documents/Workspace/agent-assistant/packages/deepagent/package.json": {
+    "size": 1027,
+    "mtime_ns": 1781513716286514215,
+    "hash": "33189f5c71208c1ea4b14fc15a2294d60acc23c4db38a5b55270a66d7c2608ff"
+  },
+  "/Users/nmthang6/Documents/Workspace/agent-assistant/packages/deepagent/tsconfig.json": {
+    "size": 841,
+    "mtime_ns": 1781511914399114319,
+    "hash": "3c9fd7e24578d60f2c4040f8310120024ad0674ce24c701c5a6ebf19dadc19d0"
+  },
+  "/Users/nmthang6/Documents/Workspace/agent-assistant/packages/harness/package.json": {
+    "size": 1318,
+    "mtime_ns": 1781513722343885065,
+    "hash": "14d4c2f71474fb8b177e63589f10038fc90eace7561f596da3e389e29bc9e0a5"
+  },
+  "/Users/nmthang6/Documents/Workspace/agent-assistant/packages/harness/tsconfig.json": {
+    "size": 841,
+    "mtime_ns": 1781511914480309994,
+    "hash": "24602c8d758eb977c47d6c3695df4e05968545f8ebdf82e1172c9bd95071a880"
+  }
+}

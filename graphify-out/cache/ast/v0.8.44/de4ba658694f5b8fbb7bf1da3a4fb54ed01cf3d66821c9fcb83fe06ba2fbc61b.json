@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "users_nmthang6_documents_workspace_agent_assistant_mcp_json",
+      "label": ".mcp.json",
+      "file_type": "code",
+      "source_file": ".mcp.json",
+      "source_location": "L1",
+      "metadata": { "mcp_kind": "mcp_config_file" }
+    },
+    {
+      "id": "agent_assistant_mcp_mcp_server_livekit_docs",
+      "label": "livekit-docs",
+      "file_type": "code",
+      "source_file": ".mcp.json",
+      "source_location": "L1",
+      "metadata": { "mcp_kind": "mcp_server" }
+    }
+  ],
+  "edges": [
+    {
+      "source": "users_nmthang6_documents_workspace_agent_assistant_mcp_json",
+      "target": "agent_assistant_mcp_mcp_server_livekit_docs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".mcp.json",
+      "source_location": "L1",
+      "weight": 1.0
+    }
+  ]
+}

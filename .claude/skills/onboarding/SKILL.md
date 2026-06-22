@@ -29,7 +29,10 @@ Systematically onboard AI to a project by discovering its structure, stack, and 
 
 Load the step references in order. Do not skip or summarize them.
 
-**Prelight:** It is recomended to install and set up GitNexus before starting onboarding, as it provides a comprehensive codebase index that the AI can reference during onboarding and future tasks. **Ask** the user if they have set up GitNexus, and if not, offer to load the GitNexus setup reference before proceeding with onboarding steps - see [GitNexus](./references/setup-gitnexus.md)
+**Prelight:** Before starting onboarding, offer to set up two tools that improve AI's effectiveness on this project. **Ask** the user whether they want each one, and load the matching reference only for the ones they accept:
+
+- **Graphify** — indexes the repo into a queryable knowledge graph the AI can consult so it never misses code context - see [Graphify](./references/setup-graphify.md)
+- **RTK** — a CLI proxy that compresses command output to cut LLM token usage by 60–90% - see [RTK](./references/setup-rtk.md)
 
 1. [Step 1 — Greet and Confirm](./references/step-1-greet-and-confirm.md)
 2. [Step 2 — Research Project Overview](./references/step-2-research-project-overview.md)

@@ -1,0 +1,1087 @@
+{
+  "nodes": [
+    {
+      "id": "users_nmthang6_documents_workspace_agent_assistant_apps_livekit_agent_package_json",
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "livekit_agent_package_name",
+      "label": "name",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L2"
+    },
+    {
+      "id": "livekit_agent_package_version",
+      "label": "version",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L3"
+    },
+    {
+      "id": "livekit_agent_package_private",
+      "label": "private",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L4"
+    },
+    {
+      "id": "livekit_agent_package_type",
+      "label": "type",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L5"
+    },
+    {
+      "id": "livekit_agent_package_scripts",
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "livekit_agent_package_scripts_build",
+      "label": "build",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "livekit_agent_package_scripts_clean",
+      "label": "clean",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "livekit_agent_package_scripts_typecheck",
+      "label": "typecheck",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "livekit_agent_package_scripts_lint",
+      "label": "lint",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L10"
+    },
+    {
+      "id": "livekit_agent_package_scripts_lint_fix",
+      "label": "lint:fix",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L11"
+    },
+    {
+      "id": "livekit_agent_package_scripts_test",
+      "label": "test",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L12"
+    },
+    {
+      "id": "livekit_agent_package_scripts_test_watch",
+      "label": "test:watch",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L13"
+    },
+    {
+      "id": "livekit_agent_package_scripts_dev",
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L14"
+    },
+    {
+      "id": "livekit_agent_package_scripts_download_files",
+      "label": "download-files",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L15"
+    },
+    {
+      "id": "livekit_agent_package_scripts_start",
+      "label": "start",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L16"
+    },
+    {
+      "id": "livekit_agent_package_engines",
+      "label": "engines",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L18"
+    },
+    {
+      "id": "livekit_agent_package_engines_node",
+      "label": "node",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L19"
+    },
+    {
+      "id": "livekit_agent_package_engines_pnpm",
+      "label": "pnpm",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L20"
+    },
+    {
+      "id": "livekit_agent_package_devdependencies",
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "livekit_agent_package_devdependencies_eslint_js",
+      "label": "@eslint/js",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L23"
+    },
+    {
+      "id": "livekit_agent_package_devdependencies_types_node",
+      "label": "@types/node",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L24"
+    },
+    {
+      "id": "livekit_agent_package_devdependencies_eslint",
+      "label": "eslint",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L25"
+    },
+    {
+      "id": "livekit_agent_package_devdependencies_globals",
+      "label": "globals",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L26"
+    },
+    {
+      "id": "livekit_agent_package_devdependencies_jiti",
+      "label": "jiti",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L27"
+    },
+    {
+      "id": "livekit_agent_package_devdependencies_typescript",
+      "label": "typescript",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L28"
+    },
+    {
+      "id": "livekit_agent_package_devdependencies_typescript_eslint",
+      "label": "typescript-eslint",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L29"
+    },
+    {
+      "id": "livekit_agent_package_devdependencies_vite",
+      "label": "vite",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L30"
+    },
+    {
+      "id": "livekit_agent_package_devdependencies_vitest",
+      "label": "vitest",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L31"
+    },
+    {
+      "id": "livekit_agent_package_dependencies",
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L33"
+    },
+    {
+      "id": "livekit_agent_package_dependencies_call_center_agent_harness",
+      "label": "@call-center-agent/harness",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L34"
+    },
+    {
+      "id": "livekit_agent_package_dependencies_livekit_agents",
+      "label": "@livekit/agents",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L35"
+    },
+    {
+      "id": "livekit_agent_package_dependencies_livekit_agents_plugin_cartesia",
+      "label": "@livekit/agents-plugin-cartesia",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L36"
+    },
+    {
+      "id": "livekit_agent_package_dependencies_livekit_agents_plugin_deepgram",
+      "label": "@livekit/agents-plugin-deepgram",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L37"
+    },
+    {
+      "id": "livekit_agent_package_dependencies_livekit_agents_plugin_elevenlabs",
+      "label": "@livekit/agents-plugin-elevenlabs",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L38"
+    },
+    {
+      "id": "livekit_agent_package_dependencies_livekit_agents_plugin_fishaudio",
+      "label": "@livekit/agents-plugin-fishaudio",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L39"
+    },
+    {
+      "id": "livekit_agent_package_dependencies_livekit_agents_plugin_google",
+      "label": "@livekit/agents-plugin-google",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L40"
+    },
+    {
+      "id": "livekit_agent_package_dependencies_livekit_agents_plugin_hume",
+      "label": "@livekit/agents-plugin-hume",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L41"
+    },
+    {
+      "id": "livekit_agent_package_dependencies_livekit_agents_plugin_inworld",
+      "label": "@livekit/agents-plugin-inworld",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L42"
+    },
+    {
+      "id": "livekit_agent_package_dependencies_livekit_agents_plugin_livekit",
+      "label": "@livekit/agents-plugin-livekit",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L43"
+    },
+    {
+      "id": "livekit_agent_package_dependencies_livekit_agents_plugin_mistralai",
+      "label": "@livekit/agents-plugin-mistralai",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L44"
+    },
+    {
+      "id": "livekit_agent_package_dependencies_livekit_agents_plugin_neuphonic",
+      "label": "@livekit/agents-plugin-neuphonic",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L45"
+    },
+    {
+      "id": "livekit_agent_package_dependencies_livekit_agents_plugin_openai",
+      "label": "@livekit/agents-plugin-openai",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L46"
+    },
+    {
+      "id": "livekit_agent_package_dependencies_livekit_agents_plugin_resemble",
+      "label": "@livekit/agents-plugin-resemble",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L47"
+    },
+    {
+      "id": "livekit_agent_package_dependencies_livekit_agents_plugin_rime",
+      "label": "@livekit/agents-plugin-rime",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L48"
+    },
+    {
+      "id": "livekit_agent_package_dependencies_livekit_agents_plugin_silero",
+      "label": "@livekit/agents-plugin-silero",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L49"
+    },
+    {
+      "id": "livekit_agent_package_dependencies_livekit_agents_plugin_xai",
+      "label": "@livekit/agents-plugin-xai",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L50"
+    },
+    {
+      "id": "livekit_agent_package_dependencies_livekit_noise_cancellation_node",
+      "label": "@livekit/noise-cancellation-node",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L51"
+    },
+    {
+      "id": "livekit_agent_package_dependencies_dotenv",
+      "label": "dotenv",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L52"
+    },
+    {
+      "id": "livekit_agent_package_dependencies_zod",
+      "label": "zod",
+      "file_type": "code",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L53"
+    }
+  ],
+  "edges": [
+    {
+      "source": "users_nmthang6_documents_workspace_agent_assistant_apps_livekit_agent_package_json",
+      "target": "livekit_agent_package_name",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "users_nmthang6_documents_workspace_agent_assistant_apps_livekit_agent_package_json",
+      "target": "livekit_agent_package_version",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "users_nmthang6_documents_workspace_agent_assistant_apps_livekit_agent_package_json",
+      "target": "livekit_agent_package_private",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "users_nmthang6_documents_workspace_agent_assistant_apps_livekit_agent_package_json",
+      "target": "livekit_agent_package_type",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "users_nmthang6_documents_workspace_agent_assistant_apps_livekit_agent_package_json",
+      "target": "livekit_agent_package_scripts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_scripts",
+      "target": "livekit_agent_package_scripts_build",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_scripts",
+      "target": "livekit_agent_package_scripts_clean",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_scripts",
+      "target": "livekit_agent_package_scripts_typecheck",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_scripts",
+      "target": "livekit_agent_package_scripts_lint",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_scripts",
+      "target": "livekit_agent_package_scripts_lint_fix",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_scripts",
+      "target": "livekit_agent_package_scripts_test",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_scripts",
+      "target": "livekit_agent_package_scripts_test_watch",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_scripts",
+      "target": "livekit_agent_package_scripts_dev",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_scripts",
+      "target": "livekit_agent_package_scripts_download_files",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_scripts",
+      "target": "livekit_agent_package_scripts_start",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "users_nmthang6_documents_workspace_agent_assistant_apps_livekit_agent_package_json",
+      "target": "livekit_agent_package_engines",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_engines",
+      "target": "livekit_agent_package_engines_node",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_engines",
+      "target": "livekit_agent_package_engines_pnpm",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "users_nmthang6_documents_workspace_agent_assistant_apps_livekit_agent_package_json",
+      "target": "livekit_agent_package_devdependencies",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_devdependencies",
+      "target": "livekit_agent_package_devdependencies_eslint_js",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_devdependencies_eslint_js",
+      "target": "eslint_js",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_devdependencies",
+      "target": "livekit_agent_package_devdependencies_types_node",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_devdependencies_types_node",
+      "target": "types_node",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_devdependencies",
+      "target": "livekit_agent_package_devdependencies_eslint",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_devdependencies_eslint",
+      "target": "eslint",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_devdependencies",
+      "target": "livekit_agent_package_devdependencies_globals",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_devdependencies_globals",
+      "target": "globals",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_devdependencies",
+      "target": "livekit_agent_package_devdependencies_jiti",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_devdependencies_jiti",
+      "target": "jiti",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_devdependencies",
+      "target": "livekit_agent_package_devdependencies_typescript",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_devdependencies_typescript",
+      "target": "typescript",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_devdependencies",
+      "target": "livekit_agent_package_devdependencies_typescript_eslint",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_devdependencies_typescript_eslint",
+      "target": "typescript_eslint",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L29",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_devdependencies",
+      "target": "livekit_agent_package_devdependencies_vite",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_devdependencies_vite",
+      "target": "vite",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L30",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_devdependencies",
+      "target": "livekit_agent_package_devdependencies_vitest",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_devdependencies_vitest",
+      "target": "vitest",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L31",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "users_nmthang6_documents_workspace_agent_assistant_apps_livekit_agent_package_json",
+      "target": "livekit_agent_package_dependencies",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_dependencies",
+      "target": "livekit_agent_package_dependencies_call_center_agent_harness",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_dependencies_call_center_agent_harness",
+      "target": "call_center_agent_harness",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L34",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_dependencies",
+      "target": "livekit_agent_package_dependencies_livekit_agents",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_dependencies_livekit_agents",
+      "target": "livekit_agents",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L35",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_dependencies",
+      "target": "livekit_agent_package_dependencies_livekit_agents_plugin_cartesia",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_dependencies_livekit_agents_plugin_cartesia",
+      "target": "livekit_agents_plugin_cartesia",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L36",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_dependencies",
+      "target": "livekit_agent_package_dependencies_livekit_agents_plugin_deepgram",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_dependencies_livekit_agents_plugin_deepgram",
+      "target": "livekit_agents_plugin_deepgram",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L37",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_dependencies",
+      "target": "livekit_agent_package_dependencies_livekit_agents_plugin_elevenlabs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_dependencies_livekit_agents_plugin_elevenlabs",
+      "target": "livekit_agents_plugin_elevenlabs",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L38",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_dependencies",
+      "target": "livekit_agent_package_dependencies_livekit_agents_plugin_fishaudio",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_dependencies_livekit_agents_plugin_fishaudio",
+      "target": "livekit_agents_plugin_fishaudio",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L39",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_dependencies",
+      "target": "livekit_agent_package_dependencies_livekit_agents_plugin_google",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_dependencies_livekit_agents_plugin_google",
+      "target": "livekit_agents_plugin_google",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L40",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_dependencies",
+      "target": "livekit_agent_package_dependencies_livekit_agents_plugin_hume",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_dependencies_livekit_agents_plugin_hume",
+      "target": "livekit_agents_plugin_hume",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L41",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_dependencies",
+      "target": "livekit_agent_package_dependencies_livekit_agents_plugin_inworld",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_dependencies_livekit_agents_plugin_inworld",
+      "target": "livekit_agents_plugin_inworld",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L42",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_dependencies",
+      "target": "livekit_agent_package_dependencies_livekit_agents_plugin_livekit",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_dependencies_livekit_agents_plugin_livekit",
+      "target": "livekit_agents_plugin_livekit",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L43",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_dependencies",
+      "target": "livekit_agent_package_dependencies_livekit_agents_plugin_mistralai",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_dependencies_livekit_agents_plugin_mistralai",
+      "target": "livekit_agents_plugin_mistralai",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L44",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_dependencies",
+      "target": "livekit_agent_package_dependencies_livekit_agents_plugin_neuphonic",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_dependencies_livekit_agents_plugin_neuphonic",
+      "target": "livekit_agents_plugin_neuphonic",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L45",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_dependencies",
+      "target": "livekit_agent_package_dependencies_livekit_agents_plugin_openai",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_dependencies_livekit_agents_plugin_openai",
+      "target": "livekit_agents_plugin_openai",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L46",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_dependencies",
+      "target": "livekit_agent_package_dependencies_livekit_agents_plugin_resemble",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_dependencies_livekit_agents_plugin_resemble",
+      "target": "livekit_agents_plugin_resemble",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L47",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_dependencies",
+      "target": "livekit_agent_package_dependencies_livekit_agents_plugin_rime",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_dependencies_livekit_agents_plugin_rime",
+      "target": "livekit_agents_plugin_rime",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L48",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_dependencies",
+      "target": "livekit_agent_package_dependencies_livekit_agents_plugin_silero",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_dependencies_livekit_agents_plugin_silero",
+      "target": "livekit_agents_plugin_silero",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L49",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_dependencies",
+      "target": "livekit_agent_package_dependencies_livekit_agents_plugin_xai",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_dependencies_livekit_agents_plugin_xai",
+      "target": "livekit_agents_plugin_xai",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L50",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_dependencies",
+      "target": "livekit_agent_package_dependencies_livekit_noise_cancellation_node",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_dependencies_livekit_noise_cancellation_node",
+      "target": "livekit_noise_cancellation_node",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L51",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_dependencies",
+      "target": "livekit_agent_package_dependencies_dotenv",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_dependencies_dotenv",
+      "target": "dotenv",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L52",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "livekit_agent_package_dependencies",
+      "target": "livekit_agent_package_dependencies_zod",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "livekit_agent_package_dependencies_zod",
+      "target": "zod",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/livekit-agent/package.json",
+      "source_location": "L53",
+      "weight": 1.0,
+      "context": "import"
+    }
+  ]
+}
