@@ -73,7 +73,7 @@ Turn the existing chat prototype into a sellable multi-tenant SaaS: tenants are 
 | 10  | DONE   | [API] Tenant context + scope enforcement                    | Injects tenantId + scopes; 403 insufficient scope                        | 9          |
 | 11  | DONE   | [API] Per-bot key binding enforcement                       | Bound key works for its bot; 403 others; null = all                      | 10         |
 | 12  | DONE   | [Logic] Update `lastUsedAt` on successful auth              | Async/throttled update; no latency impact                                | 9          |
-| 13  | TODO   | [Logic] Password hash/verify utility                        | argon2/bcrypt round-trip; wrong pw fails                                 | —          |
+| 13  | DONE   | [Logic] Password hash/verify utility                        | argon2/bcrypt round-trip; wrong pw fails                                 | —          |
 | 14  | TODO   | [API] `POST /admin/auth/login`                              | 200 access+refresh; 401 bad creds; 403 inactive                          | 1, 13      |
 | 15  | TODO   | [API] `POST /admin/auth/refresh`                            | Rotates refresh; 401 unknown/expired/reused                              | 14         |
 | 16  | TODO   | [API] `POST /admin/auth/logout`                             | Revokes refresh; reuse → 401                                             | 14         |
