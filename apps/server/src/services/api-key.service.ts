@@ -1,5 +1,5 @@
 import { ApiKeyScope, ApiKeyStatus } from '@prisma/client';
-import type { ApiKey } from '@prisma/client';
+import type { ApiKey, ApiKeyUsage } from '@prisma/client';
 import { timingSafeEqual } from 'node:crypto';
 import type { BotBindingResolution } from '../types/api-key';
 import { ApiKeyUtil } from '../utils/api-key.utils';
@@ -58,6 +58,34 @@ export class ApiKeyService {
     await prisma.apiKey.update({
       where: { id },
       data: { lastUsedAt: new Date() },
+    });
+  }
+
+  /**
+   * Atomically records one more request against the usage window identified by
+   * (`apiKeyId`, `windowStart`) and returns the resulting `ApiKeyUsage` row.
+   *
+   * The write is a single `upsert` keyed on the `apiKeyId_windowStart` compound
+   * unique constraint: a brand-new window is seeded with `requestCount: 1`, while
+   * an existing window is bumped via Prisma's atomic `{ increment: 1 }` operator.
+   * Performing the increment in the database — never read-then-write in
+   * application code — guarantees that N concurrent calls on an existing window
+   * yield exactly +N with no lost updates.
+   *
+   * `windowStart` is supplied by the caller; this method never computes the
+   * current window. Edge case (accepted by design): if two requests race to
+   * insert the *first* row for a brand-new window, one may surface a Prisma
+   * `P2002` unique-violation. There is intentionally no retry fallback here — the
+   * error propagates to the caller.
+   */
+  public async incrementUsage(
+    apiKeyId: string,
+    windowStart: Date,
+  ): Promise<ApiKeyUsage> {
+    return prisma.apiKeyUsage.upsert({
+      where: { apiKeyId_windowStart: { apiKeyId, windowStart } },
+      create: { apiKeyId, windowStart, requestCount: 1 },
+      update: { requestCount: { increment: 1 } },
     });
   }
 

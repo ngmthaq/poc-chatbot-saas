@@ -1066,7 +1066,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agentvisualizerpanel_configs",
-      "community": 26,
+      "community": 5,
       "norm_label": "configs.ts"
     },
     {
@@ -1076,7 +1076,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "agentvisualizerpanel_configs_overlay_states",
-      "community": 26,
+      "community": 5,
       "norm_label": "overlay_states"
     },
     {
@@ -1086,7 +1086,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agentvisualizerpanel_index",
-      "community": 26,
+      "community": 5,
       "norm_label": "index.tsx"
     },
     {
@@ -1096,7 +1096,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "agentvisualizerpanel_index_agentvisualizerpanel",
-      "community": 26,
+      "community": 5,
       "norm_label": "agentvisualizerpanel()"
     },
     {
@@ -1106,7 +1106,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agentvisualizerpanel_styled",
-      "community": 26,
+      "community": 5,
       "norm_label": "styled.ts"
     },
     {
@@ -1116,7 +1116,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "agentvisualizerpanel_styled_visualizerroot",
-      "community": 26,
+      "community": 5,
       "norm_label": "visualizerroot"
     },
     {
@@ -1126,7 +1126,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "agentvisualizerpanel_styled_visualizeroverlay",
-      "community": 26,
+      "community": 5,
       "norm_label": "visualizeroverlay"
     },
     {
@@ -1136,7 +1136,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "agentvisualizerpanel_styled_styledprogress",
-      "community": 26,
+      "community": 5,
       "norm_label": "styledprogress"
     },
     {
@@ -1146,7 +1146,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "agentvisualizerpanel_styled_overlaytext",
-      "community": 26,
+      "community": 5,
       "norm_label": "overlaytext"
     },
     {
@@ -1156,7 +1156,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agentvisualizerpanel_types",
-      "community": 26,
+      "community": 5,
       "norm_label": "types.ts"
     },
     {
@@ -1166,7 +1166,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "agentvisualizerpanel_types_agentvisualizerpanelprops",
-      "community": 26,
+      "community": 5,
       "norm_label": "agentvisualizerpanelprops"
     },
     {
@@ -1176,7 +1176,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "agentvisualizerpanel_types_visualizerrootprops",
-      "community": 26,
+      "community": 5,
       "norm_label": "visualizerrootprops"
     },
     {
@@ -1406,7 +1406,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "conversationfeed_index",
-      "community": 5,
+      "community": 26,
       "norm_label": "index.tsx"
     },
     {
@@ -1426,7 +1426,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "conversationfeed_styled",
-      "community": 5,
+      "community": 26,
       "norm_label": "styled.ts"
     },
     {
@@ -1436,7 +1436,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "conversationfeed_styled_thinkingpulse",
-      "community": 5,
+      "community": 26,
       "norm_label": "thinkingpulse"
     },
     {
@@ -1446,7 +1446,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "conversationfeed_styled_feedcontainer",
-      "community": 5,
+      "community": 26,
       "norm_label": "feedcontainer"
     },
     {
@@ -1456,7 +1456,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "conversationfeed_styled_emptystate",
-      "community": 5,
+      "community": 26,
       "norm_label": "emptystate"
     },
     {
@@ -1466,7 +1466,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "conversationfeed_styled_placeholdericon",
-      "community": 5,
+      "community": 26,
       "norm_label": "placeholdericon"
     },
     {
@@ -1476,7 +1476,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "conversationfeed_styled_placeholdertext",
-      "community": 5,
+      "community": 26,
       "norm_label": "placeholdertext"
     },
     {
@@ -1486,7 +1486,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "conversationfeed_styled_bubblerow",
-      "community": 5,
+      "community": 26,
       "norm_label": "bubblerow"
     },
     {
@@ -1496,7 +1496,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "conversationfeed_styled_bubble",
-      "community": 5,
+      "community": 26,
       "norm_label": "bubble"
     },
     {
@@ -1506,7 +1506,7 @@
       "source_location": "L90",
       "_origin": "ast",
       "id": "conversationfeed_styled_sourcetag",
-      "community": 5,
+      "community": 26,
       "norm_label": "sourcetag"
     },
     {
@@ -1516,7 +1516,7 @@
       "source_location": "L97",
       "_origin": "ast",
       "id": "conversationfeed_styled_thinkingbubble",
-      "community": 5,
+      "community": 26,
       "norm_label": "thinkingbubble"
     },
     {
@@ -1526,7 +1526,7 @@
       "source_location": "L108",
       "_origin": "ast",
       "id": "conversationfeed_styled_thinkingdot",
-      "community": 5,
+      "community": 26,
       "norm_label": "thinkingdot"
     },
     {
@@ -1536,7 +1536,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "conversationfeed_types",
-      "community": 5,
+      "community": 26,
       "norm_label": "types.ts"
     },
     {
@@ -1546,7 +1546,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "conversationfeed_types_conversationbubbleprops",
-      "community": 5,
+      "community": 26,
       "norm_label": "conversationbubbleprops"
     },
     {
@@ -1556,7 +1556,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "conversationfeed_types_conversationfeedprops",
-      "community": 5,
+      "community": 26,
       "norm_label": "conversationfeedprops"
     },
     {
@@ -4446,7 +4446,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "server_package",
-      "community": 20,
+      "community": 34,
       "norm_label": "package.json"
     },
     {
@@ -4456,7 +4456,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "server_package_name",
-      "community": 20,
+      "community": 34,
       "norm_label": "name"
     },
     {
@@ -4466,7 +4466,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "server_package_version",
-      "community": 20,
+      "community": 34,
       "norm_label": "version"
     },
     {
@@ -4476,7 +4476,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "server_package_private",
-      "community": 20,
+      "community": 34,
       "norm_label": "private"
     },
     {
@@ -4486,7 +4486,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "server_package_type",
-      "community": 20,
+      "community": 34,
       "norm_label": "type"
     },
     {
@@ -4496,7 +4496,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "server_package_scripts",
-      "community": 20,
+      "community": 28,
       "norm_label": "scripts"
     },
     {
@@ -4506,7 +4506,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "server_package_scripts_build",
-      "community": 20,
+      "community": 28,
       "norm_label": "build"
     },
     {
@@ -4516,7 +4516,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "server_package_scripts_clean",
-      "community": 20,
+      "community": 28,
       "norm_label": "clean"
     },
     {
@@ -4526,7 +4526,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "server_package_scripts_typecheck",
-      "community": 20,
+      "community": 28,
       "norm_label": "typecheck"
     },
     {
@@ -4536,7 +4536,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "server_package_scripts_lint",
-      "community": 20,
+      "community": 28,
       "norm_label": "lint"
     },
     {
@@ -4546,7 +4546,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "server_package_scripts_lint_fix",
-      "community": 20,
+      "community": 28,
       "norm_label": "lint:fix"
     },
     {
@@ -4556,7 +4556,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "server_package_scripts_dev",
-      "community": 20,
+      "community": 28,
       "norm_label": "dev"
     },
     {
@@ -4566,7 +4566,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "server_package_scripts_start",
-      "community": 20,
+      "community": 28,
       "norm_label": "start"
     },
     {
@@ -4576,7 +4576,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "server_package_scripts_postinstall",
-      "community": 20,
+      "community": 28,
       "norm_label": "postinstall"
     },
     {
@@ -4586,7 +4586,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "server_package_scripts_prisma_generate",
-      "community": 20,
+      "community": 28,
       "norm_label": "prisma:generate"
     },
     {
@@ -4596,7 +4596,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "server_package_scripts_db_migrate",
-      "community": 20,
+      "community": 28,
       "norm_label": "db:migrate"
     },
     {
@@ -4606,7 +4606,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "server_package_engines",
-      "community": 20,
+      "community": 34,
       "norm_label": "engines"
     },
     {
@@ -4616,7 +4616,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "server_package_engines_node",
-      "community": 20,
+      "community": 34,
       "norm_label": "node"
     },
     {
@@ -4626,7 +4626,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "server_package_engines_pnpm",
-      "community": 20,
+      "community": 34,
       "norm_label": "pnpm"
     },
     {
@@ -5940,10 +5940,20 @@
       "norm_label": ".touchlastused()"
     },
     {
+      "label": ".incrementUsage()",
+      "file_type": "code",
+      "source_file": "apps/server/src/services/api-key.service.ts",
+      "source_location": "L81",
+      "_origin": "ast",
+      "id": "services_api_key_service_apikeyservice_incrementusage",
+      "community": 78,
+      "norm_label": ".incrementusage()"
+    },
+    {
       "label": ".hasRequiredScopes()",
       "file_type": "code",
       "source_file": "apps/server/src/services/api-key.service.ts",
-      "source_location": "L69",
+      "source_location": "L97",
       "_origin": "ast",
       "id": "services_api_key_service_apikeyservice_hasrequiredscopes",
       "community": 78,
@@ -5953,7 +5963,7 @@
       "label": ".resolveBotBinding()",
       "file_type": "code",
       "source_file": "apps/server/src/services/api-key.service.ts",
-      "source_location": "L97",
+      "source_location": "L125",
       "_origin": "ast",
       "id": "services_api_key_service_apikeyservice_resolvebotbinding",
       "community": 78,
@@ -5963,7 +5973,7 @@
       "label": ".hashesMatch()",
       "file_type": "code",
       "source_file": "apps/server/src/services/api-key.service.ts",
-      "source_location": "L116",
+      "source_location": "L144",
       "_origin": "ast",
       "id": "services_api_key_service_apikeyservice_hashesmatch",
       "community": 78,
@@ -6036,7 +6046,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "services_health_service",
-      "community": 3,
+      "community": 81,
       "norm_label": "health.service.ts"
     },
     {
@@ -6046,7 +6056,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "services_health_service_healthservice",
-      "community": 3,
+      "community": 81,
       "norm_label": "healthservice"
     },
     {
@@ -6056,7 +6066,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "services_health_service_healthservice_getstatus",
-      "community": 3,
+      "community": 81,
       "norm_label": ".getstatus()"
     },
     {
@@ -6646,7 +6656,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "utils_logger_utils",
-      "community": 3,
+      "community": 81,
       "norm_label": "logger.utils.ts"
     },
     {
@@ -6656,7 +6666,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "utils_logger_utils_config",
-      "community": 3,
+      "community": 81,
       "norm_label": "config"
     },
     {
@@ -6666,7 +6676,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "utils_logger_utils_logger",
-      "community": 3,
+      "community": 81,
       "norm_label": "logger"
     },
     {
@@ -16288,9 +16298,9 @@
       "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "middlewares_admin_auth_middleware",
-      "target": "configs_error_messages_errormessages",
-      "confidence_score": 1.0
+      "target": "configs_error_messages_errormessages"
     },
     {
       "relation": "imports",
@@ -16878,9 +16888,9 @@
       "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "middlewares_admin_auth_middleware",
-      "target": "middlewares_admin_auth_middleware_adminauth",
-      "confidence_score": 1.0
+      "target": "middlewares_admin_auth_middleware_adminauth"
     },
     {
       "relation": "contains",
@@ -16888,9 +16898,9 @@
       "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "middlewares_admin_auth_middleware",
-      "target": "middlewares_admin_auth_middleware_adminauthservice",
-      "confidence_score": 1.0
+      "target": "middlewares_admin_auth_middleware_adminauthservice"
     },
     {
       "relation": "contains",
@@ -16898,9 +16908,9 @@
       "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "middlewares_admin_auth_middleware",
-      "target": "middlewares_admin_auth_middleware_parsebearertoken",
-      "confidence_score": 1.0
+      "target": "middlewares_admin_auth_middleware_parsebearertoken"
     },
     {
       "relation": "imports_from",
@@ -16909,9 +16919,9 @@
       "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "middlewares_admin_auth_middleware",
-      "target": "services_admin_auth_service",
-      "confidence_score": 1.0
+      "target": "services_admin_auth_service"
     },
     {
       "relation": "imports",
@@ -16920,9 +16930,9 @@
       "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "middlewares_admin_auth_middleware",
-      "target": "services_admin_auth_service_adminauthservice",
-      "confidence_score": 1.0
+      "target": "services_admin_auth_service_adminauthservice"
     },
     {
       "relation": "re_exports",
@@ -16931,9 +16941,9 @@
       "source_file": "apps/server/src/middlewares/index.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "middlewares_index",
-      "target": "middlewares_admin_auth_middleware",
-      "confidence_score": 1.0
+      "target": "middlewares_admin_auth_middleware"
     },
     {
       "relation": "re_exports",
@@ -16942,9 +16952,9 @@
       "source_file": "apps/server/src/middlewares/index.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "middlewares_index",
-      "target": "middlewares_admin_auth_middleware_adminauth",
-      "confidence_score": 1.0
+      "target": "middlewares_admin_auth_middleware_adminauth"
     },
     {
       "relation": "contains",
@@ -18151,9 +18161,9 @@
       "source_file": "apps/server/src/services/admin-auth.service.ts",
       "source_location": "L188",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_admin_auth_service_adminauthservice",
-      "target": "services_admin_auth_service_adminauthservice_authenticateaccesstoken",
-      "confidence_score": 1.0
+      "target": "services_admin_auth_service_adminauthservice_authenticateaccesstoken"
     },
     {
       "relation": "method",
@@ -18301,6 +18311,16 @@
       "confidence_score": 1.0,
       "source": "services_api_key_service_apikeyservice",
       "target": "services_api_key_service_apikeyservice_hasrequiredscopes"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/api-key.service.ts",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "services_api_key_service_apikeyservice",
+      "target": "services_api_key_service_apikeyservice_incrementusage",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -18640,9 +18660,9 @@
       "source_file": "apps/server/src/types/admin-auth.d.ts",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "types_admin_auth_d",
-      "target": "types_admin_auth_d_authenticatedadmin",
-      "confidence_score": 1.0
+      "target": "types_admin_auth_d_authenticatedadmin"
     },
     {
       "relation": "contains",
@@ -23383,5 +23403,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "7b11c889d1be65b002ac31a742aff0bf860c3164"
+  "built_at_commit": "4e395397fd1a3e40f5cdf0b0fba865cbc569691f"
 }

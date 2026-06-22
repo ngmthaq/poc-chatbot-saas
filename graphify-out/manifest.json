@@ -740,8 +740,8 @@
     "semantic_hash": "537a086a5dfb3cc8ce5fd94accd57b23"
   },
   "apps/server/src/services/api-key.service.ts": {
-    "mtime": 1782100775.308303,
-    "ast_hash": "b1cec163061442f5fac0493b06501274",
+    "mtime": 1782122897.025459,
+    "ast_hash": "e3d088e286ca0b4c7b25397dfe67f4fe",
     "semantic_hash": ""
   },
   "apps/server/src/services/chat.service.ts": {
@@ -865,8 +865,8 @@
     "semantic_hash": "5ea2a131d5bc8612693c9c224020e093"
   },
   "package.json": {
-    "mtime": 1782116678.9758368,
-    "ast_hash": "ba5192f182f23962308ba510856616c5",
+    "mtime": 1782121250.230647,
+    "ast_hash": "b4298b83d30564708f6f24f933fabd8e",
     "semantic_hash": ""
   },
   "packages/deepagent/eslint.config.ts": {

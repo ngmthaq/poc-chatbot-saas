@@ -2,18 +2,18 @@
 
 ## Corpus Check
 
-- 220 files · ~21,880 words
+- 220 files · ~22,070 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
 
-- 1014 nodes · 1277 edges · 82 communities (57 shown, 25 thin omitted)
+- 1015 nodes · 1278 edges · 84 communities (58 shown, 26 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 14 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
 
-- Built from commit: `7b11c889`
+- Built from commit: `4e395397`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -47,11 +47,13 @@
 - [[_COMMUNITY_Community 25|Community 25]]
 - [[_COMMUNITY_Community 26|Community 26]]
 - [[_COMMUNITY_Community 27|Community 27]]
+- [[_COMMUNITY_Community 28|Community 28]]
 - [[_COMMUNITY_Community 29|Community 29]]
 - [[_COMMUNITY_Community 30|Community 30]]
 - [[_COMMUNITY_Community 31|Community 31]]
 - [[_COMMUNITY_Community 32|Community 32]]
 - [[_COMMUNITY_Community 33|Community 33]]
+- [[_COMMUNITY_Community 34|Community 34]]
 - [[_COMMUNITY_Community 35|Community 35]]
 - [[_COMMUNITY_Community 36|Community 36]]
 - [[_COMMUNITY_Community 37|Community 37]]
@@ -119,7 +121,7 @@
 
 - None detected.
 
-## Communities (82 total, 25 thin omitted)
+## Communities (84 total, 26 thin omitted)
 
 ### Community 0 - "Community 0"
 
@@ -136,11 +138,6 @@ Nodes (30): AdminAuthController, ChatController, ConfigController, HealthControl
 Cohesion: 0.04
 Nodes (47): dependencies, axios, @emotion/react, @emotion/styled, formik, jotai, livekit-client, @livekit/components-react (+39 more)
 
-### Community 3 - "Community 3"
-
-Cohesion: 0.24
-Nodes (5): apiKeyAuth(), apiKeyService, HealthService, config, logger
-
 ### Community 4 - "Community 4"
 
 Cohesion: 0.04
@@ -149,7 +146,7 @@ Nodes (44): dependencies, zod, devDependencies, eslint, @eslint/js, globals, jit
 ### Community 5 - "Community 5"
 
 Cohesion: 0.07
-Nodes (27): ControlBarRoot, CallControlBarProps, ChatView(), ChatViewRoot, InputDock, ConversationFeed(), Bubble, BubbleRow (+19 more)
+Nodes (22): OVERLAY_STATES, OverlayText, StyledProgress, VisualizerOverlay, VisualizerRoot, AgentVisualizerPanelProps, VisualizerRootProps, ControlBarRoot (+14 more)
 
 ### Community 6 - "Community 6"
 
@@ -223,8 +220,8 @@ Nodes (16): compilerOptions, allowJs, allowSyntheticDefaultImports, composite, e
 
 ### Community 20 - "Community 20"
 
-Cohesion: 0.05
-Nodes (37): dependencies, bcrypt, @call-center-agent/deepagent, cors, dotenv, express, express-rate-limit, helmet (+29 more)
+Cohesion: 0.11
+Nodes (19): dependencies, bcrypt, @call-center-agent/deepagent, cors, dotenv, express, express-rate-limit, helmet (+11 more)
 
 ### Community 21 - "Community 21"
 
@@ -253,13 +250,18 @@ Nodes (7): ErrorText, InputRow, MessageField, PanelRoot, SendButton, ChatForm, C
 
 ### Community 26 - "Community 26"
 
-Cohesion: 0.29
-Nodes (7): OVERLAY_STATES, OverlayText, StyledProgress, VisualizerOverlay, VisualizerRoot, AgentVisualizerPanelProps, VisualizerRootProps
+Cohesion: 0.25
+Nodes (12): Bubble, BubbleRow, EmptyState, FeedContainer, PlaceholderIcon, PlaceholderText, SourceTag, ThinkingBubble (+4 more)
 
 ### Community 27 - "Community 27"
 
 Cohesion: 0.18
 Nodes (11): scripts, build, clean, dev, download-files, lint, lint:fix, start (+3 more)
+
+### Community 28 - "Community 28"
+
+Cohesion: 0.18
+Nodes (11): scripts, build, clean, db:migrate, dev, lint, lint:fix, postinstall (+3 more)
 
 ### Community 29 - "Community 29"
 
@@ -282,6 +284,11 @@ Cohesion: 0.25
 Nodes (5): LiveKitFunctionTool, LiveKitToolContext, toLiveKitTool(), toLiveKitTools(), LLMAgent
 
 ### Community 33 - "Community 33"
+
+Cohesion: 0.25
+Nodes (7): engines, node, pnpm, name, private, type, version
+
+### Community 34 - "Community 34"
 
 Cohesion: 0.25
 Nodes (7): engines, node, pnpm, name, private, type, version
@@ -318,7 +325,7 @@ Nodes (3): AgentInstructionsMode, AgentInstructionsOptions, ResolvedAgentInstruc
 
 ### Community 78 - "Community 78"
 
-Cohesion: 0.15
+Cohesion: 0.14
 Nodes (6): apiKeyService, requireBotBinding(), apiKeyService, requireScopes(), ApiKeyService, ApiKeyUtil
 
 ### Community 79 - "Community 79"
@@ -333,8 +340,8 @@ Nodes (4): WebhookController, router, webhookController, WebhookService
 
 ### Community 81 - "Community 81"
 
-Cohesion: 0.25
-Nodes (6): createApp(), config, start(), adapter, { DATABASE_URL }, globalForPrisma
+Cohesion: 0.17
+Nodes (9): HealthService, createApp(), config, start(), config, logger, adapter, { DATABASE_URL } (+1 more)
 
 ### Community 83 - "Community 83"
 
@@ -345,7 +352,7 @@ Nodes (9): AdminAccessTokenPayload, AdminLoginOptions, AdminLoginResult, AdminLo
 
 - **505 isolated node(s):** `livekit-docs`, `name`, `version`, `private`, `type` (+500 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **25 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 
