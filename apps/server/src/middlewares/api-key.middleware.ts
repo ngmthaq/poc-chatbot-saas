@@ -1,4 +1,3 @@
-import { ApiKeyScope } from '@prisma/client';
 import type { RequestHandler } from 'express';
 import createHttpError from 'http-errors';
 import { errorMessages } from '../configs';
@@ -25,15 +24,16 @@ function parseBearerToken(header: string | undefined): string | null {
 }
 
 /**
- * Authenticates a request by its API key and enforces the given scopes.
+ * Authenticates a request by its API key and injects the tenant context.
  *
  * Returns a 401 when the `Authorization` header is missing, malformed, or the
  * key is invalid (a single generic message avoids leaking whether a key exists
- * versus is expired), and a 403 when the key lacks a required scope. On success
- * the verified record is attached to `req.apiKey` and `lastUsedAt` is touched on
- * a best-effort basis that can never fail the request.
+ * versus is expired). On success the verified record is attached to `req.apiKey`,
+ * the derived tenant context is attached to `req.context`, and `lastUsedAt` is
+ * touched on a best-effort basis that can never fail the request. Scope
+ * enforcement is handled separately by the `requireScopes` middleware.
  */
-export function apiKeyAuth(requiredScopes: ApiKeyScope[] = []): RequestHandler {
+export function apiKeyAuth(): RequestHandler {
   return async (req, _res, next) => {
     try {
       const raw = parseBearerToken(req.headers.authorization);
@@ -46,11 +46,13 @@ export function apiKeyAuth(requiredScopes: ApiKeyScope[] = []): RequestHandler {
         return next(createHttpError(401, errorMessages.unauthorized()));
       }
 
-      if (!apiKeyService.hasRequiredScopes(record, requiredScopes)) {
-        return next(createHttpError(403, errorMessages.forbidden()));
-      }
-
       req.apiKey = record;
+      req.context = {
+        tenantId: record.tenantId,
+        apiKeyId: record.id,
+        scopes: record.scopes,
+        botId: record.botId,
+      };
 
       try {
         await apiKeyService.touchLastUsed(record.id);

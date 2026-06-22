@@ -69,8 +69,8 @@ Turn the existing chat prototype into a sellable multi-tenant SaaS: tenants are 
 | 6   | DONE   | [DB] Add voice config fields to `Bot` + migration           | voiceEnabled/stt/tts/voiceId added; existing bots text-only              | 5          |
 | 7   | DONE   | [Logic] Key generation + hashing utility                    | `{raw, keyHash, keyPrefix}`; raw never persisted/logged                  | —          |
 | 8   | DONE   | [Logic] Key verification (lookup-by-hash)                   | Returns null for unknown/expired/revoked; constant-time compare          | 7          |
-| 9   | TODO   | [API] API-key auth middleware (parse + load)                | Attaches `req.apiKey`; 401 missing/invalid                               | 8          |
-| 10  | TODO   | [API] Tenant context + scope enforcement                    | Injects tenantId + scopes; 403 insufficient scope                        | 9          |
+| 9   | DONE   | [API] API-key auth middleware (parse + load)                | Attaches `req.apiKey`; 401 missing/invalid                               | 8          |
+| 10  | DONE   | [API] Tenant context + scope enforcement                    | Injects tenantId + scopes; 403 insufficient scope                        | 9          |
 | 11  | TODO   | [API] Per-bot key binding enforcement                       | Bound key works for its bot; 403 others; null = all                      | 10         |
 | 12  | TODO   | [Logic] Update `lastUsedAt` on successful auth              | Async/throttled update; no latency impact                                | 9          |
 | 13  | TODO   | [Logic] Password hash/verify utility                        | argon2/bcrypt round-trip; wrong pw fails                                 | —          |

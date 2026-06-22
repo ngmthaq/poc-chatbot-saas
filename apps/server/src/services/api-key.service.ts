@@ -61,20 +61,23 @@ export class ApiKeyService {
   }
 
   /**
-   * Returns whether `key` satisfies every scope in `required`. An empty
-   * requirement is always satisfied, and a key holding `ApiKeyScope.ADMIN`
+   * Returns whether `scopes` satisfies every scope in `required`. An empty
+   * requirement is always satisfied, and `scopes` holding `ApiKeyScope.ADMIN`
    * bypasses the check entirely; otherwise EVERY required scope must be present.
    */
-  public hasRequiredScopes(key: ApiKey, required: ApiKeyScope[]): boolean {
+  public hasRequiredScopes(
+    scopes: ApiKeyScope[],
+    required: ApiKeyScope[],
+  ): boolean {
     if (required.length === 0) {
       return true;
     }
 
-    if (key.scopes.includes(ApiKeyScope.ADMIN)) {
+    if (scopes.includes(ApiKeyScope.ADMIN)) {
       return true;
     }
 
-    return required.every((scope) => key.scopes.includes(scope));
+    return required.every((scope) => scopes.includes(scope));
   }
 
   /**
