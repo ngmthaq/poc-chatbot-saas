@@ -79,7 +79,7 @@ Turn the existing chat prototype into a sellable multi-tenant SaaS: tenants are 
 | 16  | DONE   | [API] `POST /admin/auth/logout`                             | Revokes refresh; reuse → 401                                             | 14         |
 | 17  | DONE   | [API] Admin auth-guard middleware                           | Verifies JWT + isAdmin/isActive; 401/403                                 | 14         |
 | 18  | DONE   | [Logic] Usage counter increment                             | Atomic upsert; concurrency-safe                                          | 9          |
-| 19  | TODO   | [API] Rate-limit middleware                                 | 429 + Retry-After when over window limit                                 | 18, 2      |
+| 19  | DONE   | [API] Rate-limit middleware                                 | 429 + Retry-After when over window limit                                 | 18, 2      |
 | 20  | TODO   | [API] `POST /admin/tenants`                                 | 201; 409 dup slug; 400 invalid                                           | 17         |
 | 21  | TODO   | [API] `GET /admin/tenants`                                  | Paginated list; empty → []                                               | 17         |
 | 22  | TODO   | [API] `GET /admin/tenants/:id`                              | 200 with counts; 404 unknown                                             | 17         |

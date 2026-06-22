@@ -28,6 +28,10 @@ const schema = yup.object().shape({
     .required('ADMIN_JWT_SECRET is required'),
   ADMIN_ACCESS_TOKEN_TTL: yup.string().trim().default('15m'),
   ADMIN_REFRESH_TOKEN_TTL_DAYS: yup.number().integer().positive().default(7),
+  // Per-API-key rate-limit window: fixed window length (ms) and max requests
+  // allowed per key per window. Defaults: 60s window, 60 requests.
+  RATE_LIMIT_WINDOW_MS: yup.number().integer().positive().default(60000),
+  RATE_LIMIT_MAX: yup.number().integer().positive().default(60),
   // Text-chat (deepagent) LLM provider selection.
   LLM_PROVIDER: yup
     .mixed<ProviderType>()

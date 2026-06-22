@@ -4,6 +4,7 @@ export { errorHandler } from './error-handler.middleware';
 export { fileValidator } from './file-validator.middleware';
 export { notFoundHandler } from './not-found.middleware';
 export {
+  apiKeyRateLimit,
   authRateLimitHandler,
   rateLimitHandler,
 } from './rate-limit.middleware';

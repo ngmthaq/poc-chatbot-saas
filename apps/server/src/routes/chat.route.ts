@@ -1,7 +1,12 @@
 import { ApiKeyScope } from '@prisma/client';
 import { Router } from 'express';
 import { ChatController } from '../controllers/chat.controller';
-import { apiKeyAuth, requireBotBinding, requireScopes } from '../middlewares';
+import {
+  apiKeyAuth,
+  apiKeyRateLimit,
+  requireBotBinding,
+  requireScopes,
+} from '../middlewares';
 import { requestValidator } from '../middlewares/request-validator.middleware';
 import { responseHandler } from '../utils/response-handler.utils';
 import { chatSchema } from '../validators/chat.validator';
@@ -13,6 +18,7 @@ const chatController = new ChatController();
 router.post(
   '/',
   apiKeyAuth(),
+  apiKeyRateLimit(),
   requireScopes(ApiKeyScope.CHAT),
   requestValidator({
     target: 'body',

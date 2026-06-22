@@ -5053,7 +5053,7 @@
       "label": "Config",
       "file_type": "code",
       "source_file": "apps/server/src/configs/env.ts",
-      "source_location": "L64",
+      "source_location": "L68",
       "_origin": "ast",
       "id": "apps_server_src_configs_env_ts_configs_env_config",
       "community": 43,
@@ -5063,7 +5063,7 @@
       "label": "loadEnv()",
       "file_type": "code",
       "source_file": "apps/server/src/configs/env.ts",
-      "source_location": "L68",
+      "source_location": "L72",
       "_origin": "ast",
       "id": "apps_server_src_configs_env_ts_configs_env_loadenv",
       "community": 43,
@@ -5156,7 +5156,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "controllers_chat_controller",
-      "community": 1,
+      "community": 85,
       "norm_label": "chat.controller.ts"
     },
     {
@@ -5166,7 +5166,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "controllers_chat_controller_chatcontroller",
-      "community": 1,
+      "community": 85,
       "norm_label": "chatcontroller"
     },
     {
@@ -5176,7 +5176,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "controllers_chat_controller_chatcontroller_handlechat",
-      "community": 1,
+      "community": 85,
       "norm_label": ".handlechat()"
     },
     {
@@ -5186,7 +5186,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "controllers_config_controller",
-      "community": 1,
+      "community": 86,
       "norm_label": "config.controller.ts"
     },
     {
@@ -5196,7 +5196,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "controllers_config_controller_configcontroller",
-      "community": 1,
+      "community": 86,
       "norm_label": "configcontroller"
     },
     {
@@ -5206,7 +5206,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "controllers_config_controller_configcontroller_getconfig",
-      "community": 1,
+      "community": 86,
       "norm_label": ".getconfig()"
     },
     {
@@ -5216,7 +5216,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "controllers_health_controller",
-      "community": 1,
+      "community": 3,
       "norm_label": "health.controller.ts"
     },
     {
@@ -5226,7 +5226,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "controllers_health_controller_healthcontroller",
-      "community": 1,
+      "community": 3,
       "norm_label": "healthcontroller"
     },
     {
@@ -5236,7 +5236,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "controllers_health_controller_healthcontroller_getstatus",
-      "community": 1,
+      "community": 3,
       "norm_label": ".getstatus()"
     },
     {
@@ -5246,7 +5246,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "controllers_livekit_controller",
-      "community": 1,
+      "community": 87,
       "norm_label": "livekit.controller.ts"
     },
     {
@@ -5256,7 +5256,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "controllers_livekit_controller_livekitcontroller",
-      "community": 1,
+      "community": 87,
       "norm_label": "livekitcontroller"
     },
     {
@@ -5266,7 +5266,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "controllers_livekit_controller_livekitcontroller_gettoken",
-      "community": 1,
+      "community": 87,
       "norm_label": ".gettoken()"
     },
     {
@@ -5276,7 +5276,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "controllers_webhook_controller",
-      "community": 80,
+      "community": 82,
       "norm_label": "webhook.controller.ts"
     },
     {
@@ -5286,7 +5286,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "controllers_webhook_controller_webhookcontroller",
-      "community": 80,
+      "community": 82,
       "norm_label": "webhookcontroller"
     },
     {
@@ -5296,7 +5296,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "controllers_webhook_controller_webhookcontroller_receive",
-      "community": 80,
+      "community": 82,
       "norm_label": ".receive()"
     },
     {
@@ -5306,7 +5306,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "middlewares_admin_auth_middleware",
-      "community": 79,
+      "community": 1,
       "norm_label": "admin-auth.middleware.ts"
     },
     {
@@ -5316,7 +5316,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "middlewares_admin_auth_middleware_adminauthservice",
-      "community": 79,
+      "community": 1,
       "norm_label": "adminauthservice"
     },
     {
@@ -5326,7 +5326,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "middlewares_admin_auth_middleware_parsebearertoken",
-      "community": 79,
+      "community": 1,
       "norm_label": "parsebearertoken()"
     },
     {
@@ -5336,7 +5336,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "middlewares_admin_auth_middleware_adminauth",
-      "community": 79,
+      "community": 1,
       "norm_label": "adminauth()"
     },
     {
@@ -5376,7 +5376,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "middlewares_api_key_middleware_apikeyauth",
-      "community": 3,
+      "community": 84,
       "norm_label": "apikeyauth()"
     },
     {
@@ -5416,7 +5416,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "middlewares_file_validator_middleware",
-      "community": 79,
+      "community": 84,
       "norm_label": "file-validator.middleware.ts"
     },
     {
@@ -5426,7 +5426,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "middlewares_file_validator_middleware_normalisefiles",
-      "community": 79,
+      "community": 84,
       "norm_label": "normalisefiles()"
     },
     {
@@ -5436,7 +5436,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "middlewares_file_validator_middleware_validatefiles",
-      "community": 79,
+      "community": 84,
       "norm_label": "validatefiles()"
     },
     {
@@ -5446,7 +5446,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "middlewares_file_validator_middleware_filevalidator",
-      "community": 79,
+      "community": 84,
       "norm_label": "filevalidator()"
     },
     {
@@ -5456,7 +5456,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "middlewares_index",
-      "community": 79,
+      "community": 84,
       "norm_label": "index.ts"
     },
     {
@@ -5486,14 +5486,24 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "middlewares_rate_limit_middleware",
-      "community": 79,
+      "community": 3,
       "norm_label": "rate-limit.middleware.ts"
+    },
+    {
+      "label": "apiKeyService",
+      "file_type": "code",
+      "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "middlewares_rate_limit_middleware_apikeyservice",
+      "community": 3,
+      "norm_label": "apikeyservice"
     },
     {
       "label": "rateLimitHandler",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
-      "source_location": "L7",
+      "source_location": "L11",
       "_origin": "ast",
       "id": "middlewares_rate_limit_middleware_ratelimithandler",
       "community": 79,
@@ -5503,11 +5513,21 @@
       "label": "authRateLimitHandler",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
-      "source_location": "L21",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "middlewares_rate_limit_middleware_authratelimithandler",
-      "community": 79,
+      "community": 80,
       "norm_label": "authratelimithandler"
+    },
+    {
+      "label": "apiKeyRateLimit()",
+      "file_type": "code",
+      "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "middlewares_rate_limit_middleware_apikeyratelimit",
+      "community": 84,
+      "norm_label": "apikeyratelimit()"
     },
     {
       "label": "request-validator.middleware.ts",
@@ -5516,7 +5536,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "middlewares_request_validator_middleware",
-      "community": 1,
+      "community": 84,
       "norm_label": "request-validator.middleware.ts"
     },
     {
@@ -5526,7 +5546,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "middlewares_request_validator_middleware_requestvalidator",
-      "community": 1,
+      "community": 84,
       "norm_label": "requestvalidator()"
     },
     {
@@ -5536,7 +5556,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "middlewares_require_bot_binding_middleware",
-      "community": 78,
+      "community": 84,
       "norm_label": "require-bot-binding.middleware.ts"
     },
     {
@@ -5546,7 +5566,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "middlewares_require_bot_binding_middleware_apikeyservice",
-      "community": 78,
+      "community": 84,
       "norm_label": "apikeyservice"
     },
     {
@@ -5556,7 +5576,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "middlewares_require_bot_binding_middleware_requirebotbinding",
-      "community": 78,
+      "community": 84,
       "norm_label": "requirebotbinding()"
     },
     {
@@ -5586,7 +5606,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "middlewares_require_scopes_middleware_requirescopes",
-      "community": 78,
+      "community": 84,
       "norm_label": "requirescopes()"
     },
     {
@@ -5596,7 +5616,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "routes_admin_auth_route",
-      "community": 1,
+      "community": 80,
       "norm_label": "admin-auth.route.ts"
     },
     {
@@ -5606,7 +5626,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "routes_admin_auth_route_router",
-      "community": 1,
+      "community": 80,
       "norm_label": "router"
     },
     {
@@ -5616,7 +5636,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "routes_admin_auth_route_adminauthcontroller",
-      "community": 1,
+      "community": 80,
       "norm_label": "adminauthcontroller"
     },
     {
@@ -5626,27 +5646,27 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "routes_chat_route",
-      "community": 1,
+      "community": 84,
       "norm_label": "chat.route.ts"
     },
     {
       "label": "router",
       "file_type": "code",
       "source_file": "apps/server/src/routes/chat.route.ts",
-      "source_location": "L10",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "routes_chat_route_router",
-      "community": 1,
+      "community": 80,
       "norm_label": "router"
     },
     {
       "label": "chatController",
       "file_type": "code",
       "source_file": "apps/server/src/routes/chat.route.ts",
-      "source_location": "L11",
+      "source_location": "L16",
       "_origin": "ast",
       "id": "routes_chat_route_chatcontroller",
-      "community": 1,
+      "community": 84,
       "norm_label": "chatcontroller"
     },
     {
@@ -5656,7 +5676,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "routes_config_route",
-      "community": 1,
+      "community": 80,
       "norm_label": "config.route.ts"
     },
     {
@@ -5666,7 +5686,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "routes_config_route_router",
-      "community": 1,
+      "community": 80,
       "norm_label": "router"
     },
     {
@@ -5676,7 +5696,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "routes_config_route_configcontroller",
-      "community": 1,
+      "community": 80,
       "norm_label": "configcontroller"
     },
     {
@@ -5686,7 +5706,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "routes_health_route",
-      "community": 1,
+      "community": 80,
       "norm_label": "health.route.ts"
     },
     {
@@ -5696,7 +5716,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "routes_health_route_router",
-      "community": 1,
+      "community": 80,
       "norm_label": "router"
     },
     {
@@ -5706,7 +5726,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "routes_health_route_healthcontroller",
-      "community": 1,
+      "community": 80,
       "norm_label": "healthcontroller"
     },
     {
@@ -5716,7 +5736,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "apps_server_src_routes_index_ts_routes_index",
-      "community": 1,
+      "community": 80,
       "norm_label": "index.ts"
     },
     {
@@ -5726,7 +5746,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "routes_index_router",
-      "community": 1,
+      "community": 80,
       "norm_label": "router"
     },
     {
@@ -5736,7 +5756,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "routes_livekit_route",
-      "community": 1,
+      "community": 80,
       "norm_label": "livekit.route.ts"
     },
     {
@@ -5746,7 +5766,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "routes_livekit_route_router",
-      "community": 1,
+      "community": 80,
       "norm_label": "router"
     },
     {
@@ -5756,7 +5776,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "routes_livekit_route_livekitcontroller",
-      "community": 1,
+      "community": 80,
       "norm_label": "livekitcontroller"
     },
     {
@@ -5766,7 +5786,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "routes_webhook_route",
-      "community": 80,
+      "community": 79,
       "norm_label": "webhook.route.ts"
     },
     {
@@ -5776,7 +5796,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "routes_webhook_route_router",
-      "community": 80,
+      "community": 79,
       "norm_label": "router"
     },
     {
@@ -5786,7 +5806,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "routes_webhook_route_webhookcontroller",
-      "community": 80,
+      "community": 79,
       "norm_label": "webhookcontroller"
     },
     {
@@ -5986,7 +6006,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "services_chat_service",
-      "community": 1,
+      "community": 85,
       "norm_label": "chat.service.ts"
     },
     {
@@ -5996,7 +6016,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "services_chat_service_chatservice",
-      "community": 1,
+      "community": 85,
       "norm_label": "chatservice"
     },
     {
@@ -6006,7 +6026,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "services_chat_service_chatservice_chat",
-      "community": 1,
+      "community": 85,
       "norm_label": ".chat()"
     },
     {
@@ -6016,7 +6036,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "services_config_service",
-      "community": 1,
+      "community": 86,
       "norm_label": "config.service.ts"
     },
     {
@@ -6026,7 +6046,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "services_config_service_configservice",
-      "community": 1,
+      "community": 86,
       "norm_label": "configservice"
     },
     {
@@ -6036,7 +6056,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "services_config_service_configservice_getpublicconfig",
-      "community": 1,
+      "community": 86,
       "norm_label": ".getpublicconfig()"
     },
     {
@@ -6046,7 +6066,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "services_health_service",
-      "community": 81,
+      "community": 3,
       "norm_label": "health.service.ts"
     },
     {
@@ -6056,7 +6076,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "services_health_service_healthservice",
-      "community": 81,
+      "community": 3,
       "norm_label": "healthservice"
     },
     {
@@ -6066,7 +6086,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "services_health_service_healthservice_getstatus",
-      "community": 81,
+      "community": 3,
       "norm_label": ".getstatus()"
     },
     {
@@ -6076,7 +6096,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "services_livekit_service",
-      "community": 1,
+      "community": 87,
       "norm_label": "livekit.service.ts"
     },
     {
@@ -6086,7 +6106,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "services_livekit_service_livekitservice",
-      "community": 1,
+      "community": 87,
       "norm_label": "livekitservice"
     },
     {
@@ -6096,7 +6116,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "services_livekit_service_livekitservice_gettoken",
-      "community": 1,
+      "community": 87,
       "norm_label": ".gettoken()"
     },
     {
@@ -6116,7 +6136,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "services_webhook_service_webhookservice",
-      "community": 80,
+      "community": 82,
       "norm_label": "webhookservice"
     },
     {
@@ -6126,7 +6146,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "services_webhook_service_webhookservice_receive",
-      "community": 80,
+      "community": 82,
       "norm_label": ".receive()"
     },
     {
@@ -6136,7 +6156,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "services_webhook_service_webhookservice_handleroomfinished",
-      "community": 80,
+      "community": 82,
       "norm_label": ".handleroomfinished()"
     },
     {
@@ -6656,7 +6676,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "utils_logger_utils",
-      "community": 81,
+      "community": 3,
       "norm_label": "logger.utils.ts"
     },
     {
@@ -6666,7 +6686,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "utils_logger_utils_config",
-      "community": 81,
+      "community": 3,
       "norm_label": "config"
     },
     {
@@ -6676,7 +6696,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "utils_logger_utils_logger",
-      "community": 81,
+      "community": 3,
       "norm_label": "logger"
     },
     {
@@ -6726,7 +6746,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "utils_response_handler_utils",
-      "community": 1,
+      "community": 80,
       "norm_label": "response-handler.utils.ts"
     },
     {
@@ -6736,7 +6756,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "utils_response_handler_utils_responsehandler",
-      "community": 1,
+      "community": 80,
       "norm_label": "responsehandler()"
     },
     {
@@ -6836,7 +6856,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "validators_chat_validator",
-      "community": 1,
+      "community": 85,
       "norm_label": "chat.validator.ts"
     },
     {
@@ -6846,7 +6866,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "validators_chat_validator_chatschema",
-      "community": 1,
+      "community": 85,
       "norm_label": "chatschema"
     },
     {
@@ -6856,7 +6876,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "validators_chat_validator_chatbody",
-      "community": 1,
+      "community": 85,
       "norm_label": "chatbody"
     },
     {
@@ -6866,7 +6886,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "validators_index",
-      "community": 1,
+      "community": 85,
       "norm_label": "index.ts"
     },
     {
@@ -17206,6 +17226,17 @@
       "context": "re-export",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/middlewares/index.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "middlewares_index",
+      "target": "middlewares_rate_limit_middleware_apikeyratelimit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/index.ts",
       "source_location": "L5",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -17325,6 +17356,26 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "middlewares_rate_limit_middleware",
+      "target": "middlewares_rate_limit_middleware_apikeyratelimit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "middlewares_rate_limit_middleware",
+      "target": "middlewares_rate_limit_middleware_apikeyservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
       "source_location": "L21",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -17342,6 +17393,50 @@
       "target": "middlewares_rate_limit_middleware_ratelimithandler"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "middlewares_rate_limit_middleware",
+      "target": "services_api_key_service",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "middlewares_rate_limit_middleware",
+      "target": "services_api_key_service_apikeyservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "middlewares_rate_limit_middleware",
+      "target": "utils_logger_utils",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "middlewares_rate_limit_middleware",
+      "target": "utils_logger_utils_logger",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -17351,6 +17446,17 @@
       "confidence_score": 1.0,
       "source": "routes_admin_auth_route",
       "target": "middlewares_rate_limit_middleware_authratelimithandler"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/chat.route.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "routes_chat_route",
+      "target": "middlewares_rate_limit_middleware_apikeyratelimit",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -18318,9 +18424,9 @@
       "source_file": "apps/server/src/services/api-key.service.ts",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_api_key_service_apikeyservice",
-      "target": "services_api_key_service_apikeyservice_incrementusage",
-      "confidence_score": 1.0
+      "target": "services_api_key_service_apikeyservice_incrementusage"
     },
     {
       "relation": "method",
@@ -23403,5 +23509,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "4e395397fd1a3e40f5cdf0b0fba865cbc569691f"
+  "built_at_commit": "4f6e2da4f79daf222ce8b9904c6d33a0745517a6"
 }

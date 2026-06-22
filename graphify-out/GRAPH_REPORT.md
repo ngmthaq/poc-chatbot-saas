@@ -2,18 +2,18 @@
 
 ## Corpus Check
 
-- 220 files · ~22,070 words
+- 220 files · ~22,308 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
 
-- 1015 nodes · 1278 edges · 84 communities (58 shown, 26 thin omitted)
+- 1017 nodes · 1286 edges · 88 communities (62 shown, 26 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 14 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
 
-- Built from commit: `4e395397`
+- Built from commit: `4f6e2da4`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -90,6 +90,10 @@
 - [[_COMMUNITY_Community 81|Community 81]]
 - [[_COMMUNITY_Community 82|Community 82]]
 - [[_COMMUNITY_Community 83|Community 83]]
+- [[_COMMUNITY_Community 84|Community 84]]
+- [[_COMMUNITY_Community 85|Community 85]]
+- [[_COMMUNITY_Community 86|Community 86]]
+- [[_COMMUNITY_Community 87|Community 87]]
 
 ## God Nodes (most connected - your core abstractions)
 
@@ -121,7 +125,7 @@
 
 - None detected.
 
-## Communities (84 total, 26 thin omitted)
+## Communities (88 total, 26 thin omitted)
 
 ### Community 0 - "Community 0"
 
@@ -130,13 +134,18 @@ Nodes (39): LangChainStructuredTool, LangChainToolSchema, BaseTool, AgentInstruc
 
 ### Community 1 - "Community 1"
 
-Cohesion: 0.06
-Nodes (30): AdminAuthController, ChatController, ConfigController, HealthController, LiveKitController, requestValidator(), adminAuthController, router (+22 more)
+Cohesion: 0.13
+Nodes (10): AdminAuthController, adminAuth(), adminAuthService, AdminAuthService, AdminLoginBody, adminLoginSchema, AdminLogoutBody, adminLogoutSchema (+2 more)
 
 ### Community 2 - "Community 2"
 
 Cohesion: 0.04
 Nodes (47): dependencies, axios, @emotion/react, @emotion/styled, formik, jotai, livekit-client, @livekit/components-react (+39 more)
+
+### Community 3 - "Community 3"
+
+Cohesion: 0.19
+Nodes (6): HealthController, apiKeyService, apiKeyService, HealthService, config, logger
 
 ### Community 4 - "Community 4"
 
@@ -325,32 +334,47 @@ Nodes (3): AgentInstructionsMode, AgentInstructionsOptions, ResolvedAgentInstruc
 
 ### Community 78 - "Community 78"
 
-Cohesion: 0.14
-Nodes (6): apiKeyService, requireBotBinding(), apiKeyService, requireScopes(), ApiKeyService, ApiKeyUtil
+Cohesion: 0.19
+Nodes (3): apiKeyService, ApiKeyService, ApiKeyUtil
 
 ### Community 79 - "Community 79"
 
-Cohesion: 0.17
-Nodes (9): errorMessages, adminAuth(), adminAuthService, errorHandler(), normalizeMessage(), fileValidator(), notFoundHandler(), authRateLimitHandler (+1 more)
+Cohesion: 0.22
+Nodes (7): errorMessages, errorHandler(), normalizeMessage(), notFoundHandler(), rateLimitHandler, router, webhookController
 
 ### Community 80 - "Community 80"
 
-Cohesion: 0.28
-Nodes (4): WebhookController, router, webhookController, WebhookService
+Cohesion: 0.18
+Nodes (12): authRateLimitHandler, adminAuthController, router, router, configController, router, healthController, router (+4 more)
 
 ### Community 81 - "Community 81"
 
-Cohesion: 0.17
-Nodes (9): HealthService, createApp(), config, start(), config, logger, adapter, { DATABASE_URL } (+1 more)
+Cohesion: 0.25
+Nodes (6): createApp(), config, start(), adapter, { DATABASE_URL }, globalForPrisma
+
+### Community 82 - "Community 82"
+
+Cohesion: 0.19
+Nodes (3): WebhookController, WebhookService, LiveKitRoomUtil
 
 ### Community 83 - "Community 83"
 
 Cohesion: 0.20
 Nodes (9): AdminAccessTokenPayload, AdminLoginOptions, AdminLoginResult, AdminLogoutResult, AdminPublicProfile, AdminRefreshResult, AuthenticatedAdmin, GeneratedRefreshToken (+1 more)
 
+### Community 84 - "Community 84"
+
+Cohesion: 0.22
+Nodes (8): apiKeyAuth(), fileValidator(), apiKeyRateLimit(), requestValidator(), apiKeyService, requireBotBinding(), requireScopes(), chatController
+
+### Community 85 - "Community 85"
+
+Cohesion: 0.36
+Nodes (4): ChatController, ChatService, ChatBody, chatSchema
+
 ## Knowledge Gaps
 
-- **505 isolated node(s):** `livekit-docs`, `name`, `version`, `private`, `type` (+500 more)
+- **506 isolated node(s):** `livekit-docs`, `name`, `version`, `private`, `type` (+501 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -363,11 +387,11 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `VoiceSession()` connect `Community 10` to `Community 8`?**
   _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **What connects `livekit-docs`, `name`, `version` to the rest of the system?**
-  _505 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _506 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.07111501316944688 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.055178652193577565 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.13 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.041666666666666664 - nodes in this community are weakly interconnected._
 - **Should `Community 4` be split into smaller, more focused modules?**

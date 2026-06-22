@@ -3,6 +3,10 @@ import { rateLimit } from 'express-rate-limit';
 import createHttpError from 'http-errors';
 import { errorMessages } from '../configs';
 import { loadEnv } from '../configs';
+import { ApiKeyService } from '../services/api-key.service';
+import { logger } from '../utils/logger.utils';
+
+const apiKeyService = new ApiKeyService();
 
 export const rateLimitHandler: RequestHandler = rateLimit({
   windowMs: 15 * 60 * 1000,
@@ -28,3 +32,55 @@ export const authRateLimitHandler: RequestHandler = rateLimit({
     next(createHttpError(429, errorMessages.tooManyAuthAttempts()));
   },
 });
+
+/**
+ * DB-backed, per-API-key rate limiter. Floors the request time into a fixed
+ * window, atomically increments the per-key usage counter, and rejects with a
+ * 429 (plus `Retry-After` / `X-RateLimit-*` headers) once the window's request
+ * count exceeds the configured max. Runs in all environments — unlike the
+ * IP-keyed limiters above — because it also meters per-key usage. Fails open:
+ * if the counter cannot be read/written the request is allowed through.
+ */
+export function apiKeyRateLimit(): RequestHandler {
+  return async (req, res, next) => {
+    try {
+      const { RATE_LIMIT_WINDOW_MS: windowMs, RATE_LIMIT_MAX: max } = loadEnv();
+
+      if (req.context === undefined) {
+        return next();
+      }
+
+      const now = Date.now();
+      const windowStart = new Date(Math.floor(now / windowMs) * windowMs);
+
+      try {
+        const usage = await apiKeyService.incrementUsage(
+          req.context.apiKeyId,
+          windowStart,
+        );
+        const remaining = Math.max(0, max - usage.requestCount);
+
+        res.setHeader('X-RateLimit-Limit', max);
+        res.setHeader('X-RateLimit-Remaining', remaining);
+
+        if (usage.requestCount > max) {
+          const retryAfterSeconds = Math.ceil(
+            (windowStart.getTime() + windowMs - now) / 1000,
+          );
+          res.setHeader('Retry-After', retryAfterSeconds);
+          return next(createHttpError(429, errorMessages.tooManyRequests()));
+        }
+
+        return next();
+      } catch (err) {
+        logger.warn(
+          { err },
+          'Rate-limit counter failed; allowing request (fail-open)',
+        );
+        return next();
+      }
+    } catch (err) {
+      return next(err);
+    }
+  };
+}
