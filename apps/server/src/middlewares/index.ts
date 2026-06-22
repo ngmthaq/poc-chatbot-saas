@@ -4,4 +4,5 @@ export { fileValidator } from './file-validator.middleware';
 export { notFoundHandler } from './not-found.middleware';
 export { rateLimitHandler } from './rate-limit.middleware';
 export { requestValidator } from './request-validator.middleware';
+export { requireBotBinding } from './require-bot-binding.middleware';
 export { requireScopes } from './require-scopes.middleware';

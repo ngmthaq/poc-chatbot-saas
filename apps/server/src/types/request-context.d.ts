@@ -5,4 +5,5 @@ export interface RequestContext {
   apiKeyId: string;
   scopes: ApiKeyScope[];
   botId: string | null;
+  effectiveBotId?: string | null;
 }

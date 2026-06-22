@@ -3,3 +3,8 @@ export interface GeneratedApiKey {
   keyHash: string;
   keyPrefix: string;
 }
+
+export interface BotBindingResolution {
+  allowed: boolean;
+  effectiveBotId: string | null;
+}

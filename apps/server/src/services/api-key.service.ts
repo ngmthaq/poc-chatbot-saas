@@ -1,6 +1,7 @@
 import { ApiKeyScope, ApiKeyStatus } from '@prisma/client';
 import type { ApiKey } from '@prisma/client';
 import { timingSafeEqual } from 'node:crypto';
+import type { BotBindingResolution } from '../types/api-key';
 import { ApiKeyUtil } from '../utils/api-key.utils';
 import { prisma } from '../utils/prisma.utils';
 
@@ -78,6 +79,34 @@ export class ApiKeyService {
     }
 
     return required.every((scope) => scopes.includes(scope));
+  }
+
+  /**
+   * Decides whether a request targeting `requestedBotId` is allowed for a key
+   * bound to `boundBotId`, and resolves the effective bot to use downstream.
+   *
+   * Rules:
+   * 1. An unbound key (`boundBotId === null`) is tenant-wide: it passes and the
+   *    effective bot is whatever was requested (possibly `null`).
+   * 2. A bound key with no requested target passes and injects the bound bot.
+   * 3. A bound key whose requested target matches the binding passes.
+   * 4. A bound key whose requested target differs is denied.
+   *
+   * Pure and side-effect free so it can be reused and tested in isolation.
+   */
+  public resolveBotBinding(
+    boundBotId: string | null,
+    requestedBotId: string | null,
+  ): BotBindingResolution {
+    if (boundBotId === null) {
+      return { allowed: true, effectiveBotId: requestedBotId };
+    }
+
+    if (requestedBotId === null || requestedBotId === boundBotId) {
+      return { allowed: true, effectiveBotId: boundBotId };
+    }
+
+    return { allowed: false, effectiveBotId: null };
   }
 
   /**

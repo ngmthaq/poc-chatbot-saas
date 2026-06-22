@@ -1,18 +1,19 @@
-# Graph Report - . (2026-06-22)
+# Graph Report - agent-assistant (2026-06-22)
 
 ## Corpus Check
 
-- cluster-only mode — file stats not available
+- 212 files · ~19,680 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
 
-- 967 nodes · 1190 edges · 78 communities (54 shown, 24 thin omitted)
+- 972 nodes · 1201 edges · 83 communities (58 shown, 25 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 14 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
 
-- Built from commit: `f648bf50`
+- Built from commit: `a0484864`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -83,6 +84,11 @@
 - [[_COMMUNITY_Community 62|Community 62]]
 - [[_COMMUNITY_Community 63|Community 63]]
 - [[_COMMUNITY_Community 64|Community 64]]
+- [[_COMMUNITY_Community 78|Community 78]]
+- [[_COMMUNITY_Community 79|Community 79]]
+- [[_COMMUNITY_Community 80|Community 80]]
+- [[_COMMUNITY_Community 81|Community 81]]
+- [[_COMMUNITY_Community 82|Community 82]]
 
 ## God Nodes (most connected - your core abstractions)
 
@@ -114,7 +120,7 @@
 
 - None detected.
 
-## Communities (78 total, 24 thin omitted)
+## Communities (83 total, 25 thin omitted)
 
 ### Community 0 - "Community 0"
 
@@ -123,8 +129,8 @@ Nodes (37): BaseTool, AgentInstructions, convertCurrencySchema, ConvertCurrencyT
 
 ### Community 1 - "Community 1"
 
-Cohesion: 0.06
-Nodes (28): errorMessages, ChatController, ConfigController, LiveKitController, apiKeyAuth(), errorHandler(), normalizeMessage(), fileValidator() (+20 more)
+Cohesion: 0.08
+Nodes (20): ChatController, ConfigController, HealthController, LiveKitController, requestValidator(), chatController, router, configController (+12 more)
 
 ### Community 2 - "Community 2"
 
@@ -133,8 +139,8 @@ Nodes (47): dependencies, axios, @emotion/react, @emotion/styled, formik, jotai,
 
 ### Community 3 - "Community 3"
 
-Cohesion: 0.06
-Nodes (18): HealthController, WebhookController, apiKeyService, router, webhookController, ApiKeyService, HealthService, WebhookService (+10 more)
+Cohesion: 0.23
+Nodes (5): apiKeyAuth(), apiKeyService, HealthService, config, logger
 
 ### Community 4 - "Community 4"
 
@@ -321,11 +327,31 @@ Nodes (4): CurrentWeather, GeocodingResponse, GeocodingResult, WeatherForecastRe
 Cohesion: 0.50
 Nodes (3): AgentInstructionsMode, AgentInstructionsOptions, ResolvedAgentInstructionsOptions
 
+### Community 78 - "Community 78"
+
+Cohesion: 0.15
+Nodes (6): apiKeyService, requireBotBinding(), apiKeyService, requireScopes(), ApiKeyService, ApiKeyUtil
+
+### Community 79 - "Community 79"
+
+Cohesion: 0.23
+Nodes (6): errorMessages, errorHandler(), normalizeMessage(), fileValidator(), notFoundHandler(), rateLimitHandler
+
+### Community 80 - "Community 80"
+
+Cohesion: 0.28
+Nodes (4): WebhookController, router, webhookController, WebhookService
+
+### Community 81 - "Community 81"
+
+Cohesion: 0.25
+Nodes (6): createApp(), config, start(), adapter, { DATABASE_URL }, globalForPrisma
+
 ## Knowledge Gaps
 
-- **489 isolated node(s):** `livekit-docs`, `name`, `version`, `private`, `type` (+484 more)
+- **491 isolated node(s):** `livekit-docs`, `name`, `version`, `private`, `type` (+486 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **24 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **25 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 
@@ -336,12 +362,12 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `VoiceSession()` connect `Community 10` to `Community 8`?**
   _High betweenness centrality (0.013) - this node is a cross-community bridge._
 - **What connects `livekit-docs`, `name`, `version` to the rest of the system?**
-  _489 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _491 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.07787698412698413 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.061016949152542375 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08130081300813008 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.041666666666666664 - nodes in this community are weakly interconnected._
-- **Should `Community 3` be split into smaller, more focused modules?**
-  _Cohesion score 0.05673758865248227 - nodes in this community are weakly interconnected._
+- **Should `Community 4` be split into smaller, more focused modules?**
+  _Cohesion score 0.044444444444444446 - nodes in this community are weakly interconnected._
