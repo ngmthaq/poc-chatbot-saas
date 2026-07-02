@@ -6,6 +6,20 @@ When a user prompt arrives, the Root Agent **must greet the user, classify the i
 
 ---
 
+## Check Task Complexity
+
+**Before classifying the intent, assess the size of the request.** A task is **big** when it:
+
+- spans multiple layers (DB / API / business logic / UI),
+- describes an epic, user story, or feature request too large for a handful of atomic tasks, or
+- has many independent moving parts.
+
+**If the task is big, STOP.** Tell the user they must run the [ticket-breakdown](../../ticket-breakdown/SKILL.md) skill first to decompose it into smaller tickets, then **end the session**. Do not classify, brainstorm further, plan, or spawn any sub-agent. The user re-invokes `/party-mode` on an individual ticket once the breakdown is done.
+
+Only continue to classification when the task is small enough to be handled directly.
+
+---
+
 ## Classify the Intent
 
 Classification shapes the brainstorming questions and the eventual plan structure.
@@ -47,15 +61,16 @@ If the prompt contains signals for both `feature` and `bug`, or if intent cannot
 ## Brainstorming Dialogue
 
 1. **Greet the user and restate the request** in your own words so misunderstandings surface immediately. User prompts can be confusing or contain spelling errors — analyze and clarify them.
-2. **Classify the intent** (`feature` or `bug`) using the rules above.
-3. **Explore the codebase context.** Read the relevant files, modules, and conventions (read-only). Reference real paths — do not invent files.
-4. **Load relevant documents.** Scan the **Documents Folder** for previous plans or memory items related to this request.
-5. **Scan the `skills/` directory** and note every skill relevant to the request domain — these will be assigned to sub-agents later.
-6. **Gather classification-specific details:**
+2. **Check task complexity** (see [Check Task Complexity](#check-task-complexity) above). If the task is big, instruct the user to run the [ticket-breakdown](../../ticket-breakdown/SKILL.md) skill first, then **end the session** — do not proceed to classification.
+3. **Classify the intent** (`feature` or `bug`) using the rules above.
+4. **Explore the codebase context.** Read the relevant files, modules, and conventions (read-only). Reference real paths — do not invent files.
+5. **Load relevant documents.** Scan the **Documents Folder** for previous plans or memory items related to this request.
+6. **Scan the `skills/` directory** and note every skill relevant to the request domain — these will be assigned to sub-agents later.
+7. **Gather classification-specific details:**
    - For a `feature`: scope, expected behaviour, affected areas, constraints, what is explicitly out of scope.
    - For a `bug`: observed behaviour (error messages, stack traces, logs), expected behaviour, and reproduction steps. Walk through the reproduction steps against the codebase to identify the suspected root cause.
-7. **Surface every open question to the user.** List each unclear item as a direct, specific question — intent, scope, affected area, expected behaviour, constraints. **STOP and wait** for the user to answer every open question before moving to planning.
-8. **Iterate.** If the user's answers raise new questions, ask again. Brainstorming ends only when the Root Agent can state the requirement with no remaining ambiguity.
+8. **Surface every open question to the user.** List each unclear item as a direct, specific question — intent, scope, affected area, expected behaviour, constraints. **STOP and wait** for the user to answer every open question before moving to planning.
+9. **Iterate.** If the user's answers raise new questions, ask again. Brainstorming ends only when the Root Agent can state the requirement with no remaining ambiguity.
 
 ---
 

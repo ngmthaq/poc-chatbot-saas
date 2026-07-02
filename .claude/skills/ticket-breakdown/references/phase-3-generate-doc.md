@@ -49,18 +49,11 @@ Where:
 
 ---
 
-## Subtask Breakdown
-
-| #   | Title | Acceptance Criteria | Depends On |
-| --- | ----- | ------------------- | ---------- |
-| 1   | ...   | ...                 | —          |
-| 2   | ...   | ...                 | #1         |
-
----
-
-## Subtask Details
+## Subtask
 
 ### #1 — <Title>
+
+**Status:** TODO | WIP | DONE
 
 **Acceptance Criteria:**
 

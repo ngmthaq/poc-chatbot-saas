@@ -39,6 +39,8 @@ graphify install --project
 
 Run once. After this, the assistant can consult the graph automatically.
 
+`graphify install --project` writes its usage instructions into a root `CLAUDE.md`. For consistency with the project convention, move that Graphify block out of the root `CLAUDE.md` and into `.claude/CLAUDE.md` (create the file if it does not exist), then remove the now-empty root `CLAUDE.md`. All AI instructions live under `.claude/CLAUDE.md`.
+
 ## Build the graph
 
 ```bash
