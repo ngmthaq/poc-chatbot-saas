@@ -1,48 +1,52 @@
 import { Router } from 'express';
-import { TenantController } from '../controllers/tenant.controller';
-import { adminAuth } from '../middlewares/admin-auth.middleware';
-import { requestValidator } from '../middlewares/request-validator.middleware';
-import { responseHandler } from '../utils/response-handler.utils';
+import { tenantController } from '../controllers';
+import {
+  adminAuthMiddleware,
+  requestValidatorMiddleware,
+} from '../middlewares';
+import { responseHandlerUtil } from '../utils';
 import {
   createTenantSchema,
   listTenantsQuerySchema,
   updateTenantSchema,
-} from '../validators/tenant.validator';
+} from '../validators';
 
 const router: Router = Router();
-const tenantController = new TenantController();
 
-router.use(adminAuth());
+router.use(adminAuthMiddleware.handle);
 
 router.post(
   '/',
-  requestValidator({
+  requestValidatorMiddleware.handle({
     target: 'body',
     schema: createTenantSchema,
   }),
-  responseHandler(tenantController.handleCreate),
+  responseHandlerUtil.handle(tenantController.handleCreate),
 );
 
 router.get(
   '/',
-  requestValidator({
+  requestValidatorMiddleware.handle({
     target: 'query',
     schema: listTenantsQuerySchema,
   }),
-  responseHandler(tenantController.handleList),
+  responseHandlerUtil.handle(tenantController.handleList),
 );
 
-router.get('/:id', responseHandler(tenantController.handleGet));
+router.get('/:id', responseHandlerUtil.handle(tenantController.handleGet));
 
 router.patch(
   '/:id',
-  requestValidator({
+  requestValidatorMiddleware.handle({
     target: 'body',
     schema: updateTenantSchema,
   }),
-  responseHandler(tenantController.handleUpdate),
+  responseHandlerUtil.handle(tenantController.handleUpdate),
 );
 
-router.delete('/:id', responseHandler(tenantController.handleDelete));
+router.delete(
+  '/:id',
+  responseHandlerUtil.handle(tenantController.handleDelete),
+);
 
 export default router;

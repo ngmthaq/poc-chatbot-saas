@@ -2,12 +2,9 @@ import { ApiKeyScope, ApiKeyStatus, TenantStatus } from '@prisma/client';
 import type { ApiKey, ApiKeyUsage } from '@prisma/client';
 import { timingSafeEqual } from 'node:crypto';
 import type { BotBindingResolution } from '../types/api-key';
-import { ApiKeyUtil } from '../utils/api-key.utils';
-import { prisma } from '../utils/prisma.utils';
+import { apiKeyUtil, prismaUtil } from '../utils';
 
 export class ApiKeyService {
-  private readonly apiKeyUtil = new ApiKeyUtil();
-
   /**
    * Verifies a raw API key against the stored records and returns the matching
    * ApiKey when it is valid, or `null` otherwise. This path is read-only — it
@@ -24,8 +21,8 @@ export class ApiKeyService {
       return null;
     }
 
-    const keyHash = this.apiKeyUtil.hashKey(raw);
-    const record = await prisma.apiKey.findUnique({
+    const keyHash = apiKeyUtil.hashKey(raw);
+    const record = await prismaUtil.client.apiKey.findUnique({
       where: { keyHash },
       include: { tenant: true },
     });
@@ -64,7 +61,7 @@ export class ApiKeyService {
    * time. This is a best-effort write — callers treat a failure as non-fatal.
    */
   public async touchLastUsed(id: string): Promise<void> {
-    await prisma.apiKey.update({
+    await prismaUtil.client.apiKey.update({
       where: { id },
       data: { lastUsedAt: new Date() },
     });
@@ -91,7 +88,7 @@ export class ApiKeyService {
     apiKeyId: string,
     windowStart: Date,
   ): Promise<ApiKeyUsage> {
-    return prisma.apiKeyUsage.upsert({
+    return prismaUtil.client.apiKeyUsage.upsert({
       where: { apiKeyId_windowStart: { apiKeyId, windowStart } },
       create: { apiKeyId, windowStart, requestCount: 1 },
       update: { requestCount: { increment: 1 } },
@@ -161,3 +158,5 @@ export class ApiKeyService {
     return timingSafeEqual(computedBuffer, storedBuffer);
   }
 }
+
+export const apiKeyService = new ApiKeyService();

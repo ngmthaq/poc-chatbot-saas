@@ -1,14 +1,13 @@
 import express, { Router } from 'express';
-import { WebhookController } from '../controllers/webhook.controller';
-import { responseHandler } from '../utils/response-handler.utils';
+import { webhookController } from '../controllers';
+import { responseHandlerUtil } from '../utils';
 
 const router: Router = Router();
-const webhookController = new WebhookController();
 
 router.post(
   '/',
   express.text({ type: '*/*' }),
-  responseHandler(webhookController.receive),
+  responseHandlerUtil.handle(webhookController.receive),
 );
 
 export default router;

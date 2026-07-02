@@ -46,3 +46,5 @@ export class LiveKitRoomUtil {
     return this.roomService.updateRoomMetadata(name, metadata);
   }
 }
+
+export const liveKitRoomUtil = new LiveKitRoomUtil();

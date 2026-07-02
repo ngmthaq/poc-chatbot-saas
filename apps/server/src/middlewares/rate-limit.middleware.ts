@@ -4,34 +4,42 @@ import createHttpError from 'http-errors';
 import { errorMessages } from '../configs';
 import { loadEnv } from '../configs';
 import { ApiKeyService } from '../services/api-key.service';
-import { logger } from '../utils/logger.utils';
+import { loggerUtil } from '../utils/logger.utils';
 
-const apiKeyService = new ApiKeyService();
+export class GlobalRateLimitMiddleware {
+  public handle: RequestHandler = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 100,
+    standardHeaders: true,
+    legacyHeaders: false,
+    skip: () => loadEnv().NODE_ENV === 'development',
+    handler: (_req, _res, next) => {
+      next(createHttpError(429, errorMessages.tooManyRequests()));
+    },
+  });
+}
 
-export const rateLimitHandler: RequestHandler = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: 100,
-  standardHeaders: true,
-  legacyHeaders: false,
-  skip: () => loadEnv().NODE_ENV === 'development',
-  handler: (_req, _res, next) => {
-    next(createHttpError(429, errorMessages.tooManyRequests()));
-  },
-});
+export const globalRateLimitMiddleware = new GlobalRateLimitMiddleware();
 
-// Stricter, IP-keyed limiter for authentication endpoints (e.g. admin login)
-// to blunt credential-stuffing / brute-force attempts. Skipped in development
-// like the global limiter.
-export const authRateLimitHandler: RequestHandler = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: 10,
-  standardHeaders: true,
-  legacyHeaders: false,
-  skip: () => loadEnv().NODE_ENV === 'development',
-  handler: (_req, _res, next) => {
-    next(createHttpError(429, errorMessages.tooManyAuthAttempts()));
-  },
-});
+/**
+ * Stricter, IP-keyed limiter for authentication endpoints (e.g. admin login)
+ * to blunt credential-stuffing / brute-force attempts. Skipped in development
+ * like the global limiter.
+ */
+export class AuthRateLimitMiddleware {
+  public handle: RequestHandler = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 10,
+    standardHeaders: true,
+    legacyHeaders: false,
+    skip: () => loadEnv().NODE_ENV === 'development',
+    handler: (_req, _res, next) => {
+      next(createHttpError(429, errorMessages.tooManyAuthAttempts()));
+    },
+  });
+}
+
+export const authRateLimitMiddleware = new AuthRateLimitMiddleware();
 
 /**
  * DB-backed, per-API-key rate limiter. Floors the request time into a fixed
@@ -41,8 +49,10 @@ export const authRateLimitHandler: RequestHandler = rateLimit({
  * IP-keyed limiters above — because it also meters per-key usage. Fails open:
  * if the counter cannot be read/written the request is allowed through.
  */
-export function apiKeyRateLimit(): RequestHandler {
-  return async (req, res, next) => {
+export class ApiKeyRateLimitMiddleware {
+  private readonly apiKeyService = new ApiKeyService();
+
+  public handle: RequestHandler = async (req, res, next) => {
     try {
       const { RATE_LIMIT_WINDOW_MS: windowMs, RATE_LIMIT_MAX: max } = loadEnv();
 
@@ -54,7 +64,7 @@ export function apiKeyRateLimit(): RequestHandler {
       const windowStart = new Date(Math.floor(now / windowMs) * windowMs);
 
       try {
-        const usage = await apiKeyService.incrementUsage(
+        const usage = await this.apiKeyService.incrementUsage(
           req.context.apiKeyId,
           windowStart,
         );
@@ -73,7 +83,7 @@ export function apiKeyRateLimit(): RequestHandler {
 
         return next();
       } catch (err) {
-        logger.warn(
+        loggerUtil.instance.warn(
           { err },
           'Rate-limit counter failed; allowing request (fail-open)',
         );
@@ -84,3 +94,5 @@ export function apiKeyRateLimit(): RequestHandler {
     }
   };
 }
+
+export const apiKeyRateLimitMiddleware = new ApiKeyRateLimitMiddleware();

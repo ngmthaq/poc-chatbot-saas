@@ -28,3 +28,5 @@ export class ApiKeyUtil {
     return createHash(this.hashAlgorithm).update(raw).digest('hex');
   }
 }
+
+export const apiKeyUtil = new ApiKeyUtil();

@@ -26,3 +26,5 @@ export class PasswordUtil {
     return bcrypt.compare(plain, hash);
   }
 }
+
+export const passwordUtil = new PasswordUtil();

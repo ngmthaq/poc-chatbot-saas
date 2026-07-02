@@ -1,17 +1,16 @@
 import type { HealthStatus } from '../types/health';
-import { logger } from '../utils/logger.utils';
-import { prisma } from '../utils/prisma.utils';
+import { loggerUtil, prismaUtil } from '../utils';
 
 export class HealthService {
   public async getStatus(): Promise<HealthStatus> {
     try {
-      await prisma.$queryRaw`SELECT 1`;
+      await prismaUtil.client.$queryRaw`SELECT 1`;
       return {
         status: 'ok',
         db: 'ok',
       };
     } catch (error: unknown) {
-      logger.error({ error }, 'Database health check failed');
+      loggerUtil.instance.error({ error }, 'Database health check failed');
       return {
         status: 'ok',
         db: 'down',
@@ -19,3 +18,5 @@ export class HealthService {
     }
   }
 }
+
+export const healthService = new HealthService();

@@ -76,3 +76,5 @@ export class LiveKitParticipantUtil {
     await this.roomService.mutePublishedTrack(room, identity, trackSid, muted);
   }
 }
+
+export const liveKitParticipantUtil = new LiveKitParticipantUtil();

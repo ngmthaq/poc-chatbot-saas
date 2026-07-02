@@ -3,8 +3,6 @@ import createHttpError from 'http-errors';
 import { errorMessages } from '../configs';
 import { ApiKeyService } from '../services/api-key.service';
 
-const apiKeyService = new ApiKeyService();
-
 /**
  * Enforces that the authenticated key may act on the bot targeted by the
  * request, delegating the decision to `ApiKeyService.resolveBotBinding`.
@@ -20,26 +18,32 @@ const apiKeyService = new ApiKeyService();
  * is recorded on `req.context.effectiveBotId`. Must be mounted after
  * `apiKeyAuth`.
  */
-export function requireBotBinding(
-  getBotId: (req: Request) => string | null | undefined,
-): RequestHandler {
-  return (req, _res, next) => {
-    if (req.context === undefined) {
-      return next(createHttpError(401, errorMessages.unauthorized()));
-    }
+export class RequireBotBindingMiddleware {
+  private readonly apiKeyService = new ApiKeyService();
 
-    const requestedBotId = getBotId(req) ?? null;
-    const { allowed, effectiveBotId } = apiKeyService.resolveBotBinding(
-      req.context.botId,
-      requestedBotId,
-    );
+  public handle = (
+    getBotId: (req: Request) => string | null | undefined,
+  ): RequestHandler => {
+    return (req, _res, next) => {
+      if (req.context === undefined) {
+        return next(createHttpError(401, errorMessages.unauthorized()));
+      }
 
-    if (!allowed) {
-      return next(createHttpError(403, errorMessages.forbidden()));
-    }
+      const requestedBotId = getBotId(req) ?? null;
+      const { allowed, effectiveBotId } = this.apiKeyService.resolveBotBinding(
+        req.context.botId,
+        requestedBotId,
+      );
 
-    req.context.effectiveBotId = effectiveBotId;
+      if (!allowed) {
+        return next(createHttpError(403, errorMessages.forbidden()));
+      }
 
-    return next();
+      req.context.effectiveBotId = effectiveBotId;
+
+      return next();
+    };
   };
 }
+
+export const requireBotBindingMiddleware = new RequireBotBindingMiddleware();

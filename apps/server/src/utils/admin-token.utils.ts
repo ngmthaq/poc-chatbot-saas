@@ -98,3 +98,5 @@ export class AdminTokenUtil {
     return new TextEncoder().encode(secret);
   }
 }
+
+export const adminTokenUtil = new AdminTokenUtil();

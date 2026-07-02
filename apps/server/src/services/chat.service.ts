@@ -2,7 +2,7 @@ import { TextChatService } from '@call-center-agent/deepagent';
 import createHttpError from 'http-errors';
 import { loadEnv } from '../configs';
 import type { ChatResponseBody } from '../types/chat';
-import type { ChatBody } from '../validators/chat.validator';
+import type { ChatBody } from '../validators';
 
 export class ChatService {
   // Hard ceiling for a single chat request. Larger than the 8s tool-fetch
@@ -34,3 +34,5 @@ export class ChatService {
     }
   }
 }
+
+export const chatService = new ChatService();

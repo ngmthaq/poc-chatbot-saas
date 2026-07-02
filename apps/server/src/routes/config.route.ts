@@ -1,10 +1,9 @@
 import { Router } from 'express';
-import { ConfigController } from '../controllers/config.controller';
-import { responseHandler } from '../utils/response-handler.utils';
+import { configController } from '../controllers';
+import { responseHandlerUtil } from '../utils';
 
 const router: Router = Router();
-const configController = new ConfigController();
 
-router.get('/', responseHandler(configController.getConfig));
+router.get('/', responseHandlerUtil.handle(configController.getConfig));
 
 export default router;

@@ -4,8 +4,6 @@ import createHttpError from 'http-errors';
 import { errorMessages } from '../configs';
 import { ApiKeyService } from '../services/api-key.service';
 
-const apiKeyService = new ApiKeyService();
-
 /**
  * Enforces that the authenticated request holds every scope in `required`.
  *
@@ -15,16 +13,22 @@ const apiKeyService = new ApiKeyService();
  * is returned. Both messages are generic so they never reveal which scope is
  * missing. Must be mounted after `apiKeyAuth`.
  */
-export function requireScopes(...required: ApiKeyScope[]): RequestHandler {
-  return (req, _res, next) => {
-    if (req.context === undefined) {
-      return next(createHttpError(401, errorMessages.unauthorized()));
-    }
+export class RequireScopesMiddleware {
+  private readonly apiKeyService = new ApiKeyService();
 
-    if (!apiKeyService.hasRequiredScopes(req.context.scopes, required)) {
-      return next(createHttpError(403, errorMessages.forbidden()));
-    }
+  public handle = (...required: ApiKeyScope[]): RequestHandler => {
+    return (req, _res, next) => {
+      if (req.context === undefined) {
+        return next(createHttpError(401, errorMessages.unauthorized()));
+      }
 
-    return next();
+      if (!this.apiKeyService.hasRequiredScopes(req.context.scopes, required)) {
+        return next(createHttpError(403, errorMessages.forbidden()));
+      }
+
+      return next();
+    };
   };
 }
+
+export const requireScopesMiddleware = new RequireScopesMiddleware();

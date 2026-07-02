@@ -1,11 +1,9 @@
 import { WebhookEvent, WebhookReceiver } from 'livekit-server-sdk';
 import { loadEnv } from '../configs';
-import { LiveKitRoomUtil } from '../utils/livekit-room.utils';
-import { logger } from '../utils/logger.utils';
+import { liveKitRoomUtil, loggerUtil } from '../utils';
 
 export class WebhookService {
   private readonly config = loadEnv();
-  private readonly liveKitRoomUtil = new LiveKitRoomUtil();
   private readonly receiver = new WebhookReceiver(
     this.config.LIVEKIT_API_KEY,
     this.config.LIVEKIT_API_SECRET,
@@ -16,7 +14,7 @@ export class WebhookService {
     authHeader: string | null,
   ): Promise<void> {
     const event = await this.receiver.receive(rawBody, authHeader ?? undefined);
-    logger.info(
+    loggerUtil.instance.info(
       { event: event.event, room: event.room?.name },
       'Received webhook event',
     );
@@ -31,6 +29,8 @@ export class WebhookService {
   private async handleRoomFinished(event: WebhookEvent): Promise<void> {
     const roomName = event.room?.name;
     if (!roomName) return;
-    await this.liveKitRoomUtil.deleteRoom(roomName);
+    await liveKitRoomUtil.deleteRoom(roomName);
   }
 }
+
+export const webhookService = new WebhookService();

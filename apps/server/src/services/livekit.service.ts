@@ -3,12 +3,11 @@ import humps from 'humps';
 import { RoomAgentDispatch, RoomConfiguration } from 'livekit-server-sdk';
 import { randomUUID } from 'node:crypto';
 import { errorMessages, loadEnv } from '../configs';
-import { LiveKitTokenUtil } from '../utils/livekit-token.utils';
-import type { GetLiveKitTokenBody } from '../validators/get-livekit-token.validator';
+import { liveKitTokenUtil } from '../utils';
+import type { GetLiveKitTokenBody } from '../validators';
 
 export class LiveKitService {
   private readonly config = loadEnv();
-  private readonly liveKitTokenUtil = new LiveKitTokenUtil();
 
   public async getToken(body: GetLiveKitTokenBody) {
     if (!this.config.VOICE_MODE_ENABLED) {
@@ -24,7 +23,7 @@ export class LiveKitService {
       body.participantMetadata ?? `participant-metadata-${randomUUID()}`;
     const participantAttributes = body.participantAttributes ?? {};
 
-    const at = this.liveKitTokenUtil.createAccessToken({
+    const at = liveKitTokenUtil.createAccessToken({
       identity: participantIdentity,
       name: participantName,
       metadata: participantMetadata,
@@ -63,3 +62,5 @@ export class LiveKitService {
     });
   }
 }
+
+export const liveKitService = new LiveKitService();

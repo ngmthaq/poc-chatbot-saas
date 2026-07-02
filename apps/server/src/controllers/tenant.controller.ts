@@ -2,25 +2,21 @@ import type { RequestHandler } from 'express';
 import createHttpError from 'http-errors';
 import { errorMessages } from '../configs';
 import { TenantSlugConflictError } from '../exceptions';
-import { TenantService } from '../services/tenant.service';
+import { tenantService } from '../services';
 import type {
   CreateTenantBody,
   ListTenantsQuery,
   UpdateTenantBody,
-} from '../validators/tenant.validator';
+} from '../validators';
 
 export class TenantController {
-  private readonly tenantService = new TenantService();
-
   /**
    * Handles `POST /admin/tenants`. Creates a tenant and returns `{ tenant }`
    * wrapped with a 201. A slug collision surfaces as a 409.
    */
   public readonly handleCreate: RequestHandler = async (req, res) => {
     try {
-      const tenant = await this.tenantService.create(
-        req.body as CreateTenantBody,
-      );
+      const tenant = await tenantService.create(req.body as CreateTenantBody);
       res.status(201);
       return { tenant };
     } catch (err) {
@@ -36,7 +32,7 @@ export class TenantController {
    * for the validated query, wrapped with a 200.
    */
   public readonly handleList: RequestHandler = async (req) => {
-    return this.tenantService.list(req.query as unknown as ListTenantsQuery);
+    return tenantService.list(req.query as unknown as ListTenantsQuery);
   };
 
   /**
@@ -44,7 +40,7 @@ export class TenantController {
    * wrapped with a 200, or a 404 when no tenant matches.
    */
   public readonly handleGet: RequestHandler = async (req) => {
-    const tenant = await this.tenantService.getByIdWithCounts(
+    const tenant = await tenantService.getByIdWithCounts(
       req.params.id as string,
     );
 
@@ -62,7 +58,7 @@ export class TenantController {
    */
   public readonly handleUpdate: RequestHandler = async (req) => {
     try {
-      const tenant = await this.tenantService.update(
+      const tenant = await tenantService.update(
         req.params.id as string,
         req.body as UpdateTenantBody,
       );
@@ -85,7 +81,7 @@ export class TenantController {
    * with a true 204 (no envelope); a missing tenant yields a 404.
    */
   public readonly handleDelete: RequestHandler = async (req, res) => {
-    const tenant = await this.tenantService.archive(req.params.id as string);
+    const tenant = await tenantService.archive(req.params.id as string);
 
     if (tenant === null) {
       throw createHttpError(404, errorMessages.tenantNotFound());
@@ -94,3 +90,5 @@ export class TenantController {
     res.status(204).end();
   };
 }
+
+export const tenantController = new TenantController();

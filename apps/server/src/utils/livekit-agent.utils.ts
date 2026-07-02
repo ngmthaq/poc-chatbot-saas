@@ -16,3 +16,5 @@ export class LiveKitAgentUtil {
     );
   }
 }
+
+export const liveKitAgentUtil = new LiveKitAgentUtil();

@@ -16,6 +16,8 @@ export const createTenantSchema = yup.object({
   slug: slugRule.clone().required('slug is required'),
 });
 
+export type CreateTenantBody = InferType<typeof createTenantSchema>;
+
 export const updateTenantSchema = yup
   .object({
     name: yup.string().trim(),
@@ -33,12 +35,12 @@ export const updateTenantSchema = yup
       value.status !== undefined,
   );
 
+export type UpdateTenantBody = InferType<typeof updateTenantSchema>;
+
 export const listTenantsQuerySchema = yup.object({
   page: yup.number().integer().min(1).default(1),
   limit: yup.number().integer().min(1).max(100).default(20),
   search: yup.string().trim(),
 });
 
-export type CreateTenantBody = InferType<typeof createTenantSchema>;
-export type UpdateTenantBody = InferType<typeof updateTenantSchema>;
 export type ListTenantsQuery = InferType<typeof listTenantsQuerySchema>;

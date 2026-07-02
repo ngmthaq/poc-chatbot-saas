@@ -2,16 +2,12 @@ import { Prisma, TenantStatus } from '@prisma/client';
 import type { Tenant } from '@prisma/client';
 import { TenantSlugConflictError } from '../exceptions';
 import type { PaginatedTenants, TenantWithCounts } from '../types/tenant';
-import {
-  isRecordNotFound,
-  isUniqueViolation,
-  prisma,
-} from '../utils/prisma.utils';
+import { prismaUtil } from '../utils';
 import type {
   CreateTenantBody,
   ListTenantsQuery,
   UpdateTenantBody,
-} from '../validators/tenant.validator';
+} from '../validators';
 
 export class TenantService {
   /**
@@ -22,11 +18,11 @@ export class TenantService {
    */
   public async create(body: CreateTenantBody): Promise<Tenant> {
     try {
-      return await prisma.tenant.create({
+      return await prismaUtil.client.tenant.create({
         data: { name: body.name, slug: body.slug },
       });
     } catch (err) {
-      if (isUniqueViolation(err)) {
+      if (prismaUtil.isUniqueViolation(err)) {
         throw new TenantSlugConflictError();
       }
       throw err;
@@ -52,14 +48,14 @@ export class TenantService {
           }
         : {};
 
-    const [items, total] = await prisma.$transaction([
-      prisma.tenant.findMany({
+    const [items, total] = await prismaUtil.client.$transaction([
+      prismaUtil.client.tenant.findMany({
         where,
         skip: (page - 1) * limit,
         take: limit,
         orderBy: { createdAt: 'desc' },
       }),
-      prisma.tenant.count({ where }),
+      prismaUtil.client.tenant.count({ where }),
     ]);
 
     return { items, total };
@@ -71,7 +67,7 @@ export class TenantService {
    * matches.
    */
   public async getByIdWithCounts(id: string): Promise<TenantWithCounts | null> {
-    const tenant = await prisma.tenant.findUnique({
+    const tenant = await prismaUtil.client.tenant.findUnique({
       where: { id },
       include: {
         _count: {
@@ -113,7 +109,7 @@ export class TenantService {
     patch: UpdateTenantBody,
   ): Promise<Tenant | null> {
     try {
-      return await prisma.tenant.update({
+      return await prismaUtil.client.tenant.update({
         where: { id },
         data: {
           ...(patch.name !== undefined ? { name: patch.name } : {}),
@@ -122,10 +118,10 @@ export class TenantService {
         },
       });
     } catch (err) {
-      if (isRecordNotFound(err)) {
+      if (prismaUtil.isRecordNotFound(err)) {
         return null;
       }
-      if (isUniqueViolation(err)) {
+      if (prismaUtil.isUniqueViolation(err)) {
         throw new TenantSlugConflictError();
       }
       throw err;
@@ -139,15 +135,17 @@ export class TenantService {
    */
   public async archive(id: string): Promise<Tenant | null> {
     try {
-      return await prisma.tenant.update({
+      return await prismaUtil.client.tenant.update({
         where: { id },
         data: { status: TenantStatus.ARCHIVED },
       });
     } catch (err) {
-      if (isRecordNotFound(err)) {
+      if (prismaUtil.isRecordNotFound(err)) {
         return null;
       }
       throw err;
     }
   }
 }
+
+export const tenantService = new TenantService();

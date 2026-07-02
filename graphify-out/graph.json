@@ -1066,7 +1066,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agentvisualizerpanel_configs",
-      "community": 5,
+      "community": 3,
       "norm_label": "configs.ts"
     },
     {
@@ -1076,7 +1076,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "agentvisualizerpanel_configs_overlay_states",
-      "community": 5,
+      "community": 3,
       "norm_label": "overlay_states"
     },
     {
@@ -1086,7 +1086,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agentvisualizerpanel_index",
-      "community": 5,
+      "community": 3,
       "norm_label": "index.tsx"
     },
     {
@@ -1096,7 +1096,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "agentvisualizerpanel_index_agentvisualizerpanel",
-      "community": 5,
+      "community": 3,
       "norm_label": "agentvisualizerpanel()"
     },
     {
@@ -1106,7 +1106,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agentvisualizerpanel_styled",
-      "community": 5,
+      "community": 3,
       "norm_label": "styled.ts"
     },
     {
@@ -1116,7 +1116,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "agentvisualizerpanel_styled_visualizerroot",
-      "community": 5,
+      "community": 3,
       "norm_label": "visualizerroot"
     },
     {
@@ -1126,7 +1126,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "agentvisualizerpanel_styled_visualizeroverlay",
-      "community": 5,
+      "community": 3,
       "norm_label": "visualizeroverlay"
     },
     {
@@ -1136,7 +1136,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "agentvisualizerpanel_styled_styledprogress",
-      "community": 5,
+      "community": 3,
       "norm_label": "styledprogress"
     },
     {
@@ -1146,7 +1146,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "agentvisualizerpanel_styled_overlaytext",
-      "community": 5,
+      "community": 3,
       "norm_label": "overlaytext"
     },
     {
@@ -1156,7 +1156,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agentvisualizerpanel_types",
-      "community": 5,
+      "community": 3,
       "norm_label": "types.ts"
     },
     {
@@ -1166,7 +1166,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "agentvisualizerpanel_types_agentvisualizerpanelprops",
-      "community": 5,
+      "community": 3,
       "norm_label": "agentvisualizerpanelprops"
     },
     {
@@ -1176,7 +1176,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "agentvisualizerpanel_types_visualizerrootprops",
-      "community": 5,
+      "community": 3,
       "norm_label": "visualizerrootprops"
     },
     {
@@ -1246,7 +1246,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "chatpanel_index",
-      "community": 25,
+      "community": 5,
       "norm_label": "index.tsx"
     },
     {
@@ -1256,7 +1256,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "chatpanel_index_chatpanel",
-      "community": 25,
+      "community": 5,
       "norm_label": "chatpanel()"
     },
     {
@@ -1266,7 +1266,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "chatpanel_styled",
-      "community": 25,
+      "community": 5,
       "norm_label": "styled.ts"
     },
     {
@@ -1276,7 +1276,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "chatpanel_styled_panelroot",
-      "community": 25,
+      "community": 5,
       "norm_label": "panelroot"
     },
     {
@@ -1286,7 +1286,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "chatpanel_styled_inputrow",
-      "community": 25,
+      "community": 5,
       "norm_label": "inputrow"
     },
     {
@@ -1296,7 +1296,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "chatpanel_styled_messagefield",
-      "community": 25,
+      "community": 5,
       "norm_label": "messagefield"
     },
     {
@@ -1306,7 +1306,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "chatpanel_styled_sendbutton",
-      "community": 25,
+      "community": 5,
       "norm_label": "sendbutton"
     },
     {
@@ -1316,7 +1316,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "chatpanel_styled_errortext",
-      "community": 25,
+      "community": 5,
       "norm_label": "errortext"
     },
     {
@@ -1326,7 +1326,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "chatpanel_types",
-      "community": 25,
+      "community": 5,
       "norm_label": "types.ts"
     },
     {
@@ -1336,7 +1336,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "chatpanel_types_chatform",
-      "community": 25,
+      "community": 5,
       "norm_label": "chatform"
     },
     {
@@ -1346,7 +1346,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "chatpanel_types_chatpanelprops",
-      "community": 25,
+      "community": 5,
       "norm_label": "chatpanelprops"
     },
     {
@@ -1566,7 +1566,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "transcriptionfeed_index",
-      "community": 29,
+      "community": 5,
       "norm_label": "index.tsx"
     },
     {
@@ -1576,7 +1576,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "transcriptionfeed_index_transcriptionfeed",
-      "community": 29,
+      "community": 5,
       "norm_label": "transcriptionfeed()"
     },
     {
@@ -1586,7 +1586,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "transcriptionfeed_styled",
-      "community": 29,
+      "community": 5,
       "norm_label": "styled.ts"
     },
     {
@@ -1596,7 +1596,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "transcriptionfeed_styled_emptystate",
-      "community": 29,
+      "community": 5,
       "norm_label": "emptystate"
     },
     {
@@ -1606,7 +1606,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "transcriptionfeed_styled_placeholdericon",
-      "community": 29,
+      "community": 5,
       "norm_label": "placeholdericon"
     },
     {
@@ -1616,7 +1616,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "transcriptionfeed_styled_placeholdertext",
-      "community": 29,
+      "community": 5,
       "norm_label": "placeholdertext"
     },
     {
@@ -1626,7 +1626,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "transcriptionfeed_styled_feedcontainer",
-      "community": 29,
+      "community": 5,
       "norm_label": "feedcontainer"
     },
     {
@@ -1636,7 +1636,7 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "transcriptionfeed_styled_transcriptionentry",
-      "community": 29,
+      "community": 5,
       "norm_label": "transcriptionentry"
     },
     {
@@ -1646,7 +1646,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "transcriptionfeed_types",
-      "community": 29,
+      "community": 5,
       "norm_label": "types.ts"
     },
     {
@@ -1656,7 +1656,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "transcriptionfeed_types_transcriptionfeedprops",
-      "community": 29,
+      "community": 5,
       "norm_label": "transcriptionfeedprops"
     },
     {
@@ -1666,7 +1666,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "transcriptionfeed_types_transcriptionentryprops",
-      "community": 29,
+      "community": 5,
       "norm_label": "transcriptionentryprops"
     },
     {
@@ -5016,7 +5016,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app",
-      "community": 79,
+      "community": 78,
       "norm_label": "app.ts"
     },
     {
@@ -5026,7 +5026,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_app_createapp",
-      "community": 81,
+      "community": 78,
       "norm_label": "createapp()"
     },
     {
@@ -5076,7 +5076,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "configs_error_messages",
-      "community": 79,
+      "community": 78,
       "norm_label": "error-messages.ts"
     },
     {
@@ -5086,7 +5086,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "configs_error_messages_errormessages",
-      "community": 79,
+      "community": 78,
       "norm_label": "errormessages"
     },
     {
@@ -5096,7 +5096,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "apps_server_src_configs_index_ts_configs_index",
-      "community": 79,
+      "community": 78,
       "norm_label": "index.ts"
     },
     {
@@ -5156,7 +5156,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "controllers_chat_controller",
-      "community": 85,
+      "community": 29,
       "norm_label": "chat.controller.ts"
     },
     {
@@ -5166,7 +5166,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "controllers_chat_controller_chatcontroller",
-      "community": 85,
+      "community": 29,
       "norm_label": "chatcontroller"
     },
     {
@@ -5176,7 +5176,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "controllers_chat_controller_chatcontroller_handlechat",
-      "community": 85,
+      "community": 29,
       "norm_label": ".handlechat()"
     },
     {
@@ -5186,7 +5186,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "controllers_config_controller",
-      "community": 86,
+      "community": 84,
       "norm_label": "config.controller.ts"
     },
     {
@@ -5196,7 +5196,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "controllers_config_controller_configcontroller",
-      "community": 86,
+      "community": 84,
       "norm_label": "configcontroller"
     },
     {
@@ -5206,7 +5206,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "controllers_config_controller_configcontroller_getconfig",
-      "community": 86,
+      "community": 84,
       "norm_label": ".getconfig()"
     },
     {
@@ -5216,7 +5216,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "controllers_health_controller",
-      "community": 3,
+      "community": 79,
       "norm_label": "health.controller.ts"
     },
     {
@@ -5226,7 +5226,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "controllers_health_controller_healthcontroller",
-      "community": 3,
+      "community": 79,
       "norm_label": "healthcontroller"
     },
     {
@@ -5236,7 +5236,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "controllers_health_controller_healthcontroller_getstatus",
-      "community": 3,
+      "community": 79,
       "norm_label": ".getstatus()"
     },
     {
@@ -5246,7 +5246,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "controllers_livekit_controller",
-      "community": 87,
+      "community": 85,
       "norm_label": "livekit.controller.ts"
     },
     {
@@ -5256,7 +5256,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "controllers_livekit_controller_livekitcontroller",
-      "community": 87,
+      "community": 85,
       "norm_label": "livekitcontroller"
     },
     {
@@ -5266,8 +5266,78 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "controllers_livekit_controller_livekitcontroller_gettoken",
-      "community": 87,
+      "community": 85,
       "norm_label": ".gettoken()"
+    },
+    {
+      "label": "tenant.controller.ts",
+      "file_type": "code",
+      "source_file": "apps/server/src/controllers/tenant.controller.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "controllers_tenant_controller",
+      "community": 81,
+      "norm_label": "tenant.controller.ts"
+    },
+    {
+      "label": "TenantController",
+      "file_type": "code",
+      "source_file": "apps/server/src/controllers/tenant.controller.ts",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "controllers_tenant_controller_tenantcontroller",
+      "community": 86,
+      "norm_label": "tenantcontroller"
+    },
+    {
+      "label": ".handleCreate()",
+      "file_type": "code",
+      "source_file": "apps/server/src/controllers/tenant.controller.ts",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "controllers_tenant_controller_tenantcontroller_handlecreate",
+      "community": 86,
+      "norm_label": ".handlecreate()"
+    },
+    {
+      "label": ".handleList()",
+      "file_type": "code",
+      "source_file": "apps/server/src/controllers/tenant.controller.ts",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "controllers_tenant_controller_tenantcontroller_handlelist",
+      "community": 86,
+      "norm_label": ".handlelist()"
+    },
+    {
+      "label": ".handleGet()",
+      "file_type": "code",
+      "source_file": "apps/server/src/controllers/tenant.controller.ts",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "controllers_tenant_controller_tenantcontroller_handleget",
+      "community": 86,
+      "norm_label": ".handleget()"
+    },
+    {
+      "label": ".handleUpdate()",
+      "file_type": "code",
+      "source_file": "apps/server/src/controllers/tenant.controller.ts",
+      "source_location": "L63",
+      "_origin": "ast",
+      "id": "controllers_tenant_controller_tenantcontroller_handleupdate",
+      "community": 86,
+      "norm_label": ".handleupdate()"
+    },
+    {
+      "label": ".handleDelete()",
+      "file_type": "code",
+      "source_file": "apps/server/src/controllers/tenant.controller.ts",
+      "source_location": "L87",
+      "_origin": "ast",
+      "id": "controllers_tenant_controller_tenantcontroller_handledelete",
+      "community": 86,
+      "norm_label": ".handledelete()"
     },
     {
       "label": "webhook.controller.ts",
@@ -5300,44 +5370,84 @@
       "norm_label": ".receive()"
     },
     {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "apps/server/src/exceptions/index.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "exceptions_index",
+      "community": 81,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "tenant.exception.ts",
+      "file_type": "code",
+      "source_file": "apps/server/src/exceptions/tenant.exception.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "exceptions_tenant_exception",
+      "community": 81,
+      "norm_label": "tenant.exception.ts"
+    },
+    {
+      "label": "TenantSlugConflictError",
+      "file_type": "code",
+      "source_file": "apps/server/src/exceptions/tenant.exception.ts",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "exceptions_tenant_exception_tenantslugconflicterror",
+      "community": 81,
+      "norm_label": "tenantslugconflicterror"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "apps/server/src/exceptions/tenant.exception.ts",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "exceptions_tenant_exception_tenantslugconflicterror_constructor",
+      "community": 81,
+      "norm_label": ".constructor()"
+    },
+    {
       "label": "admin-auth.middleware.ts",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
       "source_location": "L1",
       "_origin": "ast",
       "id": "middlewares_admin_auth_middleware",
-      "community": 1,
+      "community": 78,
       "norm_label": "admin-auth.middleware.ts"
     },
     {
-      "label": "adminAuthService",
+      "label": "AdminAuthMiddleware",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
-      "source_location": "L6",
+      "source_location": "L16",
       "_origin": "ast",
-      "id": "middlewares_admin_auth_middleware_adminauthservice",
-      "community": 1,
-      "norm_label": "adminauthservice"
+      "id": "middlewares_admin_auth_middleware_adminauthmiddleware",
+      "community": 78,
+      "norm_label": "adminauthmiddleware"
     },
     {
-      "label": "parseBearerToken()",
+      "label": ".handle()",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
-      "source_location": "L12",
+      "source_location": "L19",
       "_origin": "ast",
-      "id": "middlewares_admin_auth_middleware_parsebearertoken",
-      "community": 1,
-      "norm_label": "parsebearertoken()"
+      "id": "middlewares_admin_auth_middleware_adminauthmiddleware_handle",
+      "community": 78,
+      "norm_label": ".handle()"
     },
     {
-      "label": "adminAuth()",
+      "label": ".parseBearerToken()",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
-      "source_location": "L35",
+      "source_location": "L42",
       "_origin": "ast",
-      "id": "middlewares_admin_auth_middleware_adminauth",
-      "community": 1,
-      "norm_label": "adminauth()"
+      "id": "middlewares_admin_auth_middleware_adminauthmiddleware_parsebearertoken",
+      "community": 78,
+      "norm_label": ".parsebearertoken()"
     },
     {
       "label": "api-key.middleware.ts",
@@ -5346,38 +5456,38 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "middlewares_api_key_middleware",
-      "community": 3,
+      "community": 78,
       "norm_label": "api-key.middleware.ts"
     },
     {
-      "label": "apiKeyService",
+      "label": "ApiKeyAuthMiddleware",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/api-key.middleware.ts",
-      "source_location": "L7",
+      "source_location": "L17",
       "_origin": "ast",
-      "id": "middlewares_api_key_middleware_apikeyservice",
-      "community": 3,
-      "norm_label": "apikeyservice"
+      "id": "middlewares_api_key_middleware_apikeyauthmiddleware",
+      "community": 78,
+      "norm_label": "apikeyauthmiddleware"
     },
     {
-      "label": "parseBearerToken()",
+      "label": ".handle()",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/api-key.middleware.ts",
-      "source_location": "L13",
+      "source_location": "L20",
       "_origin": "ast",
-      "id": "middlewares_api_key_middleware_parsebearertoken",
-      "community": 3,
-      "norm_label": "parsebearertoken()"
+      "id": "middlewares_api_key_middleware_apikeyauthmiddleware_handle",
+      "community": 78,
+      "norm_label": ".handle()"
     },
     {
-      "label": "apiKeyAuth()",
+      "label": ".parseBearerToken()",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/api-key.middleware.ts",
-      "source_location": "L36",
+      "source_location": "L59",
       "_origin": "ast",
-      "id": "middlewares_api_key_middleware_apikeyauth",
-      "community": 84,
-      "norm_label": "apikeyauth()"
+      "id": "middlewares_api_key_middleware_apikeyauthmiddleware_parsebearertoken",
+      "community": 78,
+      "norm_label": ".parsebearertoken()"
     },
     {
       "label": "error-handler.middleware.ts",
@@ -5386,28 +5496,38 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "middlewares_error_handler_middleware",
-      "community": 79,
+      "community": 78,
       "norm_label": "error-handler.middleware.ts"
     },
     {
-      "label": "errorHandler()",
+      "label": "ErrorHandlerMiddleware",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/error-handler.middleware.ts",
-      "source_location": "L8",
+      "source_location": "L7",
       "_origin": "ast",
-      "id": "middlewares_error_handler_middleware_errorhandler",
-      "community": 79,
-      "norm_label": "errorhandler()"
+      "id": "middlewares_error_handler_middleware_errorhandlermiddleware",
+      "community": 78,
+      "norm_label": "errorhandlermiddleware"
     },
     {
-      "label": "normalizeMessage()",
+      "label": ".handle()",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/error-handler.middleware.ts",
-      "source_location": "L25",
+      "source_location": "L9",
       "_origin": "ast",
-      "id": "middlewares_error_handler_middleware_normalizemessage",
-      "community": 79,
-      "norm_label": "normalizemessage()"
+      "id": "middlewares_error_handler_middleware_errorhandlermiddleware_handle",
+      "community": 78,
+      "norm_label": ".handle()"
+    },
+    {
+      "label": ".normalizeMessage()",
+      "file_type": "code",
+      "source_file": "apps/server/src/middlewares/error-handler.middleware.ts",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "middlewares_error_handler_middleware_errorhandlermiddleware_normalizemessage",
+      "community": 78,
+      "norm_label": ".normalizemessage()"
     },
     {
       "label": "file-validator.middleware.ts",
@@ -5416,38 +5536,58 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "middlewares_file_validator_middleware",
-      "community": 84,
+      "community": 78,
       "norm_label": "file-validator.middleware.ts"
     },
     {
-      "label": "normaliseFiles()",
+      "label": "FileValidatorMiddleware",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/file-validator.middleware.ts",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "middlewares_file_validator_middleware_normalisefiles",
-      "community": 84,
-      "norm_label": "normalisefiles()"
+      "id": "middlewares_file_validator_middleware_filevalidatormiddleware",
+      "community": 78,
+      "norm_label": "filevalidatormiddleware"
     },
     {
-      "label": "validateFiles()",
+      "label": ".constructor()",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/file-validator.middleware.ts",
-      "source_location": "L15",
+      "source_location": "L11",
       "_origin": "ast",
-      "id": "middlewares_file_validator_middleware_validatefiles",
-      "community": 84,
-      "norm_label": "validatefiles()"
+      "id": "middlewares_file_validator_middleware_filevalidatormiddleware_constructor",
+      "community": 78,
+      "norm_label": ".constructor()"
     },
     {
-      "label": "fileValidator()",
+      "label": ".handle()",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/file-validator.middleware.ts",
-      "source_location": "L67",
+      "source_location": "L17",
       "_origin": "ast",
-      "id": "middlewares_file_validator_middleware_filevalidator",
-      "community": 84,
-      "norm_label": "filevalidator()"
+      "id": "middlewares_file_validator_middleware_filevalidatormiddleware_handle",
+      "community": 78,
+      "norm_label": ".handle()"
+    },
+    {
+      "label": ".normaliseFiles()",
+      "file_type": "code",
+      "source_file": "apps/server/src/middlewares/file-validator.middleware.ts",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "middlewares_file_validator_middleware_filevalidatormiddleware_normalisefiles",
+      "community": 78,
+      "norm_label": ".normalisefiles()"
+    },
+    {
+      "label": ".validateFiles()",
+      "file_type": "code",
+      "source_file": "apps/server/src/middlewares/file-validator.middleware.ts",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "middlewares_file_validator_middleware_filevalidatormiddleware_validatefiles",
+      "community": 78,
+      "norm_label": ".validatefiles()"
     },
     {
       "label": "index.ts",
@@ -5456,7 +5596,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "middlewares_index",
-      "community": 84,
+      "community": 78,
       "norm_label": "index.ts"
     },
     {
@@ -5466,18 +5606,28 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "middlewares_not_found_middleware",
-      "community": 79,
+      "community": 78,
       "norm_label": "not-found.middleware.ts"
     },
     {
-      "label": "notFoundHandler()",
+      "label": "NotFoundMiddleware",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/not-found.middleware.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "middlewares_not_found_middleware_notfoundhandler",
-      "community": 79,
-      "norm_label": "notfoundhandler()"
+      "id": "middlewares_not_found_middleware_notfoundmiddleware",
+      "community": 78,
+      "norm_label": "notfoundmiddleware"
+    },
+    {
+      "label": ".handle()",
+      "file_type": "code",
+      "source_file": "apps/server/src/middlewares/not-found.middleware.ts",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "middlewares_not_found_middleware_notfoundmiddleware_handle",
+      "community": 78,
+      "norm_label": ".handle()"
     },
     {
       "label": "rate-limit.middleware.ts",
@@ -5486,48 +5636,48 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "middlewares_rate_limit_middleware",
-      "community": 3,
+      "community": 78,
       "norm_label": "rate-limit.middleware.ts"
     },
     {
-      "label": "apiKeyService",
+      "label": "GlobalRateLimitMiddleware",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "middlewares_rate_limit_middleware_apikeyservice",
-      "community": 3,
-      "norm_label": "apikeyservice"
+      "id": "middlewares_rate_limit_middleware_globalratelimitmiddleware",
+      "community": 78,
+      "norm_label": "globalratelimitmiddleware"
     },
     {
-      "label": "rateLimitHandler",
+      "label": "AuthRateLimitMiddleware",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
-      "source_location": "L11",
+      "source_location": "L27",
       "_origin": "ast",
-      "id": "middlewares_rate_limit_middleware_ratelimithandler",
-      "community": 79,
-      "norm_label": "ratelimithandler"
+      "id": "middlewares_rate_limit_middleware_authratelimitmiddleware",
+      "community": 78,
+      "norm_label": "authratelimitmiddleware"
     },
     {
-      "label": "authRateLimitHandler",
+      "label": "ApiKeyRateLimitMiddleware",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
-      "source_location": "L25",
+      "source_location": "L48",
       "_origin": "ast",
-      "id": "middlewares_rate_limit_middleware_authratelimithandler",
-      "community": 80,
-      "norm_label": "authratelimithandler"
+      "id": "middlewares_rate_limit_middleware_apikeyratelimitmiddleware",
+      "community": 78,
+      "norm_label": "apikeyratelimitmiddleware"
     },
     {
-      "label": "apiKeyRateLimit()",
+      "label": ".handle()",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
-      "source_location": "L44",
+      "source_location": "L51",
       "_origin": "ast",
-      "id": "middlewares_rate_limit_middleware_apikeyratelimit",
-      "community": 84,
-      "norm_label": "apikeyratelimit()"
+      "id": "middlewares_rate_limit_middleware_apikeyratelimitmiddleware_handle",
+      "community": 78,
+      "norm_label": ".handle()"
     },
     {
       "label": "request-validator.middleware.ts",
@@ -5536,18 +5686,38 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "middlewares_request_validator_middleware",
-      "community": 84,
+      "community": 80,
       "norm_label": "request-validator.middleware.ts"
     },
     {
-      "label": "requestValidator()",
+      "label": "RequestValidatorMiddleware",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/request-validator.middleware.ts",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "middlewares_request_validator_middleware_requestvalidator",
-      "community": 84,
-      "norm_label": "requestvalidator()"
+      "id": "middlewares_request_validator_middleware_requestvalidatormiddleware",
+      "community": 80,
+      "norm_label": "requestvalidatormiddleware"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "apps/server/src/middlewares/request-validator.middleware.ts",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "middlewares_request_validator_middleware_requestvalidatormiddleware_constructor",
+      "community": 80,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".handle()",
+      "file_type": "code",
+      "source_file": "apps/server/src/middlewares/request-validator.middleware.ts",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "middlewares_request_validator_middleware_requestvalidatormiddleware_handle",
+      "community": 80,
+      "norm_label": ".handle()"
     },
     {
       "label": "require-bot-binding.middleware.ts",
@@ -5556,28 +5726,38 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "middlewares_require_bot_binding_middleware",
-      "community": 84,
+      "community": 78,
       "norm_label": "require-bot-binding.middleware.ts"
     },
     {
-      "label": "apiKeyService",
+      "label": "RequireBotBindingMiddleware",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/require-bot-binding.middleware.ts",
-      "source_location": "L6",
+      "source_location": "L21",
       "_origin": "ast",
-      "id": "middlewares_require_bot_binding_middleware_apikeyservice",
-      "community": 84,
-      "norm_label": "apikeyservice"
+      "id": "middlewares_require_bot_binding_middleware_requirebotbindingmiddleware",
+      "community": 78,
+      "norm_label": "requirebotbindingmiddleware"
     },
     {
-      "label": "requireBotBinding()",
+      "label": ".constructor()",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/require-bot-binding.middleware.ts",
-      "source_location": "L23",
+      "source_location": "L24",
       "_origin": "ast",
-      "id": "middlewares_require_bot_binding_middleware_requirebotbinding",
-      "community": 84,
-      "norm_label": "requirebotbinding()"
+      "id": "middlewares_require_bot_binding_middleware_requirebotbindingmiddleware_constructor",
+      "community": 78,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".handle()",
+      "file_type": "code",
+      "source_file": "apps/server/src/middlewares/require-bot-binding.middleware.ts",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "middlewares_require_bot_binding_middleware_requirebotbindingmiddleware_handle",
+      "community": 78,
+      "norm_label": ".handle()"
     },
     {
       "label": "require-scopes.middleware.ts",
@@ -5590,24 +5770,34 @@
       "norm_label": "require-scopes.middleware.ts"
     },
     {
-      "label": "apiKeyService",
+      "label": "RequireScopesMiddleware",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/require-scopes.middleware.ts",
-      "source_location": "L7",
+      "source_location": "L16",
       "_origin": "ast",
-      "id": "middlewares_require_scopes_middleware_apikeyservice",
+      "id": "middlewares_require_scopes_middleware_requirescopesmiddleware",
       "community": 78,
-      "norm_label": "apikeyservice"
+      "norm_label": "requirescopesmiddleware"
     },
     {
-      "label": "requireScopes()",
+      "label": ".constructor()",
       "file_type": "code",
       "source_file": "apps/server/src/middlewares/require-scopes.middleware.ts",
-      "source_location": "L18",
+      "source_location": "L20",
       "_origin": "ast",
-      "id": "middlewares_require_scopes_middleware_requirescopes",
-      "community": 84,
-      "norm_label": "requirescopes()"
+      "id": "middlewares_require_scopes_middleware_requirescopesmiddleware_constructor",
+      "community": 78,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".handle()",
+      "file_type": "code",
+      "source_file": "apps/server/src/middlewares/require-scopes.middleware.ts",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "middlewares_require_scopes_middleware_requirescopesmiddleware_handle",
+      "community": 78,
+      "norm_label": ".handle()"
     },
     {
       "label": "admin-auth.route.ts",
@@ -5616,7 +5806,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "routes_admin_auth_route",
-      "community": 80,
+      "community": 1,
       "norm_label": "admin-auth.route.ts"
     },
     {
@@ -5636,8 +5826,18 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "routes_admin_auth_route_adminauthcontroller",
-      "community": 80,
+      "community": 1,
       "norm_label": "adminauthcontroller"
+    },
+    {
+      "label": "authRateLimit",
+      "file_type": "code",
+      "source_file": "apps/server/src/routes/admin-auth.route.ts",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "routes_admin_auth_route_authratelimit",
+      "community": 1,
+      "norm_label": "authratelimit"
     },
     {
       "label": "chat.route.ts",
@@ -5646,7 +5846,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "routes_chat_route",
-      "community": 84,
+      "community": 29,
       "norm_label": "chat.route.ts"
     },
     {
@@ -5656,7 +5856,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "routes_chat_route_router",
-      "community": 80,
+      "community": 29,
       "norm_label": "router"
     },
     {
@@ -5666,7 +5866,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "routes_chat_route_chatcontroller",
-      "community": 84,
+      "community": 29,
       "norm_label": "chatcontroller"
     },
     {
@@ -5706,7 +5906,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "routes_health_route",
-      "community": 80,
+      "community": 79,
       "norm_label": "health.route.ts"
     },
     {
@@ -5716,7 +5916,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "routes_health_route_router",
-      "community": 80,
+      "community": 79,
       "norm_label": "router"
     },
     {
@@ -5726,7 +5926,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "routes_health_route_healthcontroller",
-      "community": 80,
+      "community": 79,
       "norm_label": "healthcontroller"
     },
     {
@@ -5743,10 +5943,10 @@
       "label": "router",
       "file_type": "code",
       "source_file": "apps/server/src/routes/index.ts",
-      "source_location": "L8",
+      "source_location": "L9",
       "_origin": "ast",
       "id": "routes_index_router",
-      "community": 80,
+      "community": 78,
       "norm_label": "router"
     },
     {
@@ -5780,13 +5980,43 @@
       "norm_label": "livekitcontroller"
     },
     {
+      "label": "tenant.route.ts",
+      "file_type": "code",
+      "source_file": "apps/server/src/routes/tenant.route.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "routes_tenant_route",
+      "community": 80,
+      "norm_label": "tenant.route.ts"
+    },
+    {
+      "label": "router",
+      "file_type": "code",
+      "source_file": "apps/server/src/routes/tenant.route.ts",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "routes_tenant_route_router",
+      "community": 80,
+      "norm_label": "router"
+    },
+    {
+      "label": "tenantController",
+      "file_type": "code",
+      "source_file": "apps/server/src/routes/tenant.route.ts",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "routes_tenant_route_tenantcontroller",
+      "community": 80,
+      "norm_label": "tenantcontroller"
+    },
+    {
       "label": "webhook.route.ts",
       "file_type": "code",
       "source_file": "apps/server/src/routes/webhook.route.ts",
       "source_location": "L1",
       "_origin": "ast",
       "id": "routes_webhook_route",
-      "community": 79,
+      "community": 82,
       "norm_label": "webhook.route.ts"
     },
     {
@@ -5796,7 +6026,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "routes_webhook_route_router",
-      "community": 79,
+      "community": 82,
       "norm_label": "router"
     },
     {
@@ -5806,7 +6036,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "routes_webhook_route_webhookcontroller",
-      "community": 79,
+      "community": 82,
       "norm_label": "webhookcontroller"
     },
     {
@@ -5816,7 +6046,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_server",
-      "community": 81,
+      "community": 78,
       "norm_label": "server.ts"
     },
     {
@@ -5826,7 +6056,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_server_config",
-      "community": 81,
+      "community": 78,
       "norm_label": "config"
     },
     {
@@ -5836,7 +6066,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_server_start",
-      "community": 81,
+      "community": 78,
       "norm_label": "start()"
     },
     {
@@ -5846,7 +6076,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_server_shutdown",
-      "community": 81,
+      "community": 78,
       "norm_label": "shutdown()"
     },
     {
@@ -5953,7 +6183,7 @@
       "label": ".touchLastUsed()",
       "file_type": "code",
       "source_file": "apps/server/src/services/api-key.service.ts",
-      "source_location": "L57",
+      "source_location": "L66",
       "_origin": "ast",
       "id": "services_api_key_service_apikeyservice_touchlastused",
       "community": 78,
@@ -5963,7 +6193,7 @@
       "label": ".incrementUsage()",
       "file_type": "code",
       "source_file": "apps/server/src/services/api-key.service.ts",
-      "source_location": "L81",
+      "source_location": "L90",
       "_origin": "ast",
       "id": "services_api_key_service_apikeyservice_incrementusage",
       "community": 78,
@@ -5973,7 +6203,7 @@
       "label": ".hasRequiredScopes()",
       "file_type": "code",
       "source_file": "apps/server/src/services/api-key.service.ts",
-      "source_location": "L97",
+      "source_location": "L106",
       "_origin": "ast",
       "id": "services_api_key_service_apikeyservice_hasrequiredscopes",
       "community": 78,
@@ -5983,7 +6213,7 @@
       "label": ".resolveBotBinding()",
       "file_type": "code",
       "source_file": "apps/server/src/services/api-key.service.ts",
-      "source_location": "L125",
+      "source_location": "L134",
       "_origin": "ast",
       "id": "services_api_key_service_apikeyservice_resolvebotbinding",
       "community": 78,
@@ -5993,7 +6223,7 @@
       "label": ".hashesMatch()",
       "file_type": "code",
       "source_file": "apps/server/src/services/api-key.service.ts",
-      "source_location": "L144",
+      "source_location": "L153",
       "_origin": "ast",
       "id": "services_api_key_service_apikeyservice_hashesmatch",
       "community": 78,
@@ -6006,17 +6236,17 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "services_chat_service",
-      "community": 85,
+      "community": 29,
       "norm_label": "chat.service.ts"
     },
     {
       "label": "ChatService",
       "file_type": "code",
       "source_file": "apps/server/src/services/chat.service.ts",
-      "source_location": "L11",
+      "source_location": "L7",
       "_origin": "ast",
       "id": "services_chat_service_chatservice",
-      "community": 85,
+      "community": 29,
       "norm_label": "chatservice"
     },
     {
@@ -6026,7 +6256,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "services_chat_service_chatservice_chat",
-      "community": 85,
+      "community": 29,
       "norm_label": ".chat()"
     },
     {
@@ -6036,7 +6266,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "services_config_service",
-      "community": 86,
+      "community": 84,
       "norm_label": "config.service.ts"
     },
     {
@@ -6046,7 +6276,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "services_config_service_configservice",
-      "community": 86,
+      "community": 84,
       "norm_label": "configservice"
     },
     {
@@ -6056,7 +6286,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "services_config_service_configservice_getpublicconfig",
-      "community": 86,
+      "community": 84,
       "norm_label": ".getpublicconfig()"
     },
     {
@@ -6066,7 +6296,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "services_health_service",
-      "community": 3,
+      "community": 78,
       "norm_label": "health.service.ts"
     },
     {
@@ -6076,7 +6306,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "services_health_service_healthservice",
-      "community": 3,
+      "community": 79,
       "norm_label": "healthservice"
     },
     {
@@ -6086,7 +6316,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "services_health_service_healthservice_getstatus",
-      "community": 3,
+      "community": 79,
       "norm_label": ".getstatus()"
     },
     {
@@ -6096,7 +6326,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "services_livekit_service",
-      "community": 87,
+      "community": 85,
       "norm_label": "livekit.service.ts"
     },
     {
@@ -6106,7 +6336,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "services_livekit_service_livekitservice",
-      "community": 87,
+      "community": 85,
       "norm_label": "livekitservice"
     },
     {
@@ -6116,8 +6346,78 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "services_livekit_service_livekitservice_gettoken",
-      "community": 87,
+      "community": 85,
       "norm_label": ".gettoken()"
+    },
+    {
+      "label": "tenant.service.ts",
+      "file_type": "code",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "services_tenant_service",
+      "community": 81,
+      "norm_label": "tenant.service.ts"
+    },
+    {
+      "label": "TenantService",
+      "file_type": "code",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "services_tenant_service_tenantservice",
+      "community": 81,
+      "norm_label": "tenantservice"
+    },
+    {
+      "label": ".create()",
+      "file_type": "code",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "services_tenant_service_tenantservice_create",
+      "community": 81,
+      "norm_label": ".create()"
+    },
+    {
+      "label": ".list()",
+      "file_type": "code",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "services_tenant_service_tenantservice_list",
+      "community": 81,
+      "norm_label": ".list()"
+    },
+    {
+      "label": ".getByIdWithCounts()",
+      "file_type": "code",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "services_tenant_service_tenantservice_getbyidwithcounts",
+      "community": 81,
+      "norm_label": ".getbyidwithcounts()"
+    },
+    {
+      "label": ".update()",
+      "file_type": "code",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L107",
+      "_origin": "ast",
+      "id": "services_tenant_service_tenantservice_update",
+      "community": 81,
+      "norm_label": ".update()"
+    },
+    {
+      "label": ".archive()",
+      "file_type": "code",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L136",
+      "_origin": "ast",
+      "id": "services_tenant_service_tenantservice_archive",
+      "community": 81,
+      "norm_label": ".archive()"
     },
     {
       "label": "webhook.service.ts",
@@ -6450,6 +6750,36 @@
       "norm_label": "successresponsebody"
     },
     {
+      "label": "tenant.d.ts",
+      "file_type": "code",
+      "source_file": "apps/server/src/types/tenant.d.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "types_tenant_d",
+      "community": 25,
+      "norm_label": "tenant.d.ts"
+    },
+    {
+      "label": "TenantWithCounts",
+      "file_type": "code",
+      "source_file": "apps/server/src/types/tenant.d.ts",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "types_tenant_d_tenantwithcounts",
+      "community": 25,
+      "norm_label": "tenantwithcounts"
+    },
+    {
+      "label": "PaginatedTenants",
+      "file_type": "code",
+      "source_file": "apps/server/src/types/tenant.d.ts",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "types_tenant_d_paginatedtenants",
+      "community": 25,
+      "norm_label": "paginatedtenants"
+    },
+    {
       "label": "api-key.utils.ts",
       "file_type": "code",
       "source_file": "apps/server/src/utils/api-key.utils.ts",
@@ -6676,28 +7006,18 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "utils_logger_utils",
-      "community": 3,
+      "community": 78,
       "norm_label": "logger.utils.ts"
     },
     {
-      "label": "config",
+      "label": "LoggerUtil",
       "file_type": "code",
       "source_file": "apps/server/src/utils/logger.utils.ts",
-      "source_location": "L4",
+      "source_location": "L5",
       "_origin": "ast",
-      "id": "utils_logger_utils_config",
-      "community": 3,
-      "norm_label": "config"
-    },
-    {
-      "label": "logger",
-      "file_type": "code",
-      "source_file": "apps/server/src/utils/logger.utils.ts",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "utils_logger_utils_logger",
-      "community": 3,
-      "norm_label": "logger"
+      "id": "utils_logger_utils_loggerutil",
+      "community": 78,
+      "norm_label": "loggerutil"
     },
     {
       "label": "prisma.utils.ts",
@@ -6706,38 +7026,48 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "utils_prisma_utils",
-      "community": 81,
+      "community": 78,
       "norm_label": "prisma.utils.ts"
     },
     {
-      "label": "{ DATABASE_URL }",
+      "label": "PrismaUtil",
       "file_type": "code",
       "source_file": "apps/server/src/utils/prisma.utils.ts",
-      "source_location": "L10",
+      "source_location": "L5",
       "_origin": "ast",
-      "id": "utils_prisma_utils_database_url",
-      "community": 81,
-      "norm_label": "{ database_url }"
+      "id": "utils_prisma_utils_prismautil",
+      "community": 78,
+      "norm_label": "prismautil"
     },
     {
-      "label": "globalForPrisma",
+      "label": ".constructor()",
       "file_type": "code",
       "source_file": "apps/server/src/utils/prisma.utils.ts",
-      "source_location": "L14",
+      "source_location": "L16",
       "_origin": "ast",
-      "id": "utils_prisma_utils_globalforprisma",
-      "community": 81,
-      "norm_label": "globalforprisma"
+      "id": "utils_prisma_utils_prismautil_constructor",
+      "community": 78,
+      "norm_label": ".constructor()"
     },
     {
-      "label": "adapter",
+      "label": ".isUniqueViolation()",
       "file_type": "code",
       "source_file": "apps/server/src/utils/prisma.utils.ts",
-      "source_location": "L18",
+      "source_location": "L33",
       "_origin": "ast",
-      "id": "utils_prisma_utils_adapter",
-      "community": 81,
-      "norm_label": "adapter"
+      "id": "utils_prisma_utils_prismautil_isuniqueviolation",
+      "community": 78,
+      "norm_label": ".isuniqueviolation()"
+    },
+    {
+      "label": ".isRecordNotFound()",
+      "file_type": "code",
+      "source_file": "apps/server/src/utils/prisma.utils.ts",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "utils_prisma_utils_prismautil_isrecordnotfound",
+      "community": 78,
+      "norm_label": ".isrecordnotfound()"
     },
     {
       "label": "response-handler.utils.ts",
@@ -6750,14 +7080,24 @@
       "norm_label": "response-handler.utils.ts"
     },
     {
-      "label": "responseHandler()",
+      "label": "ResponseHandlerUtil",
       "file_type": "code",
       "source_file": "apps/server/src/utils/response-handler.utils.ts",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "utils_response_handler_utils_responsehandler",
+      "id": "utils_response_handler_utils_responsehandlerutil",
       "community": 80,
-      "norm_label": "responsehandler()"
+      "norm_label": "responsehandlerutil"
+    },
+    {
+      "label": ".handle()",
+      "file_type": "code",
+      "source_file": "apps/server/src/utils/response-handler.utils.ts",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "utils_response_handler_utils_responsehandlerutil_handle",
+      "community": 80,
+      "norm_label": ".handle()"
     },
     {
       "label": "admin-login.validator.ts",
@@ -6856,7 +7196,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "validators_chat_validator",
-      "community": 85,
+      "community": 29,
       "norm_label": "chat.validator.ts"
     },
     {
@@ -6866,7 +7206,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "validators_chat_validator_chatschema",
-      "community": 85,
+      "community": 29,
       "norm_label": "chatschema"
     },
     {
@@ -6876,7 +7216,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "validators_chat_validator_chatbody",
-      "community": 85,
+      "community": 29,
       "norm_label": "chatbody"
     },
     {
@@ -6886,8 +7226,88 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "validators_index",
-      "community": 85,
+      "community": 81,
       "norm_label": "index.ts"
+    },
+    {
+      "label": "tenant.validator.ts",
+      "file_type": "code",
+      "source_file": "apps/server/src/validators/tenant.validator.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "validators_tenant_validator",
+      "community": 81,
+      "norm_label": "tenant.validator.ts"
+    },
+    {
+      "label": "slugRule",
+      "file_type": "code",
+      "source_file": "apps/server/src/validators/tenant.validator.ts",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "validators_tenant_validator_slugrule",
+      "community": 81,
+      "norm_label": "slugrule"
+    },
+    {
+      "label": "createTenantSchema",
+      "file_type": "code",
+      "source_file": "apps/server/src/validators/tenant.validator.ts",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "validators_tenant_validator_createtenantschema",
+      "community": 81,
+      "norm_label": "createtenantschema"
+    },
+    {
+      "label": "updateTenantSchema",
+      "file_type": "code",
+      "source_file": "apps/server/src/validators/tenant.validator.ts",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "validators_tenant_validator_updatetenantschema",
+      "community": 81,
+      "norm_label": "updatetenantschema"
+    },
+    {
+      "label": "listTenantsQuerySchema",
+      "file_type": "code",
+      "source_file": "apps/server/src/validators/tenant.validator.ts",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "validators_tenant_validator_listtenantsqueryschema",
+      "community": 81,
+      "norm_label": "listtenantsqueryschema"
+    },
+    {
+      "label": "CreateTenantBody",
+      "file_type": "code",
+      "source_file": "apps/server/src/validators/tenant.validator.ts",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "validators_tenant_validator_createtenantbody",
+      "community": 81,
+      "norm_label": "createtenantbody"
+    },
+    {
+      "label": "UpdateTenantBody",
+      "file_type": "code",
+      "source_file": "apps/server/src/validators/tenant.validator.ts",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "validators_tenant_validator_updatetenantbody",
+      "community": 81,
+      "norm_label": "updatetenantbody"
+    },
+    {
+      "label": "ListTenantsQuery",
+      "file_type": "code",
+      "source_file": "apps/server/src/validators/tenant.validator.ts",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "validators_tenant_validator_listtenantsquery",
+      "community": 81,
+      "norm_label": "listtenantsquery"
     },
     {
       "label": "tsconfig.json",
@@ -16127,7 +16547,7 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_app",
-      "target": "middlewares_error_handler_middleware_errorhandler"
+      "target": "middlewares_error_handler_middleware_errorhandlermiddleware"
     },
     {
       "relation": "imports_from",
@@ -16149,7 +16569,7 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_app",
-      "target": "middlewares_not_found_middleware_notfoundhandler"
+      "target": "middlewares_not_found_middleware_notfoundmiddleware"
     },
     {
       "relation": "imports_from",
@@ -16171,7 +16591,7 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_app",
-      "target": "middlewares_rate_limit_middleware_ratelimithandler"
+      "target": "middlewares_rate_limit_middleware_globalratelimitmiddleware"
     },
     {
       "relation": "imports",
@@ -16309,6 +16729,17 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "controllers_admin_auth_controller",
+      "target": "configs_error_messages_errormessages"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/tenant.controller.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_tenant_controller",
       "target": "configs_error_messages_errormessages"
     },
     {
@@ -16841,6 +17272,176 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/tenant.controller.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_tenant_controller",
+      "target": "controllers_tenant_controller_tenantcontroller"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/tenant.controller.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_tenant_controller",
+      "target": "exceptions_index"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/tenant.controller.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_tenant_controller",
+      "target": "exceptions_tenant_exception_tenantslugconflicterror"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/tenant.controller.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_tenant_controller",
+      "target": "services_tenant_service"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/tenant.controller.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_tenant_controller",
+      "target": "services_tenant_service_tenantservice"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/tenant.controller.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_tenant_controller",
+      "target": "validators_tenant_validator"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/tenant.controller.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_tenant_controller",
+      "target": "validators_tenant_validator_createtenantbody"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/tenant.controller.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_tenant_controller",
+      "target": "validators_tenant_validator_listtenantsquery"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/tenant.controller.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_tenant_controller",
+      "target": "validators_tenant_validator_updatetenantbody"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/tenant.route.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_tenant_route",
+      "target": "controllers_tenant_controller"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/tenant.controller.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_tenant_controller_tenantcontroller",
+      "target": "controllers_tenant_controller_tenantcontroller_handlecreate"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/tenant.controller.ts",
+      "source_location": "L87",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_tenant_controller_tenantcontroller",
+      "target": "controllers_tenant_controller_tenantcontroller_handledelete"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/tenant.controller.ts",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_tenant_controller_tenantcontroller",
+      "target": "controllers_tenant_controller_tenantcontroller_handleget"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/tenant.controller.ts",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_tenant_controller_tenantcontroller",
+      "target": "controllers_tenant_controller_tenantcontroller_handlelist"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/controllers/tenant.controller.ts",
+      "source_location": "L63",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "controllers_tenant_controller_tenantcontroller",
+      "target": "controllers_tenant_controller_tenantcontroller_handleupdate"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/tenant.route.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_tenant_route",
+      "target": "controllers_tenant_controller_tenantcontroller"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "apps/server/src/controllers/webhook.controller.ts",
       "source_location": "L4",
       "weight": 1.0,
@@ -16903,34 +17504,78 @@
       "target": "controllers_webhook_controller_webhookcontroller"
     },
     {
-      "relation": "contains",
+      "relation": "re_exports",
+      "context": "export",
       "confidence": "EXTRACTED",
-      "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
-      "source_location": "L35",
+      "source_file": "apps/server/src/exceptions/index.ts",
+      "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "middlewares_admin_auth_middleware",
-      "target": "middlewares_admin_auth_middleware_adminauth"
+      "source": "exceptions_index",
+      "target": "exceptions_tenant_exception"
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/exceptions/index.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "exceptions_index",
+      "target": "exceptions_tenant_exception_tenantslugconflicterror"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_tenant_service",
+      "target": "exceptions_index"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
+      "source_file": "apps/server/src/exceptions/tenant.exception.ts",
       "source_location": "L6",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "middlewares_admin_auth_middleware",
-      "target": "middlewares_admin_auth_middleware_adminauthservice"
+      "source": "exceptions_tenant_exception",
+      "target": "exceptions_tenant_exception_tenantslugconflicterror"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/exceptions/tenant.exception.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "exceptions_tenant_exception_tenantslugconflicterror",
+      "target": "exceptions_tenant_exception_tenantslugconflicterror_constructor"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_tenant_service",
+      "target": "exceptions_tenant_exception_tenantslugconflicterror"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
-      "source_location": "L12",
+      "source_location": "L16",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "middlewares_admin_auth_middleware",
-      "target": "middlewares_admin_auth_middleware_parsebearertoken"
+      "target": "middlewares_admin_auth_middleware_adminauthmiddleware"
     },
     {
       "relation": "imports_from",
@@ -16966,6 +17611,37 @@
       "target": "middlewares_admin_auth_middleware"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/tenant.route.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_tenant_route",
+      "target": "middlewares_admin_auth_middleware"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "middlewares_admin_auth_middleware_adminauthmiddleware",
+      "target": "middlewares_admin_auth_middleware_adminauthmiddleware_handle"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
+      "source_location": "L42",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "middlewares_admin_auth_middleware_adminauthmiddleware",
+      "target": "middlewares_admin_auth_middleware_adminauthmiddleware_parsebearertoken"
+    },
+    {
       "relation": "re_exports",
       "context": "re-export",
       "confidence": "EXTRACTED",
@@ -16974,37 +17650,39 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "middlewares_index",
-      "target": "middlewares_admin_auth_middleware_adminauth"
+      "target": "middlewares_admin_auth_middleware_adminauthmiddleware"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/tenant.route.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_tenant_route",
+      "target": "middlewares_admin_auth_middleware_adminauthmiddleware"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/admin-auth.middleware.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "middlewares_admin_auth_middleware_adminauthmiddleware_handle",
+      "target": "middlewares_admin_auth_middleware_adminauthmiddleware_parsebearertoken"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/middlewares/api-key.middleware.ts",
-      "source_location": "L36",
+      "source_location": "L17",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "middlewares_api_key_middleware",
-      "target": "middlewares_api_key_middleware_apikeyauth"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/server/src/middlewares/api-key.middleware.ts",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "middlewares_api_key_middleware",
-      "target": "middlewares_api_key_middleware_apikeyservice"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/server/src/middlewares/api-key.middleware.ts",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "middlewares_api_key_middleware",
-      "target": "middlewares_api_key_middleware_parsebearertoken"
+      "target": "middlewares_api_key_middleware_apikeyauthmiddleware"
     },
     {
       "relation": "imports_from",
@@ -17046,9 +17724,9 @@
       "source_file": "apps/server/src/middlewares/api-key.middleware.ts",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "middlewares_api_key_middleware",
-      "target": "utils_logger_utils_logger"
+      "target": "utils_logger_utils_loggerutil",
+      "confidence_score": 1.0
     },
     {
       "relation": "re_exports",
@@ -17062,15 +17740,35 @@
       "target": "middlewares_api_key_middleware"
     },
     {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/api-key.middleware.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "middlewares_api_key_middleware_apikeyauthmiddleware",
+      "target": "middlewares_api_key_middleware_apikeyauthmiddleware_handle"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/api-key.middleware.ts",
+      "source_location": "L56",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "middlewares_api_key_middleware_apikeyauthmiddleware",
+      "target": "middlewares_api_key_middleware_apikeyauthmiddleware_parsebearertoken"
+    },
+    {
       "relation": "re_exports",
       "context": "re-export",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/middlewares/index.ts",
-      "source_location": "L1",
+      "source_location": "L2",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "middlewares_index",
-      "target": "middlewares_api_key_middleware_apikeyauth"
+      "target": "middlewares_api_key_middleware_apikeyauthmiddleware"
     },
     {
       "relation": "imports",
@@ -17081,27 +17779,28 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "routes_chat_route",
-      "target": "middlewares_api_key_middleware_apikeyauth"
+      "target": "middlewares_api_key_middleware_apikeyauthmiddleware"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/api-key.middleware.ts",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "middlewares_api_key_middleware_apikeyauthmiddleware_handle",
+      "target": "middlewares_api_key_middleware_apikeyauthmiddleware_parsebearertoken"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/middlewares/error-handler.middleware.ts",
-      "source_location": "L8",
+      "source_location": "L7",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "middlewares_error_handler_middleware",
-      "target": "middlewares_error_handler_middleware_errorhandler"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/server/src/middlewares/error-handler.middleware.ts",
-      "source_location": "L25",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "middlewares_error_handler_middleware",
-      "target": "middlewares_error_handler_middleware_normalizemessage"
+      "target": "middlewares_error_handler_middleware_errorhandlermiddleware"
     },
     {
       "relation": "re_exports",
@@ -17115,36 +17814,46 @@
       "target": "middlewares_error_handler_middleware"
     },
     {
-      "relation": "calls",
-      "context": "call",
+      "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/middlewares/error-handler.middleware.ts",
-      "source_location": "L12",
+      "source_location": "L9",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "middlewares_error_handler_middleware_errorhandler",
-      "target": "middlewares_error_handler_middleware_normalizemessage"
+      "source": "middlewares_error_handler_middleware_errorhandlermiddleware",
+      "target": "middlewares_error_handler_middleware_errorhandlermiddleware_handle"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/error-handler.middleware.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "middlewares_error_handler_middleware_errorhandlermiddleware",
+      "target": "middlewares_error_handler_middleware_errorhandlermiddleware_normalizemessage"
     },
     {
       "relation": "re_exports",
       "context": "re-export",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/middlewares/index.ts",
-      "source_location": "L2",
+      "source_location": "L3",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "middlewares_index",
-      "target": "middlewares_error_handler_middleware_errorhandler"
+      "target": "middlewares_error_handler_middleware_errorhandlermiddleware"
     },
     {
-      "relation": "contains",
+      "relation": "calls",
+      "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "apps/server/src/middlewares/file-validator.middleware.ts",
-      "source_location": "L67",
+      "source_file": "apps/server/src/middlewares/error-handler.middleware.ts",
+      "source_location": "L13",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "middlewares_file_validator_middleware",
-      "target": "middlewares_file_validator_middleware_filevalidator"
+      "source": "middlewares_error_handler_middleware_errorhandlermiddleware_handle",
+      "target": "middlewares_error_handler_middleware_errorhandlermiddleware_normalizemessage"
     },
     {
       "relation": "contains",
@@ -17154,17 +17863,7 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "middlewares_file_validator_middleware",
-      "target": "middlewares_file_validator_middleware_normalisefiles"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/server/src/middlewares/file-validator.middleware.ts",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "middlewares_file_validator_middleware",
-      "target": "middlewares_file_validator_middleware_validatefiles"
+      "target": "middlewares_file_validator_middleware_filevalidatormiddleware"
     },
     {
       "relation": "re_exports",
@@ -17178,15 +17877,55 @@
       "target": "middlewares_file_validator_middleware"
     },
     {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/file-validator.middleware.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "middlewares_file_validator_middleware_filevalidatormiddleware",
+      "target": "middlewares_file_validator_middleware_filevalidatormiddleware_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/file-validator.middleware.ts",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "middlewares_file_validator_middleware_filevalidatormiddleware",
+      "target": "middlewares_file_validator_middleware_filevalidatormiddleware_handle"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/file-validator.middleware.ts",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "middlewares_file_validator_middleware_filevalidatormiddleware",
+      "target": "middlewares_file_validator_middleware_filevalidatormiddleware_normalisefiles"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/file-validator.middleware.ts",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "middlewares_file_validator_middleware_filevalidatormiddleware",
+      "target": "middlewares_file_validator_middleware_filevalidatormiddleware_validatefiles"
+    },
+    {
       "relation": "re_exports",
       "context": "re-export",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/middlewares/index.ts",
-      "source_location": "L3",
+      "source_location": "L4",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "middlewares_index",
-      "target": "middlewares_file_validator_middleware_filevalidator"
+      "target": "middlewares_file_validator_middleware_filevalidatormiddleware"
     },
     {
       "relation": "re_exports",
@@ -17204,11 +17943,11 @@
       "context": "re-export",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/middlewares/index.ts",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "middlewares_index",
-      "target": "middlewares_not_found_middleware_notfoundhandler"
+      "target": "middlewares_not_found_middleware_notfoundmiddleware"
     },
     {
       "relation": "re_exports",
@@ -17228,31 +17967,31 @@
       "source_file": "apps/server/src/middlewares/index.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "middlewares_index",
-      "target": "middlewares_rate_limit_middleware_apikeyratelimit",
-      "confidence_score": 1.0
+      "target": "middlewares_rate_limit_middleware_apikeyratelimitmiddleware"
     },
     {
       "relation": "re_exports",
       "context": "re-export",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/middlewares/index.ts",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "middlewares_index",
-      "target": "middlewares_rate_limit_middleware_authratelimithandler"
+      "target": "middlewares_rate_limit_middleware_authratelimitmiddleware"
     },
     {
       "relation": "re_exports",
       "context": "re-export",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/middlewares/index.ts",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "middlewares_index",
-      "target": "middlewares_rate_limit_middleware_ratelimithandler"
+      "target": "middlewares_rate_limit_middleware_globalratelimitmiddleware"
     },
     {
       "relation": "re_exports",
@@ -17270,11 +18009,11 @@
       "context": "re-export",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/middlewares/index.ts",
-      "source_location": "L6",
+      "source_location": "L11",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "middlewares_index",
-      "target": "middlewares_request_validator_middleware_requestvalidator"
+      "target": "middlewares_request_validator_middleware_requestvalidatormiddleware"
     },
     {
       "relation": "re_exports",
@@ -17292,11 +18031,11 @@
       "context": "re-export",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/middlewares/index.ts",
-      "source_location": "L7",
+      "source_location": "L12",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "middlewares_index",
-      "target": "middlewares_require_bot_binding_middleware_requirebotbinding"
+      "target": "middlewares_require_bot_binding_middleware_requirebotbindingmiddleware"
     },
     {
       "relation": "re_exports",
@@ -17314,11 +18053,11 @@
       "context": "re-export",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/middlewares/index.ts",
-      "source_location": "L7",
+      "source_location": "L13",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "middlewares_index",
-      "target": "middlewares_require_scopes_middleware_requirescopes"
+      "target": "middlewares_require_scopes_middleware_requirescopesmiddleware"
     },
     {
       "relation": "imports_from",
@@ -17350,17 +18089,37 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "middlewares_not_found_middleware",
-      "target": "middlewares_not_found_middleware_notfoundhandler"
+      "target": "middlewares_not_found_middleware_notfoundmiddleware"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/not-found.middleware.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "middlewares_not_found_middleware_notfoundmiddleware",
+      "target": "middlewares_not_found_middleware_notfoundmiddleware_handle"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
-      "source_location": "L44",
+      "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "middlewares_rate_limit_middleware",
-      "target": "middlewares_rate_limit_middleware_apikeyratelimit",
-      "confidence_score": 1.0
+      "target": "middlewares_rate_limit_middleware_apikeyratelimitmiddleware"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "middlewares_rate_limit_middleware",
+      "target": "middlewares_rate_limit_middleware_authratelimitmiddleware"
     },
     {
       "relation": "contains",
@@ -17368,29 +18127,9 @@
       "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
       "source_location": "L9",
       "weight": 1.0,
-      "source": "middlewares_rate_limit_middleware",
-      "target": "middlewares_rate_limit_middleware_apikeyservice",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
-      "source_location": "L21",
-      "weight": 1.0,
       "confidence_score": 1.0,
       "source": "middlewares_rate_limit_middleware",
-      "target": "middlewares_rate_limit_middleware_authratelimithandler"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "middlewares_rate_limit_middleware",
-      "target": "middlewares_rate_limit_middleware_ratelimithandler"
+      "target": "middlewares_rate_limit_middleware_globalratelimitmiddleware"
     },
     {
       "relation": "imports_from",
@@ -17399,9 +18138,9 @@
       "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "middlewares_rate_limit_middleware",
-      "target": "services_api_key_service",
-      "confidence_score": 1.0
+      "target": "services_api_key_service"
     },
     {
       "relation": "imports",
@@ -17410,9 +18149,9 @@
       "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "middlewares_rate_limit_middleware",
-      "target": "services_api_key_service_apikeyservice",
-      "confidence_score": 1.0
+      "target": "services_api_key_service_apikeyservice"
     },
     {
       "relation": "imports_from",
@@ -17421,9 +18160,9 @@
       "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "middlewares_rate_limit_middleware",
-      "target": "utils_logger_utils",
-      "confidence_score": 1.0
+      "target": "utils_logger_utils"
     },
     {
       "relation": "imports",
@@ -17433,7 +18172,7 @@
       "source_location": "L7",
       "weight": 1.0,
       "source": "middlewares_rate_limit_middleware",
-      "target": "utils_logger_utils_logger",
+      "target": "utils_logger_utils_loggerutil",
       "confidence_score": 1.0
     },
     {
@@ -17445,7 +18184,17 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "routes_admin_auth_route",
-      "target": "middlewares_rate_limit_middleware_authratelimithandler"
+      "target": "middlewares_rate_limit_middleware_authratelimitmiddleware"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/rate-limit.middleware.ts",
+      "source_location": "L51",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "middlewares_rate_limit_middleware_apikeyratelimitmiddleware",
+      "target": "middlewares_rate_limit_middleware_apikeyratelimitmiddleware_handle"
     },
     {
       "relation": "imports",
@@ -17454,9 +18203,9 @@
       "source_file": "apps/server/src/routes/chat.route.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "routes_chat_route",
-      "target": "middlewares_rate_limit_middleware_apikeyratelimit",
-      "confidence_score": 1.0
+      "target": "middlewares_rate_limit_middleware_apikeyratelimitmiddleware"
     },
     {
       "relation": "contains",
@@ -17466,7 +18215,7 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "middlewares_request_validator_middleware",
-      "target": "middlewares_request_validator_middleware_requestvalidator"
+      "target": "middlewares_request_validator_middleware_requestvalidatormiddleware"
     },
     {
       "relation": "imports_from",
@@ -17502,110 +18251,152 @@
       "target": "middlewares_request_validator_middleware"
     },
     {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/server/src/routes/admin-auth.route.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_admin_auth_route",
-      "target": "middlewares_request_validator_middleware_requestvalidator"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/server/src/routes/chat.route.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_chat_route",
-      "target": "middlewares_request_validator_middleware_requestvalidator"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/server/src/routes/livekit.route.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_livekit_route",
-      "target": "middlewares_request_validator_middleware_requestvalidator"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/server/src/middlewares/require-bot-binding.middleware.ts",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "middlewares_require_bot_binding_middleware",
-      "target": "middlewares_require_bot_binding_middleware_apikeyservice"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/server/src/middlewares/require-bot-binding.middleware.ts",
-      "source_location": "L23",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "middlewares_require_bot_binding_middleware",
-      "target": "middlewares_require_bot_binding_middleware_requirebotbinding"
-    },
-    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "apps/server/src/middlewares/require-bot-binding.middleware.ts",
+      "source_file": "apps/server/src/routes/tenant.route.ts",
       "source_location": "L4",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "middlewares_require_bot_binding_middleware",
-      "target": "services_api_key_service"
+      "source": "routes_tenant_route",
+      "target": "middlewares_request_validator_middleware"
     },
     {
-      "relation": "imports",
-      "context": "import",
+      "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "apps/server/src/middlewares/require-bot-binding.middleware.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "middlewares_require_bot_binding_middleware",
-      "target": "services_api_key_service_apikeyservice"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/server/src/routes/chat.route.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_chat_route",
-      "target": "middlewares_require_bot_binding_middleware_requirebotbinding"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/server/src/middlewares/require-scopes.middleware.ts",
+      "source_file": "apps/server/src/middlewares/request-validator.middleware.ts",
       "source_location": "L7",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "middlewares_require_scopes_middleware",
-      "target": "middlewares_require_scopes_middleware_apikeyservice"
+      "source": "middlewares_request_validator_middleware_requestvalidatormiddleware",
+      "target": "middlewares_request_validator_middleware_requestvalidatormiddleware_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/request-validator.middleware.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "middlewares_request_validator_middleware_requestvalidatormiddleware",
+      "target": "middlewares_request_validator_middleware_requestvalidatormiddleware_handle"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/admin-auth.route.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_admin_auth_route",
+      "target": "middlewares_request_validator_middleware_requestvalidatormiddleware"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/chat.route.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_chat_route",
+      "target": "middlewares_request_validator_middleware_requestvalidatormiddleware"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/livekit.route.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_livekit_route",
+      "target": "middlewares_request_validator_middleware_requestvalidatormiddleware"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/tenant.route.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_tenant_route",
+      "target": "middlewares_request_validator_middleware_requestvalidatormiddleware"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/require-bot-binding.middleware.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "middlewares_require_bot_binding_middleware",
+      "target": "middlewares_require_bot_binding_middleware_requirebotbindingmiddleware"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/require-bot-binding.middleware.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "middlewares_require_bot_binding_middleware",
+      "target": "services_api_key_service"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/require-bot-binding.middleware.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "middlewares_require_bot_binding_middleware",
+      "target": "services_api_key_service_apikeyservice"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/require-bot-binding.middleware.ts",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "middlewares_require_bot_binding_middleware_requirebotbindingmiddleware",
+      "target": "middlewares_require_bot_binding_middleware_requirebotbindingmiddleware_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/require-bot-binding.middleware.ts",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "middlewares_require_bot_binding_middleware_requirebotbindingmiddleware",
+      "target": "middlewares_require_bot_binding_middleware_requirebotbindingmiddleware_handle"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/chat.route.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_chat_route",
+      "target": "middlewares_require_bot_binding_middleware_requirebotbindingmiddleware"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/middlewares/require-scopes.middleware.ts",
-      "source_location": "L18",
+      "source_location": "L16",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "middlewares_require_scopes_middleware",
-      "target": "middlewares_require_scopes_middleware_requirescopes"
+      "target": "middlewares_require_scopes_middleware_requirescopesmiddleware"
     },
     {
       "relation": "imports_from",
@@ -17630,6 +18421,26 @@
       "target": "services_api_key_service_apikeyservice"
     },
     {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/require-scopes.middleware.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "middlewares_require_scopes_middleware_requirescopesmiddleware",
+      "target": "middlewares_require_scopes_middleware_requirescopesmiddleware_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/middlewares/require-scopes.middleware.ts",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "middlewares_require_scopes_middleware_requirescopesmiddleware",
+      "target": "middlewares_require_scopes_middleware_requirescopesmiddleware_handle"
+    },
+    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -17638,7 +18449,7 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "routes_chat_route",
-      "target": "middlewares_require_scopes_middleware_requirescopes"
+      "target": "middlewares_require_scopes_middleware_requirescopesmiddleware"
     },
     {
       "relation": "imports_from",
@@ -17660,6 +18471,16 @@
       "confidence_score": 1.0,
       "source": "routes_admin_auth_route",
       "target": "routes_admin_auth_route_adminauthcontroller"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/admin-auth.route.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_admin_auth_route",
+      "target": "routes_admin_auth_route_authratelimit"
     },
     {
       "relation": "contains",
@@ -17689,9 +18510,9 @@
       "source_file": "apps/server/src/routes/admin-auth.route.ts",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "routes_admin_auth_route",
-      "target": "utils_response_handler_utils_responsehandler"
+      "target": "utils_response_handler_utils_responsehandlerutil",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -17817,11 +18638,11 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/routes/chat.route.ts",
-      "source_location": "L6",
+      "source_location": "L11",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "routes_chat_route",
-      "target": "utils_response_handler_utils_responsehandler"
+      "target": "utils_response_handler_utils_responsehandlerutil",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -17916,9 +18737,9 @@
       "source_file": "apps/server/src/routes/config.route.ts",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "routes_config_route",
-      "target": "utils_response_handler_utils_responsehandler"
+      "target": "utils_response_handler_utils_responsehandlerutil",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -17980,9 +18801,9 @@
       "source_file": "apps/server/src/routes/health.route.ts",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "routes_health_route",
-      "target": "utils_response_handler_utils_responsehandler"
+      "target": "utils_response_handler_utils_responsehandlerutil",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -18028,6 +18849,28 @@
       "target": "routes_livekit_route_router"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/index.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_server_src_routes_index_ts_routes_index",
+      "target": "routes_tenant_route"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/index.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apps_server_src_routes_index_ts_routes_index",
+      "target": "routes_tenant_route_router"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/routes/livekit.route.ts",
@@ -18065,9 +18908,95 @@
       "source_file": "apps/server/src/routes/livekit.route.ts",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "routes_livekit_route",
-      "target": "utils_response_handler_utils_responsehandler"
+      "target": "utils_response_handler_utils_responsehandlerutil",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/tenant.route.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_tenant_route",
+      "target": "routes_tenant_route_router"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/tenant.route.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_tenant_route",
+      "target": "routes_tenant_route_tenantcontroller"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/tenant.route.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_tenant_route",
+      "target": "utils_response_handler_utils"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/tenant.route.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "routes_tenant_route",
+      "target": "utils_response_handler_utils_responsehandlerutil",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/tenant.route.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_tenant_route",
+      "target": "validators_tenant_validator"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/tenant.route.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_tenant_route",
+      "target": "validators_tenant_validator_createtenantschema"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/tenant.route.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_tenant_route",
+      "target": "validators_tenant_validator_listtenantsqueryschema"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/routes/tenant.route.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_tenant_route",
+      "target": "validators_tenant_validator_updatetenantschema"
     },
     {
       "relation": "contains",
@@ -18107,9 +19036,9 @@
       "source_file": "apps/server/src/routes/webhook.route.ts",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "routes_webhook_route",
-      "target": "utils_response_handler_utils_responsehandler"
+      "target": "utils_response_handler_utils_responsehandlerutil",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -18159,9 +19088,9 @@
       "source_file": "apps/server/src/server.ts",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_server",
-      "target": "utils_logger_utils_logger"
+      "target": "utils_logger_utils_loggerutil",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -18173,6 +19102,17 @@
       "confidence_score": 1.0,
       "source": "src_server",
       "target": "utils_prisma_utils"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/server.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_server",
+      "target": "utils_prisma_utils_prismautil",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -18194,6 +19134,17 @@
       "confidence_score": 1.0,
       "source": "services_admin_auth_service",
       "target": "utils_prisma_utils"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/admin-auth.service.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "services_admin_auth_service",
+      "target": "utils_prisma_utils_prismautil",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -18399,6 +19350,17 @@
       "target": "utils_prisma_utils"
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/api-key.service.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "services_api_key_service",
+      "target": "utils_prisma_utils_prismautil",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/services/api-key.service.ts",
@@ -18570,9 +19532,9 @@
       "source_file": "apps/server/src/services/health.service.ts",
       "source_location": "L2",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "services_health_service",
-      "target": "utils_logger_utils_logger"
+      "target": "utils_logger_utils_loggerutil",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -18584,6 +19546,17 @@
       "confidence_score": 1.0,
       "source": "services_health_service",
       "target": "utils_prisma_utils"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/health.service.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "services_health_service",
+      "target": "utils_prisma_utils_prismautil",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -18614,6 +19587,176 @@
       "confidence_score": 1.0,
       "source": "services_livekit_service_livekitservice",
       "target": "services_livekit_service_livekitservice_gettoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_tenant_service",
+      "target": "services_tenant_service_tenantservice"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_tenant_service",
+      "target": "utils_prisma_utils"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "services_tenant_service",
+      "target": "utils_prisma_utils_prismautil",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_tenant_service",
+      "target": "validators_tenant_validator"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_tenant_service",
+      "target": "validators_tenant_validator_createtenantbody"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_tenant_service",
+      "target": "validators_tenant_validator_listtenantsquery"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_tenant_service",
+      "target": "validators_tenant_validator_updatetenantbody"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L140",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_tenant_service_tenantservice",
+      "target": "services_tenant_service_tenantservice_archive"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_tenant_service_tenantservice",
+      "target": "services_tenant_service_tenantservice_create"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L73",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_tenant_service_tenantservice",
+      "target": "services_tenant_service_tenantservice_getbyidwithcounts"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L42",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_tenant_service_tenantservice",
+      "target": "services_tenant_service_tenantservice_list"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L111",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_tenant_service_tenantservice",
+      "target": "services_tenant_service_tenantservice_update"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_tenant_service_tenantservice_create",
+      "target": "validators_tenant_validator_createtenantbody"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L42",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_tenant_service_tenantservice_list",
+      "target": "validators_tenant_validator_listtenantsquery"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L142",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_tenant_service_tenantservice_archive",
+      "target": "services_tenant_service_tenantservice_update"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/services/tenant.service.ts",
+      "source_location": "L111",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_tenant_service_tenantservice_update",
+      "target": "validators_tenant_validator_updatetenantbody"
     },
     {
       "relation": "contains",
@@ -18665,9 +19808,9 @@
       "source_file": "apps/server/src/services/webhook.service.ts",
       "source_location": "L4",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "services_webhook_service",
-      "target": "utils_logger_utils_logger"
+      "target": "utils_logger_utils_loggerutil",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -18893,6 +20036,26 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/types/tenant.d.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "types_tenant_d",
+      "target": "types_tenant_d_paginatedtenants"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/types/tenant.d.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "types_tenant_d",
+      "target": "types_tenant_d_tenantwithcounts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "apps/server/src/utils/api-key.utils.ts",
       "source_location": "L4",
       "weight": 1.0,
@@ -19096,61 +20259,71 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/utils/logger.utils.ts",
-      "source_location": "L4",
+      "source_location": "L12",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "utils_logger_utils",
-      "target": "utils_logger_utils_config"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/server/src/utils/logger.utils.ts",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "utils_logger_utils",
-      "target": "utils_logger_utils_logger"
+      "target": "utils_logger_utils_loggerutil",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/utils/prisma.utils.ts",
-      "source_location": "L18",
+      "source_location": "L52",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "utils_prisma_utils",
-      "target": "utils_prisma_utils_adapter"
+      "target": "utils_prisma_utils_prismautil",
+      "confidence_score": 1.0
     },
     {
-      "relation": "contains",
+      "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/utils/prisma.utils.ts",
-      "source_location": "L10",
+      "source_location": "L16",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "utils_prisma_utils",
-      "target": "utils_prisma_utils_database_url"
+      "source": "utils_prisma_utils_prismautil",
+      "target": "utils_prisma_utils_prismautil_constructor",
+      "confidence_score": 1.0
     },
     {
-      "relation": "contains",
+      "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/utils/prisma.utils.ts",
-      "source_location": "L14",
+      "source_location": "L44",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "utils_prisma_utils",
-      "target": "utils_prisma_utils_globalforprisma"
+      "source": "utils_prisma_utils_prismautil",
+      "target": "utils_prisma_utils_prismautil_isrecordnotfound",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/utils/prisma.utils.ts",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "utils_prisma_utils_prismautil",
+      "target": "utils_prisma_utils_prismautil_isuniqueviolation",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/server/src/utils/response-handler.utils.ts",
-      "source_location": "L4",
+      "source_location": "L29",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "utils_response_handler_utils",
-      "target": "utils_response_handler_utils_responsehandler"
+      "target": "utils_response_handler_utils_responsehandlerutil",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/utils/response-handler.utils.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "utils_response_handler_utils_responsehandlerutil",
+      "target": "utils_response_handler_utils_responsehandlerutil_handle",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -19264,6 +20437,153 @@
       "confidence_score": 1.0,
       "source": "validators_index",
       "target": "validators_chat_validator_chatbody"
+    },
+    {
+      "relation": "re_exports",
+      "context": "export",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/validators/index.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validators_index",
+      "target": "validators_tenant_validator"
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/validators/index.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validators_index",
+      "target": "validators_tenant_validator_createtenantbody"
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/validators/index.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validators_index",
+      "target": "validators_tenant_validator_createtenantschema"
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/validators/index.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validators_index",
+      "target": "validators_tenant_validator_listtenantsquery"
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/validators/index.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validators_index",
+      "target": "validators_tenant_validator_listtenantsqueryschema"
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/validators/index.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validators_index",
+      "target": "validators_tenant_validator_updatetenantbody"
+    },
+    {
+      "relation": "re_exports",
+      "context": "re-export",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/validators/index.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validators_index",
+      "target": "validators_tenant_validator_updatetenantschema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/validators/tenant.validator.ts",
+      "source_location": "L42",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validators_tenant_validator",
+      "target": "validators_tenant_validator_createtenantbody"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/validators/tenant.validator.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validators_tenant_validator",
+      "target": "validators_tenant_validator_createtenantschema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/validators/tenant.validator.ts",
+      "source_location": "L44",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validators_tenant_validator",
+      "target": "validators_tenant_validator_listtenantsquery"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/validators/tenant.validator.ts",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validators_tenant_validator",
+      "target": "validators_tenant_validator_listtenantsqueryschema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/validators/tenant.validator.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validators_tenant_validator",
+      "target": "validators_tenant_validator_slugrule"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/validators/tenant.validator.ts",
+      "source_location": "L43",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validators_tenant_validator",
+      "target": "validators_tenant_validator_updatetenantbody"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/server/src/validators/tenant.validator.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "validators_tenant_validator",
+      "target": "validators_tenant_validator_updatetenantschema"
     },
     {
       "relation": "contains",
@@ -23509,5 +24829,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "4f6e2da4f79daf222ce8b9904c6d33a0745517a6"
+  "built_at_commit": "b27cb81101174f61ff1a43bbfea17d985e4d1195"
 }

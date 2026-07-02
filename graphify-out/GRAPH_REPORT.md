@@ -1,24 +1,20 @@
-# Graph Report - agent-assistant (2026-06-22)
+# Graph Report - agent-assistant  (2026-07-02)
 
 ## Corpus Check
-
-- 220 files · ~22,308 words
+- 227 files · ~23,807 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-
-- 1017 nodes · 1286 edges · 88 communities (62 shown, 26 thin omitted)
+- 1059 nodes · 1371 edges · 87 communities (59 shown, 28 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 14 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-
-- Built from commit: `4f6e2da4`
+- Built from commit: `b27cb811`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-
 - [[_COMMUNITY_Community 0|Community 0]]
 - [[_COMMUNITY_Community 1|Community 1]]
 - [[_COMMUNITY_Community 2|Community 2]]
@@ -93,10 +89,8 @@
 - [[_COMMUNITY_Community 84|Community 84]]
 - [[_COMMUNITY_Community 85|Community 85]]
 - [[_COMMUNITY_Community 86|Community 86]]
-- [[_COMMUNITY_Community 87|Community 87]]
 
 ## God Nodes (most connected - your core abstractions)
-
 1. `compilerOptions` - 25 edges
 2. `compilerOptions` - 24 edges
 3. `compilerOptions` - 24 edges
@@ -106,293 +100,228 @@
 7. `BaseTool` - 17 edges
 8. `dedent()` - 16 edges
 9. `compilerOptions` - 15 edges
-10. `scripts` - 11 edges
+10. `errorMessages` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
-
-- `ConversationFeed()` --calls--> `useConversation()` [INFERRED]
+- `ConversationFeed()` --calls--> `useConversation()`  [INFERRED]
   apps/client/src/components/molecules/ConversationFeed/index.tsx → apps/client/src/hooks/stores/useConversationStore.ts
-- `VoiceSession()` --calls--> `useChatMode()` [INFERRED]
+- `VoiceSession()` --calls--> `useChatMode()`  [INFERRED]
   apps/client/src/components/molecules/VoiceSession/index.tsx → apps/client/src/hooks/stores/useChatModeStore.ts
-- `VoiceTranscriptionBridge()` --calls--> `useConversation()` [INFERRED]
+- `VoiceTranscriptionBridge()` --calls--> `useConversation()`  [INFERRED]
   apps/client/src/components/molecules/VoiceTranscriptionBridge/index.tsx → apps/client/src/hooks/stores/useConversationStore.ts
-- `ModeToggle()` --calls--> `usePublicConfig()` [INFERRED]
+- `ModeToggle()` --calls--> `usePublicConfig()`  [INFERRED]
   apps/client/src/components/atoms/ModeToggle/index.tsx → apps/client/src/hooks/queries/usePublicConfig.ts
-- `ModeToggle()` --calls--> `useChatMode()` [INFERRED]
+- `ModeToggle()` --calls--> `useChatMode()`  [INFERRED]
   apps/client/src/components/atoms/ModeToggle/index.tsx → apps/client/src/hooks/stores/useChatModeStore.ts
 
 ## Import Cycles
-
 - None detected.
 
-## Communities (88 total, 26 thin omitted)
+## Communities (87 total, 28 thin omitted)
 
 ### Community 0 - "Community 0"
-
 Cohesion: 0.07
 Nodes (39): LangChainStructuredTool, LangChainToolSchema, BaseTool, AgentInstructions, convertCurrencySchema, ConvertCurrencyTool, formatNumber(), formatNumber() (+31 more)
 
 ### Community 1 - "Community 1"
-
-Cohesion: 0.13
-Nodes (10): AdminAuthController, adminAuth(), adminAuthService, AdminAuthService, AdminLoginBody, adminLoginSchema, AdminLogoutBody, adminLogoutSchema (+2 more)
+Cohesion: 0.16
+Nodes (10): AdminAuthController, adminAuthController, authRateLimit, AdminAuthService, AdminLoginBody, adminLoginSchema, AdminLogoutBody, adminLogoutSchema (+2 more)
 
 ### Community 2 - "Community 2"
-
 Cohesion: 0.04
 Nodes (47): dependencies, axios, @emotion/react, @emotion/styled, formik, jotai, livekit-client, @livekit/components-react (+39 more)
 
 ### Community 3 - "Community 3"
-
-Cohesion: 0.19
-Nodes (6): HealthController, apiKeyService, apiKeyService, HealthService, config, logger
+Cohesion: 0.29
+Nodes (7): OVERLAY_STATES, OverlayText, StyledProgress, VisualizerOverlay, VisualizerRoot, AgentVisualizerPanelProps, VisualizerRootProps
 
 ### Community 4 - "Community 4"
-
 Cohesion: 0.04
 Nodes (44): dependencies, zod, devDependencies, eslint, @eslint/js, globals, jiti, langchain (+36 more)
 
 ### Community 5 - "Community 5"
-
-Cohesion: 0.07
-Nodes (22): OVERLAY_STATES, OverlayText, StyledProgress, VisualizerOverlay, VisualizerRoot, AgentVisualizerPanelProps, VisualizerRootProps, ControlBarRoot (+14 more)
+Cohesion: 0.06
+Nodes (29): ControlBarRoot, CallControlBarProps, ErrorText, InputRow, MessageField, PanelRoot, SendButton, ChatForm (+21 more)
 
 ### Community 6 - "Community 6"
-
 Cohesion: 0.06
 Nodes (35): dependencies, @call-center-agent/harness, deepagents, langchain, @langchain/anthropic, @langchain/core, @langchain/langgraph, @langchain/mistralai (+27 more)
 
 ### Community 7 - "Community 7"
-
 Cohesion: 0.09
 Nodes (14): STATE_CONFIG, StyledChip, AgentStatusBadgeProps, StatusConfig, QUALITY_LABELS, QualityLabel, Root, ConnectionQualityBadgeProps (+6 more)
 
 ### Community 8 - "Community 8"
-
 Cohesion: 0.09
 Nodes (18): HomePage(), BrandIcon, HeaderStack, RoomTitle, ShellBody, ShellHeader, ShellRoot, MODE_OPTIONS (+10 more)
 
 ### Community 9 - "Community 9"
-
 Cohesion: 0.07
 Nodes (27): compilerOptions, allowJs, allowSyntheticDefaultImports, declaration, declarationMap, esModuleInterop, exactOptionalPropertyTypes, forceConsistentCasingInFileNames (+19 more)
 
 ### Community 10 - "Community 10"
-
 Cohesion: 0.13
 Nodes (23): CONNECTION_STATE_COLORS, CONNECTION_STATE_LABELS, VoiceSession(), ColumnBox, ErrorIcon, FailureOverlay, FailureReasonList, FailureReasonText (+15 more)
 
 ### Community 11 - "Community 11"
-
 Cohesion: 0.07
 Nodes (26): compilerOptions, allowJs, allowSyntheticDefaultImports, declaration, declarationMap, esModuleInterop, exactOptionalPropertyTypes, forceConsistentCasingInFileNames (+18 more)
 
 ### Community 12 - "Community 12"
-
 Cohesion: 0.07
 Nodes (26): compilerOptions, allowJs, allowSyntheticDefaultImports, declaration, declarationMap, esModuleInterop, exactOptionalPropertyTypes, forceConsistentCasingInFileNames (+18 more)
 
 ### Community 13 - "Community 13"
-
 Cohesion: 0.07
 Nodes (26): compilerOptions, allowJs, allowSyntheticDefaultImports, declaration, declarationMap, esModuleInterop, exactOptionalPropertyTypes, forceConsistentCasingInFileNames (+18 more)
 
 ### Community 14 - "Community 14"
-
 Cohesion: 0.07
 Nodes (26): author, description, devDependencies, husky, prettier, @trivago/prettier-plugin-sort-imports, engines, node (+18 more)
 
 ### Community 15 - "Community 15"
-
 Cohesion: 0.08
 Nodes (24): compilerOptions, allowJs, allowSyntheticDefaultImports, esModuleInterop, exactOptionalPropertyTypes, forceConsistentCasingInFileNames, isolatedModules, jsx (+16 more)
 
 ### Community 16 - "Community 16"
-
 Cohesion: 0.14
 Nodes (12): toLangChainTools(), ChatAgent, createChatAgent(), LangChainTool, RESEARCH_TOOL_NAMES, researchSubAgent, subAgents, SubAgentTools (+4 more)
 
 ### Community 17 - "Community 17"
-
 Cohesion: 0.10
 Nodes (21): dependencies, @call-center-agent/harness, dotenv, @livekit/agents, @livekit/agents-plugin-cartesia, @livekit/agents-plugin-deepgram, @livekit/agents-plugin-elevenlabs, @livekit/agents-plugin-fishaudio (+13 more)
 
 ### Community 18 - "Community 18"
-
 Cohesion: 0.11
 Nodes (7): apiEndpoints, axiosInstance, queryClient, router, defaultTheme, Logger, rootElement
 
 ### Community 19 - "Community 19"
-
 Cohesion: 0.12
 Nodes (16): compilerOptions, allowJs, allowSyntheticDefaultImports, composite, esModuleInterop, forceConsistentCasingInFileNames, isolatedModules, lib (+8 more)
 
 ### Community 20 - "Community 20"
-
 Cohesion: 0.11
 Nodes (19): dependencies, bcrypt, @call-center-agent/deepagent, cors, dotenv, express, express-rate-limit, helmet (+11 more)
 
 ### Community 21 - "Community 21"
-
 Cohesion: 0.11
 Nodes (18): devDependencies, eslint, @eslint/js, globals, jiti, prisma, tsx, @types/bcrypt (+10 more)
 
 ### Community 22 - "Community 22"
-
 Cohesion: 0.12
 Nodes (15): dependencies, devDependencies, engines, node, pnpm, name, private, scripts (+7 more)
 
 ### Community 23 - "Community 23"
-
 Cohesion: 0.17
 Nodes (10): FileRoutesByFullPath, FileRoutesById, FileRoutesByPath, FileRoutesByTo, FileRouteTypes, IndexRoute, RootRouteChildren, routeTree (+2 more)
 
 ### Community 24 - "Community 24"
-
 Cohesion: 0.29
 Nodes (8): AgentIcon, CardContainer, DisplayName, IdentityText, MetadataDivider, MetadataText, NameContainer, AgentInfoCardProps
 
-### Community 25 - "Community 25"
-
-Cohesion: 0.29
-Nodes (7): ErrorText, InputRow, MessageField, PanelRoot, SendButton, ChatForm, ChatPanelProps
-
 ### Community 26 - "Community 26"
-
 Cohesion: 0.25
 Nodes (12): Bubble, BubbleRow, EmptyState, FeedContainer, PlaceholderIcon, PlaceholderText, SourceTag, ThinkingBubble (+4 more)
 
 ### Community 27 - "Community 27"
-
 Cohesion: 0.18
 Nodes (11): scripts, build, clean, dev, download-files, lint, lint:fix, start (+3 more)
 
 ### Community 28 - "Community 28"
-
 Cohesion: 0.18
 Nodes (11): scripts, build, clean, db:migrate, dev, lint, lint:fix, postinstall (+3 more)
 
 ### Community 29 - "Community 29"
-
-Cohesion: 0.33
-Nodes (7): EmptyState, FeedContainer, PlaceholderIcon, PlaceholderText, TranscriptionEntry, TranscriptionEntryProps, TranscriptionFeedProps
+Cohesion: 0.30
+Nodes (6): ChatController, chatController, router, ChatService, ChatBody, chatSchema
 
 ### Community 30 - "Community 30"
-
 Cohesion: 0.20
 Nodes (10): devDependencies, eslint, @eslint/js, globals, jiti, @types/node, typescript, typescript-eslint (+2 more)
 
 ### Community 31 - "Community 31"
-
 Cohesion: 0.20
 Nodes (9): StockChartResponse, StockChartResult, StockQuote, StockQuoteMeta, SymbolSuggestion, SymbolValidation, TwelveDataQuoteResponse, YahooSearchQuote (+1 more)
 
 ### Community 32 - "Community 32"
-
 Cohesion: 0.25
 Nodes (5): LiveKitFunctionTool, LiveKitToolContext, toLiveKitTool(), toLiveKitTools(), LLMAgent
 
 ### Community 33 - "Community 33"
-
 Cohesion: 0.25
 Nodes (7): engines, node, pnpm, name, private, type, version
 
 ### Community 34 - "Community 34"
-
 Cohesion: 0.25
 Nodes (7): engines, node, pnpm, name, private, type, version
 
 ### Community 35 - "Community 35"
-
 Cohesion: 0.25
 Nodes (7): DuckDuckGoResponse, TavilyResponse, TavilyResult, WebSearchResult, WikipediaSearchPage, WikipediaSearchResponse, WikipediaSummaryResponse
 
 ### Community 38 - "Community 38"
-
 Cohesion: 0.40
 Nodes (3): config, schema, EnvSchema
 
 ### Community 40 - "Community 40"
-
 Cohesion: 0.40
 Nodes (4): ChatMode, ConversationEntry, ConversationRole, ConversationSource
 
 ### Community 41 - "Community 41"
-
 Cohesion: 0.40
 Nodes (4): CoinMarketData, CoinSearchEntry, CoinSearchResponse, SimplePriceResponse
 
 ### Community 42 - "Community 42"
-
 Cohesion: 0.40
 Nodes (4): CurrentWeather, GeocodingResponse, GeocodingResult, WeatherForecastResponse
 
 ### Community 45 - "Community 45"
-
 Cohesion: 0.50
 Nodes (3): AgentInstructionsMode, AgentInstructionsOptions, ResolvedAgentInstructionsOptions
 
 ### Community 78 - "Community 78"
-
-Cohesion: 0.19
-Nodes (3): apiKeyService, ApiKeyService, ApiKeyUtil
+Cohesion: 0.05
+Nodes (19): errorMessages, AdminAuthMiddleware, ApiKeyAuthMiddleware, ErrorHandlerMiddleware, FileValidatorMiddleware, NotFoundMiddleware, ApiKeyRateLimitMiddleware, AuthRateLimitMiddleware (+11 more)
 
 ### Community 79 - "Community 79"
-
-Cohesion: 0.22
-Nodes (7): errorMessages, errorHandler(), normalizeMessage(), notFoundHandler(), rateLimitHandler, router, webhookController
+Cohesion: 0.29
+Nodes (4): HealthController, healthController, router, HealthService
 
 ### Community 80 - "Community 80"
-
 Cohesion: 0.18
-Nodes (12): authRateLimitHandler, adminAuthController, router, router, configController, router, healthController, router (+4 more)
+Nodes (9): RequestValidatorMiddleware, router, configController, router, liveKitController, router, router, tenantController (+1 more)
 
 ### Community 81 - "Community 81"
-
-Cohesion: 0.25
-Nodes (6): createApp(), config, start(), adapter, { DATABASE_URL }, globalForPrisma
+Cohesion: 0.20
+Nodes (9): TenantSlugConflictError, TenantService, CreateTenantBody, createTenantSchema, ListTenantsQuery, listTenantsQuerySchema, slugRule, UpdateTenantBody (+1 more)
 
 ### Community 82 - "Community 82"
-
-Cohesion: 0.19
-Nodes (3): WebhookController, WebhookService, LiveKitRoomUtil
+Cohesion: 0.15
+Nodes (5): WebhookController, router, webhookController, WebhookService, LiveKitRoomUtil
 
 ### Community 83 - "Community 83"
-
 Cohesion: 0.20
 Nodes (9): AdminAccessTokenPayload, AdminLoginOptions, AdminLoginResult, AdminLogoutResult, AdminPublicProfile, AdminRefreshResult, AuthenticatedAdmin, GeneratedRefreshToken (+1 more)
 
-### Community 84 - "Community 84"
-
-Cohesion: 0.22
-Nodes (8): apiKeyAuth(), fileValidator(), apiKeyRateLimit(), requestValidator(), apiKeyService, requireBotBinding(), requireScopes(), chatController
-
-### Community 85 - "Community 85"
-
-Cohesion: 0.36
-Nodes (4): ChatController, ChatService, ChatBody, chatSchema
-
 ## Knowledge Gaps
-
-- **506 isolated node(s):** `livekit-docs`, `name`, `version`, `private`, `type` (+501 more)
+- **502 isolated node(s):** `livekit-docs`, `name`, `version`, `private`, `type` (+497 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **28 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
-
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `useChatMode()` connect `Community 8` to `Community 10`?**
-  _High betweenness centrality (0.014) - this node is a cross-community bridge._
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
 - **Why does `VoiceSession()` connect `Community 10` to `Community 8`?**
-  _High betweenness centrality (0.012) - this node is a cross-community bridge._
+  _High betweenness centrality (0.014) - this node is a cross-community bridge._
 - **What connects `livekit-docs`, `name`, `version` to the rest of the system?**
-  _506 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _502 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.07111501316944688 - nodes in this community are weakly interconnected._
-- **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.13 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.041666666666666664 - nodes in this community are weakly interconnected._
 - **Should `Community 4` be split into smaller, more focused modules?**
   _Cohesion score 0.044444444444444446 - nodes in this community are weakly interconnected._
+- **Should `Community 5` be split into smaller, more focused modules?**
+  _Cohesion score 0.0563265306122449 - nodes in this community are weakly interconnected._

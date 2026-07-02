@@ -1,15 +1,15 @@
 import type { RequestHandler } from 'express';
 import createHttpError from 'http-errors';
 import { errorMessages } from '../configs';
-import { AdminAuthService } from '../services/admin-auth.service';
+import { adminAuthService } from '../services';
 import type { AdminLogoutResult } from '../types/admin-auth';
-import type { AdminLoginBody } from '../validators/admin-login.validator';
-import type { AdminLogoutBody } from '../validators/admin-logout.validator';
-import type { AdminRefreshBody } from '../validators/admin-refresh.validator';
+import type {
+  AdminLoginBody,
+  AdminLogoutBody,
+  AdminRefreshBody,
+} from '../validators';
 
 export class AdminAuthController {
-  private readonly adminAuthService = new AdminAuthService();
-
   /**
    * Handles `POST /admin/auth/login`. On valid credentials it returns the login
    * result (tokens + minimal admin profile) for `responseHandler` to wrap with
@@ -17,12 +17,9 @@ export class AdminAuthController {
    * enumeration.
    */
   public readonly handleLogin: RequestHandler = async (req) => {
-    const result = await this.adminAuthService.login(
-      req.body as AdminLoginBody,
-      {
-        userAgent: req.get('user-agent') ?? undefined,
-      },
-    );
+    const result = await adminAuthService.login(req.body as AdminLoginBody, {
+      userAgent: req.get('user-agent') ?? undefined,
+    });
 
     if (result === null) {
       throw createHttpError(401, errorMessages.invalidCredentials());
@@ -38,7 +35,7 @@ export class AdminAuthController {
    * failure mode collapses to a single generic 401 with no enumeration.
    */
   public readonly handleRefresh: RequestHandler = async (req) => {
-    const result = await this.adminAuthService.refresh(
+    const result = await adminAuthService.refresh(
       req.body as AdminRefreshBody,
       {
         userAgent: req.get('user-agent') ?? undefined,
@@ -60,8 +57,10 @@ export class AdminAuthController {
    * endpoint never reveals whether the token existed or was active.
    */
   public readonly handleLogout: RequestHandler = async (req) => {
-    await this.adminAuthService.logout(req.body as AdminLogoutBody);
+    await adminAuthService.logout(req.body as AdminLogoutBody);
 
     return { revoked: true } satisfies AdminLogoutResult;
   };
 }
+
+export const adminAuthController = new AdminAuthController();

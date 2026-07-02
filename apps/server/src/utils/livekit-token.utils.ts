@@ -16,3 +16,5 @@ export class LiveKitTokenUtil {
     );
   }
 }
+
+export const liveKitTokenUtil = new LiveKitTokenUtil();

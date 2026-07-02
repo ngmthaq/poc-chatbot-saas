@@ -9,3 +9,5 @@ export class ConfigService {
     };
   }
 }
+
+export const configService = new ConfigService();

@@ -2,26 +2,7 @@ import type { RequestHandler } from 'express';
 import createHttpError from 'http-errors';
 import { errorMessages } from '../configs';
 import { ApiKeyService } from '../services/api-key.service';
-import { logger } from '../utils/logger.utils';
-
-const apiKeyService = new ApiKeyService();
-
-/**
- * Parses the raw API key from an `Authorization: Bearer <token>` header,
- * returning `null` when the header is missing or malformed.
- */
-function parseBearerToken(header: string | undefined): string | null {
-  if (header === undefined) {
-    return null;
-  }
-
-  const [scheme, token] = header.split(' ');
-  if (scheme !== 'Bearer' || token === undefined || token.length === 0) {
-    return null;
-  }
-
-  return token;
-}
+import { loggerUtil } from '../utils/logger.utils';
 
 /**
  * Authenticates a request by its API key and injects the tenant context.
@@ -33,15 +14,17 @@ function parseBearerToken(header: string | undefined): string | null {
  * touched on a best-effort basis that can never fail the request. Scope
  * enforcement is handled separately by the `requireScopes` middleware.
  */
-export function apiKeyAuth(): RequestHandler {
-  return async (req, _res, next) => {
+export class ApiKeyAuthMiddleware {
+  private readonly apiKeyService = new ApiKeyService();
+
+  public handle: RequestHandler = async (req, _res, next) => {
     try {
-      const raw = parseBearerToken(req.headers.authorization);
+      const raw = this.parseBearerToken(req.headers.authorization);
       if (raw === null) {
         return next(createHttpError(401, errorMessages.unauthorized()));
       }
 
-      const record = await apiKeyService.verifyKey(raw);
+      const record = await this.apiKeyService.verifyKey(raw);
       if (record === null) {
         return next(createHttpError(401, errorMessages.unauthorized()));
       }
@@ -55,9 +38,12 @@ export function apiKeyAuth(): RequestHandler {
       };
 
       try {
-        await apiKeyService.touchLastUsed(record.id);
+        await this.apiKeyService.touchLastUsed(record.id);
       } catch (err) {
-        logger.warn({ err }, 'Failed to update API key lastUsedAt');
+        loggerUtil.instance.warn(
+          { err },
+          'Failed to update API key lastUsedAt',
+        );
       }
 
       return next();
@@ -65,4 +51,23 @@ export function apiKeyAuth(): RequestHandler {
       return next(err);
     }
   };
+
+  /**
+   * Parses the raw API key from an `Authorization: Bearer <token>` header,
+   * returning `null` when the header is missing or malformed.
+   */
+  private parseBearerToken(header: string | undefined): string | null {
+    if (header === undefined) {
+      return null;
+    }
+
+    const [scheme, token] = header.split(' ');
+    if (scheme !== 'Bearer' || token === undefined || token.length === 0) {
+      return null;
+    }
+
+    return token;
+  }
 }
+
+export const apiKeyAuthMiddleware = new ApiKeyAuthMiddleware();

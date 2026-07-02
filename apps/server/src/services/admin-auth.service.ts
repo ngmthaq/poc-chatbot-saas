@@ -5,16 +5,14 @@ import type {
   AdminRefreshResult,
   AuthenticatedAdmin,
 } from '../types/admin-auth';
-import { AdminTokenUtil } from '../utils/admin-token.utils';
-import { PasswordUtil } from '../utils/password.utils';
-import { prisma } from '../utils/prisma.utils';
-import type { AdminLoginBody } from '../validators/admin-login.validator';
-import type { AdminLogoutBody } from '../validators/admin-logout.validator';
-import type { AdminRefreshBody } from '../validators/admin-refresh.validator';
+import { adminTokenUtil, passwordUtil, prismaUtil } from '../utils';
+import type {
+  AdminLoginBody,
+  AdminLogoutBody,
+  AdminRefreshBody,
+} from '../validators';
 
 export class AdminAuthService {
-  private readonly passwordUtil = new PasswordUtil();
-  private readonly adminTokenUtil = new AdminTokenUtil();
   private readonly millisPerDay = 24 * 60 * 60 * 1000;
 
   // A fixed, valid bcrypt digest (cost 12) of a throwaway value. When the email
@@ -41,11 +39,11 @@ export class AdminAuthService {
     body: AdminLoginBody,
     opts: AdminLoginOptions = {},
   ): Promise<AdminLoginResult | null> {
-    const admin = await prisma.adminUser.findUnique({
+    const admin = await prismaUtil.client.adminUser.findUnique({
       where: { email: body.email },
     });
 
-    const passwordOk = await this.passwordUtil.verify(
+    const passwordOk = await passwordUtil.verify(
       body.password,
       admin?.passwordHash ?? this.dummyPasswordHash,
     );
@@ -55,16 +53,16 @@ export class AdminAuthService {
     }
 
     const { token: accessToken, expiresIn } =
-      await this.adminTokenUtil.signAccessToken(admin.id);
-    const refreshToken = this.adminTokenUtil.generateRefreshToken();
+      await adminTokenUtil.signAccessToken(admin.id);
+    const refreshToken = adminTokenUtil.generateRefreshToken();
 
     const { ADMIN_REFRESH_TOKEN_TTL_DAYS } = loadEnv();
     const expiresAt = new Date(
       Date.now() + ADMIN_REFRESH_TOKEN_TTL_DAYS * this.millisPerDay,
     );
 
-    await prisma.$transaction([
-      prisma.adminSession.create({
+    await prismaUtil.client.$transaction([
+      prismaUtil.client.adminSession.create({
         data: {
           adminUserId: admin.id,
           tokenHash: refreshToken.tokenHash,
@@ -72,7 +70,7 @@ export class AdminAuthService {
           userAgent: opts.userAgent ?? null,
         },
       }),
-      prisma.adminUser.update({
+      prismaUtil.client.adminUser.update({
         where: { id: admin.id },
         data: { lastLoginAt: new Date() },
       }),
@@ -105,8 +103,8 @@ export class AdminAuthService {
     body: AdminRefreshBody,
     opts: AdminLoginOptions = {},
   ): Promise<AdminRefreshResult | null> {
-    const tokenHash = this.adminTokenUtil.hashRefreshToken(body.refreshToken);
-    const session = await prisma.adminSession.findUnique({
+    const tokenHash = adminTokenUtil.hashRefreshToken(body.refreshToken);
+    const session = await prismaUtil.client.adminSession.findUnique({
       where: { tokenHash },
     });
 
@@ -114,7 +112,7 @@ export class AdminAuthService {
       return null;
     }
 
-    if (!this.adminTokenUtil.hashesMatch(tokenHash, session.tokenHash)) {
+    if (!adminTokenUtil.hashesMatch(tokenHash, session.tokenHash)) {
       return null;
     }
 
@@ -124,14 +122,14 @@ export class AdminAuthService {
     }
 
     if (session.expiresAt <= new Date()) {
-      await prisma.adminSession.update({
+      await prismaUtil.client.adminSession.update({
         where: { id: session.id },
         data: { revokedAt: new Date() },
       });
       return null;
     }
 
-    const admin = await prisma.adminUser.findUnique({
+    const admin = await prismaUtil.client.adminUser.findUnique({
       where: { id: session.adminUserId },
     });
 
@@ -140,20 +138,20 @@ export class AdminAuthService {
     }
 
     const { token: accessToken, expiresIn } =
-      await this.adminTokenUtil.signAccessToken(admin.id);
-    const refreshToken = this.adminTokenUtil.generateRefreshToken();
+      await adminTokenUtil.signAccessToken(admin.id);
+    const refreshToken = adminTokenUtil.generateRefreshToken();
 
     const { ADMIN_REFRESH_TOKEN_TTL_DAYS } = loadEnv();
     const expiresAt = new Date(
       Date.now() + ADMIN_REFRESH_TOKEN_TTL_DAYS * this.millisPerDay,
     );
 
-    await prisma.$transaction([
-      prisma.adminSession.update({
+    await prismaUtil.client.$transaction([
+      prismaUtil.client.adminSession.update({
         where: { id: session.id },
         data: { revokedAt: new Date() },
       }),
-      prisma.adminSession.create({
+      prismaUtil.client.adminSession.create({
         data: {
           adminUserId: admin.id,
           tokenHash: refreshToken.tokenHash,
@@ -190,7 +188,7 @@ export class AdminAuthService {
   ): Promise<AuthenticatedAdmin | null> {
     let sub: string;
     try {
-      const { payload } = await this.adminTokenUtil.verifyAccessToken(token);
+      const { payload } = await adminTokenUtil.verifyAccessToken(token);
       if (typeof payload.sub !== 'string' || payload.sub.length === 0) {
         return null;
       }
@@ -199,7 +197,7 @@ export class AdminAuthService {
       return null;
     }
 
-    const admin = await prisma.adminUser.findUnique({
+    const admin = await prismaUtil.client.adminUser.findUnique({
       where: { id: sub },
       omit: { passwordHash: true },
     });
@@ -221,9 +219,9 @@ export class AdminAuthService {
    * active (no enumeration) — and the raw token and its hash are never logged.
    */
   public async logout(body: AdminLogoutBody): Promise<void> {
-    const tokenHash = this.adminTokenUtil.hashRefreshToken(body.refreshToken);
+    const tokenHash = adminTokenUtil.hashRefreshToken(body.refreshToken);
 
-    await prisma.adminSession.updateMany({
+    await prismaUtil.client.adminSession.updateMany({
       where: { tokenHash, revokedAt: null },
       data: { revokedAt: new Date() },
     });
@@ -235,9 +233,11 @@ export class AdminAuthService {
    * signals theft, so the entire session family is invalidated.
    */
   private async revokeAllSessions(adminUserId: string): Promise<void> {
-    await prisma.adminSession.updateMany({
+    await prismaUtil.client.adminSession.updateMany({
       where: { adminUserId, revokedAt: null },
       data: { revokedAt: new Date() },
     });
   }
 }
+
+export const adminAuthService = new AdminAuthService();

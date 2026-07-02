@@ -1,43 +1,45 @@
 import { Router } from 'express';
-import { AdminAuthController } from '../controllers/admin-auth.controller';
-import { authRateLimitHandler } from '../middlewares';
-import { requestValidator } from '../middlewares/request-validator.middleware';
-import { responseHandler } from '../utils/response-handler.utils';
-import { adminLoginSchema } from '../validators/admin-login.validator';
-import { adminLogoutSchema } from '../validators/admin-logout.validator';
-import { adminRefreshSchema } from '../validators/admin-refresh.validator';
+import { adminAuthController } from '../controllers';
+import {
+  authRateLimitMiddleware,
+  requestValidatorMiddleware,
+} from '../middlewares';
+import { responseHandlerUtil } from '../utils';
+import {
+  adminLoginSchema,
+  adminLogoutSchema,
+  adminRefreshSchema,
+} from '../validators';
 
 const router: Router = Router();
-const adminAuthController = new AdminAuthController();
+
+router.use(authRateLimitMiddleware.handle);
 
 router.post(
   '/login',
-  authRateLimitHandler,
-  requestValidator({
+  requestValidatorMiddleware.handle({
     target: 'body',
     schema: adminLoginSchema,
   }),
-  responseHandler(adminAuthController.handleLogin),
+  responseHandlerUtil.handle(adminAuthController.handleLogin),
 );
 
 router.post(
   '/refresh',
-  authRateLimitHandler,
-  requestValidator({
+  requestValidatorMiddleware.handle({
     target: 'body',
     schema: adminRefreshSchema,
   }),
-  responseHandler(adminAuthController.handleRefresh),
+  responseHandlerUtil.handle(adminAuthController.handleRefresh),
 );
 
 router.post(
   '/logout',
-  authRateLimitHandler,
-  requestValidator({
+  requestValidatorMiddleware.handle({
     target: 'body',
     schema: adminLogoutSchema,
   }),
-  responseHandler(adminAuthController.handleLogout),
+  responseHandlerUtil.handle(adminAuthController.handleLogout),
 );
 
 export default router;

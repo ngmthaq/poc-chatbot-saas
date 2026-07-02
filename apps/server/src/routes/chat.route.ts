@@ -1,31 +1,31 @@
 import { ApiKeyScope } from '@prisma/client';
 import { Router } from 'express';
-import { ChatController } from '../controllers/chat.controller';
+import { chatController } from '../controllers';
 import {
-  apiKeyAuth,
-  apiKeyRateLimit,
-  requireBotBinding,
-  requireScopes,
+  apiKeyAuthMiddleware,
+  apiKeyRateLimitMiddleware,
+  requestValidatorMiddleware,
+  requireBotBindingMiddleware,
+  requireScopesMiddleware,
 } from '../middlewares';
-import { requestValidator } from '../middlewares/request-validator.middleware';
-import { responseHandler } from '../utils/response-handler.utils';
-import { chatSchema } from '../validators/chat.validator';
-import type { ChatBody } from '../validators/chat.validator';
+import { responseHandlerUtil } from '../utils';
+import { type ChatBody, chatSchema } from '../validators';
 
 const router: Router = Router();
-const chatController = new ChatController();
 
 router.post(
   '/',
-  apiKeyAuth(),
-  apiKeyRateLimit(),
-  requireScopes(ApiKeyScope.CHAT),
-  requestValidator({
+  apiKeyAuthMiddleware.handle,
+  apiKeyRateLimitMiddleware.handle,
+  requireScopesMiddleware.handle(ApiKeyScope.CHAT),
+  requestValidatorMiddleware.handle({
     target: 'body',
     schema: chatSchema,
   }),
-  requireBotBinding((req) => (req.body as ChatBody).botId ?? null),
-  responseHandler(chatController.handleChat),
+  requireBotBindingMiddleware.handle(
+    (req) => (req.body as ChatBody).botId ?? null,
+  ),
+  responseHandlerUtil.handle(chatController.handleChat),
 );
 
 export default router;
