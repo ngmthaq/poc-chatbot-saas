@@ -2,7 +2,7 @@ import { WebhookEvent, WebhookReceiver } from 'livekit-server-sdk';
 import { loadEnv } from '../configs';
 import { liveKitRoomUtil, loggerUtil } from '../utils';
 
-export class WebhookService {
+export class LiveKitWebhookService {
   private readonly config = loadEnv();
   private readonly receiver = new WebhookReceiver(
     this.config.LIVEKIT_API_KEY,
@@ -33,4 +33,4 @@ export class WebhookService {
   }
 }
 
-export const webhookService = new WebhookService();
+export const liveKitWebhookService = new LiveKitWebhookService();
