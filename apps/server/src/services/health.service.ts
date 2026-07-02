@@ -6,10 +6,16 @@ export class HealthService {
   public async getStatus(): Promise<HealthStatus> {
     try {
       await prisma.$queryRaw`SELECT 1`;
-      return { status: 'ok', db: 'ok' };
+      return {
+        status: 'ok',
+        db: 'ok',
+      };
     } catch (error: unknown) {
       logger.error({ error }, 'Database health check failed');
-      return { status: 'ok', db: 'down' };
+      return {
+        status: 'ok',
+        db: 'down',
+      };
     }
   }
 }

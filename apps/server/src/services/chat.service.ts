@@ -4,11 +4,11 @@ import { loadEnv } from '../configs';
 import type { ChatResponseBody } from '../types/chat';
 import type { ChatBody } from '../validators/chat.validator';
 
-// Hard ceiling for a single chat request. Larger than the 8s tool-fetch
-// timeout so per-provider fallbacks fire before this 504 does.
-const CHAT_TIMEOUT_MS = 30_000;
-
 export class ChatService {
+  // Hard ceiling for a single chat request. Larger than the 8s tool-fetch
+  // timeout so per-provider fallbacks fire before this 504 does.
+  private readonly chatTimeoutMs = 30_000;
+
   private readonly textChatService = new TextChatService(
     loadEnv().LLM_PROVIDER,
   );
@@ -18,7 +18,7 @@ export class ChatService {
     const timeoutPromise = new Promise<never>((_resolve, reject) => {
       timeout = setTimeout(() => {
         reject(createHttpError(504, 'Chat request timed out'));
-      }, CHAT_TIMEOUT_MS);
+      }, this.chatTimeoutMs);
     });
 
     try {

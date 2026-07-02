@@ -54,4 +54,12 @@ export const errorMessages = {
   invalidRefreshToken: () => {
     return 'Invalid or expired refresh token';
   },
+
+  tenantNotFound: () => {
+    return 'Tenant not found';
+  },
+
+  slugConflict: () => {
+    return 'Tenant slug already in use';
+  },
 } as const;

@@ -1,5 +1,5 @@
 import { PrismaPg } from '@prisma/adapter-pg';
-import { PrismaClient } from '@prisma/client';
+import { Prisma, PrismaClient } from '@prisma/client';
 import { loadEnv } from '../configs';
 
 // Prisma 7: the runtime client connects through a driver adapter instead of a
@@ -22,4 +22,23 @@ export const prisma: PrismaClient =
 
 if (process.env.NODE_ENV !== 'production') {
   globalForPrisma.prisma = prisma;
+}
+
+/**
+ * Narrows an unknown error to a Prisma unique-constraint violation (`P2002`).
+ */
+export function isUniqueViolation(err: unknown): boolean {
+  return (
+    err instanceof Prisma.PrismaClientKnownRequestError && err.code === 'P2002'
+  );
+}
+
+/**
+ * Narrows an unknown error to a Prisma "record not found" error (`P2025`),
+ * raised by `update` when the target row does not exist.
+ */
+export function isRecordNotFound(err: unknown): boolean {
+  return (
+    err instanceof Prisma.PrismaClientKnownRequestError && err.code === 'P2025'
+  );
 }

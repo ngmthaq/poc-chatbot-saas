@@ -1,4 +1,4 @@
-import { ApiKeyScope, ApiKeyStatus } from '@prisma/client';
+import { ApiKeyScope, ApiKeyStatus, TenantStatus } from '@prisma/client';
 import type { ApiKey, ApiKeyUsage } from '@prisma/client';
 import { timingSafeEqual } from 'node:crypto';
 import type { BotBindingResolution } from '../types/api-key';
@@ -25,7 +25,10 @@ export class ApiKeyService {
     }
 
     const keyHash = this.apiKeyUtil.hashKey(raw);
-    const record = await prisma.apiKey.findUnique({ where: { keyHash } });
+    const record = await prisma.apiKey.findUnique({
+      where: { keyHash },
+      include: { tenant: true },
+    });
 
     if (record === null) {
       return null;
@@ -47,7 +50,13 @@ export class ApiKeyService {
       return null;
     }
 
-    return record;
+    const { tenant, ...apiKey } = record;
+
+    if (tenant.status !== TenantStatus.ACTIVE) {
+      return null;
+    }
+
+    return apiKey;
   }
 
   /**

@@ -80,11 +80,11 @@ Turn the existing chat prototype into a sellable multi-tenant SaaS: tenants are 
 | 17  | DONE   | [API] Admin auth-guard middleware                           | Verifies JWT + isAdmin/isActive; 401/403                                 | 14         |
 | 18  | DONE   | [Logic] Usage counter increment                             | Atomic upsert; concurrency-safe                                          | 9          |
 | 19  | DONE   | [API] Rate-limit middleware                                 | 429 + Retry-After when over window limit                                 | 18, 2      |
-| 20  | TODO   | [API] `POST /admin/tenants`                                 | 201; 409 dup slug; 400 invalid                                           | 17         |
-| 21  | TODO   | [API] `GET /admin/tenants`                                  | Paginated list; empty → []                                               | 17         |
-| 22  | TODO   | [API] `GET /admin/tenants/:id`                              | 200 with counts; 404 unknown                                             | 17         |
-| 23  | TODO   | [API] `PATCH /admin/tenants/:id`                            | 200; 409 conflict; 404 unknown                                           | 20         |
-| 24  | TODO   | [API] `DELETE /admin/tenants/:id`                           | Archive/delete; archived keys stop authenticating                        | 20         |
+| 20  | DONE   | [API] `POST /admin/tenants`                                 | 201; 409 dup slug; 400 invalid                                           | 17         |
+| 21  | DONE   | [API] `GET /admin/tenants`                                  | Paginated list; empty → []                                               | 17         |
+| 22  | DONE   | [API] `GET /admin/tenants/:id`                              | 200 with counts; 404 unknown                                             | 17         |
+| 23  | DONE   | [API] `PATCH /admin/tenants/:id`                            | 200; 409 conflict; 404 unknown                                           | 20         |
+| 24  | DONE   | [API] `DELETE /admin/tenants/:id`                           | Archive/delete; archived keys stop authenticating                        | 20         |
 | 25  | TODO   | [API] `POST /admin/tenants/:id/keys`                        | 201 raw key once; 400 scope; 404 unknown                                 | 17, 7, 20  |
 | 26  | TODO   | [API] `GET /admin/tenants/:id/keys`                         | Prefix-only list; never raw/hash                                         | 17, 20     |
 | 27  | TODO   | [API] `PATCH /admin/keys/:keyId`                            | Update scopes/expiry/botId; 404/400                                      | 25         |
